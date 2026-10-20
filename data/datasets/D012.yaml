@@ -1,0 +1,24 @@
+# Dataset D012. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D012
+name: BOND
+year: "2022"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: []
+modality: [gr]
+size: Node-level datasets with injected (Cora, Amazon, Flickr) and organic outliers (Weibo, Reddit, Disney, Books, Enron, DGraph)
+description: "Benchmark for unsupervised node outlier detection (NeurIPS 2022); injected structural and contextual outliers proved much easier than organic ones."
+applications: []
+extra_scenarios: [S18]
+links:
+  page:
+    url: "https://github.com/pygod-team/pygod"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

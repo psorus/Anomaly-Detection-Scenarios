@@ -1,0 +1,23 @@
+# Dataset D091. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D091
+name: ROAD (Real ORNL Automotive Dynamometer)
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [seq, mts]
+size: CAN captures with fabrication and masquerade attacks
+description: Real vehicle data on a dynamometer with physically verified attacks, including stealthy masquerades (Verma et al.).
+applications: [SEC-086]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2012.14600"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

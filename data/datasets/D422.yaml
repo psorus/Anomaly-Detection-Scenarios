@@ -1,0 +1,21 @@
+# Dataset D422. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D422
+name: MovieLens with injected shilling profiles
+year: "2016"
+tier: app  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: [grp]
+modality: [tab]
+size: Ratings with attack profiles injected by standard shilling models
+description: Common evaluation setup for detecting recommender attacks.
+applications: [WEB-393]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

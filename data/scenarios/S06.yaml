@@ -1,0 +1,32 @@
+# Scenario S06. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S06
+name: Batch image screening with high-recall localization
+family: Images, video & perception
+paper: ""
+summary: Images or volumes reviewed offline (medical scans, radiography, aerial inspection) where a miss is costly and findings must be marked for a human reader. Domain shift between scanners, sites and seasons is the main threat.
+rule:
+  - match:
+      mod:
+        any: [img, vol, pc]
+      pt:
+        in: [bat]
+      out:
+        any: [loc]
+      ep:
+        any: [rec]
+      adv:
+        in: ["no"]
+    datasets_need:
+      - [loc]
+metrics: "Sensitivity at fixed specificity; lesion-level FROC; pixel AUROC and Dice for localization; worklist metrics such as time-to-read for critical cases."
+protocol: "Patient- or object-level splits; external validation on another site or scanner; subgroup analysis for fairness; separate results per finding type and size."
+preprocessing: "Intensity standardization per scanner, skull stripping or registration where relevant, consistent windowing; never normalize away the pathology (for example, by histogram matching to healthy scans)."
+algorithms: Healthy-reference reconstruction and diffusion models (AnoDDPM, f-AnoGAN), feature-embedding methods adapted from industry, supervised detectors with OOD rejection for known findings.
+avoid: "Random slice-level splits that leak patients; reporting only image-level AUROC."
+gaps: Cross-domain benchmarks exist (BMAD) but few report subgroup fairness, calibration or reader-in-the-loop impact.
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

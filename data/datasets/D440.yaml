@@ -1,0 +1,21 @@
+# Dataset D440. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D440
+name: Enron spreadsheet corpus
+year: "2015"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab, code]
+size: About 15,000 spreadsheets with formulas from Enron email attachments
+description: "Real business spreadsheets (Hermans and Murphy-Hill) used to study formula smells and errors; no error labels."
+applications: [MLD-129]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

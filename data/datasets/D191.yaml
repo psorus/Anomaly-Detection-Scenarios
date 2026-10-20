@@ -1,0 +1,21 @@
+# Dataset D191. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D191
+name: NEU surface defect database
+year: "2013"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, loc]
+modality: [img]
+size: "1,800 grayscale images of six hot-rolled strip defect types"
+description: Northeastern University steel defect classification and detection (NEU-DET) data.
+applications: [MFG-143]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,26 @@
+# Application ENE-209. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-209
+name: Water distribution leak detection and localization
+domain: ENE
+subdomain: Water & wastewater
+description: "Pressure and flow sensors across a pipe network reveal bursts and background leaks; the leak must be localized to a pipe segment."
+properties:
+  mod: [mts, gr]  # Data modality
+  at: [cp, dep]  # Anomaly type
+  unit: [win, node]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [season]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,23 @@
+# Dataset D423. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D423
+name: TalkingData AdTracking Fraud
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab, seq]
+size: About 200 million ad clicks with app download labels
+description: Kaggle mobile ad click fraud competition.
+applications: [RET-370]
+links:
+  page:
+    url: "https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

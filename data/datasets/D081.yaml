@@ -1,0 +1,21 @@
+# Dataset D081. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D081
+name: Edge-IIoTset
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [tab]
+size: Testbed traffic from more than ten IoT/IIoT device types with 14 attacks
+description: Dataset for centralized and federated intrusion detection in IoT and IIoT (Ferrag et al.).
+applications: [SEC-087, SEC-084]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

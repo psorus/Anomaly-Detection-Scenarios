@@ -1,0 +1,21 @@
+# Dataset D403. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D403
+name: Safety helmet wearing dataset (SHWD)
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [img]
+size: "7,581 images of workers with and without helmets"
+description: Construction-site safety helmet detection dataset.
+applications: [SAF-421]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

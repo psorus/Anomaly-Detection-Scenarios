@@ -1,0 +1,30 @@
+# Application ENE-186. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-186
+name: Grid instability and oscillation detection
+domain: ENE
+subdomain: Power grid
+description: Synchrophasor (PMU) streams across the grid. Oscillations and instability must be flagged in sub-second to second time frames so protection can act.
+properties:
+  mod: [mts, gr]  # Data modality
+  at: [cp, dep]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov, weak]  # Supervision
+  pt: hrt  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [loc, sev]  # Required outputs
+  oc: [cert]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references:
+  - ref: "[41]"
+    citation: Madabhushi and Dewri (2023). A survey of anomaly detection methods for power grids. International Journal of Information Security.
+    context: "Example 2.1: instability in power grids."
+    url: "https://doi.org/10.1007/s10207-023-00720-z"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

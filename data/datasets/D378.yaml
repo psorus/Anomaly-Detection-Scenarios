@@ -1,0 +1,21 @@
+# Dataset D378. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D378
+name: iWildCam
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, xdom]
+modality: [img]
+size: Camera trap images from many locations
+description: Species identification under location shift (also part of WILDS).
+applications: [ENV-345]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

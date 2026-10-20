@@ -1,0 +1,23 @@
+# Dataset D241. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D241
+name: DCASE machine condition monitoring (Task 2)
+year: "2020"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [xdom]
+modality: [sig]
+size: Yearly datasets since 2020 based on MIMII and ToyADMOS
+description: "Unsupervised anomalous sound detection challenge; later editions test domain generalization and first-shot detection on unseen machine types."
+applications: [MFG-170]
+links:
+  page:
+    url: "https://dcase.community/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

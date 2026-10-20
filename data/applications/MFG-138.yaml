@@ -1,0 +1,26 @@
+# Application MFG-138. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-138
+name: Surface defect inspection of discrete parts
+domain: MFG
+subdomain: Visual inspection
+description: "Scratches, dents, contamination and cracks on manufactured parts. Usually trained on good parts only, because new defect types keep appearing; defects must be localized at pixel level for rework decisions."
+properties:
+  mod: [img]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [obj, reg]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [loc, type, sev]  # Required outputs
+  oc: [shift, cold, edge]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [small]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,28 @@
+# Scenario S34. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S34
+name: Entity-level early warning from records
+family: Graphs, space & entities
+paper: ""
+summary: Borrowers, suppliers, students, employees or devices whose multi-source records drift toward a bad outcome (default, failure, dropout, disruption). Lead time matters, and decisions affect people or contracts.
+rule:
+  - match:
+      out:
+        any: [early]
+      unit:
+        any: [ent]
+      mod:
+        any: [tab]
+    datasets_need:
+      - [loc, rul]
+metrics: "Recall at a fixed lead time and alert budget; lead-time distribution; calibration of risk; subgroup error rates."
+protocol: "Rolling origin with outcome windows; no leakage of post-outcome records; cohorts by start date."
+preprocessing: "Point-in-time feature construction (as known at prediction time); handling of missing history for new entities."
+algorithms: Survival and hazard models, gradient-boosted trees on temporal aggregates, sequence models over entity histories, change-point features as inputs.
+avoid: "Features computed with knowledge of the outcome date; static snapshots without temporal context."
+gaps: Early-warning evaluation with explicit lead-time and budget constraints is rare in anomaly detection research.
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

@@ -1,0 +1,26 @@
+# Dataset D311. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D311
+name: BMAD
+year: "2024"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, xdom]
+modality: [img, vol]
+size: "Six datasets: brain MRI, liver CT, retinal OCT, chest X-ray, pathology and retinal fundus"
+description: Medical anomaly detection benchmark with unified protocols and many baselines (CVPR 2024).
+applications: [HLT-275, HLT-276, HLT-277, HLT-278, HLT-285]
+links:
+  page:
+    url: "https://github.com/DorisBao/BMAD"
+    found_in_search: false
+  other: []
+references:
+  - ref: "[36]"
+    citation: "Bao, Sun, Deng, He, Zhang and Li (2024). BMAD: Benchmarks for medical anomaly detection. CVPR."
+    context: "Section 2.1.2: organizes datasets around clinical contexts, enabling scenario-based evaluation."
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

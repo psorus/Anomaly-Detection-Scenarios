@@ -1,0 +1,26 @@
+# Application SCI-335. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SCI-335
+name: Climate simulation output errors
+domain: SCI
+subdomain: Earth & climate sciences
+description: Numerical artifacts and implausible fields in large simulation outputs.
+properties:
+  mod: [rs, mts]  # Data modality
+  at: [log, glob]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

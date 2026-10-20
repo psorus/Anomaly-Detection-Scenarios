@@ -1,0 +1,26 @@
+# Application RET-363. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: RET-363
+name: Sales anomalies for demand forecasting
+domain: RET
+subdomain: E-commerce & retail
+description: Stockouts, promotions, events and data errors in sales histories that must be flagged or cleaned before forecasting.
+properties:
+  mod: [ts]  # Data modality
+  at: [ctx, cp]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [fix, xai]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [season, hier]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

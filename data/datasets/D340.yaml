@@ -1,0 +1,23 @@
+# Dataset D340. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D340
+name: Tabula Muris
+year: "2018"
+tier: app  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [tab]
+size: About 100,000 mouse cells from 20 organs with cell type annotations
+description: Single-cell atlas usable for rare cell type evaluation by holding out small populations.
+applications: [LIF-300]
+links:
+  page:
+    url: "https://tabula-muris.ds.czbiohub.org/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

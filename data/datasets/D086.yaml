@@ -1,0 +1,23 @@
+# Dataset D086. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D086
+name: HAI (HIL-based Augmented ICS)
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, rca]
+modality: [mts]
+size: Several releases of boiler, turbine and water treatment process data with attacks
+description: Hardware-in-the-loop testbed from the National Security Research Institute (Korea) with documented attack targets.
+applications: [SEC-083]
+links:
+  page:
+    url: "https://github.com/icsdataset/hai"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

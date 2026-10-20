@@ -1,0 +1,20 @@
+# TODO before the camera-ready: complete the author list of the paper and set the atlas release DOI (e.g. from Zenodo).
+cff-version: 1.2.0
+message: "If you use the atlas, cite the paper and the release you used; the release's catalog.json reproduces every number."
+title: "Anomaly Detection Scenario Atlas"
+type: dataset
+authors:
+  - name: "Anomaly Detection Scenario Atlas contributors"
+license: CC-BY-4.0
+repository-code: "https://github.com/OWNER/REPO"
+preferred-citation:
+  type: article
+  title: "We Need to Rethink Benchmarking in Anomaly Detection"
+  authors:
+    - family-names: "Röchner"
+    - family-names: "Klüttermann"
+      given-names: "Simon"
+  identifiers:
+    - type: other
+      value: "arXiv:2507.15584"
+  url: "https://arxiv.org/abs/2507.15584"

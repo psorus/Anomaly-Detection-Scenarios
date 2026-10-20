@@ -1,0 +1,27 @@
+# Scenario S20. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S20
+name: Sensor-network fault versus event discrimination
+family: Graphs, space & entities
+paper: ""
+summary: "Many spatially related sensors or network elements. A deviating node can be a broken sensor or a real local event; neighbors and topology decide which."
+rule:
+  - match:
+      unit:
+        any: [node]
+      mod:
+        any: [st, gr]
+      adv:
+        in: ["no"]
+    datasets_need: []
+metrics: "Node-level detection and localization accuracy; separate precision for faults versus events; time to localize."
+protocol: "Leave-region-out evaluation; synthetic fault injection on top of real event data; missing-data stress tests."
+preprocessing: "Spatial neighborhood definitions and topology as explicit inputs; per-node baselines."
+algorithms: Spatial interpolation residuals (kriging), graph neural forecasters, robust PCA on sensor matrices, majority-vote and consensus checks.
+avoid: Per-node univariate detectors that ignore neighbors.
+gaps: Benchmarks rarely label the fault-versus-event distinction.
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

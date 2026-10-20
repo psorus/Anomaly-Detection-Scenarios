@@ -1,0 +1,26 @@
+# Application HLT-279. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-279
+name: Mammography screening
+domain: HLT
+subdomain: Medical imaging
+description: "Masses and calcifications in screening mammograms; recall rate and missed cancers both matter."
+properties:
+  mod: [img]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [loc, rank, sev]  # Required outputs
+  oc: [fair, reg]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

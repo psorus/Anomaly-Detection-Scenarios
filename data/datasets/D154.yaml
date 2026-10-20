@@ -1,0 +1,23 @@
+# Dataset D154. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D154
+name: LEMMA-RCA
+year: "2024"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [rca]
+modality: [mts, seq]
+size: Metrics and logs from IT and industrial control systems with labeled root causes
+description: Large multi-domain, multi-modal root-cause analysis dataset.
+applications: [ITO-097, SEC-083]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2406.05375"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

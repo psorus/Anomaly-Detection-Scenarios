@@ -1,0 +1,21 @@
+# Dataset D149. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D149
+name: CFDR supercomputer logs (BGL, Thunderbird, Spirit, Liberty)
+year: "2007"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type]
+modality: [seq]
+size: Logs from four supercomputers with expert-tagged alert categories
+description: "\"What supercomputers say\" logs (Oliner and Stearley), distributed through the USENIX Computer Failure Data Repository."
+applications: [ITO-095, ITO-108]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

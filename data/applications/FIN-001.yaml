@@ -1,0 +1,29 @@
+# Application FIN-001. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-001
+name: Card-present (POS) fraud
+domain: FIN
+subdomain: Payments & cards
+description: In-store card transactions scored at authorization. Counterfeit or skimmed cards show impossible travel, unusual merchant categories and spend bursts relative to the cardholder's own history.
+properties:
+  mod: [tab, st]  # Data modality
+  at: [ctx, glob, seq]  # Anomaly type
+  unit: [rec, ent]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [sup, weak]  # Supervision
+  pt: hrt  # Processing time
+  ep: [prec, spec]  # Evaluation priority
+  out: [sev, xai]  # Required outputs
+  oc: [scale, drift, reg, hitl]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [mix, het]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[4]"
+    citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+    context: "Introduction and Example 2.3: financial fraud detection as an adversarial scenario."
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,22 @@
+# Dataset D024. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D024
+name: Shifts
+year: "2021"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [xdom]
+modality: [tab, txt, mts]
+size: Weather prediction, machine translation and vehicle motion with shifted test sets (Shifts 2.0 adds MS lesions and vessel power)
+description: Benchmark of real distributional shift and uncertainty across tasks (Malinin et al.).
+applications: [MLD-131, MLD-130]
+extra_scenarios: [S27]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

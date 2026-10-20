@@ -1,0 +1,25 @@
+# Dataset D142. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D142
+name: CATS (Controlled Anomalies Time Series)
+year: "2023"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: sim  # real | semi | sim
+annotations: [loc, rca, type]
+modality: [mts]
+size: "17 variables of a simulated system with 200 injected anomalies"
+description: Synthetic multivariate series with known root-cause channels and anomaly categories for detection and root-cause evaluation (Fleith).
+applications: [ITO-094, MFG-153]
+links:
+  page:
+    url: "https://zenodo.org/records/8338435"
+    found_in_search: true
+  other:
+    - label: Data (Hugging Face)
+      url: "https://huggingface.co/datasets/patrickfleith/controlled-anomalies-time-series-dataset"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

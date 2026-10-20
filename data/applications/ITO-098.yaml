@@ -1,0 +1,26 @@
+# Application ITO-098. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ITO-098
+name: Multi-dimensional KPI root-cause localization
+domain: ITO
+subdomain: Monitoring & AIOps
+description: When a total KPI drops, find the attribute combination (region, ISP, app version, device) that explains it. The anomaly is a set of cells in a data cube.
+properties:
+  mod: [tab, ts]  # Data modality
+  at: [ctx, clu]  # Anomaly type
+  unit: [sub]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [rca, loc]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [hier]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

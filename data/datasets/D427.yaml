@@ -1,0 +1,21 @@
+# Dataset D427. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D427
+name: TREC Incident Streams
+year: "2018"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, sev]
+modality: [txt]
+size: Tweets from dozens of crisis events labeled with information types and priority
+description: TREC-IS track on actionable information in emergency streams.
+applications: [WEB-394]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

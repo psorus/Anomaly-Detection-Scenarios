@@ -1,0 +1,26 @@
+# Application HLT-273. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-273
+name: Medical device malfunction detection
+domain: HLT
+subdomain: Patient monitoring
+description: Infusion pumps, ventilators and dialysis machines whose behavior deviates from specification.
+properties:
+  mod: [mts, seq]  # Data modality
+  at: [log, glob]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [rca]  # Required outputs
+  oc: [cert, edge]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

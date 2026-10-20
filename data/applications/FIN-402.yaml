@@ -1,0 +1,26 @@
+# Application FIN-402. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-402
+name: Fraudulent borrowers in lending-platform graphs
+domain: FIN
+subdomain: Lending platforms
+description: Users likely to default or commit fraud, identified from the contact graph of a consumer lending platform.
+properties:
+  mod: [gr, tab]  # Data modality
+  at: [str, loc]  # Anomaly type
+  unit: [node]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank]  # Required outputs
+  oc: [fair]  # Operational constraints
+  adv: conc  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

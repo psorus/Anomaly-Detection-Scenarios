@@ -1,0 +1,26 @@
+# Application SEC-072. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-072
+name: Web application attack detection
+domain: SEC
+subdomain: Application, web & cloud security
+description: HTTP requests carrying injection, cross-site scripting or path traversal payloads, scored inline by a web application firewall in anomaly mode.
+properties:
+  mod: [txt, seq]  # Data modality
+  at: [sem, glob]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov, sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [spec, prec]  # Evaluation priority
+  out: [type, loc]  # Required outputs
+  oc: [scale, drift]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

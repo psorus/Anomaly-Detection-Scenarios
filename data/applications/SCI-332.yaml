@@ -1,0 +1,26 @@
+# Application SCI-332. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SCI-332
+name: Oceanographic profile quality control
+domain: SCI
+subdomain: Earth & climate sciences
+description: Temperature and salinity profiles from floats checked for sensor drift and spikes before entering climate records.
+properties:
+  mod: [mts, st]  # Data modality
+  at: [glob, log]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [fix]  # Required outputs
+  oc: [rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [miss]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,26 @@
+# Application FIN-005. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-005
+name: Instant-payment rail fraud
+domain: FIN
+subdomain: Payments & cards
+description: Real-time rails (instant transfers, mobile money) settle in seconds and cannot be recalled. Scoring budget is tens of milliseconds and must use graph features of receiving accounts.
+properties:
+  mod: [tab, dg]  # Data modality
+  at: [ctx, str, clu]  # Anomaly type
+  unit: [rec, edge]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak, sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [prec, spec]  # Evaluation priority
+  out: [sev, xai]  # Required outputs
+  oc: [scale, drift, reg]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

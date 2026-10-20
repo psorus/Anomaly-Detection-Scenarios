@@ -1,0 +1,26 @@
+# Application MLD-122. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MLD-122
+name: Data pipeline quality monitoring
+domain: MLD
+subdomain: Data quality & data management
+description: Schema changes, volume drops, null spikes and distribution shifts in tables feeding analytics and ML. The faulty source must be found before reports go out.
+properties:
+  mod: [tab, ts]  # Data modality
+  at: [cp, log, glob]  # Anomaly type
+  unit: [win, rec]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec, time]  # Evaluation priority
+  out: [rca, loc]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [mix]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

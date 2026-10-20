@@ -1,0 +1,21 @@
+# Dataset D363. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D363
+name: INSTANCE
+year: "2021"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, sev]
+modality: [sig]
+size: About 1.3 million Italian seismic waveforms with metadata
+description: Italian seismic dataset for machine learning (INGV).
+applications: [SCI-329]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

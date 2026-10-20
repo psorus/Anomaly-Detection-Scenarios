@@ -1,0 +1,26 @@
+# Application MLD-126. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MLD-126
+name: Sensor data validation
+domain: MLD
+subdomain: Data quality & data management
+description: Stuck values, spikes, gaps and drifts in sensor archives that must be flagged or repaired before analysis.
+properties:
+  mod: [ts]  # Data modality
+  at: [glob, cp, log]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [fix]  # Required outputs
+  oc: [rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [miss]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

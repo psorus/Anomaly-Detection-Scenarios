@@ -1,0 +1,26 @@
+# Application SCI-320. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SCI-320
+name: Gravitational-wave detector glitches
+domain: SCI
+subdomain: Astronomy & astrophysics
+description: "Transient noise bursts in detector strain data that mimic or mask astrophysical signals; new glitch classes appear with detector changes."
+properties:
+  mod: [sig, img]  # Data modality
+  at: [glob, sem]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup, un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [type, disc]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

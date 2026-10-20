@@ -1,0 +1,26 @@
+# Application EDU-446. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: EDU-446
+name: Review bombing and rating manipulation
+domain: EDU
+subdomain: Sports & media
+description: Coordinated rating floods on films, games and apps.
+properties:
+  mod: [ts, txt]  # Data modality
+  at: [cp, clu]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [grp]  # Required outputs
+  oc: []  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

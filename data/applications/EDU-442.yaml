@@ -1,0 +1,26 @@
+# Application EDU-442. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: EDU-442
+name: Anti-doping athlete biological passport
+domain: EDU
+subdomain: Sports & media
+description: Longitudinal blood and steroid markers of an athlete compared with their own baseline to reveal doping.
+properties:
+  mod: [ts, tab]  # Data modality
+  at: [ctx, cp]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [xai]  # Required outputs
+  oc: [fair, reg]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [het, small]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,26 @@
+# Application ITO-108. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ITO-108
+name: HPC failure prediction
+domain: ITO
+subdomain: Monitoring & AIOps
+description: Node failures on supercomputers anticipated from system logs and hardware sensors so jobs can be checkpointed in time.
+properties:
+  mod: [seq, mts]  # Data modality
+  at: [seq, cp]  # Anomaly type
+  unit: [win, node]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time]  # Evaluation priority
+  out: [early, loc]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

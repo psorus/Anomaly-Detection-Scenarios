@@ -1,0 +1,26 @@
+# Application SAF-422. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SAF-422
+name: Radiation anomaly detection
+domain: SAF
+subdomain: Video surveillance & public safety
+description: Portal monitors and mobile detectors distinguishing illicit radioactive sources from natural background and medical isotopes.
+properties:
+  mod: [sig, st]  # Data modality
+  at: [glob, sem]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [loc, type]  # Required outputs
+  oc: [cert]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

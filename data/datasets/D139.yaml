@@ -1,0 +1,23 @@
+# Dataset D139. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D139
+name: Application Server Dataset (ASD)
+year: "2021"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, rca, ent]
+modality: [mts]
+size: "12 server entities with 19 metrics"
+description: Released with InterFusion (KDD 2021), with interpretation labels per anomaly.
+applications: [ITO-094]
+links:
+  page:
+    url: "https://github.com/zhhlee/InterFusion"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

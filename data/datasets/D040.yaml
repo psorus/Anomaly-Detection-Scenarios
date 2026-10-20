@@ -1,0 +1,21 @@
+# Dataset D040. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D040
+name: T-Finance
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [gr]
+size: "39,357 accounts with about 21 million transaction edges"
+description: Transaction network with fraud and money laundering labels (from the BWGNN paper).
+applications: [FIN-402, FIN-011]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

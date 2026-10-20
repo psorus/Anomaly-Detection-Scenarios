@@ -1,0 +1,26 @@
+# Application FIN-012. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-012
+name: Money mule account detection
+domain: FIN
+subdomain: Anti-money laundering & financial crime
+description: Accounts that receive many small transfers and forward them quickly, often newly opened by recruited students. Must detect early in the account lifecycle.
+properties:
+  mod: [dg, tab]  # Data modality
+  at: [str, clu, seq]  # Anomaly type
+  unit: [node, sub]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec, rec]  # Evaluation priority
+  out: [grp, xai, rank]  # Required outputs
+  oc: [reg, fair, cold]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,21 @@
+# Dataset D307. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D307
+name: SisFall
+year: "2017"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [mts]
+size: Falls and daily activities of 38 participants with accelerometers and gyroscope
+description: Simulated falls by young adults and daily activities including older participants.
+applications: [HLT-268]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

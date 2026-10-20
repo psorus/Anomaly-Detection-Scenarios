@@ -1,0 +1,25 @@
+# Scenario S24. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S24
+name: Embedded detection on constrained hardware
+family: Cross-cutting requirements
+paper: ""
+summary: "Detection runs on the device: sensors, vehicle ECUs, wearables, satellites. Memory, energy and compute budgets bound the model, and connectivity to update it is limited."
+rule:
+  - match:
+      oc:
+        any: [edge]
+      pt:
+        in: [hrt, "on"]
+    datasets_need: []
+metrics: "Detection performance versus model size, energy per inference and latency on target hardware; degradation after quantization."
+protocol: "Benchmarks on real microcontrollers or edge accelerators; long-running tests for drift without updates."
+preprocessing: "Fixed-point friendly features; minimal buffering."
+algorithms: Tiny autoencoders and one-class models, streaming statistical tests, quantized CNNs on spectrograms, half-space trees and other constant-memory streaming detectors.
+avoid: "Large pretrained backbones; memory-bank methods with growing state."
+gaps: Accuracy-efficiency trade-offs are rarely reported in anomaly detection benchmarks.
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

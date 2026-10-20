@@ -1,0 +1,28 @@
+# Dataset D018. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D018
+name: TAB (Time series Anomaly Benchmark)
+year: "2025"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [ts, mts]
+size: "29 multivariate datasets and 1,635 univariate series"
+description: Unified benchmark (VLDB 2025) of 46 univariate and 40 multivariate methods, including foundation-model detectors.
+applications: []
+extra_scenarios: [S02, S03]
+links:
+  page:
+    url: "https://github.com/decisionintelligence/TAB"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2506.18046"
+    - label: Paper (VLDB 2025)
+      url: "https://vldb.org/pvldb/volumes/18/paper/TAB%3A%20Unified%20Benchmarking%20of%20Time%20Series%20Anomaly%20Detection%20Methods"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,26 @@
+# Application TRN-227. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: TRN-227
+name: LiDAR anomaly segmentation for automated driving
+domain: TRN
+subdomain: Automated & connected driving
+description: Unknown objects on the road detected in LiDAR point clouds, which work in darkness and give exact distances but become sparse at range. Points must be segmented in real time for planning.
+properties:
+  mod: [pc]  # Data modality
+  at: [sem]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, unc]  # Required outputs
+  oc: [cert, shift, edge]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

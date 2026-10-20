@@ -1,0 +1,26 @@
+# Application FIN-009. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-009
+name: ATM cash-out and skimming detection
+domain: FIN
+subdomain: Payments & cards
+description: Coordinated withdrawals with many cards at few ATMs in a short window, and terminals compromised by skimmers. Group and location matter more than single withdrawals.
+properties:
+  mod: [st, tab]  # Data modality
+  at: [clu, seq, ctx]  # Anomaly type
+  unit: [sub, win, node]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un, weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, prec]  # Evaluation priority
+  out: [grp, loc]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

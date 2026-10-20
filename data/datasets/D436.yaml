@@ -1,0 +1,23 @@
+# Dataset D436. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D436
+name: CUAD
+year: "2021"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [txt]
+size: "510 commercial contracts with over 13,000 clause annotations in 41 categories"
+description: "Contract Understanding Atticus Dataset; clause labels support unusual-clause studies but there are no anomaly labels."
+applications: [BIZ-429]
+links:
+  page:
+    url: "https://www.atticusprojectai.org/cuad"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

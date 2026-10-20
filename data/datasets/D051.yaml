@@ -1,0 +1,21 @@
+# Dataset D051. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D051
+name: Lending Club loan data
+year: "2019"
+tier: app  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [rul]
+modality: [tab]
+size: Over two million peer-to-peer loans with final status
+description: Loan records with charged-off, default and late status, widely mirrored after the platform stopped publishing them.
+applications: [FIN-029, FIN-402]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,26 @@
+# Application ENE-212. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-212
+name: Non-revenue water and meter tampering
+domain: ENE
+subdomain: Water & wastewater
+description: Consumption series that suggest under-registering meters, tampering or illegal connections.
+properties:
+  mod: [ts, tab]  # Data modality
+  at: [ctx, loc]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank]  # Required outputs
+  oc: [fair]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [season]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

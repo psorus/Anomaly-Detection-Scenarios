@@ -1,0 +1,21 @@
+# Dataset D124. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D124
+name: Celeb-DF
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [vid]
+size: "590 real and 5,639 deepfake celebrity videos"
+description: Higher-quality deepfakes that are harder than earlier datasets.
+applications: [SEC-070]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

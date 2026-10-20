@@ -1,0 +1,29 @@
+# Application ENE-207. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-207
+name: Reactor component signature monitoring
+domain: ENE
+subdomain: Nuclear & heat networks
+description: Current and vibration signatures of drive mechanisms and pumps compared with healthy references.
+properties:
+  mod: [sig]  # Data modality
+  at: [dep, glob]  # Anomaly type
+  unit: [ser]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [type]  # Required outputs
+  oc: [cert]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [small]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[56]"
+    citation: Oluwasegun and Jung (2023). A multivariate Gaussian mixture model for anomaly detection in transient current signature of control element drive mechanism. Nuclear Engineering and Design.
+    context: "Section 3.2: one of the many proposed detection algorithms."
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

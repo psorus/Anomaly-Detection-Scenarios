@@ -1,0 +1,26 @@
+# Application ITO-104. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ITO-104
+name: Cloud cost anomaly detection
+domain: ITO
+subdomain: Monitoring & AIOps
+description: Unexpected jumps in cloud spend by account, service or tag, caused by misconfiguration, leaks or abuse.
+properties:
+  mod: [ts]  # Data modality
+  at: [cp, ctx]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [xai, rca]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [hier, season]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

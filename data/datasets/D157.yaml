@@ -1,0 +1,25 @@
+# Dataset D157. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D157
+name: JetBrains crash report dataset (S3M)
+year: "2021"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [grp]
+modality: [txt, seq]
+size: Stack traces from JetBrains products labeled with report groups
+description: Released with the S3M stack trace similarity model (MSR 2021) for crash deduplication.
+applications: [ITO-116]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2103.10526"
+    - label: Conference page (MSR 2021)
+      url: "https://2021.msrconf.org/details/msr-2021-technical-papers/26/S3M-Siamese-Stack-Trace-Similarity-Measure"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

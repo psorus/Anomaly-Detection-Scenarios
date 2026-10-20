@@ -1,0 +1,26 @@
+# Application MFG-159. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-159
+name: Welding process monitoring
+domain: MFG
+subdomain: Process monitoring & quality
+description: "Current, voltage, acoustic and image signals of each weld seam; defective welds flagged before parts move on."
+properties:
+  mod: [sig, mts]  # Data modality
+  at: [seq, glob]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov, sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [type]  # Required outputs
+  oc: [edge]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

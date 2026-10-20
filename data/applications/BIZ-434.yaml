@@ -1,0 +1,26 @@
+# Application BIZ-434. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: BIZ-434
+name: Time and attendance fraud
+domain: BIZ
+subdomain: Business processes & HR
+description: Buddy punching and fabricated hours in time-tracking systems.
+properties:
+  mod: [seq, img]  # Data modality
+  at: [log, clu]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [xai]  # Required outputs
+  oc: [priv, fair]  # Operational constraints
+  adv: conc  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

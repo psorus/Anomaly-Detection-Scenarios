@@ -1,0 +1,23 @@
+# Dataset D343. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D343
+name: Genome in a Bottle truth sets
+year: "2014"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [seq, tab]
+size: High-confidence variant calls for reference genomes HG001 to HG007
+description: NIST benchmark used to evaluate variant callers and artifact filters.
+applications: [LIF-301]
+links:
+  page:
+    url: "https://www.nist.gov/programs-projects/genome-bottle"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,26 @@
+# Application FIN-038. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-038
+name: Telematics data tampering
+domain: FIN
+subdomain: Insurance
+description: "Usage-based insurance data that is spoofed: phone not in the car, GPS manipulation, emulator traces."
+properties:
+  mod: [mts, st]  # Data modality
+  at: [dep, glob, log]  # Anomaly type
+  unit: [ser]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [xai]  # Required outputs
+  oc: [rob]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [miss]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

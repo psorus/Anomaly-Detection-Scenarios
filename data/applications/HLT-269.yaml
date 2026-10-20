@@ -1,0 +1,30 @@
+# Application HLT-269. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-269
+name: Remote patient monitoring
+domain: HLT
+subdomain: Patient monitoring
+description: Home weight, blood pressure and activity series of chronic patients (heart failure, COPD) that signal decompensation days in advance.
+properties:
+  mod: [ts, mts]  # Data modality
+  at: [cp, ctx]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [early, sev]  # Required outputs
+  oc: [priv, fair, rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het, miss]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[70]"
+    citation: Subha and Sathiaseelan (2023). Effective anomaly detection approach to classify noisy data using robust noise detection and removal technique in IoT healthcare data. SN Computer Science.
+    context: "Section 4.1: robustness to noise in healthcare as an evaluation objective."
+    url: "https://doi.org/10.1007/s42979-023-01890-2"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

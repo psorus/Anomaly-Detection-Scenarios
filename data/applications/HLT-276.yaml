@@ -1,0 +1,26 @@
+# Application HLT-276. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-276
+name: Chest X-ray abnormality triage
+domain: HLT
+subdomain: Medical imaging
+description: Radiographs prioritized by abnormality so urgent studies are read first. Performance must hold across hospitals and patient groups.
+properties:
+  mod: [img]  # Data modality
+  at: [glob, sem]  # Anomaly type
+  unit: [obj, reg]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup, nov]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, rank]  # Required outputs
+  oc: [fair, shift, reg]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

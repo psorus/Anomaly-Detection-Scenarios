@@ -1,0 +1,25 @@
+# Scenario S32. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S32
+name: Supervised rare-event detection with known classes
+family: Cross-cutting requirements
+paper: ""
+summary: Enough labeled anomalies exist to train a classifier for known types (defect patterns, disease classes, flare events), but the class imbalance is severe and unseen types still occur.
+rule:
+  - match:
+      sup:
+        first: [sup]
+      adv:
+        in: ["no", conc]
+    datasets_need: []
+metrics: "PR-AUC and recall at fixed precision per class; macro-averaged metrics across anomaly types; open-set rejection rate for unseen types; calibration."
+protocol: "Stratified splits that keep rare classes represented, or temporal splits when classes drift; held-out classes to test open-set behavior; confidence intervals for rare classes."
+preprocessing: "Standard supervised pipelines; resampling or cost weighting chosen on validation data, not test data."
+algorithms: Gradient-boosted trees and deep classifiers with focal or cost-sensitive losses, one-vs-rest with an unsupervised novelty fallback, semi-supervised deviation networks for partially labeled data.
+avoid: "Accuracy as a metric; oversampling before the train-test split."
+gaps: Supervised and unsupervised anomaly detection are rarely compared on the same scenario-level benchmarks.
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

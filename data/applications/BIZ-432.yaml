@@ -1,0 +1,29 @@
+# Application BIZ-432. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: BIZ-432
+name: Interview answer outlier detection
+domain: BIZ
+subdomain: Business processes & HR
+description: Off-topic or atypical interview answers detected before automated scoring, so candidates are not scored unfairly.
+properties:
+  mod: [txt]  # Data modality
+  at: [loc, sem]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [xai]  # Required outputs
+  oc: [fair]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references:
+  - ref: "[71]"
+    citation: Dai, Jayaratne and Jayatilleke (2023). Question-aware outlier answer detection for fairer AI scoring of interviews. SIOP Annual Conference.
+    context: "Section 4.1: fairness in business screening as an evaluation objective."
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,21 @@
+# Dataset D389. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D389
+name: XD-Violence
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: weak  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type]
+modality: [vid, sig]
+size: "4,754 videos (217 hours) with audio and six violence types"
+description: Audio-visual violence detection with weak labels.
+applications: [SAF-414]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

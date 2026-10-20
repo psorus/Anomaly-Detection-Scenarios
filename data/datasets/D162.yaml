@@ -1,0 +1,23 @@
+# Dataset D162. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D162
+name: Label errors in test sets (Northcutt et al.)
+year: "2021"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [fix]
+modality: [img, txt, sig]
+size: Verified label errors in 10 common datasets (ImageNet, CIFAR, QuickDraw, Amazon reviews and others)
+description: Confident-learning candidates validated by crowdworkers, with corrected labels.
+applications: [MLD-125]
+links:
+  page:
+    url: "https://labelerrors.com/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

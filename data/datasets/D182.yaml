@@ -1,0 +1,23 @@
+# Dataset D182. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D182
+name: Real-IAD
+year: "2024"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type, xdom]
+modality: [img]
+size: "150,000 images of 30 objects from five viewpoints"
+description: Large multi-view dataset with defect types and a fully unsupervised setting with contaminated training data (CVPR 2024).
+applications: [MFG-141, MFG-138]
+links:
+  page:
+    url: "https://arxiv.org/abs/2403.12580"
+    found_in_search: true
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,29 @@
+# Scenario S11. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S11
+name: Investigation queues for concealed misconduct
+family: Adversarial anomalies
+paper: Example 2.3
+summary: Hidden wrongdoing (money laundering, fraud, evasion, insider threats) surfaced as a ranked queue for scarce investigators. Every flag must be justified, and decisions may affect people.
+rule:
+  - match:
+      adv:
+        in: [adapt, conc]
+      pt:
+        in: [bat, "on"]
+      ep:
+        any: [prec]
+      out:
+        any: [rank, xai]
+    datasets_need: []
+metrics: "Precision@k at the real daily investigation budget; cases confirmed per analyst hour; recall of known typologies; explanation fidelity; disparity of flag rates across protected groups."
+protocol: "Budget-constrained evaluation; simulated analyst feedback loops (active learning); temporal holdout; keep linked cases in the same fold."
+preprocessing: "Entity resolution and aggregation across accounts; peer-group definitions as an explicit, documented component."
+algorithms: Isolation Forest and kNN baselines with peer-group features, local methods (LOF) for locally hidden anomalies, active anomaly discovery, graph features, supervised models trained on past investigations with care for selection bias.
+avoid: "Global extreme-value detectors only; ROC-AUC alone (it ignores the budget at the top of the list)."
+gaps: "Labels reflect past investigation choices (selection bias); few public datasets; fairness and explanation quality are rarely benchmarked."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

@@ -1,0 +1,26 @@
+# Application SEC-077. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-077
+name: DeFi exploit detection
+domain: SEC
+subdomain: Application, web & cloud security
+description: Flash-loan attacks, price-oracle manipulation and reentrancy in smart-contract transaction traces. Detection must happen within a block to allow front-running defenses.
+properties:
+  mod: [dg, code, seq]  # Data modality
+  at: [seq, str]  # Anomaly type
+  unit: [rec, sub]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: hrt  # Processing time
+  ep: [time, prec]  # Evaluation priority
+  out: [type, xai]  # Required outputs
+  oc: []  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

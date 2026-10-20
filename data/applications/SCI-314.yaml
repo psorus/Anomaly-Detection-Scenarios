@@ -1,0 +1,26 @@
+# Application SCI-314. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SCI-314
+name: Transient anomaly detection in survey alert streams
+domain: SCI
+subdomain: Astronomy & astrophysics
+description: Millions of alerts per night from time-domain surveys. Rare, unknown transients must be found quickly for follow-up telescopes, which are scarce.
+properties:
+  mod: [ts, img]  # Data modality
+  at: [sem, seq]  # Anomaly type
+  unit: [ser]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un, weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec, time]  # Evaluation priority
+  out: [rank, disc]  # Required outputs
+  oc: [scale, div, hitl]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [miss]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

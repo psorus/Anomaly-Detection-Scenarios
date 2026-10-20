@@ -1,0 +1,26 @@
+# Application RET-358. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: RET-358
+name: Fake review and opinion spam detection
+domain: RET
+subdomain: E-commerce & retail
+description: "Paid or incentivized reviews written by coordinated groups. Single reviews look plausible; reviewer-product graphs and burst timing expose the groups."
+properties:
+  mod: [txt, gr, tab]  # Data modality
+  at: [clu, str, sem]  # Anomaly type
+  unit: [rec, ent, sub]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [weak, un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [grp, xai]  # Required outputs
+  oc: [drift]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

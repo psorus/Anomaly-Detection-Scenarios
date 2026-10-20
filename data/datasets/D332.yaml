@@ -1,0 +1,23 @@
+# Dataset D332. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D332
+name: RSNA Intracranial Hemorrhage Detection
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [vol, img]
+size: Over 25,000 head CT exams with five hemorrhage subtypes
+description: Kaggle challenge with slice-level labels from radiologists.
+applications: [HLT-282]
+links:
+  page:
+    url: "https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

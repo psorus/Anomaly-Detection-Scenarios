@@ -1,0 +1,23 @@
+# Dataset D180. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D180
+name: MVTec LOCO AD
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type, xdom]
+modality: [img]
+size: "3,644 images in 5 categories with structural and logical anomalies"
+description: Logical constraint violations (missing, misplaced or wrong components) evaluated with sPRO.
+applications: [MFG-139]
+links:
+  page:
+    url: "https://www.mvtec.com/company/research/datasets/mvtec-loco"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

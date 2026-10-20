@@ -1,0 +1,23 @@
+# Dataset D058. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D058
+name: Statlog German Credit
+year: "1994"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [prot]
+modality: [tab]
+size: "1,000 loan applicants with 20 attributes"
+description: "Credit risk data with personal status, sex and age; a standard fairness benchmark."
+applications: [FIN-029]
+links:
+  page:
+    url: "https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

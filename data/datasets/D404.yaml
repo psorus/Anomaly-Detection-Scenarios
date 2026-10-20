@@ -1,0 +1,25 @@
+# Dataset D404. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D404
+name: TwiBot-22
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [gr, txt, tab]
+size: About one million Twitter users in a heterogeneous graph with bot labels
+description: Graph-based bot detection benchmark (NeurIPS 2022).
+applications: [WEB-385]
+links:
+  page:
+    url: "https://arxiv.org/abs/2206.04564"
+    found_in_search: true
+  other:
+    - label: Paper (NeurIPS 2022)
+      url: "https://proceedings.neurips.cc/paper_files/paper/2022/hash/e4fd610b1d77699a02df07ae97de992a-Abstract-Datasets_and_Benchmarks.html"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

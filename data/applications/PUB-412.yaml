@@ -1,0 +1,26 @@
+# Application PUB-412. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: PUB-412
+name: Election result anomaly screening
+domain: PUB
+subdomain: Official statistics & elections
+description: Polling-station results with unusual turnout, vote shares or digit patterns, flagged for review rather than as proof of fraud.
+properties:
+  mod: [tab, st]  # Data modality
+  at: [loc, glob]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [xai]  # Required outputs
+  oc: [fair]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [hier]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

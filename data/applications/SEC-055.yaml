@@ -1,0 +1,26 @@
+# Application SEC-055. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-055
+name: Wireless intrusion and rogue access points
+domain: SEC
+subdomain: Network security
+description: Deauthentication floods, evil-twin access points and spoofed MAC addresses identified from frames and RF fingerprints.
+properties:
+  mod: [sig, tab]  # Data modality
+  at: [glob, ctx]  # Anomaly type
+  unit: [rec, ent]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov, sup]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [loc, type]  # Required outputs
+  oc: [edge]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,21 @@
+# Dataset D135. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D135
+name: PAN plagiarism corpus 2011
+year: "2011"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: [loc]
+modality: [txt]
+size: Thousands of documents with artificial and simulated plagiarism cases
+description: Corpus for external and intrinsic plagiarism detection with passage-level annotations.
+applications: [EDU-440]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

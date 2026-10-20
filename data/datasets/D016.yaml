@@ -1,0 +1,26 @@
+# Dataset D016. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D016
+name: TimeEval benchmark
+year: "2022"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [ts, mts]
+size: "976 time series from real and synthetic sources"
+description: Evaluation of 71 algorithms (Schmidl, Wenig, Papenbrock, VLDB 2022).
+applications: []
+extra_scenarios: [S02, S03, S31]
+links:
+  page:
+    url: "https://www.hpi.uni-potsdam.de/naumann/s/time-series-anomaly-detection-evaluation.html"
+    found_in_search: true
+  other:
+    - label: Documentation
+      url: "https://timeeval.readthedocs.io/en/latest/user/usage-timeeval.html"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

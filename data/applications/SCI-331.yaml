@@ -1,0 +1,26 @@
+# Application SCI-331. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SCI-331
+name: Tsunami buoy anomaly detection
+domain: SCI
+subdomain: Earth & climate sciences
+description: Pressure sensors on the ocean floor detecting tsunami waves among tides and noise.
+properties:
+  mod: [ts]  # Data modality
+  at: [glob]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [sev]  # Required outputs
+  oc: [cert]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

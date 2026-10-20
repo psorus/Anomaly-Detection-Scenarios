@@ -1,0 +1,26 @@
+# Application SEC-086. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-086
+name: In-vehicle network intrusion detection (CAN bus)
+domain: SEC
+subdomain: Industrial & cyber-physical security
+description: Injected, fuzzed or spoofed frames on vehicle buses detected on resource-limited ECUs within milliseconds.
+properties:
+  mod: [seq, mts]  # Data modality
+  at: [seq, ctx, dep]  # Anomaly type
+  unit: [rec, win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov, sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [spec, time]  # Evaluation priority
+  out: [type]  # Required outputs
+  oc: [edge, cert]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,26 @@
+# Application SAF-420. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SAF-420
+name: Abandoned object detection
+domain: SAF
+subdomain: Video surveillance & public safety
+description: Unattended items in airports and stations detected from video with scene context.
+properties:
+  mod: [vid]  # Data modality
+  at: [sem, ctx]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: [priv]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

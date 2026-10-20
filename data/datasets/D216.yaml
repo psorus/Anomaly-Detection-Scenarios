@@ -1,0 +1,25 @@
+# Dataset D216. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D216
+name: Anomaly-ShapeNet
+year: "2024"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: [loc, xdom]
+modality: [pc]
+size: Over 1,600 point clouds in 40 categories with sculpted anomalies
+description: ShapeNet objects with bulges, concavities, cracks, holes and breaks (CVPR 2024).
+applications: [MFG-140]
+links:
+  page: {}
+  other:
+    - label: Paper (CVPR 2024)
+      url: "https://openaccess.thecvf.com/content/CVPR2024/html/Li_Towards_Scalable_3D_Anomaly_Detection_and_Localization_A_Benchmark_via_CVPR_2024_paper.html"
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2311.14897"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,26 @@
+# Application TRN-240. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: TRN-240
+name: Public transit operations anomalies
+domain: TRN
+subdomain: Traffic & urban mobility
+description: Bunching, delays and route deviations in automatic vehicle location data.
+properties:
+  mod: [st, ts]  # Data modality
+  at: [ctx, cp]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time]  # Evaluation priority
+  out: [rca]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [season]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

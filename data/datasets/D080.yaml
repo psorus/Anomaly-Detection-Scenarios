@@ -1,0 +1,26 @@
+# Dataset D080. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D080
+name: ToN-IoT
+year: "2020"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [tab, mts, seq]
+size: IoT/IIoT telemetry, operating system logs and network traffic
+description: Heterogeneous testbed data with nine attack types across telemetry, host and network sources.
+applications: [SEC-087, SEC-084]
+links:
+  page:
+    url: "https://research.unsw.edu.au/projects/toniot-datasets"
+    found_in_search: false
+  other: []
+references:
+  - ref: "[37]"
+    citation: Sarhan, Layeghy, Moustafa and Portmann (2021). NetFlow datasets for machine learning-based network intrusion detection systems. BDTA/WiCON 2020.
+    context: "Section 2.1.2 names this dataset among those that report performance per attack category, as analyzed in [37]. Analyst workload and false-positive costs remain unaddressed."
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

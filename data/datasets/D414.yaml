@@ -1,0 +1,23 @@
+# Dataset D414. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D414
+name: JODIE interaction datasets (Reddit, Wikipedia, MOOC)
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [ent]
+modality: [dg]
+size: Timestamped user-item interactions with ban or dropout labels
+description: Temporal interaction networks for predicting state changes such as bans (KDD 2019).
+applications: [WEB-392]
+links:
+  page:
+    url: "https://snap.stanford.edu/jodie/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

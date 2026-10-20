@@ -1,0 +1,23 @@
+# Dataset D310. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D310
+name: VitalDB
+year: "2022"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [mts, sig]
+size: "6,388 surgical cases with high-resolution vital sign waveforms"
+description: "Open intraoperative vital signs database (Seoul National University Hospital); hypotension events must be derived."
+applications: [HLT-272]
+links:
+  page:
+    url: "https://vitaldb.net/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

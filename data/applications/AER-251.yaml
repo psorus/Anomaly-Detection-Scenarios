@@ -1,0 +1,26 @@
+# Application AER-251. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: AER-251
+name: Flight data monitoring for unknown safety events
+domain: AER
+subdomain: Aviation
+description: Recorded flight parameters screened for exceedances and for unusual flights that no predefined rule covers. Safety analysts want a diverse set of explained events.
+properties:
+  mod: [mts]  # Data modality
+  at: [seq, ctx, dep]  # Anomaly type
+  unit: [ser, win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, xai, rank]  # Required outputs
+  oc: [reg, div]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

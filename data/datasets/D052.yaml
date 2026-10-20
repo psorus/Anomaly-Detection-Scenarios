@@ -1,0 +1,21 @@
+# Dataset D052. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D052
+name: YelpChi
+year: "2015"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [gr, txt]
+size: "45,954 reviews in three relation graphs, 14.5% filtered as spam"
+description: "Yelp hotel and restaurant reviews labeled by Yelp's filter; the standard multi-relational fraud graph (CARE-GNN)."
+applications: [RET-358]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

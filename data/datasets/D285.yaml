@@ -1,0 +1,21 @@
+# Dataset D285. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D285
+name: Porto taxi trajectories
+year: "2015"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [st]
+size: "1.7 million taxi trips from 442 taxis"
+description: "ECML/PKDD 2015 challenge trajectories; detours must be injected or labeled."
+applications: [TRN-237]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,21 @@
+# Dataset D123. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D123
+name: DFDC (Deepfake Detection Challenge)
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [vid]
+size: Over 100,000 clips from 3,426 paid actors
+description: Meta's challenge data with diverse manipulations and augmentations.
+applications: [SEC-070]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

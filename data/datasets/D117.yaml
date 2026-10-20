@@ -1,0 +1,21 @@
+# Dataset D117. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D117
+name: SpamAssassin Public Corpus
+year: "2002"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [txt]
+size: About 6,000 emails labeled spam or ham
+description: Classic email spam corpus with easy and hard ham.
+applications: [SEC-079]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,21 @@
+# Dataset D322. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D322
+name: OCT2017 (Kermany)
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [img]
+size: About 84,000 retinal OCT images in four classes
+description: Normal, CNV, DME and drusen images used in retinal anomaly benchmarks.
+applications: [HLT-277]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

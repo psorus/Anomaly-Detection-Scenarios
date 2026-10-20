@@ -1,0 +1,23 @@
+# Dataset D119. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D119
+name: SMS Spam Collection
+year: "2011"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [txt]
+size: "5,574 SMS messages, 747 spam"
+description: UCI collection of tagged SMS messages.
+applications: [SEC-082]
+links:
+  page:
+    url: "https://archive.ics.uci.edu/dataset/228/sms+spam+collection"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

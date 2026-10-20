@@ -1,0 +1,26 @@
+# Application WEB-388. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: WEB-388
+name: Misinformation early detection
+domain: WEB
+subdomain: Social media & online platforms
+description: False stories identified early from content and propagation patterns, before they spread widely.
+properties:
+  mod: [txt, dg]  # Data modality
+  at: [sem, seq]  # Anomaly type
+  unit: [obj, ser]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time]  # Evaluation priority
+  out: [early, xai]  # Required outputs
+  oc: [fair]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

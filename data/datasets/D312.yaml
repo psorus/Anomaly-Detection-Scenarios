@@ -1,0 +1,25 @@
+# Dataset D312. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D312
+name: MedIAnomaly
+year: "2024"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, xdom]
+modality: [img]
+size: Seven datasets across five modalities (X-ray, MRI, fundus, dermoscopy, pathology)
+description: Comparative study of 30 methods with unified preprocessing (Cai et al., Medical Image Analysis 2025).
+applications: [HLT-276, HLT-275, HLT-277, HLT-280, HLT-278]
+links:
+  page:
+    url: "https://zenodo.org/records/12677223"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2404.04518"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

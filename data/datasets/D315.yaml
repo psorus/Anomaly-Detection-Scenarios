@@ -1,0 +1,21 @@
+# Dataset D315. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D315
+name: BraTS
+year: "2012"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [vol]
+size: Multi-parametric MRI of gliomas with tumor sub-region masks (yearly editions)
+description: Brain tumor segmentation challenge data, widely used as anomalies against healthy references.
+applications: [HLT-275]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

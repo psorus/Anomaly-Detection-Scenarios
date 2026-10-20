@@ -1,0 +1,26 @@
+# Application ENE-198. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-198
+name: Wind turbine early fault detection
+domain: ENE
+subdomain: Renewables & storage
+description: "SCADA channels (temperatures, power curve, pitch) monitored for gearbox, generator and bearing faults months ahead; turbines differ by site and model."
+properties:
+  mod: [mts]  # Data modality
+  at: [dep, ctx, cp]  # Anomaly type
+  unit: [win, ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [early, rca]  # Required outputs
+  oc: [shift, drift, rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het, miss]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

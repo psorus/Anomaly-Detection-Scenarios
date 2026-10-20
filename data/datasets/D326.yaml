@@ -1,0 +1,21 @@
+# Dataset D326. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D326
+name: Camelyon17-WILDS
+year: "2021"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [xdom]
+modality: [img]
+size: "455,954 patches from five hospitals"
+description: Patch-level tumor detection under hospital shift (part of WILDS).
+applications: [HLT-278]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

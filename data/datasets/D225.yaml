@@ -1,0 +1,31 @@
+# Dataset D225. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D225
+name: PyScrew
+year: "2025"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, xdom]
+modality: [mts]
+size: Six scenarios with about 34,000 screw-driving operations
+description: Torque, angle and gradient curves from industrial screw driving on thermoplastic housings, with labeled conditions (thread wear, friction, assembly faults, molding parameters).
+applications: [MFG-161]
+links:
+  page:
+    url: "https://doi.org/10.5281/zenodo.14729547"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2505.11925"
+    - label: Code (GitHub)
+      url: "https://github.com/nikolaiwest/pyscrew"
+    - label: Python package
+      url: "https://pypi.org/project/pyscrew/"
+    - label: Latest data version (Zenodo)
+      url: "https://zenodo.org/records/15393134"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

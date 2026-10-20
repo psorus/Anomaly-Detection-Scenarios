@@ -1,0 +1,27 @@
+# Scenario S01. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S01
+name: Hard real-time interlocks on signals and sensor streams
+family: Sequential monitoring
+paper: Example 2.1 (hard real-time variant)
+summary: "A score on a numeric stream gates an automatic action within milliseconds: brake, trip, cut off, kill switch. Failure modes are often known, normal data is plentiful, and adversaries are absent."
+rule:
+  - match:
+      pt:
+        in: [hrt]
+      mod:
+        any: [ts, mts, sig]
+      adv:
+        in: ["no"]
+    datasets_need: []
+metrics: "Event-wise recall at a fixed false-trip rate per operating hour; detection delay distribution (median and worst case); false trips per 1,000 hours. Avoid point-adjusted F1, which inflates scores for long events."
+protocol: "Strictly time-ordered splits; evaluate on whole events, not points; report worst-case latency on target hardware; stress tests with injected known faults at controlled magnitudes."
+preprocessing: "Causal only: no centered windows, no normalization statistics from the future. Feature extraction must fit the latency budget (the paper's Section 3.1 example)."
+algorithms: "Residuals of lightweight forecasters, CUSUM/EWMA and Page-Hinkley tests, one-class models on short windows, small autoencoders or TCNs quantized for embedded targets; known faults via supervised classifiers with a novelty fallback."
+avoid: "Heavy ensembles whose combined cost exceeds the latency budget; transformers over long contexts; methods that need the full series (offline matrix profile, bidirectional models)."
+gaps: "Benchmarks rarely report latency or hardware cost; few datasets measure false trips per hour of normal operation; transfer of thresholds across machines is unstudied."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

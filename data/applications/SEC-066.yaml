@@ -1,0 +1,26 @@
+# Application SEC-066. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-066
+name: Credential stuffing and brute-force detection
+domain: SEC
+subdomain: Identity, access & insider threat
+description: Distributed login attempts with leaked credentials across many accounts, often from residential proxies.
+properties:
+  mod: [ts, tab]  # Data modality
+  at: [clu, cp]  # Anomaly type
+  unit: [win, sub]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un, sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [spec, time]  # Evaluation priority
+  out: [grp]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

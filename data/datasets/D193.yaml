@@ -1,0 +1,21 @@
+# Dataset D193. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D193
+name: TILDA textile texture database
+year: "1996"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [img]
+size: Images of eight textile types with several defect classes
+description: Classic textile defect database from the University of Freiburg.
+applications: [MFG-144]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

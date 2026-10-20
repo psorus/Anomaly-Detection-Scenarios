@@ -1,0 +1,21 @@
+# Dataset D255. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D255
+name: NASA battery aging data
+year: "2007"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [rul, sev, ent]
+modality: [ts, mts]
+size: Charge, discharge and impedance cycles of Li-ion cells until end of life
+description: "Prognostics data from NASA Ames; capacity fade gives graded health."
+applications: [ENE-202, ENE-203]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

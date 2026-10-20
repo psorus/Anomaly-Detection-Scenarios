@@ -1,0 +1,30 @@
+# Application ENE-193. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-193
+name: Inverter and distributed energy resource anomalies
+domain: ENE
+subdomain: Power grid
+description: Rooftop solar and battery inverters misbehaving or misconfigured, affecting grid voltage.
+properties:
+  mod: [mts]  # Data modality
+  at: [dep, ctx]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[46]"
+    citation: Idrisov, Okeke, Albaseer, Abdallah and Ibanez (2025). Leveraging digital twin and machine learning techniques for anomaly detection in power electronics dominated grid.
+    context: "Section 3: an end-to-end pipeline built from distinct components."
+    url: "https://arxiv.org/abs/2501.13474"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

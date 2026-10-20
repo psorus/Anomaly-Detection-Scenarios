@@ -1,0 +1,24 @@
+# Scenario S36. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S36
+name: Few-shot and zero-shot transfer to new products, machines or sites
+family: Cross-cutting requirements
+paper: ""
+summary: A detector must work on a product, machine, hospital or operating condition it has seen few or no normal samples of. Typical when lines change often, fleets are heterogeneous or models move between sites.
+rule:
+  - match:
+      oc:
+        any: [cold, shift]
+    datasets_need:
+      - [xdom]
+metrics: "AUROC and AU-PRO per target domain; performance as a function of shots (0, 1, 2, 4, 8); gap between source and target domains; harmonic mean over domains as in the DCASE machine condition monitoring tasks."
+protocol: "Hold out whole categories, machines, sites or operating conditions; repeat few-shot draws and report variance; disclose pretraining data, since foundation models may have seen benchmark images; thresholds set without target anomalies."
+preprocessing: "No statistics from target-domain test data unless the protocol allows it; domain or attribute information as explicit inputs where available."
+algorithms: Vision-language zero-shot detectors (WinCLIP, AnomalyCLIP, AdaCLIP), memory banks over foundation-model features built from a few shots, attribute-conditioned embeddings for machine sounds, meta-learning, test-time adaptation, time-series foundation models.
+avoid: "Tuning on target-domain anomalies; reporting only in-domain results; comparing zero-shot methods whose backbones were pretrained on overlapping data."
+gaps: "Pretraining leakage is rarely checked; outside vision and machine sound there are few benchmarks with explicit domain splits."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

@@ -1,0 +1,26 @@
+# Application FIN-024. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-024
+name: Trading algorithm malfunction (kill switch)
+domain: FIN
+subdomain: Capital markets & trading
+description: An algorithm behaves outside its expected envelope of positions, message rates and P&L. Detection triggers an automatic kill switch.
+properties:
+  mod: [mts, seq]  # Data modality
+  at: [glob, cp, ctx]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [sev, rca]  # Required outputs
+  oc: [cert, reg]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,25 @@
+# Dataset D305. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D305
+name: TUH EEG Seizure Corpus (TUSZ)
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type]
+modality: [sig, mts]
+size: Thousands of clinical EEG sessions with seizure onset and offset annotations
+description: Temple University Hospital corpus, the largest public seizure detection dataset.
+applications: [HLT-267]
+links:
+  page:
+    url: "https://isip.piconepress.com/projects/nedc/html/tuh_eeg"
+    found_in_search: true
+  other:
+    - label: Downloads
+      url: "https://isip.piconepress.com/projects/tuh_eeg/html/downloads.shtml"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

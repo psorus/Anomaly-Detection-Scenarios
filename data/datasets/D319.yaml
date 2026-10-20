@@ -1,0 +1,21 @@
+# Dataset D319. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D319
+name: NIH ChestX-ray14
+year: "2017"
+tier: bench  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, loc]
+modality: [img]
+size: "112,120 frontal X-rays of 30,805 patients with 14 text-mined labels"
+description: "NIH Clinical Center images; a small subset has bounding boxes."
+applications: [HLT-276]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

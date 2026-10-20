@@ -1,0 +1,26 @@
+# Dataset D008. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D008
+name: NLP-ADBench
+year: "2024"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [txt]
+size: "8 datasets: AG News, BBC News, Email Spam, Emotion, Movie Review, N24News, SMS Spam, Yelp Review"
+description: "Text anomaly detection benchmark with 19 algorithms; two-step methods on transformer embeddings beat end-to-end models and no method wins everywhere."
+applications: []
+extra_scenarios: [S30]
+links:
+  page:
+    url: "https://github.com/USC-FORTIS/NLP-ADBench"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2412.04784"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

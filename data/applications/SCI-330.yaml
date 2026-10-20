@@ -1,0 +1,26 @@
+# Application SCI-330. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SCI-330
+name: Volcanic unrest detection
+domain: SCI
+subdomain: Earth & climate sciences
+description: Ground deformation, gas and seismicity changes that precede eruptions.
+properties:
+  mod: [rs, mts]  # Data modality
+  at: [cp]  # Anomaly type
+  unit: [win, reg]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, early]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

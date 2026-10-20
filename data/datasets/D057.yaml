@@ -1,0 +1,21 @@
+# Dataset D057. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D057
+name: Audit risk data (UCI)
+year: "2018"
+tier: app  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: About 780 firms with audit risk factors and fraud-risk labels
+description: Data from an Indian audit office for selecting suspicious firms (Hooda et al.).
+applications: [PUB-403, FIN-039]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

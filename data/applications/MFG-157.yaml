@@ -1,0 +1,26 @@
+# Application MFG-157. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-157
+name: Additive manufacturing in-situ monitoring
+domain: MFG
+subdomain: Process monitoring & quality
+description: Melt-pool signals, layer images and thermal video during 3D printing reveal porosity, spatter and recoater faults layer by layer.
+properties:
+  mod: [img, mts, vid]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [reg, win]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

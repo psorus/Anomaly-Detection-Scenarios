@@ -1,0 +1,23 @@
+# Dataset D373. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D373
+name: xBD
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, sev, type]
+modality: [rs, img]
+size: About 850,000 building polygons across 19 disasters with four damage levels
+description: Pre- and post-disaster satellite imagery with graded building damage.
+applications: [ENV-342]
+links:
+  page:
+    url: "https://arxiv.org/abs/1911.09296"
+    found_in_search: true
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

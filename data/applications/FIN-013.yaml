@@ -1,0 +1,26 @@
+# Application FIN-013. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-013
+name: Trade-based money laundering
+domain: FIN
+subdomain: Anti-money laundering & financial crime
+description: "Over- or under-invoicing and phantom shipments: declared unit prices inconsistent with market prices for the commodity code, route and counterparty."
+properties:
+  mod: [tab, txt]  # Data modality
+  at: [ctx, loc, log]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank, xai]  # Required outputs
+  oc: [reg, hitl]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [mix, multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

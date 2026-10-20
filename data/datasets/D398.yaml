@@ -1,0 +1,21 @@
+# Dataset D398. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D398
+name: DCASE 2017 rare sound event detection
+year: "2017"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: [loc, type]
+modality: [sig]
+size: Gunshots, glass breaks and baby cries mixed over everyday backgrounds
+description: DCASE 2017 Task 2 for rare event detection with onset times.
+applications: [SAF-417]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

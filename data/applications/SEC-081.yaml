@@ -1,0 +1,26 @@
+# Application SEC-081. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-081
+name: Phishing website detection
+domain: SEC
+subdomain: Application, web & cloud security
+description: Pages imitating brands, detected from URL, HTML and screenshot similarity to protected brands.
+properties:
+  mod: [img, txt]  # Data modality
+  at: [sem, glob]  # Anomaly type
+  unit: [obj]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup, nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [type]  # Required outputs
+  oc: [drift, scale]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

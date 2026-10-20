@@ -1,0 +1,26 @@
+# Application HLT-267. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-267
+name: Epileptic seizure detection and prediction
+domain: HLT
+subdomain: Patient monitoring
+description: "EEG monitored for seizure onset (detection) or pre-ictal changes (prediction); patient-specific patterns dominate."
+properties:
+  mod: [sig, mts]  # Data modality
+  at: [seq, cp]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup, nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, time]  # Evaluation priority
+  out: [early, loc]  # Required outputs
+  oc: [edge, cert, shift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

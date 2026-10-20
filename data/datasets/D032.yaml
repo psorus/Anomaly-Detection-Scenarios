@@ -1,0 +1,23 @@
+# Dataset D032. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D032
+name: Elliptic Bitcoin Dataset
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [dg]
+size: "203,769 transactions and 234,355 flows; 2% illicit, 21% licit, rest unlabeled"
+description: Bitcoin transaction graph with 166 features over 49 time steps.
+applications: [FIN-015, FIN-011]
+links:
+  page:
+    url: "https://www.kaggle.com/datasets/ellipticco/elliptic-data-set"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

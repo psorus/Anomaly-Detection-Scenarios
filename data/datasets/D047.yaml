@@ -1,0 +1,21 @@
+# Dataset D047. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D047
+name: Taiwanese bankruptcy prediction
+year: "2016"
+tier: app  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: "6,819 companies with 95 financial ratios"
+description: "UCI data from the Taiwan Economic Journal (1999–2009) labeled by exchange delisting rules."
+applications: [FIN-029]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

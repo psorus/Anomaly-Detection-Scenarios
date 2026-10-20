@@ -1,0 +1,21 @@
+# Dataset D385. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D385
+name: UCSD Pedestrian (Ped1, Ped2)
+year: "2010"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [vid]
+size: Pedestrian walkway videos with bikes, skaters and carts as anomalies
+description: Classic scene-specific benchmark with frame- and pixel-level labels.
+applications: [SAF-415]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

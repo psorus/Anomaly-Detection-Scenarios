@@ -1,0 +1,26 @@
+# Application FIN-039. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-039
+name: Journal entry testing in financial audits
+domain: FIN
+subdomain: Accounting, audit & tax compliance
+description: "Unusual postings: odd times, rare account combinations, round amounts, manual overrides, Benford deviations. Auditors need a defensible, diverse sample, not 500 variants of one quirk."
+properties:
+  mod: [tab]  # Data modality
+  at: [glob, loc, ctx, log]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec, rec]  # Evaluation priority
+  out: [rank, xai]  # Required outputs
+  oc: [reg, div, hitl, rob]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [mix, hier]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

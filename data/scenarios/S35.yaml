@@ -1,0 +1,23 @@
+# Scenario S35. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S35
+name: Point-cloud and 3D surface anomalies
+family: Images, video & perception
+paper: ""
+summary: "Geometric anomalies that are invisible or ambiguous in 2D images: dents, bulges, missing material, unknown objects in LiDAR scans. The data are unordered 3D points, often noisy, partial and sparse at range."
+rule:
+  - match:
+      mod:
+        any: [pc]
+    datasets_need: []
+metrics: "Object-level AUROC plus point-level AUROC and AU-PRO for localization; for LiDAR anomaly segmentation, point-level AUPR and FPR at 95% TPR (as in STU); inference time per scan on target hardware."
+protocol: "Per-category training on normal scans; separate results for RGB-only, 3D-only and fused inputs; test with sensor noise, occlusion and pose changes; report the registration or alignment step as a pipeline component."
+preprocessing: "Background and plane removal, downsampling (farthest point sampling) that keeps small defects, alignment to a CAD model or template; never normalize away the scale of a deviation."
+algorithms: Feature memory banks on point descriptors (BTF, M3DM), registration-based comparison with templates (Reg3D-AD), multi-view rendering of point clouds into 2D features (CPMF), reconstruction networks (IMRNet), open-set point segmentation with uncertainty for LiDAR.
+avoid: "Image-only detectors for geometry defects; aggressive voxel downsampling; methods that assume a canonical pose when parts arrive in random poses."
+gaps: "Few real point-cloud datasets, most from a handful of labs; LiDAR anomaly segmentation has only recently gained a real benchmark; severity and metrology tolerances are not annotated."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

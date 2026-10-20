@@ -1,0 +1,26 @@
+# Scenario S07. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S07
+name: Video event anomaly detection
+family: Images, video & perception
+paper: ""
+summary: Unusual events in video streams (falls, fights, accidents, bleeding) that must be localized in time and often in space. Context such as scene, time and location changes what counts as normal.
+rule:
+  - match:
+      mod:
+        any: [vid]
+      out:
+        any: [loc, early]
+    datasets_need:
+      - [loc, rul]
+metrics: Frame-level AUROC and AP (micro and macro), event-level detection rate, region-based detection criteria, false alarms per hour of normal footage, anticipation time for predictive tasks.
+protocol: "Scene-specific (one-class per camera) versus cross-scene (weakly supervised) settings reported separately; hold out scenes, not clips."
+preprocessing: "Frame-rate and resolution choices bounded by latency; object or pose extraction as an explicit pipeline component; privacy-preserving representations where required."
+algorithms: Frame prediction and reconstruction with memory (MemAE, MNAD), object- and pose-centric models, multiple-instance ranking for weak labels (Sultani et al., RTFM), vision-language models (VadCLIP).
+avoid: "Pooling scene-specific and cross-scene results into one number; micro-averaged AUC alone, which over-weights long videos."
+gaps: "Most datasets are small and staged; false alarms per hour and privacy constraints are rarely measured."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

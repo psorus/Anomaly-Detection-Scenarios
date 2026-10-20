@@ -1,0 +1,23 @@
+# Dataset D026. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D026
+name: ULB Credit Card Fraud
+year: "2015"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: "284,807 transactions, 492 frauds (0.17%), PCA-transformed features"
+description: "Two days of European card transactions; the most used fraud benchmark, although the anonymized features hide the original attributes."
+applications: [FIN-002, FIN-001]
+links:
+  page:
+    url: "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

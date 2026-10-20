@@ -1,0 +1,26 @@
+# Application MFG-169. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-169
+name: Rolling bearing fault detection
+domain: MFG
+subdomain: Predictive maintenance & condition monitoring
+description: Vibration signatures of inner-race, outer-race and ball defects. Models trained on one machine or speed must transfer to others.
+properties:
+  mod: [sig]  # Data modality
+  at: [glob, cp]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov, sup]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [type, early, sev]  # Required outputs
+  oc: [edge, shift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

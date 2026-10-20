@@ -1,0 +1,26 @@
+# Application MFG-147. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-147
+name: Solar cell electroluminescence inspection
+domain: MFG
+subdomain: Visual inspection
+description: Cracks, inactive areas and finger interruptions in solar cells and modules imaged by electroluminescence.
+properties:
+  mod: [img]  # Data modality
+  at: [glob]  # Anomaly type
+  unit: [obj, reg]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [type, sev]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

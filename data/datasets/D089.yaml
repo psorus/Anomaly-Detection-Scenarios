@@ -1,0 +1,21 @@
+# Dataset D089. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D089
+name: TEXBAT
+year: "2012"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [sig]
+size: Recordings of static and dynamic GPS spoofing scenarios
+description: Texas Spoofing Test Battery of raw RF recordings for receiver-level spoofing detection (UT Austin).
+applications: [SEC-088]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

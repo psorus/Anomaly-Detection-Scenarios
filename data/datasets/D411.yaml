@@ -1,0 +1,21 @@
+# Dataset D411. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D411
+name: Hateful Memes
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [img, txt]
+size: "10,000 memes labeled hateful or benign"
+description: Meta challenge requiring joint reasoning over image and text.
+applications: [WEB-389]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,21 @@
+# Dataset D111. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D111
+name: Drebin
+year: "2014"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [code, tab]
+size: "5,560 malware and 123,453 benign Android apps"
+description: Android malware dataset with static features used for explainable detection.
+applications: [SEC-056]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

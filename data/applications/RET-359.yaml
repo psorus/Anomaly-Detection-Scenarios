@@ -1,0 +1,26 @@
+# Application RET-359. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: RET-359
+name: Counterfeit and fraudulent marketplace listings
+domain: RET
+subdomain: E-commerce & retail
+description: Sellers offering counterfeits or non-existent goods, found from listing text, images, prices and seller networks.
+properties:
+  mod: [img, txt, tab]  # Data modality
+  at: [sem, clu]  # Anomaly type
+  unit: [obj, ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [grp, xai]  # Required outputs
+  oc: [scale, drift]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

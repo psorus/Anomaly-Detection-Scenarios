@@ -1,0 +1,26 @@
+# Application MFG-141. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-141
+name: Multi-view and pose-agnostic object inspection
+domain: MFG
+subdomain: Visual inspection
+description: Objects inspected from several viewpoints or in arbitrary poses, as in robotic cells and for small parts. A defect may be visible in only one view, so evidence must be fused per object.
+properties:
+  mod: [img]  # Data modality
+  at: [glob, loc, log]  # Anomaly type
+  unit: [obj, reg]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [loc, type]  # Required outputs
+  oc: [cold, shift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,27 @@
+# Dataset D045. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D045
+name: AAER accounting fraud data (Bao et al.)
+year: "2020"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: US public firms with fraud labels from SEC enforcement releases
+description: Raw accounting variables and AAER-based labels released with the 2020 Journal of Accounting Research fraud prediction paper.
+applications: [FIN-042]
+links:
+  page:
+    url: "https://github.com/JarFraud/FraudDetection"
+    found_in_search: false
+  other:
+    - label: Paper record (RePEc)
+      url: "https://ideas.repec.org/a/bla/joares/v58y2020i1p199-235.html"
+    - label: Code mirror (Gitee)
+      url: "https://gitee.com/dufefintech/FraudDetection"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

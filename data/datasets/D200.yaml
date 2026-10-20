@@ -1,0 +1,21 @@
+# Dataset D200. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D200
+name: TIG aluminium 5083 weld images
+year: "2019"
+tier: app  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [img]
+size: About 33,000 HDR images of TIG welds in six quality classes
+description: Weld images labeled good or with defects such as contamination, lack of fusion and burn-through (Bacioiu et al.).
+applications: [MFG-159]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

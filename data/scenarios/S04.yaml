@@ -1,0 +1,25 @@
+# Scenario S04. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S04
+name: Event-sequence and log anomaly detection
+family: Sequential monitoring
+paper: ""
+summary: Discrete events (log templates, process activities, signaling messages) where the order, frequency or a never-seen event type marks the anomaly. Vocabularies change with every software release.
+rule:
+  - match:
+      mod:
+        any: [seq]
+      adv:
+        in: ["no"]
+    datasets_need: []
+metrics: "Session- or window-level precision and recall; time to detect; robustness to unseen templates after updates; localization of the offending event or line."
+protocol: "Chronological splits (random splits leak future templates); evaluate across software versions; report parser choice, since template parsing errors change results substantially."
+preprocessing: "Template parsing (for example, Drain) and its error rate; handling of variable parameters; session versus sliding-window grouping, which is a scenario choice, not a tuning knob."
+algorithms: "Count-vector baselines (PCA, invariant mining), next-event prediction (DeepLog-style LSTMs), transformer encoders (LogBERT-style), semi-supervised variants with few labels; conformance checking for business processes."
+avoid: "Shuffled train-test splits; evaluation only on HDFS-style sessions with near-trivial anomalies."
+gaps: "Most log benchmarks are old and easy; evolving vocabularies, multi-source logs and grouping alerts into incidents are under-benchmarked."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

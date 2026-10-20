@@ -1,0 +1,25 @@
+# Scenario S18. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S18
+name: Graph and interaction-network anomalies
+family: Graphs, space & entities
+paper: ""
+summary: "Nodes, edges or subgraphs whose structure deviates: unusual ownership, authentication paths, call graphs or transaction flows. Anomalies often connect to normal nodes (heterophily)."
+rule:
+  - match:
+      mod:
+        any: [gr, dg]
+      at:
+        any: [str]
+    datasets_need: []
+metrics: "Node- or edge-level AUROC and AP; precision@k of subgraphs; detection latency for streaming graphs."
+protocol: "Temporal splits for dynamic graphs; distinguish injected structural anomalies (common in benchmarks, often trivial) from organic ones."
+preprocessing: "Graph construction and time-window choices; avoid neighborhood aggregation that smooths anomalous nodes into their normal neighbors."
+algorithms: Heterophily-aware GNNs (BWGNN, GHRN), reconstruction-based GAE detectors (DOMINANT, CoLA), streaming edge detectors (MIDAS, SpotLight), egonet features with classic detectors.
+avoid: "Benchmarks with only synthetic injected anomalies; homophily-assuming message passing."
+gaps: "Organic labeled graph anomalies are rare; results on injected anomalies do not transfer well."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

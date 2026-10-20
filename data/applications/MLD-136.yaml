@@ -1,0 +1,26 @@
+# Application MLD-136. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MLD-136
+name: AI agent action monitoring
+domain: MLD
+subdomain: ML model monitoring & reliability
+description: Tool calls and action sequences of autonomous agents that deviate from intended behavior and must be stopped before execution.
+properties:
+  mod: [seq, txt]  # Data modality
+  at: [seq, sem]  # Anomaly type
+  unit: [ser]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [xai]  # Required outputs
+  oc: []  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

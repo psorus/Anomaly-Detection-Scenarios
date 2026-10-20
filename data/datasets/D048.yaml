@@ -1,0 +1,23 @@
+# Dataset D048. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D048
+name: Default of credit card clients (Taiwan)
+year: "2016"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [prot, ent]
+modality: [tab]
+size: "30,000 clients with six months of payment history"
+description: UCI credit default data with repayment status, bill amounts, sex, age, education and marriage.
+applications: [FIN-029, FIN-027]
+links:
+  page:
+    url: "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

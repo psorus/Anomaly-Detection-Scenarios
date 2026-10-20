@@ -1,0 +1,21 @@
+# Dataset D266. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D266
+name: Z24 bridge
+year: "1998"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [sev, loc]
+modality: [mts, sig]
+size: One year of monitoring plus progressive damage tests before demolition
+description: Swiss highway bridge with environmental variation and staged damage scenarios (KU Leuven).
+applications: [BLD-220]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

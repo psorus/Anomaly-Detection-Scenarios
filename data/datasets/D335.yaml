@@ -1,0 +1,21 @@
+# Dataset D335. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D335
+name: OMOP pharmacovigilance reference set
+year: "2013"
+tier: app  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: "399 drug-outcome pairs labeled as positive or negative controls"
+description: Reference standard of known adverse drug reactions and negative controls for evaluating signal detection (Ryan et al.).
+applications: [HLT-295]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

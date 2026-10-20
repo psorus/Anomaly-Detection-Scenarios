@@ -1,0 +1,30 @@
+# Application ITO-094. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ITO-094
+name: Multivariate server and machine monitoring
+domain: ITO
+subdomain: Monitoring & AIOps
+description: "Dozens of correlated metrics per machine (CPU, memory, I/O, network). Anomalies break cross-metric relationships; operators need the responsible metrics."
+properties:
+  mod: [mts]  # Data modality
+  at: [dep, ctx, glob]  # Anomaly type
+  unit: [win, ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un, nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec, time]  # Evaluation priority
+  out: [loc, rca]  # Required outputs
+  oc: [scale, shift, drift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[72]"
+    citation: "Zhong, Liu, Jiang and Chen (2024). Causeformer: Interpretable anomaly detection with stepwise attention for cloud service. IEEE Transactions on Network and Service Management."
+    context: "Section 4.1: interpretability in engineering as an evaluation objective."
+    url: "https://doi.org/10.1109/TNSM.2023.3299846"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

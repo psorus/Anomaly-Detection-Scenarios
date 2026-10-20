@@ -1,0 +1,25 @@
+# Dataset D224. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D224
+name: Peregrine powder bed fusion datasets (ORNL)
+year: "2021"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [img, mts]
+size: Layer images and printer logs co-registered with CT and tensile data
+description: In-situ monitoring data from Oak Ridge National Laboratory's Peregrine software for laser powder bed fusion.
+applications: [MFG-157]
+links:
+  page: {}
+  other:
+    - label: Dataset record (ORNL)
+      url: "https://impact.ornl.gov/en/datasets/a-co-registered-in-situ-and-ex-situ-dataset-from-a-laser-powder-b/"
+    - label: Release note (ORNL)
+      url: "https://www.ornl.gov/organization-news/peregrine-releases-new-dataset-smarter-3d-printing"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

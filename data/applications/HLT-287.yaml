@@ -1,0 +1,26 @@
+# Application HLT-287. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-287
+name: Prescription error detection
+domain: HLT
+subdomain: Clinical data & operations
+description: Orders with wrong dose, route or drug for the patient's context, checked at order entry.
+properties:
+  mod: [tab]  # Data modality
+  at: [ctx, log]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un, weak]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [xai]  # Required outputs
+  oc: [cert]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [mix]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

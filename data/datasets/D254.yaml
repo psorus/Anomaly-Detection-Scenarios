@@ -1,0 +1,21 @@
+# Dataset D254. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D254
+name: EDP wind turbine open data
+year: "2018"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type, ent]
+modality: [mts]
+size: SCADA and failure logs of five turbines over two years
+description: Data from EDP's open data initiative with component failure records.
+applications: [ENE-198]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

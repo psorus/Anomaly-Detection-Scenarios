@@ -1,0 +1,29 @@
+# Application FIN-002. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-002
+name: Card-not-present e-commerce fraud
+domain: FIN
+subdomain: Payments & cards
+description: "Online purchases scored before authorization. Fraudsters test stolen cards with micro-purchases, then cash out on resellable goods; device, IP and shipping-address linkage across orders exposes rings."
+properties:
+  mod: [tab, dg]  # Data modality
+  at: [ctx, loc, clu, seq]  # Anomaly type
+  unit: [rec, ent]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [sup, weak]  # Supervision
+  pt: hrt  # Processing time
+  ep: [prec, spec]  # Evaluation priority
+  out: [sev, xai, grp]  # Required outputs
+  oc: [scale, drift, reg, hitl, fair]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [mix, het]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[4]"
+    citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+    context: "Introduction and Example 2.3: financial fraud detection as an adversarial scenario."
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

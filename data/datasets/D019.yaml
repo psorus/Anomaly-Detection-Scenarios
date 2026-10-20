@@ -1,0 +1,24 @@
+# Dataset D019. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D019
+name: mTSBench
+year: "2025"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [mts]
+size: "344 multivariate series from 19 datasets in 12 domains"
+description: Benchmark of 24 multivariate detectors and model selection methods (MetaOD, Orthus, FMMS).
+applications: []
+extra_scenarios: [S02]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2506.21550"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

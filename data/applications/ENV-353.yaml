@@ -1,0 +1,26 @@
+# Application ENV-353. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENV-353
+name: Dairy herd mastitis detection
+domain: ENV
+subdomain: Agriculture & food production
+description: Milk yield, conductivity and temperature per cow and milking that indicate udder infection.
+properties:
+  mod: [ts, tab]  # Data modality
+  at: [cp, glob]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [early]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

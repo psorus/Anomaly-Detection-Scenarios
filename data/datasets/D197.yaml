@@ -1,0 +1,23 @@
+# Dataset D197. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D197
+name: ELPV
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [sev, type]
+modality: [img]
+size: "2,624 electroluminescence images of solar cells"
+description: Cells from mono- and polycrystalline modules graded by defect probability (0, 0.33, 0.67, 1).
+applications: [MFG-147]
+links:
+  page:
+    url: "https://github.com/zae-bayern/elpv-dataset"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

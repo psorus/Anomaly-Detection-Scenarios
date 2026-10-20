@@ -1,0 +1,25 @@
+# Dataset D160. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D160
+name: Clean Me If You Can (real-world addresses)
+year: "2026"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [fix, type]
+modality: [tab]
+size: Millions of dirty address records with ground truth from OpenStreetMap
+description: "Web-extracted addresses from 128 countries with 12 error categories; about half of all cells contain errors."
+applications: [MLD-123, MLD-124, MLD-127]
+links:
+  page:
+    url: "https://github.com/D2IP-TUB/Clean-Me-If-You-Can"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2606.31983"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

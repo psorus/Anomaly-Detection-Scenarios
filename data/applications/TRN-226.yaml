@@ -1,0 +1,30 @@
+# Application TRN-226. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: TRN-226
+name: Road obstacle and unknown object segmentation
+domain: TRN
+subdomain: Automated & connected driving
+description: "Lost cargo, animals and debris that a perception model never saw in training. Pixels must be flagged in real time; a miss can be fatal, and the safety case needs evidence."
+properties:
+  mod: [img, pc]  # Data modality
+  at: [sem]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, unc]  # Required outputs
+  oc: [cert, shift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[40]"
+    citation: "Bogdoll, Nitsche and Zöllner (2022). Anomaly detection in autonomous driving: A survey. CVPR Workshops."
+    context: "Example 2.1: dangerous events in autonomous driving."
+    url: "https://doi.org/10.1109/CVPRW56347.2022.00495"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

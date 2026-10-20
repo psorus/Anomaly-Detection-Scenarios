@@ -1,0 +1,26 @@
+# Application SAF-423. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SAF-423
+name: Chemical release detection in sensor networks
+domain: SAF
+subdomain: Video surveillance & public safety
+description: Distributed gas sensors detecting toxic releases against background fluctuations and sensor drift.
+properties:
+  mod: [mts, st]  # Data modality
+  at: [glob, cp]  # Anomaly type
+  unit: [win, node]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, time]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: [cert]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

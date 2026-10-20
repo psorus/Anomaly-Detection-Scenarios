@@ -1,0 +1,21 @@
+# Dataset D293. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D293
+name: ALFA (AirLab Failure and Anomaly)
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type]
+modality: [mts]
+size: "47 autonomous fixed-wing UAV flights with engine, control surface and other failures"
+description: Real flight data with fault injection and ground-truth failure times (Keipour et al.).
+applications: [AER-257]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

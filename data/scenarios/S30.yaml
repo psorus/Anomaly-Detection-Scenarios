@@ -1,0 +1,29 @@
+# Scenario S30. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S30
+name: Semantic and logical anomalies in text and reports
+family: Text & documents
+paper: ""
+summary: "Documents or statements whose meaning is wrong, risky or inconsistent: hallucinated claims, unusual contract clauses, vandalized edits, true watchlist hits, unexpected drug-event reports. Spans must be marked for a reviewer."
+rule:
+  - match:
+      mod:
+        first: [txt]
+      at:
+        any: [sem, log]
+      unit:
+        any: [obj, reg, rec, ser]
+      adv:
+        in: ["no", conc]
+    datasets_need: []
+metrics: "Span-level precision and recall; document-level AUROC; reviewer time saved; calibration of confidence for abstention."
+protocol: "Annotations at span level with clear guidelines; separate results by document type and length; contamination of pretraining data documented for LLM-based detectors."
+preprocessing: "Segmentation into clauses or statements; normalization of templates and boilerplate."
+algorithms: Embedding distances to reference corpora, LLM-based consistency and entailment checks, sequence-labeling models for span detection, disproportionality statistics for report data.
+avoid: "Perplexity alone as an anomaly score; it confuses rare style with wrong content."
+gaps: Shared benchmarks for document-level anomaly detection are rare outside narrow tasks.
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

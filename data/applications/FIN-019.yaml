@@ -1,0 +1,26 @@
+# Application FIN-019. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-019
+name: Insider trading detection
+domain: FIN
+subdomain: Capital markets & trading
+description: Profitable trades shortly before material announcements, linked to insiders through communication and relationship graphs.
+properties:
+  mod: [tab, gr, txt]  # Data modality
+  at: [ctx, str]  # Anomaly type
+  unit: [ent, rec]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un, weak]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank, xai]  # Required outputs
+  oc: [reg, fair]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

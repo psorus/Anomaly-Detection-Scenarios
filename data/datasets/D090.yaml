@@ -1,0 +1,23 @@
+# Dataset D090. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D090
+name: HCRL Car-Hacking Dataset
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: [type]
+modality: [seq]
+size: CAN traffic with DoS, fuzzy, gear and RPM spoofing attacks
+description: Real vehicle CAN logs with injected attack frames (Korea University).
+applications: [SEC-086]
+links:
+  page: {}
+  other:
+    - label: Dataset record (TIB)
+      url: "https://service.tib.eu/ldmservice/dataset/car-hacking-dataset"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

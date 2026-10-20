@@ -1,0 +1,21 @@
+# Dataset D222. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D222
+name: PHM 2018 ion mill etch challenge
+year: "2018"
+tier: app  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [rul]
+modality: [mts]
+size: Ion mill etch tool sensor data with fault events
+description: Semiconductor tool failure prognostics data from the PHM Society challenge.
+applications: [MFG-154]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

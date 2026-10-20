@@ -1,0 +1,21 @@
+# Dataset D387. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D387
+name: ShanghaiTech Campus
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, xdom]
+modality: [vid]
+size: "437 videos from 13 scenes with 130 abnormal events"
+description: Multi-scene campus benchmark for unsupervised video anomaly detection.
+applications: [SAF-415, SAF-414]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

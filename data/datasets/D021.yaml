@@ -1,0 +1,26 @@
+# Dataset D021. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D021
+name: TCPDBench (Turing change point dataset)
+year: "2020"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [ts, mts]
+size: "37 real-world series, each annotated by five people"
+description: Change point benchmark with multiple human annotations per series (van den Burg and Williams).
+applications: []
+extra_scenarios: [S31]
+links:
+  page:
+    url: "https://github.com/alan-turing-institute/TCPDBench"
+    found_in_search: false
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2003.06222"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

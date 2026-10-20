@@ -1,0 +1,26 @@
+# Application FIN-027. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-027
+name: First-party credit bust-out
+domain: FIN
+subdomain: Credit, lending & banking operations
+description: Customers build a credit history, then max out all lines and default on purpose. Detect the behavior change before the bust-out.
+properties:
+  mod: [ts, tab]  # Data modality
+  at: [cp, seq]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, prec]  # Evaluation priority
+  out: [early, xai]  # Required outputs
+  oc: [fair, reg]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,21 @@
+# Dataset D067. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D067
+name: CAIDA DDoS Attack 2007
+year: "2007"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [seq]
+size: One hour of anonymized traces of a DDoS attack
+description: "Real attack traffic toward one victim; background traffic has to come from other traces."
+applications: [SEC-048]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

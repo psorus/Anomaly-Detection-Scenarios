@@ -1,0 +1,26 @@
+# Application ENE-211. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-211
+name: Wastewater treatment process anomalies
+domain: ENE
+subdomain: Water & wastewater
+description: Aeration, influent and effluent sensors detecting upsets, toxic inflows and sensor failures.
+properties:
+  mod: [mts]  # Data modality
+  at: [dep, cp]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time]  # Evaluation priority
+  out: [rca]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [miss]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,26 @@
+# Dataset D011. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D011
+name: UB-GOLD
+year: "2024"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [gr]
+size: Graph-level datasets for intrinsic anomalies and inter-dataset distribution shift
+description: Benchmark unifying unsupervised graph-level anomaly detection and out-of-distribution detection (ICLR 2025).
+applications: []
+extra_scenarios: [S18]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2406.15523"
+    - label: Paper (ICLR 2025)
+      url: "https://proceedings.iclr.cc/paper_files/paper/2025/hash/e58fa42d4b7a798eef8d0d75098f87ad-Abstract-Conference.html"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

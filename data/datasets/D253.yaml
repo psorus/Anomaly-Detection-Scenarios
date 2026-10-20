@@ -1,0 +1,25 @@
+# Dataset D253. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D253
+name: Kelmarsh and Penmanshiel wind farm data
+year: "2022"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, ent]
+modality: [mts, seq]
+size: "10-minute SCADA and status logs from two UK wind farms"
+description: "Open SCADA, event and status data from Cubico (Plumley); faults must be derived from the logs."
+applications: [ENE-198, MFG-177]
+links:
+  page:
+    url: "https://zenodo.org/records/5841834"
+    found_in_search: true
+  other:
+    - label: Penmanshiel data (Zenodo)
+      url: "https://zenodo.org/records/5946808"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

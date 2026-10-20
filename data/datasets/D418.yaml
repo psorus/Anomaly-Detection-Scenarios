@@ -1,0 +1,21 @@
+# Dataset D418. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D418
+name: Questions (Yandex Q) graph
+year: "2023"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [gr]
+size: "48,921 users of a question-answering service"
+description: Heterophilous user graph labeled by activity, used in GADBench.
+applications: [WEB-398]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

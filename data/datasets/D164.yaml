@@ -1,0 +1,21 @@
+# Dataset D164. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D164
+name: Clothing1M
+year: "2015"
+tier: bench  # generic | suite | bench | app
+labels: weak  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [img]
+size: "1 million clothing images with noisy labels from surrounding text"
+description: Real-world noisy-label dataset with a small clean subset.
+applications: [MLD-125]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,30 @@
+# Application SEC-050. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-050
+name: DNS tunneling and DGA detection
+domain: SEC
+subdomain: Network security
+description: High-entropy subdomains, unusual query rates and DNS-over-HTTPS exfiltration channels.
+properties:
+  mod: [txt, tab, seq]  # Data modality
+  at: [glob, seq]  # Anomaly type
+  unit: [rec, ent]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [sup, nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec, spec]  # Evaluation priority
+  out: [type]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references:
+  - ref: "[44]"
+    citation: Singh and Roy (2020). Detecting malicious DNS over HTTPS traffic using machine learning. 3ICT.
+    context: "Example 2.3: network intrusion detection as an adversarial scenario."
+    url: "https://api.semanticscholar.org/CorpusID:231599709"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

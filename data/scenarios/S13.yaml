@@ -1,0 +1,27 @@
+# Scenario S13. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S13
+name: Evolving content and file threats
+family: Adversarial anomalies
+paper: ""
+summary: Malware, phishing, deepfakes and abusive content where known classes are learnable but new families appear constantly. A supervised core needs a novelty layer and frequent retraining.
+rule:
+  - match:
+      adv:
+        in: [adapt]
+      mod:
+        any: [txt, code, img, vid, sig]
+      at:
+        any: [sem]
+    datasets_need: []
+metrics: "Detection rate at very low false-positive rates (for example, 0.01%); performance decay over time (time-aware evaluation); detection of held-out families or generators."
+protocol: "Temporal train-test splits (train on months before test); held-out families; adversarial robustness against problem-space attacks."
+preprocessing: "Deduplicate near-identical samples across splits; consistent feature extraction across versions."
+algorithms: Supervised classifiers with open-set rejection, contrastive embeddings with novelty scores, ensembles that combine static and behavioral evidence, periodic retraining with drift detection.
+avoid: "Random splits that mix future families into training; reporting accuracy without temporal decay."
+gaps: "Time-aware benchmarks exist for malware but are rare for other content types; cost of retraining is not measured."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

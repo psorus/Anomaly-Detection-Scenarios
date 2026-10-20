@@ -1,0 +1,26 @@
+# Application MLD-134. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MLD-134
+name: Training data poisoning detection
+domain: MLD
+subdomain: ML model monitoring & reliability
+description: Injected samples that plant backdoors or bias a model. Poisoned samples often form a small cluster.
+properties:
+  mod: [img, txt, tab]  # Data modality
+  at: [clu, sem]  # Anomaly type
+  unit: [rec, sub]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [grp]  # Required outputs
+  oc: []  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

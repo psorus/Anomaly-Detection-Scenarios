@@ -1,0 +1,21 @@
+# Dataset D148. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D148
+name: HDFS log dataset
+year: "2009"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [seq]
+size: About 11 million log lines in 575,061 block sessions, 2.9% anomalous
+description: Hadoop file system logs labeled per block by experts (Xu et al., SOSP 2009).
+applications: [ITO-095]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,42 @@
+# Application domains. The code is the prefix of every application id in that domain.
+domains:
+  - code: FIN
+    label: Finance, insurance & accounting
+  - code: SEC
+    label: Cybersecurity
+  - code: ITO
+    label: IT operations & software
+  - code: MLD
+    label: Data & ML systems
+  - code: MFG
+    label: Manufacturing & industry
+  - code: ENE
+    label: Energy & utilities
+  - code: TRN
+    label: Transportation & mobility
+  - code: AER
+    label: Aerospace & space
+  - code: HLT
+    label: Healthcare & medicine
+  - code: LIF
+    label: Life sciences & biotech
+  - code: SCI
+    label: Physical & earth sciences
+  - code: ENV
+    label: Environment & agriculture
+  - code: BLD
+    label: Buildings, cities & infrastructure
+  - code: RET
+    label: Retail, e-commerce & marketing
+  - code: TEL
+    label: Telecommunications
+  - code: WEB
+    label: Online platforms & social media
+  - code: PUB
+    label: Government & public sector
+  - code: SAF
+    label: Public safety & surveillance
+  - code: BIZ
+    label: Business processes & HR
+  - code: EDU
+    label: Education, sports & media

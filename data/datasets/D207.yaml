@@ -1,0 +1,21 @@
+# Dataset D207. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D207
+name: RDD2022
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type]
+modality: [img]
+size: "47,420 road images from six countries with four damage types"
+description: Crowdsensing road damage detection dataset with bounding boxes.
+applications: [BLD-222]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

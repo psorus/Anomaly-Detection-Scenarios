@@ -1,0 +1,21 @@
+# Dataset D358. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D358
+name: Dark Machines anomaly score challenge
+year: "2021"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: sim  # real | semi | sim
+annotations: [type]
+modality: [tab]
+size: Over one billion simulated events in four channels with many signal models
+description: Unsupervised new physics benchmark (Aarrestad et al.).
+applications: [SCI-322]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

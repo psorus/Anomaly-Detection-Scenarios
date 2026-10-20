@@ -1,0 +1,28 @@
+# Scenario S21. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S21
+name: Behavior change against an entity's own baseline
+family: Graphs, space & entities
+paper: ""
+summary: Each user, machine, patient or athlete has its own normal. The anomaly is a change relative to that baseline, often with little history for new entities.
+rule:
+  - match:
+      unit:
+        any: [ent]
+      dq:
+        any: [het]
+      at:
+        any: [cp, ctx, seq]
+    datasets_need:
+      - [ent]
+metrics: "Entity-level detection rate and delay; false alarms per entity per month; cold-start performance for entities with short histories."
+protocol: "Splits by time within entity plus held-out entities; report results by history length."
+preprocessing: "Per-entity normalization combined with population priors; robust baselines that ignore earlier anomalies."
+algorithms: Hierarchical (population plus entity) models, Bayesian change-point detection, per-entity sequence models with shared encoders, peer-group comparisons as a fallback.
+avoid: One global model that treats inter-entity variation as anomalous.
+gaps: "Few datasets with many entities and labeled change points; cold-start behavior is rarely reported."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

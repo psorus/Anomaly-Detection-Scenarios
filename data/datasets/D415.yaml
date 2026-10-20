@@ -1,0 +1,21 @@
+# Dataset D415. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D415
+name: Reddit banned users graph
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [gr]
+size: "10,984 users with banned labels"
+description: Reddit posting graph used in BOND and GADBench.
+applications: [WEB-392, WEB-398]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

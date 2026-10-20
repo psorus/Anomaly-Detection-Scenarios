@@ -1,0 +1,25 @@
+# Dataset D125. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D125
+name: GenImage
+year: "2023"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, xdom]
+modality: [img]
+size: Over one million real and generated images from eight generators
+description: Benchmark for AI-generated image detection with cross-generator evaluation (NeurIPS 2023).
+applications: [SEC-070]
+links:
+  page:
+    url: "https://github.com/weili-thu/genimage"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2306.08571"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

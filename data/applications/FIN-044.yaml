@@ -1,0 +1,30 @@
+# Application FIN-044. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-044
+name: Federated bookkeeping anomaly detection
+domain: FIN
+subdomain: Accounting, audit & tax compliance
+description: Double-entry bookkeeping data that companies cannot pool. Anomalies must be found without sharing raw records.
+properties:
+  mod: [tab]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [xai]  # Required outputs
+  oc: [priv, reg]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [mix]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[47]"
+    citation: Mashiko, Kawamata, Nakayama, Sakurai and Okada (2025). Anomaly detection in double-entry bookkeeping data by federated learning system with non-model sharing approach.
+    context: "Section 3: an end-to-end pipeline built from distinct components."
+    url: "https://arxiv.org/abs/2501.12723"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

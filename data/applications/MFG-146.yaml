@@ -1,0 +1,26 @@
+# Application MFG-146. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-146
+name: Semiconductor wafer map defect patterns
+domain: MFG
+subdomain: Visual inspection
+description: Spatial patterns of failing dies (rings, scratches, edge clusters) that point to specific process steps.
+properties:
+  mod: [img, tab]  # Data modality
+  at: [clu, sem, glob]  # Anomaly type
+  unit: [obj]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [sup, nov]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [type, grp, rca]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

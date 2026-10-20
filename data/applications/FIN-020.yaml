@@ -1,0 +1,26 @@
+# Application FIN-020. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-020
+name: Wash trading and pump-and-dump detection
+domain: FIN
+subdomain: Capital markets & trading
+description: "Self-trading rings inflate volume on exchanges and NFT markets; coordinated promotion on social media precedes dumps."
+properties:
+  mod: [dg, ts, txt]  # Data modality
+  at: [clu, str, seq]  # Anomaly type
+  unit: [sub, win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un, weak]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [grp, xai]  # Required outputs
+  oc: [drift]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

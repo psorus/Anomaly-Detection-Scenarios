@@ -1,0 +1,29 @@
+# Dataset D295. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D295
+name: ESA Anomalies Dataset and ESA-ADB
+year: "2024"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type, xdom]
+modality: [mts, seq]
+size: "3 anonymized missions; 176 channels and about 1.5 billion points in the two benchmark missions"
+description: Real telemetry and telecommands from three ESA missions, annotated per channel as anomalies, rare nominal events or gaps. The benchmark uses Missions 1 and 2 with a hierarchical, operator-driven metric pipeline (Kotowski et al.).
+applications: [AER-259]
+links:
+  page:
+    url: "https://github.com/kplabs-pl/ESA-ADB"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2406.17826"
+    - label: Data (Zenodo DOI)
+      url: "https://doi.org/10.5281/zenodo.12528696"
+    - label: Project page (KP Labs)
+      url: "https://www.kplabs.space/projects-and-missions/esa-anomaly-detection-benchmark"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

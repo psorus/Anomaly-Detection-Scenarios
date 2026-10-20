@@ -1,0 +1,34 @@
+# Scenario S05. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S05
+name: Normal-only visual inspection with pixel localization
+family: Images, video & perception
+paper: ""
+summary: Inline inspection of products trained on good samples only, because defect types are open-ended. Defects must be localized and graded at line speed, often with few training images per product.
+rule:
+  - match:
+      mod:
+        any: [img, vol, pc]
+      sup:
+        any: [nov]
+      out:
+        any: [loc]
+      pt:
+        in: [hrt]
+      adv:
+        in: ["no"]
+      at:
+        any: [glob, loc, log]
+    datasets_need:
+      - [loc]
+metrics: "Image-level AUROC plus pixel-level AU-PRO (up to 30% FPR); sPRO for logical anomalies; recall at the false-reject rate the line tolerates (for example, 0.1% of good parts); inference time and memory per image."
+protocol: "Separate structural and logical defects; few-shot settings (1 to 16 good images); cross-product and cross-lighting shift; thresholds fixed on good validation images only."
+preprocessing: "Keep resolution high enough for the smallest defect; avoid augmentations that create defect-like artifacts; consistent alignment and lighting normalization."
+algorithms: Pretrained-feature memory banks (PatchCore, PaDiM), normalizing flows (FastFlow, CFlow-AD), student-teacher and reverse distillation (EfficientAD, RD4AD), synthetic-defect training (DRAEM, SimpleNet), vision-language zero-shot methods (WinCLIP, AnomalyCLIP).
+avoid: "Image-level-only evaluation; methods that need defect samples for every class; global-context-free patch methods for logical anomalies."
+gaps: "MVTec AD is near saturation; severity grading, multi-view inspection and logical constraints are open; line-rate latency is rarely reported alongside accuracy."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

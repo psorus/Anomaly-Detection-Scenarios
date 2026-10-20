@@ -1,0 +1,26 @@
+# Application LIF-303. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: LIF-303
+name: Gene expression outliers in cancer
+domain: LIF
+subdomain: Genomics & omics
+description: Genes extremely over- or under-expressed in a single tumor, used to find patient-specific drivers.
+properties:
+  mod: [tab]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [rec, reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [rank]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

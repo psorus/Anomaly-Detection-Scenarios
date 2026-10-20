@@ -1,0 +1,30 @@
+# Application ITO-095. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ITO-095
+name: Log anomaly detection
+domain: ITO
+subdomain: Monitoring & AIOps
+description: System logs parsed into templates. Anomalies are unusual event sequences, unseen templates or parameter values. Software updates change templates constantly.
+properties:
+  mod: [seq, txt]  # Data modality
+  at: [seq, sem, glob]  # Anomaly type
+  unit: [win, ser]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov, weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec, time]  # Evaluation priority
+  out: [loc, rca, grp]  # Required outputs
+  oc: [drift, scale, rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references:
+  - ref: "[29]"
+    citation: Wittkopp, Wiesner, Scheinert and Kao (2021). A taxonomy of anomalies in log data.
+    context: "Section 2.1.1: an existing anomaly taxonomy."
+    url: "http://arxiv.org/abs/2111.13462"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

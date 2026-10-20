@@ -1,0 +1,29 @@
+# Scenario S08. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S08
+name: Open-set semantic novelty in perception
+family: Images, video & perception
+paper: ""
+summary: A deployed model meets an object or input class it was never trained on and must flag it instead of confidently misclassifying it. Typical in autonomous systems and clinical classifiers.
+rule:
+  - match:
+      at:
+        any: [sem]
+      mod:
+        any: [img, vid, vol, pc, rs]
+      adv:
+        in: ["no"]
+      pt:
+        in: [hrt, "on"]
+    datasets_need: []
+metrics: "AUROC and FPR at 95% TPR; component-level metrics for segmentation (sIoU, PPV, mean F1 in SegmentMeIfYouCan); calibration error; selective risk at given coverage."
+protocol: "Near-OOD and far-OOD splits reported separately; no tuning on test OOD classes; covariate shift (weather, scanner) separated from semantic shift."
+preprocessing: "Same input pipeline as the deployed model; OOD scoring must not require a second expensive pass if latency is tight."
+algorithms: Post-hoc scores (maximum softmax, energy, Mahalanobis, ViM, kNN in feature space), outlier exposure, mask-based open-set segmenters (RbA, Mask2Anomaly), ensembles and MC dropout for uncertainty.
+avoid: Evaluating on far-OOD pairs only (such as CIFAR vs. SVHN), which hides near-OOD failures.
+gaps: "Link between OOD scores and safety cases is weak; benchmarks seldom include temporal consistency across frames."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

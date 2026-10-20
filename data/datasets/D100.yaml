@@ -1,0 +1,21 @@
+# Dataset D100. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D100
+name: DARPA OpTC
+year: "2020"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, ent]
+modality: [dg, seq]
+size: Endpoint telemetry from hundreds of hosts with red-team activity
+description: "Operationally Transparent Cyber data (eCAR events); attack ground truth is documented in reports."
+applications: [SEC-058, SEC-052]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

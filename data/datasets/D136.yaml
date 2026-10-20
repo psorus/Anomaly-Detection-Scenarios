@@ -1,0 +1,21 @@
+# Dataset D136. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D136
+name: Yahoo Webscope S5
+year: "2015"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: [loc]
+modality: [ts]
+size: "367 series in four parts (A1 real traffic, A2 to A4 synthetic)"
+description: Labeled anomalies in production traffic metrics (A1) and synthetic series with outliers and change points (A2 to A4).
+applications: [ITO-093]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

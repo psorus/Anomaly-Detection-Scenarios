@@ -1,0 +1,26 @@
+# Application AER-259. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: AER-259
+name: Spacecraft telemetry anomaly detection
+domain: AER
+subdomain: Space
+description: Thousands of telemetry channels with operating modes and commands as context. Operators need few false alarms and the affected channels.
+properties:
+  mod: [mts]  # Data modality
+  at: [ctx, dep, seq]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec, time]  # Evaluation priority
+  out: [loc, rca]  # Required outputs
+  oc: [edge, cert, rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [miss, multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

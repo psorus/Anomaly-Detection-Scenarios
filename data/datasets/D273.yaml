@@ -1,0 +1,23 @@
+# Dataset D273. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D273
+name: Fishyscapes
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: [loc]
+modality: [img]
+size: Cityscapes images with pasted anomalies, plus Lost and Found
+description: Benchmark for pixel-wise uncertainty in semantic segmentation.
+applications: [TRN-226]
+links:
+  page:
+    url: "https://fishyscapes.com/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,21 @@
+# Dataset D281. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D281
+name: CCD (Car Crash Dataset)
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, txt]
+modality: [vid]
+size: "1,500 crash clips with environmental attributes and causes"
+description: Dashcam crash videos annotated with weather, lighting, ego involvement and accident reasons.
+applications: [TRN-229]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

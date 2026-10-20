@@ -1,0 +1,26 @@
+# Application ENE-188. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-188
+name: Electricity theft and non-technical losses
+domain: ENE
+subdomain: Power grid
+description: Smart meter load profiles that drop or change shape after tampering, compared with the customer's history and similar households. Inspections are expensive and accusations sensitive.
+properties:
+  mod: [ts, tab]  # Data modality
+  at: [ctx, loc, cp]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak, un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank, xai]  # Required outputs
+  oc: [fair, priv, rob]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [het, season]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

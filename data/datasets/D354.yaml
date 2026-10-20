@@ -1,0 +1,23 @@
+# Dataset D354. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D354
+name: Kepler and TESS light curves
+year: "2009"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [ts]
+size: Hundreds of thousands of stellar light curves with transit candidate dispositions
+description: Space photometry with dispositions (confirmed, false positive) and citizen-science finds such as Boyajian's star.
+applications: [SCI-317]
+links:
+  page:
+    url: "https://archive.stsci.edu/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

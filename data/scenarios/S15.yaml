@@ -1,0 +1,26 @@
+# Scenario S15. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S15
+name: "Data quality: detect and repair erroneous values"
+family: Discovery & data quality
+paper: ""
+summary: Errors are common (often more than 5% of records) and frequently systematic. The goal is a corrected dataset, so detection must come with localization of the wrong cell and a proposed repair.
+rule:
+  - match:
+      out:
+        any: [fix]
+      adv:
+        in: ["no"]
+    datasets_need:
+      - [fix]
+metrics: "Cell-level precision and recall of error detection; repair accuracy; downstream task improvement after cleaning; reviewer workload."
+protocol: "Realistic error generators (typos, unit errors, swapped fields, systematic offsets) alongside real errors; evaluate on high contamination levels."
+preprocessing: "Constraint discovery (functional dependencies, ranges) as an explicit component; keep raw values for audit."
+algorithms: Constraint-based and probabilistic cleaning (HoloClean), few-label error detection and correction (Raha, Baran), robust statistics for sensor series, neighbor-based checks against nearby stations.
+avoid: "Detectors that assume less than 1% contamination; scaling steps fitted on dirty data."
+gaps: "Benchmarks with real (not injected) errors are scarce; repair quality is rarely evaluated together with detection."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

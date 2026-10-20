@@ -1,0 +1,26 @@
+# Scenario S09. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S09
+name: Remote sensing change and target mapping
+family: Images, video & perception
+paper: ""
+summary: Satellite, aerial or spectral imagery where anomalies are changes over time or pixels whose spectra differ from the background. Maps must be precise, and seasonal or illumination change is a nuisance.
+rule:
+  - match:
+      mod:
+        any: [rs]
+      out:
+        any: [loc]
+    datasets_need:
+      - [loc]
+metrics: "Pixel or object-level F1 and IoU for changes; AUROC for hyperspectral anomaly maps; area-weighted errors; time-to-alert for monitoring products."
+protocol: "Geographic holdout (different regions), seasonal holdout; avoid spatial autocorrelation leakage between train and test tiles."
+preprocessing: "Radiometric calibration, co-registration, cloud masking; spectral normalization that keeps absorption features."
+algorithms: RX detector and its local and kernel variants, background-subspace and low-rank plus sparse models, siamese change detection networks, foundation-model embeddings with temporal baselines.
+avoid: "Random tile splits within one scene; RGB-only models for spectral targets."
+gaps: "Few labeled benchmarks for rare change events; severity and confidence maps rarely evaluated."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

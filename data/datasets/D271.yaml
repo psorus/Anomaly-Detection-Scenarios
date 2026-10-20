@@ -1,0 +1,23 @@
+# Dataset D271. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D271
+name: OpenAQ
+year: "2015"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [mts, st]
+size: Aggregated air quality measurements worldwide
+description: "Raw air quality data; sensor faults and pollution episodes must be labeled."
+applications: [ENV-339]
+links:
+  page:
+    url: "https://openaq.org/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,26 @@
+# Dataset D015. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D015
+name: TSB-UAD
+year: "2022"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: [loc]
+modality: [ts]
+size: Thousands of public, synthetic and artificially transformed univariate series
+description: Univariate benchmark (VLDB 2022) that controls difficulty by transforming public datasets.
+applications: []
+extra_scenarios: [S03, S31]
+links:
+  page:
+    url: "https://github.com/TheDatumOrg/TSB-UAD"
+    found_in_search: false
+  other:
+    - label: Documentation
+      url: "https://tsb-uad.readthedocs.io"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

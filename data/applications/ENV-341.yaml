@@ -1,0 +1,26 @@
+# Application ENV-341. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENV-341
+name: Flood detection from satellite
+domain: ENV
+subdomain: Environment & ecology
+description: Inundated areas mapped from radar and optical imagery for emergency response.
+properties:
+  mod: [rs]  # Data modality
+  at: [cp]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

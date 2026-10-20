@@ -1,0 +1,26 @@
+# Application AER-254. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: AER-254
+name: Flight trajectory anomalies
+domain: AER
+subdomain: Aviation
+description: ADS-B tracks showing unstable approaches, unusual holds, go-arounds or airspace deviations.
+properties:
+  mod: [st]  # Data modality
+  at: [seq, ctx]  # Anomaly type
+  unit: [ser]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, xai]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,25 @@
+# Dataset D239. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D239
+name: MIMII
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [xdom]
+modality: [sig]
+size: Normal and abnormal sounds of valves, pumps, fans and slide rails with factory noise
+description: Malfunctioning industrial machine sounds from Hitachi at several signal-to-noise ratios.
+applications: [MFG-170]
+links:
+  page:
+    url: "https://zenodo.org/records/3384388"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/1909.09347"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

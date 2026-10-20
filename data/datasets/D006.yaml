@@ -1,0 +1,32 @@
+# Dataset D006. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D006
+name: MacrOData
+year: "2026"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: "2,446 datasets: OddBench (790 semantic), OvrBench (856 statistical outliers), SynBench (800 synthetic)"
+description: "Large tabular outlier detection benchmark (Ding, Klüttermann, Wen, Chen, Akoglu) with standardized splits, semantic metadata, public and private partitions and an online leaderboard."
+applications: []
+extra_scenarios: [S32, S28]
+links:
+  page:
+    url: "https://huggingface.co/MacrOData-CMU"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2602.09329"
+    - label: Leaderboard (Hugging Face Space)
+      url: "https://macrodata-cmu-macrodata.hf.space/"
+references:
+  - ref: "[38]"
+    citation: "Ding, Klüttermann, Wen, Chen and Akoglu (2026). MacrOData: New benchmarks of thousands of datasets for tabular outlier detection."
+    context: "Section 2.1.2: new tabular benchmarks whose metadata is statistical or LLM-generated rather than scenario-based."
+    url: "https://arxiv.org/abs/2602.09329"
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

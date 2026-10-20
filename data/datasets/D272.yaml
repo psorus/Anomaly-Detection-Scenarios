@@ -1,0 +1,23 @@
+# Dataset D272. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D272
+name: SegmentMeIfYouCan (SMIYC)
+year: "2021"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [img]
+size: RoadAnomaly21 and RoadObstacle21 with pixel masks, plus LostAndFound-NoKnown
+description: Anomaly segmentation benchmark for driving scenes with component-level metrics and a public leaderboard.
+applications: [TRN-226]
+links:
+  page:
+    url: "https://segmentmeifyoucan.com/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

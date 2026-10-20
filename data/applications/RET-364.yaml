@@ -1,0 +1,26 @@
+# Application RET-364. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: RET-364
+name: Self-checkout and point-of-sale loss prevention
+domain: RET
+subdomain: E-commerce & retail
+description: Scan avoidance, sweethearting and void abuse detected from POS logs and checkout video.
+properties:
+  mod: [tab, vid]  # Data modality
+  at: [log, ctx]  # Anomaly type
+  unit: [rec, win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: hrt  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: [fair, priv]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

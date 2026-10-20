@@ -1,0 +1,21 @@
+# Dataset D393. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D393
+name: UMN crowd dataset
+year: "2006"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [vid]
+size: "11 videos of staged crowd escapes in three scenes"
+description: Classic crowd panic dataset.
+applications: [SAF-416]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

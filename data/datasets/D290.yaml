@@ -1,0 +1,23 @@
+# Dataset D290. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D290
+name: OpenSky Network ADS-B data
+year: "2013"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [st]
+size: Billions of ADS-B messages from a crowdsourced receiver network
+description: "Open air traffic data; anomalies require labeling."
+applications: [AER-254]
+links:
+  page:
+    url: "https://opensky-network.org/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

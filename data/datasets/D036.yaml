@@ -1,0 +1,21 @@
+# Dataset D036. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D036
+name: SAML-D
+year: "2023"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: sim  # real | semi | sim
+annotations: [type, ent]
+modality: [tab]
+size: "9.5 million transactions with 28 typologies (11 normal, 17 suspicious)"
+description: Synthetic AML transactions with typology labels, geographies and payment types.
+applications: [FIN-011]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

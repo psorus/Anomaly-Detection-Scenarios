@@ -1,0 +1,23 @@
+# Dataset D251. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D251
+name: VSB Power Line Fault Detection
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [sig]
+size: "8,712 three-phase signals of 800,000 samples each"
+description: Kaggle competition on partial discharge in medium-voltage overhead lines.
+applications: [ENE-192]
+links:
+  page:
+    url: "https://www.kaggle.com/c/vsb-power-line-fault-detection"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

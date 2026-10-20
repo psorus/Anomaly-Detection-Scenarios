@@ -1,0 +1,24 @@
+# Dataset D064. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D064
+name: NetFlow V2 datasets (NF-UQ-NIDS-v2 and components)
+year: "2021"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, xdom]
+modality: [tab]
+size: Several intrusion datasets converted to a shared 43-feature NetFlow format
+description: UNSW-NB15, BoT-IoT, ToN-IoT and CSE-CIC-IDS2018 in common NetFlow features with source labels, enabling cross-dataset evaluation (Sarhan et al.).
+applications: [SEC-046, SEC-087]
+links:
+  page: {}
+  other: []
+references:
+  - ref: "[37]"
+    citation: Sarhan, Layeghy, Moustafa and Portmann (2021). NetFlow datasets for machine learning-based network intrusion detection systems. BDTA/WiCON 2020.
+    context: "Section 2.1.2: analyzes UNSW-NB15, BoT-IoT, ToN-IoT and CSE-CIC-IDS2018 per attack category."
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,21 @@
+# Dataset D333. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D333
+name: CQ500
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [vol]
+size: "491 head CT scans read by three radiologists"
+description: Qure.ai dataset for hemorrhage, fracture and midline shift detection.
+applications: [HLT-282]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

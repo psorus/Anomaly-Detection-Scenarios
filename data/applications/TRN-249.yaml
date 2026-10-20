@@ -1,0 +1,26 @@
+# Application TRN-249. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: TRN-249
+name: Freight billing audit
+domain: TRN
+subdomain: Rail, maritime & logistics
+description: Carrier invoices with wrong rates, duplicate charges or impossible distances.
+properties:
+  mod: [tab]  # Data modality
+  at: [glob, log]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [fix]  # Required outputs
+  oc: []  # Operational constraints
+  adv: conc  # Adversary
+  dq: [mix]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

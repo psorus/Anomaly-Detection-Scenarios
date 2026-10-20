@@ -1,0 +1,21 @@
+# Dataset D234. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D234
+name: Paderborn bearing dataset
+year: "2016"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, sev, xdom]
+modality: [sig]
+size: "32 bearings with artificial and real damages from accelerated lifetime tests"
+description: "Motor current and vibration under four operating conditions; real damages graded by extent."
+applications: [MFG-169, MFG-175]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

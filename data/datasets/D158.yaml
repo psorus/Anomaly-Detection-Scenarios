@@ -1,0 +1,23 @@
+# Dataset D158. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D158
+name: Raha and Baran error detection datasets
+year: "2019"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [fix, loc]
+modality: [tab]
+size: Hospital, Flights, Beers, Rayyan, Movies, Tax and others with clean versions
+description: Dirty tables with ground-truth clean versions for error detection (Raha) and correction (Baran).
+applications: [MLD-123]
+links:
+  page:
+    url: "https://github.com/BigDaMa/raha"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

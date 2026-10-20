@@ -1,0 +1,23 @@
+# Dataset D056. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D056
+name: CFPB Consumer Complaint Database
+year: "2012"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [txt, tab]
+size: Millions of complaints with product, issue and company fields
+description: "Public complaints about financial products with narratives; useful for emerging-issue studies but has no anomaly labels."
+applications: [FIN-030]
+links:
+  page:
+    url: "https://www.consumerfinance.gov/data-research/consumer-complaints/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

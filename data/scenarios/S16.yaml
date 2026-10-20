@@ -1,0 +1,25 @@
+# Scenario S16. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S16
+name: Plausibility and rule-violation screening of records
+family: Discovery & data quality
+paper: ""
+summary: Tabular records checked for impossible combinations, broken invariants and suspicious patterns (audits, registries, invoices, orders at entry). Reviewers need explanations they can verify against domain rules.
+rule:
+  - match:
+      mod:
+        any: [tab]
+      at:
+        any: [log]
+    datasets_need: []
+metrics: "Precision and recall per rule type; coverage of known plausibility rules; explanation correctness (does the flagged attribute combination match the violated rule?)."
+protocol: "Separate known-rule violations from unknown ones; involve domain experts in labeling; report contamination level of the training data."
+preprocessing: "Mixed-type encodings that keep rare categories distinguishable; no frequency encoding that merges rare and anomalous categories."
+algorithms: Association-based and conditional-probability detectors for categorical data, autoencoders for mixed data, rule learners whose outputs can be added to validation rules.
+avoid: "Pure numeric extreme-value detectors; one-hot encodings that explode dimensionality without density handling."
+gaps: "Few public tabular datasets with real logical anomalies; mixed-type detectors are under-benchmarked compared with numeric ones."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

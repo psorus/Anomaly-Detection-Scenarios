@@ -1,0 +1,21 @@
+# Dataset D195. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D195
+name: WM-811K
+year: "2015"
+tier: bench  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, grp]
+modality: [img, tab]
+size: "811,457 wafer maps, about 172,000 labeled with nine patterns"
+description: Real fab wafer maps with failure pattern classes (Wu et al.).
+applications: [MFG-146]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

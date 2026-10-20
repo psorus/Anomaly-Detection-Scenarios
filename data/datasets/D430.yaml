@@ -1,0 +1,23 @@
+# Dataset D430. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D430
+name: M5 Forecasting (Walmart)
+year: "2020"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [ts]
+size: "42,840 hierarchical sales series of 3,049 products in 10 stores"
+description: "Kaggle forecasting data with calendar and price events; sales anomalies are unlabeled."
+applications: [RET-363, RET-365]
+links:
+  page:
+    url: "https://www.kaggle.com/c/m5-forecasting-accuracy"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,21 @@
+# Dataset D070. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D070
+name: Kitsune network attack dataset
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [seq, tab]
+size: "9 attacks on surveillance and IoT networks"
+description: Packet captures with labeled attacks such as ARP man-in-the-middle, SSDP flood and Mirai, released with the Kitsune online detector (NDSS 2018).
+applications: [SEC-087, SEC-046]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

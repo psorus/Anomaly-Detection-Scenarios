@@ -1,0 +1,21 @@
+# Dataset D342. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D342
+name: Levine and Samusik mass cytometry benchmarks
+year: "2015"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, grp]
+modality: [tab]
+size: Bone marrow cytometry with manually gated populations, including rare ones
+description: Standard datasets for clustering and rare population detection in high-dimensional cytometry.
+applications: [LIF-308, LIF-300]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

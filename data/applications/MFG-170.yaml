@@ -1,0 +1,26 @@
+# Application MFG-170. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-170
+name: Machine sound anomaly detection
+domain: MFG
+subdomain: Predictive maintenance & condition monitoring
+description: "Fans, pumps, valves, slide rails and gearboxes monitored by microphone; only normal sounds are available and machines differ in operating conditions."
+properties:
+  mod: [sig]  # Data modality
+  at: [glob, ctx]  # Anomaly type
+  unit: [win, obj]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: []  # Required outputs
+  oc: [shift, cold, edge]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

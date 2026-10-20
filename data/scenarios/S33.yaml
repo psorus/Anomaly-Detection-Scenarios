@@ -1,0 +1,27 @@
+# Scenario S33. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S33
+name: Whole-cycle comparison against normal references
+family: Sequential monitoring
+paper: ""
+summary: Each unit is a complete curve, cycle, batch or recording (a press cycle, a weld, a batch trajectory, a flight, a light curve), compared with references of normal units. No streaming decision inside the cycle is required.
+rule:
+  - match:
+      unit:
+        any: [ser, obj]
+      mod:
+        any: [mts, sig, ts]
+      sup:
+        any: [nov, un]
+    datasets_need: []
+metrics: "Unit-level AUROC and recall at the false-reject rate the process tolerates; localization of the deviating segment or channel; per-product or per-recipe breakdown."
+protocol: "Splits by production lot, recipe or machine; evaluate on new recipes or products for transfer; report contamination in training references."
+preprocessing: "Alignment of cycles (dynamic time warping, phase alignment) as an explicit component; resampling to fixed length without smoothing away short deviations."
+algorithms: Functional data analysis and functional PCA, distance-based detection on aligned curves (kNN with DTW), shapelet and matrix-profile discords, sequence autoencoders, multiway PCA for batches.
+avoid: "Streaming detectors that treat cycles as one long series; global alignment that hides local shape deviations."
+gaps: Public datasets with whole-cycle labels are rare outside a few manufacturing and astronomy sources.
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

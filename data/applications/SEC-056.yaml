@@ -1,0 +1,26 @@
+# Application SEC-056. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-056
+name: Static malware detection
+domain: SEC
+subdomain: Endpoint & host security
+description: Executables (PE, ELF, APK) classified from static features or raw bytes. Supervised on known families, but zero-day families are novelties and the label distribution drifts monthly.
+properties:
+  mod: [code, tab]  # Data modality
+  at: [sem, glob]  # Anomaly type
+  unit: [obj]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup, nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [type, xai]  # Required outputs
+  oc: [scale, drift]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

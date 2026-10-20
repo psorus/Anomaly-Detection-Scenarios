@@ -1,0 +1,29 @@
+# Scenario S31. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S31
+name: Change and level-shift detection in univariate series
+family: Sequential monitoring
+paper: ""
+summary: "A single low-dimensional series where the anomaly is a persistent change: a leak starting, a level shift, a rising epidemic signal. Detecting the onset early matters more than flagging every point after it."
+rule:
+  - match:
+      at:
+        any: [cp]
+      mod:
+        any: [ts]
+      dim:
+        in: [lo]
+      adv:
+        in: ["no"]
+    datasets_need: []
+metrics: "Detection delay versus false alarm rate (average run length); change-point localization error; F1 with tolerance windows."
+protocol: "Series with annotated change points; synthetic changes of controlled size on real noise; benign regime changes as negatives."
+preprocessing: "Detrending and deseasonalization that do not absorb the change; robust scaling."
+algorithms: CUSUM, EWMA and Shiryaev-Roberts procedures, Bayesian online change-point detection, PELT and binary segmentation for offline analysis, forecasting residuals with sequential tests.
+avoid: "Point-anomaly detectors that flag only the first point of a shift; point-wise metrics."
+gaps: Few datasets separate harmful changes from benign regime changes.
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

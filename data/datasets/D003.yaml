@@ -1,0 +1,25 @@
+# Dataset D003. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D003
+name: DAMI outlier evaluation repository (Campos et al.)
+year: "2016"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: About two dozen base datasets in many preprocessed variants
+description: "Repository from \"On the evaluation of unsupervised outlier detection\" with controlled outlier rates, duplicates and normalization variants of semantically meaningful datasets."
+applications: []
+extra_scenarios: [S32]
+links:
+  page: {}
+  other: []
+references:
+  - ref: "[6]"
+    citation: "Campos, Zimek, Sander, Campello, Micenková, Schubert, Assent and Houle (2016). On the evaluation of unsupervised outlier detection: measures, datasets, and an empirical study. Data Mining and Knowledge Discovery."
+    context: "Introduction: algorithms are evaluated across dataset collections."
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,23 @@
+# Dataset D101. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D101
+name: StreamSpot
+year: "2016"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [grp]
+modality: [dg]
+size: "600 provenance graphs from five benign scenarios and one attack scenario"
+description: Streaming heterogeneous graphs of browsing, video, downloads, gaming and a drive-by-download attack.
+applications: [SEC-058]
+links:
+  page:
+    url: "https://arxiv.org/abs/1602.04844"
+    found_in_search: true
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,24 @@
+# Scenario S26. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S26
+name: Severity-graded detection
+family: Cross-cutting requirements
+paper: ""
+summary: "Operators need to know how bad an anomaly is, not only that it exists: defect grade, patient acuity, grid stress, damage level. Severity must be comparable across entities and calibrated over time."
+rule:
+  - match:
+      out:
+        any: [sev]
+    datasets_need:
+      - [sev]
+metrics: "Rank correlation between scores and annotated severity (Spearman, Kendall); graded NDCG; calibration of severity levels; cost-weighted recall (misses of severe cases weigh more)."
+protocol: "Ordinal severity labels; separate evaluation per severity class; stability of grades across entities and time."
+preprocessing: "Normalization that preserves magnitude information; per-entity calibration."
+algorithms: Extreme value theory on scores, ordinal regression on top of anomaly scores, conformal p-values for calibrated tail probabilities, physics-based damage indices.
+avoid: "Treating raw anomaly scores as severity; scores are often uncalibrated across entities."
+gaps: Severity is almost never part of anomaly detection benchmarks (the paper calls for severity-aware evaluation).
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

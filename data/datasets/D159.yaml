@@ -1,0 +1,23 @@
+# Dataset D159. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D159
+name: REIN benchmark
+year: "2023"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [fix, loc, type]
+modality: [tab]
+size: Over a dozen datasets with real and synthetic errors and ground truth
+description: Benchmark of dozens of error detection and repair methods inside ML pipelines (Abdelaal et al.).
+applications: [MLD-123, MLD-122]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2302.04702"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

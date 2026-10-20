@@ -1,0 +1,26 @@
+# Application WEB-387. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: WEB-387
+name: Fake account detection at sign-up
+domain: WEB
+subdomain: Social media & online platforms
+description: Mass-registered accounts identified at creation time from device, network and form-filling signals.
+properties:
+  mod: [tab, gr]  # Data modality
+  at: [clu, log]  # Anomaly type
+  unit: [ent, sub]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak, sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [spec, prec]  # Evaluation priority
+  out: [grp]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

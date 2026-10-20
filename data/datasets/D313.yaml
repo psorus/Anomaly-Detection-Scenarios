@@ -1,0 +1,23 @@
+# Dataset D313. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D313
+name: OpenMIBOOD
+year: "2025"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [xdom]
+modality: [img]
+size: Medical OOD benchmarks with covariate-shifted, near-OOD and far-OOD splits
+description: Medical imaging out-of-distribution benchmark evaluating post-hoc methods (CVPR 2025).
+applications: [HLT-280, HLT-283, HLT-276]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2503.16247"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

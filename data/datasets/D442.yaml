@@ -1,0 +1,23 @@
+# Dataset D442. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D442
+name: Student Performance (UCI)
+year: "2008"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [prot]
+modality: [tab]
+size: "649 Portuguese-course and 395 math-course students with grades and demographics"
+description: Secondary school data from two Portuguese schools with sex, age and family background (Cortez and Silva).
+applications: [EDU-439]
+links:
+  page:
+    url: "https://archive.ics.uci.edu/dataset/320/student+performance"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

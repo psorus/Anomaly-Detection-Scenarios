@@ -1,0 +1,23 @@
+# Dataset D073. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D073
+name: CIRA-CIC-DoHBrw-2020
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [tab]
+size: Benign and malicious DNS-over-HTTPS traffic
+description: "Two-layer labels: DoH versus other HTTPS, then benign versus tunneling tools."
+applications: [SEC-050]
+links:
+  page:
+    url: "https://www.unb.ca/cic/datasets/dohbrw-2020.html"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

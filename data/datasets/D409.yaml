@@ -1,0 +1,21 @@
+# Dataset D409. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D409
+name: PHEME rumour dataset
+year: "2016"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, grp]
+modality: [txt, dg]
+size: Twitter threads around breaking news labeled as rumours and non-rumours
+description: Rumour detection and veracity data across nine news events.
+applications: [WEB-388, WEB-394]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

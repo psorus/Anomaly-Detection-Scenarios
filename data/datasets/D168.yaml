@@ -1,0 +1,21 @@
+# Dataset D168. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D168
+name: Semantic Shift Benchmark (SSB)
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [xdom]
+modality: [img]
+size: Open-set splits of ImageNet-21K, CUB, FGVC-Aircraft and Stanford Cars
+description: Open-set recognition benchmark with easy and hard unknowns by semantic similarity (Vaze et al.).
+applications: [MLD-130]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

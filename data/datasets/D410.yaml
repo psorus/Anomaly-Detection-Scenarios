@@ -1,0 +1,21 @@
+# Dataset D410. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D410
+name: Fakeddit
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [txt, img]
+size: About one million Reddit posts with text, images and fine-grained fake news labels
+description: Multimodal fake news dataset with 2-, 3- and 6-way labels.
+applications: [WEB-388, WEB-389]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

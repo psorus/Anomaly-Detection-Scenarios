@@ -1,0 +1,26 @@
+# Application HLT-266. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-266
+name: ECG arrhythmia detection
+domain: HLT
+subdomain: Patient monitoring
+description: "Ambulatory and wearable ECG screened for abnormal beats and rhythms; models must transfer across devices and lead placements."
+properties:
+  mod: [sig]  # Data modality
+  at: [seq, glob]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [sup, nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [type, loc]  # Required outputs
+  oc: [edge, shift, rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

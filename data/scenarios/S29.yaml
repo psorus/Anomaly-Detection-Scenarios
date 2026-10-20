@@ -1,0 +1,27 @@
+# Scenario S29. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S29
+name: Rare subpopulations and anomaly clusters
+family: Discovery & data quality
+paper: ""
+summary: "Anomalies arrive as groups that share a cause: a rare cell population, a cluster of crash reports, a batch of defective products, an outbreak. No adversary is involved, but density-based detectors miss dense anomalous groups."
+rule:
+  - match:
+      at:
+        any: [clu]
+      unit:
+        any: [sub]
+      adv:
+        in: ["no"]
+    datasets_need: []
+metrics: "Cluster-level recall and purity; size of the smallest recoverable group (in the spirit of minimum-frequency experiments); time until a growing cluster is detected."
+protocol: "Controlled experiments varying group size and density; split by group so that members of one group do not appear on both sides."
+preprocessing: "Similarity definitions and embeddings fixed in advance; deduplicate exact repeats that would trivially form clusters."
+algorithms: Microcluster detectors, clustering with small-cluster scoring (CBLOF-style), scan statistics, density methods with large neighborhoods, grouping of top-ranked anomalies.
+avoid: kNN or LOF with small k, which assign low scores to dense anomaly groups.
+gaps: "Few benchmarks annotate anomaly groups; minimum detectable group size is rarely reported."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

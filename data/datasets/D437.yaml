@@ -1,0 +1,25 @@
+# Dataset D437. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D437
+name: OULAD
+year: "2017"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [prot, rul, ent]
+modality: [tab, seq]
+size: "32,593 students in 22 course presentations with clickstreams and outcomes"
+description: Open University Learning Analytics Dataset with demographics, assessments and withdrawal dates.
+applications: [EDU-439]
+links:
+  page:
+    url: "https://analyse.kmi.open.ac.uk/open-dataset"
+    found_in_search: true
+  other:
+    - label: Paper (Scientific Data, PMC)
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5704676/"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

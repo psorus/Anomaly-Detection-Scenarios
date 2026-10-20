@@ -1,0 +1,21 @@
+# Dataset D240. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D240
+name: ToyADMOS and ToyADMOS2
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [xdom]
+modality: [sig]
+size: Miniature machine sounds (toy car, conveyor, train) with deliberately damaged parts
+description: "Anomalous sound datasets from NTT; ToyADMOS2 adds domain shift."
+applications: [MFG-170]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

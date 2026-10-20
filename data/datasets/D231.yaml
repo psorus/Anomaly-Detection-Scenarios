@@ -1,0 +1,21 @@
+# Dataset D231. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D231
+name: GasVid
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [sev]
+modality: [vid]
+size: Infrared videos of controlled methane releases at several leak sizes
+description: Optical gas imaging videos for leak detection (Wang et al., VideoGasNet).
+applications: [MFG-185]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

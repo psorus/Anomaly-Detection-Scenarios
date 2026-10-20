@@ -1,0 +1,23 @@
+# Dataset D068. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D068
+name: MAWILab
+year: "2010"
+tier: app  # generic | suite | bench | app
+labels: weak  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [seq, tab]
+size: Daily 15-minute traces from a trans-Pacific backbone link since 2001
+description: "Anomaly labels produced by combining several detectors on MAWI traces: realistic but noisy."
+applications: [SEC-046, SEC-054]
+links:
+  page: {}
+  other:
+    - label: Source traces (MAWI archive)
+      url: "https://mawi.wide.ad.jp/mawi/"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

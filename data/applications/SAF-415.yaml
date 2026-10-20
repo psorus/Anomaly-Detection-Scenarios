@@ -1,0 +1,26 @@
+# Application SAF-415. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SAF-415
+name: Scene-specific video anomaly detection
+domain: SAF
+subdomain: Video surveillance & public safety
+description: "Fixed cameras where normal is scene-specific (bikes on a walkway are anomalous here but normal on a road); trained on normal footage only."
+properties:
+  mod: [vid]  # Data modality
+  at: [sem, ctx]  # Anomaly type
+  unit: [reg, win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: [shift, edge]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

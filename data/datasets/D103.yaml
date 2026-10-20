@@ -1,0 +1,23 @@
+# Dataset D103. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D103
+name: CERT Insider Threat Test Dataset
+year: "2016"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: sim  # real | semi | sim
+annotations: [type, ent]
+modality: [seq, tab, txt]
+size: "Releases r1 to r6.2; r4.2 covers 1,000 users over 17 months"
+description: Synthetic organization logs (logon, device, file, email, web, psychometric) with injected insider scenarios (CMU SEI).
+applications: [SEC-064, SEC-065, SEC-068]
+links:
+  page:
+    url: "https://kilthub.cmu.edu/articles/dataset/Insider_Threat_Test_Dataset/12841247"
+    found_in_search: true
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

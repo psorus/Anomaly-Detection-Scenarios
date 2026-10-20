@@ -1,0 +1,23 @@
+# Dataset D087. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D087
+name: BATADAL
+year: "2017"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: sim  # real | semi | sim
+annotations: [loc, rca]
+modality: [mts, gr]
+size: Simulated SCADA readings of the C-Town water network
+description: "Battle of the Attack Detection Algorithms: EPANET-based network with labeled cyber-physical attacks."
+applications: [SEC-083, ENE-209]
+links:
+  page:
+    url: "https://www.batadal.net/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,26 @@
+# Application MFG-171. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-171
+name: Rotating machinery condition monitoring
+domain: MFG
+subdomain: Predictive maintenance & condition monitoring
+description: Turbines, compressors and gearboxes with SCADA and vibration channels. Operators need a severity level to plan maintenance.
+properties:
+  mod: [mts, sig]  # Data modality
+  at: [dep, cp, ctx]  # Anomaly type
+  unit: [win, ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [early, rca, sev]  # Required outputs
+  oc: [shift, drift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

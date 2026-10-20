@@ -1,0 +1,26 @@
+# Application TRN-247. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: TRN-247
+name: Cold chain temperature excursions
+domain: TRN
+subdomain: Rail, maritime & logistics
+description: "Temperature loggers on pharmaceuticals and food; excursions must be detected and documented for product release decisions."
+properties:
+  mod: [ts]  # Data modality
+  at: [glob, cp]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec, time]  # Evaluation priority
+  out: [sev]  # Required outputs
+  oc: [reg]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [miss]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,26 @@
+# Application BLD-215. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: BLD-215
+name: HVAC fault detection and diagnostics
+domain: BLD
+subdomain: Buildings & facilities
+description: Stuck dampers, valve leaks and sensor drifts in air handling units, diagnosed from control and sensor points.
+properties:
+  mod: [mts]  # Data modality
+  at: [dep, ctx]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov, sup]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [type, rca]  # Required outputs
+  oc: [shift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

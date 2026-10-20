@@ -1,0 +1,21 @@
+# Dataset D235. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D235
+name: IMS bearing dataset (NASA)
+year: "2007"
+tier: bench  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [rul, ent]
+modality: [sig]
+size: Three run-to-failure tests of four bearings
+description: University of Cincinnati run-to-failure vibration data from the NASA prognostics repository.
+applications: [MFG-169, MFG-178]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

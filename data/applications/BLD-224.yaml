@@ -1,0 +1,26 @@
+# Application BLD-224. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: BLD-224
+name: Railway track defect detection
+domain: BLD
+subdomain: Civil infrastructure
+description: Track geometry, rail cracks and fastener defects found from measurement trains, ultrasound and cameras.
+properties:
+  mod: [sig, img, mts]  # Data modality
+  at: [glob]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [sup]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, sev]  # Required outputs
+  oc: [cert]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,23 @@
+# Dataset D292. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D292
+name: NASA Aviation Safety Reporting System (ASRS)
+year: "1976"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, txt]
+modality: [txt]
+size: Over 1.5 million confidential incident reports with anomaly codes
+description: Voluntary safety reports with coded anomaly categories and narratives.
+applications: [AER-253]
+links:
+  page:
+    url: "https://asrs.arc.nasa.gov/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

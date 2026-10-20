@@ -1,0 +1,26 @@
+# Application MLD-125. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MLD-125
+name: Label error detection in training data
+domain: MLD
+subdomain: Data quality & data management
+description: Mislabeled examples in ML datasets, found from disagreement with model predictions and neighbors.
+properties:
+  mod: [img, txt, tab]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank, fix]  # Required outputs
+  oc: [div, rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

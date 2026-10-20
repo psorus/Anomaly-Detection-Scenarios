@@ -1,0 +1,21 @@
+# Dataset D270. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D270
+name: Intel Berkeley Research Lab sensor data
+year: "2004"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [mts, st]
+size: Readings from 54 sensors over about five weeks
+description: Classic sensor network data with many faulty readings, unlabeled.
+applications: [BLD-225]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

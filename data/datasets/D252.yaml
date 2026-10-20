@@ -1,0 +1,25 @@
+# Dataset D252. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D252
+name: CARE to Compare
+year: "2024"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, xdom, ent]
+modality: [mts]
+size: "95 datasets from 36 turbines in 3 wind farms with labeled faults"
+description: "Real SCADA data for early fault detection, with a score combining coverage, accuracy, reliability and earliness (Gück et al.)."
+applications: [ENE-198]
+links:
+  page: {}
+  other:
+    - label: Paper (Data, MDPI)
+      url: "https://www.mdpi.com/2306-5729/9/12/138"
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2404.10320"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

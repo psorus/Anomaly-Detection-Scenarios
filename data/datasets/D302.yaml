@@ -1,0 +1,23 @@
+# Dataset D302. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D302
+name: PhysioNet/CinC 2015 false arrhythmia alarms
+year: "2015"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [sig, mts]
+size: "1,250 alarms with ECG, PPG and arterial pressure waveforms"
+description: Challenge to suppress false life-threatening arrhythmia alarms in the ICU.
+applications: [HLT-265]
+links:
+  page:
+    url: "https://physionet.org/content/challenge-2015/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

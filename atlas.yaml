@@ -1,0 +1,15 @@
+# Site settings. `repository` is filled in automatically on GitHub Actions (GITHUB_REPOSITORY);
+# set it here only for local builds. `discussions` maps record kinds to GitHub Discussions category slugs.
+title: Anomaly Detection Scenario Atlas
+description: A community catalog of anomaly detection applications, the structural properties that decide which algorithms and metrics fit them, scenarios built from those properties, and the datasets that can evaluate each scenario.
+paper:
+  title: We Need to Rethink Benchmarking in Anomaly Detection
+  arxiv: "2507.15584"
+  url: "https://arxiv.org/abs/2507.15584"
+repository: OWNER/REPO
+branch: main
+discussions:
+  applications: applications
+  datasets: datasets
+  scenarios: scenarios
+  general: general

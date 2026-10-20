@@ -1,0 +1,26 @@
+# Application RET-361. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: RET-361
+name: Return fraud and wardrobing
+domain: RET
+subdomain: E-commerce & retail
+description: Customers returning used, stolen or swapped items, compared with their purchase and return history.
+properties:
+  mod: [tab]  # Data modality
+  at: [loc, ctx]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank, xai]  # Required outputs
+  oc: [fair]  # Operational constraints
+  adv: conc  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

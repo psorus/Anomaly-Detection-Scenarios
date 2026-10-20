@@ -1,0 +1,40 @@
+# Scenario S25. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S25
+name: Root-cause localization across components and dimensions
+family: Cross-cutting requirements
+paper: ""
+summary: "A detected anomaly is only useful once its origin is found: which service, machine, region, version or supplier caused it. The output is a ranked set of candidate causes among many components or attribute combinations."
+rule:
+  - match:
+      out:
+        any: [rca]
+      dq:
+        any: [hier]
+    datasets_need:
+      - [rca]
+  - match:
+      out:
+        any: [rca]
+      unit:
+        any: [sub]
+    datasets_need:
+      - [rca]
+  - match:
+      out:
+        any: [rca]
+      unit:
+        any: [node]
+    datasets_need:
+      - [rca]
+metrics: "Top-k accuracy (AC@k) and average rank of the true root cause; time to localization; precision of attributed segments; separate results by fault type."
+protocol: "Fault-injection campaigns with known root causes, plus real incident postmortems where available; report results per fault type and per system; hold out systems to test transfer."
+preprocessing: "Consistent hierarchy definitions; handling of sparse leaf combinations."
+algorithms: Search over attribute combinations (Adtributor, Squeeze), causal-graph and random-walk methods over service dependencies (MicroRCA, CausalRCA, BARO, RCD), multi-source fusion of metrics, logs and traces, contribution analysis (SPE contribution plots).
+avoid: Detection-only evaluation for applications whose real output is a root cause.
+gaps: "Few public datasets with ground-truth root causes; detection and localization are usually studied separately."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

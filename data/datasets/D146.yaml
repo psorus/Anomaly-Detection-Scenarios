@@ -1,0 +1,25 @@
+# Dataset D146. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D146
+name: Mozilla performance change-point annotations
+year: "2026"
+tier: app  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [ts]
+size: "174 performance series annotated by 11 Mozilla engineers"
+description: Practitioner-annotated change points in Firefox performance tests from a study of statistical change point detection at Mozilla (Besbes et al.).
+applications: [ITO-113]
+links:
+  page:
+    url: "https://doi.org/10.5281/zenodo.20382322"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2606.18377"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

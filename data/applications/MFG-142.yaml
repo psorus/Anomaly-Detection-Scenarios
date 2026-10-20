@@ -1,0 +1,26 @@
+# Application MFG-142. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-142
+name: Multi-sensor part inspection (RGB, 3D, infrared)
+domain: MFG
+subdomain: Visual inspection
+description: "Parts imaged with complementary sensors: surface defects show in RGB, geometric defects in 3D scans, internal defects in infrared images. Each sensor alone misses some defect classes."
+properties:
+  mod: [img, pc]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [obj, reg]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [loc, type]  # Required outputs
+  oc: [cold]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

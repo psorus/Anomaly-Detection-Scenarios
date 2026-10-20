@@ -1,0 +1,26 @@
+# Application FIN-023. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-023
+name: Flash crash and liquidity regime detection
+domain: FIN
+subdomain: Capital markets & trading
+description: Abrupt liquidity evaporation and correlation breakdown across instruments. The value is warning seconds to minutes earlier.
+properties:
+  mod: [mts]  # Data modality
+  at: [cp, dep]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time]  # Evaluation priority
+  out: [early, sev]  # Required outputs
+  oc: [drift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

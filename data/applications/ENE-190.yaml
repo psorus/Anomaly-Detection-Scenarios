@@ -1,0 +1,26 @@
+# Application ENE-190. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-190
+name: Smart meter data quality
+domain: ENE
+subdomain: Power grid
+description: "Faulty meters, reversed polarity, clock errors and duplicated reads in millions of meter series; bad reads must be validated and estimated before billing."
+properties:
+  mod: [ts]  # Data modality
+  at: [log, glob]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [type, fix]  # Required outputs
+  oc: [scale, rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

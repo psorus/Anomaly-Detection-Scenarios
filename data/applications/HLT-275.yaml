@@ -1,0 +1,26 @@
+# Application HLT-275. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-275
+name: Unsupervised brain MRI lesion detection
+domain: HLT
+subdomain: Medical imaging
+description: Tumors, lesions and other pathologies segmented as deviations from healthy anatomy, trained on healthy scans only.
+properties:
+  mod: [vol, img]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, unc]  # Required outputs
+  oc: [shift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

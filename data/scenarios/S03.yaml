@@ -1,0 +1,29 @@
+# Scenario S03. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S03
+name: Seasonal KPI stream monitoring at scale
+family: Sequential monitoring
+paper: ""
+summary: Thousands to millions of univariate business or service metrics with strong daily and weekly cycles. Alert fatigue is the dominant risk, and detectors must be cheap enough to run per series.
+rule:
+  - match:
+      mod:
+        any: [ts]
+      pt:
+        in: ["on", hrt]
+      adv:
+        in: ["no"]
+      dq:
+        any: [season, hier]
+    datasets_need: []
+metrics: "Precision at a fixed alert budget per series per week; event-level F1 with tolerance windows; NAB score for earliness; false alarms after known holidays and releases."
+protocol: "Rolling-origin evaluation over months; include calendar effects and planned changes as negatives; separate results for spikes, level shifts and trend changes."
+preprocessing: Seasonal decomposition (STL or robust variants), holiday calendars, hierarchical reconciliation when series aggregate.
+algorithms: Seasonal-hybrid ESD, Spectral Residual, Donut-style VAEs, forecasting residuals (ETS, Prophet-style, foundation forecasters such as Chronos or TimesFM) with extreme-value thresholding (SPOT/DSPOT).
+avoid: "Per-series deep models trained from scratch for millions of series; thresholds that ignore seasonality."
+gaps: "Public KPI datasets are small relative to production scale; alert-budget metrics and hierarchical (aggregate vs. leaf) evaluation are rarely benchmarked."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

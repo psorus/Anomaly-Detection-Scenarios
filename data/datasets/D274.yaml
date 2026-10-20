@@ -1,0 +1,21 @@
+# Dataset D274. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D274
+name: Lost and Found
+year: "2016"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [img]
+size: About 2,100 annotated stereo frames with small road obstacles
+description: Real lost cargo and obstacles on roads (Pinggera et al.).
+applications: [TRN-226]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

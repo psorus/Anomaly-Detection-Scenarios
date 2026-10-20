@@ -1,0 +1,26 @@
+# Application ENV-340. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENV-340
+name: Wildfire early detection
+domain: ENV
+subdomain: Environment & ecology
+description: Smoke and fire detected in camera feeds and satellite imagery within minutes of ignition.
+properties:
+  mod: [img, rs, vid]  # Data modality
+  at: [glob, sem]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: [edge]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

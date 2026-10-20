@@ -1,0 +1,26 @@
+# Application MFG-156. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-156
+name: Batch process monitoring
+domain: MFG
+subdomain: Process monitoring & quality
+description: Whole-batch trajectories in pharma, biotech and specialty chemicals compared with golden batches.
+properties:
+  mod: [mts]  # Data modality
+  at: [seq, dep]  # Anomaly type
+  unit: [ser]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [rca]  # Required outputs
+  oc: [reg]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [small]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

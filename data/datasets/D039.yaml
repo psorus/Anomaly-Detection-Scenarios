@@ -1,0 +1,25 @@
+# Dataset D039. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D039
+name: DGraph-Fin
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [ent]
+modality: [gr]
+size: "3.7 million users and 4.3 million emergency-contact edges"
+description: "Dynamic graph from the Finvolution consumer lending platform with overdue-fraud labels; most nodes are unlabeled background users."
+applications: [FIN-402]
+links:
+  page:
+    url: "https://arxiv.org/abs/2207.03579"
+    found_in_search: true
+  other:
+    - label: Paper (NeurIPS 2022)
+      url: "https://papers.neurips.cc/paper_files/paper/2022/file/8f1918f71972789db39ec0d85bb31110-Paper-Datasets_and_Benchmarks.pdf"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

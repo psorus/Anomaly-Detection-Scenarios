@@ -1,0 +1,23 @@
+# Dataset D233. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D233
+name: CWRU Bearing Data
+year: "2006"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, sev, xdom]
+modality: [sig]
+size: Vibration at 12 and 48 kHz with seeded faults of three sizes under four loads
+description: "Case Western Reserve University bearing data; seeded faults make it easy, so cross-load and cross-dataset protocols are recommended."
+applications: [MFG-169]
+links:
+  page:
+    url: "https://engineering.case.edu/bearingdatacenter"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,30 @@
+# Scenario S17. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S17
+name: Emerging-topic detection in text streams
+family: Text & documents
+paper: ""
+summary: New issues hidden in free text such as complaints, safety reports, support chats and posts. The output is a group of related documents describing a new topic, not a single outlier.
+rule:
+  - match:
+      mod:
+        first: [txt]
+      at:
+        any: [cp, sem, clu]
+      adv:
+        in: ["no"]
+      out:
+        any: [grp, disc]
+    datasets_need:
+      - [grp, txt, type]
+metrics: "Time from first document to detected topic; topic purity and coverage; precision of surfaced clusters as judged by experts."
+protocol: "Retrospective streams with known emerging issues; evaluate early in the topic's life with very few documents."
+preprocessing: "Deduplication of templates and boilerplate; embedding models fixed across the evaluation period."
+algorithms: Embedding-based novelty scores with online clustering, burst detection on topic counts, LLM-assisted summarization of candidate clusters.
+avoid: "Document-level outlier scores without grouping; topic models refit each day with unstable topics."
+gaps: "Very few benchmarks for emerging-topic detection outside news; evaluation depends on expert judgement."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

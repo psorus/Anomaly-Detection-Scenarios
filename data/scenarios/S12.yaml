@@ -1,0 +1,27 @@
+# Scenario S12. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S12
+name: Coordinated groups, rings and campaigns
+family: Adversarial anomalies
+paper: ""
+summary: "The anomaly is a group acting together: fraud rings, bot farms, collusive bidders, review spammers. Members can look normal individually; density-based detectors may even score them as normal because they are dense."
+rule:
+  - match:
+      at:
+        any: [clu]
+      unit:
+        any: [sub]
+      adv:
+        in: [adapt, conc]
+    datasets_need: []
+metrics: "Group-level recall (share of rings with at least one, or most, members flagged); group purity and ARI against ground-truth groups; precision@k over groups; time to detect a new group."
+protocol: "Split by group, never splitting a ring across train and test; camouflage tests (adding normal edges to group members)."
+preprocessing: Graph construction choices (which shared attributes create edges) documented as part of the scenario.
+algorithms: Dense-subgraph detection (FRAUDAR, D-Cube, M-Zoom), microcluster-aware stream detectors (MIDAS), heterophily-aware graph neural networks (CARE-GNN, PC-GNN, BWGNN), clustering of suspicious entities.
+avoid: "Point-wise density detectors (LOF, kNN) without group logic; they miss clustered anomalies."
+gaps: "Few datasets label groups rather than individuals; camouflage robustness is rarely measured."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

@@ -1,0 +1,24 @@
+# Scenario S37. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S37
+name: Multimodal and multi-sensor fusion
+family: Cross-cutting requirements
+paper: ""
+summary: "Anomalies show up only when several modalities are combined: RGB with 3D or infrared, video with audio, vital signs with notes, metrics with logs and traces. Each source alone misses some anomaly types, and sources can be missing or misaligned."
+rule:
+  - match:
+      dq:
+        any: [multi]
+    datasets_need:
+      - ["@multimod"]
+metrics: "Detection per modality and fused (ablation), robustness when one modality is missing or delayed, calibration of the fused score; localization metrics per modality where applicable."
+protocol: "Report each modality alone and fused; test with dropped, noisy and misaligned modalities; document synchronization and registration between sensors."
+preprocessing: "Spatial registration and temporal synchronization as explicit, evaluated components; normalization per modality before fusion."
+algorithms: Late fusion of per-modality scores, feature-level fusion (M3DM-style), cross-modal prediction (reconstruct one modality from another), contrastive alignment of modalities, graph-based fusion of metrics, logs and traces for microservices.
+avoid: "Early concatenation of unaligned features; reporting only the fused result, which hides which modality carries the signal."
+gaps: "Few datasets with synchronized modalities and anomaly labels; missing-modality robustness is rarely evaluated."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

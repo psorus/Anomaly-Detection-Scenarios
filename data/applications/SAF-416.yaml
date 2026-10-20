@@ -1,0 +1,30 @@
+# Application SAF-416. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SAF-416
+name: Crowd anomaly and crush risk detection
+domain: SAF
+subdomain: Video surveillance & public safety
+description: Density and motion patterns in crowds that indicate panic or dangerous crowding, flagged before it escalates.
+properties:
+  mod: [vid]  # Data modality
+  at: [clu, cp]  # Anomaly type
+  unit: [reg, win]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [time, rec]  # Evaluation priority
+  out: [loc, early]  # Required outputs
+  oc: [priv]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references:
+  - ref: "[31]"
+    citation: Aldayri and Albattah (2022). Taxonomy of anomaly detection techniques in crowd scenes. Sensors.
+    context: "Section 2.1.1: an existing anomaly taxonomy."
+    url: "https://www.mdpi.com/1424-8220/22/16/6080"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

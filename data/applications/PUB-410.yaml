@@ -1,0 +1,26 @@
+# Application PUB-410. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: PUB-410
+name: Mass identity fraud against public programs
+domain: PUB
+subdomain: Tax, customs & benefits
+description: Organized attacks filing thousands of claims with stolen identities, sharing addresses, devices or bank accounts.
+properties:
+  mod: [tab, gr]  # Data modality
+  at: [clu, log]  # Anomaly type
+  unit: [sub]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [grp]  # Required outputs
+  oc: [fair]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,21 @@
+# Dataset D121. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D121
+name: In-the-Wild audio deepfakes
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [sig]
+size: About 38 hours of real and deepfake speech of public figures
+description: "Web-collected deepfake audio for testing generalization of spoofing countermeasures (Müller et al.)."
+applications: [SEC-071]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

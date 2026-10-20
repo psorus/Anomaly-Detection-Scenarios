@@ -1,0 +1,27 @@
+# Dataset D153. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D153
+name: PetShop
+year: "2023"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [rca]
+modality: [mts, dg]
+size: Latency, availability and request metrics of an AWS microservice app with injected faults
+description: Root-cause benchmark (CLeaR 2024) on a pet adoption application.
+applications: [ITO-097]
+links:
+  page:
+    url: "https://amazon.science/code-and-datasets/petshop"
+    found_in_search: true
+  other:
+    - label: Paper (PMLR, CLeaR 2024)
+      url: "https://proceedings.mlr.press/v236/hardt24a.html"
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2311.04806"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,28 @@
+# Scenario S22. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S22
+name: Peer-group audits with fairness obligations
+family: Graphs, space & entities
+paper: ""
+summary: Offline comparison of people or organizations with peers (taxpayers, providers, students, claimants). Flags lead to audits or sanctions, so locally anomalous behavior must be explained and errors must not burden groups unfairly.
+rule:
+  - match:
+      at:
+        any: [loc]
+      oc:
+        any: [fair]
+      pt:
+        in: [bat]
+    datasets_need:
+      - [prot]
+metrics: "Precision@k at audit capacity; equalized false-positive rates and flag-rate disparity across protected groups; explanation stability."
+protocol: "Subgroup reporting by design; documented peer-group definitions; sensitivity analyses on peer-group choice."
+preprocessing: "Peer grouping is the central component; avoid proxies for protected attributes in features."
+algorithms: Local density and kNN methods within peer groups (LOF), conditional detectors, fairness-aware outlier detection, interpretable scoring rules.
+avoid: Global detectors that flag entire minority groups as anomalous because they are rare.
+gaps: "Fair outlier detection is young; datasets with protected attributes and audit outcomes are rare."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

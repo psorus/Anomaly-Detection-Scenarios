@@ -1,0 +1,27 @@
+# Scenario S02. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S02
+name: Streaming multivariate and signal monitoring
+family: Sequential monitoring
+paper: Example 2.1
+summary: Dozens to thousands of correlated channels or high-rate signals per asset or patient, monitored continuously. Value lies in lead time and in naming the affected channel or subsystem, so operators can intervene in time.
+rule:
+  - match:
+      pt:
+        in: ["on"]
+      mod:
+        any: [mts, sig]
+      adv:
+        in: ["no"]
+    datasets_need: []
+metrics: "Range-based precision and recall (Tatbul et al.), VUS-PR, affiliation metrics; lead time before the event or failure; channel-level localization hit rate (top-k channels contain the true one)."
+protocol: "Train on early normal periods, test later (temporal holdout); leave-one-asset-out to measure transfer; report results per operating mode; bootstrap confidence intervals over events, not points."
+preprocessing: "Mode- or context-aware normalization (per operating regime); robust scaling (median/MAD) so slow drifts are not normalized away; resampling for asynchronous channels."
+algorithms: Reconstruction and forecasting models with channel-wise residuals (USAD, OmniAnomaly, TranAD, LSTM forecasters with nonparametric dynamic thresholds), graph-based sensor models (GDN), PCA/SPE monitoring as a strong baseline.
+avoid: "Single global thresholds across heterogeneous assets; point-adjust evaluation; global PCA that discards low-variance channels where faults show first."
+gaps: "Few public datasets with labeled lead time; little work on severity grading and on transfer across fleets; benchmark datasets such as SMAP/MSL have known labeling issues."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

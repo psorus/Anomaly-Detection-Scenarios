@@ -1,0 +1,25 @@
+# Scenario S23. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S23
+name: Certified safety-critical detection
+family: Cross-cutting requirements
+paper: ""
+summary: Detectors inside safety cases (avionics, nuclear, automotive, medical devices). Recall and timing must be demonstrated, behavior must be verifiable, and changes require re-certification.
+rule:
+  - match:
+      oc:
+        any: [cert]
+      ep:
+        any: [rec, time]
+    datasets_need: []
+metrics: "Demonstrated recall with confidence bounds at required integrity levels; worst-case detection time; false alarm rate per operating hour; coverage of the fault catalog."
+protocol: "Fault-injection campaigns covering the hazard analysis; statistical demonstration with confidence intervals; frozen models with documented operating domains."
+preprocessing: "Deterministic, verifiable pipelines; no data-dependent preprocessing that changes after certification."
+algorithms: Physics-informed residuals and analytical redundancy, simple statistical tests, verifiable small networks, runtime monitors with formal guarantees.
+avoid: "Continuously self-updating models; opaque large models without verification evidence."
+gaps: Little research connects anomaly detection metrics to certification evidence.
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

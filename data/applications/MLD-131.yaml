@@ -1,0 +1,26 @@
+# Application MLD-131. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MLD-131
+name: Model data drift monitoring
+domain: MLD
+subdomain: ML model monitoring & reliability
+description: Shifts in feature and prediction distributions that degrade a production model before labels arrive.
+properties:
+  mod: [tab]  # Data modality
+  at: [cp]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [time]  # Evaluation priority
+  out: [rca, xai]  # Required outputs
+  oc: [drift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [mix]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

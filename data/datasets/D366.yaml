@@ -1,0 +1,23 @@
+# Dataset D366. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D366
+name: NOAA GHCN-Daily with QC flags
+year: "1992"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [ts, st]
+size: Daily observations from over 100,000 stations with quality-control flags
+description: Station records flagged by automated checks (duplicates, outliers, internal and spatial consistency).
+applications: [SCI-328, MLD-126]
+links:
+  page:
+    url: "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,23 @@
+# Dataset D147. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D147
+name: LogHub
+year: "2020"
+tier: suite  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [seq, txt]
+size: "16 system logs (HDFS, BGL, Thunderbird, Hadoop, OpenStack and others), several labeled"
+description: Collection of logs from distributed systems, supercomputers, operating systems and applications (He et al.).
+applications: [ITO-095]
+links:
+  page:
+    url: "https://github.com/logpai/loghub"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

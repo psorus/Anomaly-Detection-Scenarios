@@ -1,0 +1,23 @@
+# Dataset D218. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D218
+name: MulSen-AD
+year: "2025"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, xdom]
+modality: [img, pc]
+size: RGB, infrared and high-resolution point clouds of 15 industrial products
+description: Multi-sensor object anomaly dataset where some defects are visible to only one sensor (CVPR 2025).
+applications: [MFG-142]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2412.14592"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

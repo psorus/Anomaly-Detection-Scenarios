@@ -1,0 +1,21 @@
+# Dataset D434. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D434
+name: Process anomaly logs (Nolle et al.)
+year: "2018"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: semi  # real | semi | sim
+annotations: [type, loc]
+modality: [seq]
+size: Synthetic and real event logs with injected skip, rework, early, late and insert anomalies
+description: Datasets from BINet and DeepAlign for anomaly detection in business processes.
+applications: [BIZ-426]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

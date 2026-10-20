@@ -1,0 +1,26 @@
+# Application SEC-078. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-078
+name: SIEM alert triage and correlation
+domain: SEC
+subdomain: Application, web & cloud security
+description: Thousands of alerts per day from many tools grouped into incidents and ranked for analysts. Grouping quality and analyst workload decide usefulness.
+properties:
+  mod: [seq, tab]  # Data modality
+  at: [clu, seq]  # Anomaly type
+  unit: [sub, rec]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [grp, rank, sev, xai]  # Required outputs
+  oc: [hitl, scale, div]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

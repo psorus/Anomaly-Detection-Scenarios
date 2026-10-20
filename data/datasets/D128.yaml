@@ -1,0 +1,23 @@
+# Dataset D128. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D128
+name: deepset prompt injections
+year: "2023"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [txt]
+size: About 660 labeled prompts in English and German
+description: Small labeled set of injection and benign prompts.
+applications: [SEC-092]
+links:
+  page:
+    url: "https://huggingface.co/datasets/deepset/prompt-injections"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,24 @@
+# Dataset D020. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D020
+name: NAB (Numenta Anomaly Benchmark)
+year: "2015"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [ts]
+size: "58 labeled real and artificial streams"
+description: "Streaming benchmark whose score rewards early detection; covers cloud metrics, traffic, NYC taxi demand and machine temperature."
+applications: [ITO-093, TRN-236]
+extra_scenarios: [S03, S31]
+links:
+  page:
+    url: "https://github.com/numenta/NAB"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

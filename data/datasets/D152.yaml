@@ -1,0 +1,25 @@
+# Dataset D152. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D152
+name: RCAEval
+year: "2024"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [rca, type]
+modality: [mts, seq, dg]
+size: "735 failure cases from three microservice systems"
+description: Root-cause benchmark (RE1 to RE3) with fault injection in Online Boutique, Sock Shop and Train Ticket, covering metrics, logs and traces.
+applications: [ITO-097, ITO-096]
+links:
+  page:
+    url: "https://zenodo.org/records/14504481"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2412.17015"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

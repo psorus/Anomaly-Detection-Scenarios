@@ -1,0 +1,22 @@
+# Dataset D005. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D005
+name: Meta-analysis benchmark collection (Emmott et al.)
+year: "2016"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [grp]
+modality: [tab]
+size: Thousands of benchmark datasets derived from 19 UCI mother sets
+description: Systematically constructed benchmarks that vary point difficulty, relative frequency, clusteredness and irrelevant features.
+applications: []
+extra_scenarios: [S32, S29]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

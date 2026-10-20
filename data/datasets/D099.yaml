@@ -1,0 +1,23 @@
+# Dataset D099. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D099
+name: DARPA Transparent Computing (E3, E5)
+year: "2018"
+tier: suite  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, grp]
+modality: [dg, seq]
+size: Provenance audit logs from several platforms during red-team engagements
+description: "Whole-system provenance with documented APT attack steps; node-level labels are derived from ground-truth reports."
+applications: [SEC-058, SEC-057]
+links:
+  page:
+    url: "https://github.com/darpa-i2o/Transparent-Computing"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

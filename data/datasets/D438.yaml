@@ -1,0 +1,21 @@
+# Dataset D438. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D438
+name: KDD Cup 2015 MOOC dropout
+year: "2015"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [rul, ent]
+modality: [seq]
+size: Activity logs of about 120,000 enrollments with dropout labels
+description: XuetangX MOOC dropout prediction competition.
+applications: [EDU-439]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

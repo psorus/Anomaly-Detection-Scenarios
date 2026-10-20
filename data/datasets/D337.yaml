@@ -1,0 +1,21 @@
+# Dataset D337. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D337
+name: CDC ILINet
+year: "1997"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [ts, st]
+size: Weekly influenza-like illness rates by region
+description: Outpatient surveillance data without outbreak onset labels.
+applications: [HLT-294]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

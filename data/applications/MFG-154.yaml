@@ -1,0 +1,26 @@
+# Application MFG-154. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-154
+name: Semiconductor fault detection and classification (FDC)
+domain: MFG
+subdomain: Process monitoring & quality
+description: "Tool sensor traces per wafer and step. Subtle deviations predict yield loss; chamber-to-chamber differences require per-tool baselines."
+properties:
+  mod: [mts]  # Data modality
+  at: [dep, ctx]  # Anomaly type
+  unit: [ser]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov, weak]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [rca, loc]  # Required outputs
+  oc: [drift, shift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

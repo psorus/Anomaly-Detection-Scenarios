@@ -1,0 +1,21 @@
+# Dataset D156. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D156
+name: Duplicate bug report datasets (Lazar et al.)
+year: "2014"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [grp]
+modality: [txt]
+size: Bug reports from Eclipse, Mozilla, NetBeans and OpenOffice with duplicate links
+description: MSR data showcase of large bug repositories labeled with duplicate groups.
+applications: [ITO-116]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

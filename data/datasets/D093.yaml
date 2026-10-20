@@ -1,0 +1,25 @@
+# Dataset D093. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D093
+name: can-train-and-test
+year: "2023"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, xdom]
+modality: [seq]
+size: CAN data from several vehicles with per-vehicle train and test splits
+description: Curated CAN intrusion dataset (DTU) for evaluating transfer across vehicles.
+applications: [SEC-086]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2308.04972"
+    - label: Publication record (DTU)
+      url: "https://orbit.dtu.dk/en/publications/can-train-and-test-a-new-can-intrusion-detection-dataset/"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

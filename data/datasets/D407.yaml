@@ -1,0 +1,23 @@
+# Dataset D407. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D407
+name: FakeNewsNet
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [txt, dg, img]
+size: PolitiFact and GossipCop news with social context
+description: Fake news repository with content, propagation and user engagement.
+applications: [WEB-388]
+links:
+  page:
+    url: "https://github.com/KaiDMML/FakeNewsNet"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

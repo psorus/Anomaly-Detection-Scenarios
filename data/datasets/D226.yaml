@@ -1,0 +1,23 @@
+# Dataset D226. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D226
+name: voraus-AD
+year: "2023"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [mts]
+size: Joint signals of an industrial robot during a pick-and-place task
+description: Robot dataset with labeled anomaly types for time-series anomaly detection (Brockmann et al.).
+applications: [MFG-173]
+links:
+  page: {}
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2311.04765"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

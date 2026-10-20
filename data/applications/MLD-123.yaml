@@ -1,0 +1,26 @@
+# Application MLD-123. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MLD-123
+name: Erroneous cell detection in relational tables
+domain: MLD
+subdomain: Data quality & data management
+description: Typos, unit errors and constraint violations in individual cells. Errors are common and often systematic.
+properties:
+  mod: [tab]  # Data modality
+  at: [glob, log, dep]  # Anomaly type
+  unit: [rec, reg]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [fix, loc]  # Required outputs
+  oc: [rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [mix, miss]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

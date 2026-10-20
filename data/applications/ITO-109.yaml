@@ -1,0 +1,26 @@
+# Application ITO-109. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ITO-109
+name: Website availability and synthetic monitoring
+domain: ITO
+subdomain: Monitoring & AIOps
+description: Probes from many locations measuring uptime and page load. Distinguish a real outage from a probe-side problem.
+properties:
+  mod: [ts]  # Data modality
+  at: [glob, cp]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, spec]  # Evaluation priority
+  out: [sev]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

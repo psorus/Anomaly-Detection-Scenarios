@@ -1,0 +1,26 @@
+# Application FIN-030. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-030
+name: Complaint and conduct-risk monitoring
+domain: FIN
+subdomain: Credit, lending & banking operations
+description: Emerging clusters in customer complaint text that point to mis-selling or product failures.
+properties:
+  mod: [txt, ts]  # Data modality
+  at: [cp, clu, sem]  # Anomaly type
+  unit: [win, obj]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [grp, disc, xai]  # Required outputs
+  oc: [div]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

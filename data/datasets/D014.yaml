@@ -1,0 +1,31 @@
+# Dataset D014. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D014
+name: TSB-AD
+year: "2024"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [ts, mts]
+size: "1,070 curated series from 40 datasets (TSB-AD-U and TSB-AD-M)"
+description: Time-series benchmark (NeurIPS 2024) that removes flawed labels from older datasets and recommends VUS-PR.
+applications: []
+extra_scenarios: [S02, S03, S31]
+links:
+  page:
+    url: "https://github.com/TheDatumOrg/TSB-AD"
+    found_in_search: false
+  other:
+    - label: Paper (NeurIPS 2024)
+      url: "https://proceedings.neurips.cc/paper_files/paper/2024/file/c3f3c690b7a99fba16d0efd35cb83b2c-Paper-Datasets_and_Benchmarks_Track.pdf"
+    - label: Python package
+      url: "https://pypi.org/project/tsb-ad"
+references:
+  - ref: "[35]"
+    citation: "Liu and Paparrizos (2024). The elephant in the room: Towards a reliable time-series anomaly detection benchmark. NeurIPS."
+    context: "Section 2.1.2: distinguishes anomaly types and aligns evaluation with task goals, but still aggregates across dimensions."
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,26 @@
+# Application TRN-230. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: TRN-230
+name: Perception sensor degradation detection
+domain: TRN
+subdomain: Automated & connected driving
+description: Dirty, misaligned or failing cameras, LiDAR and radar detected by cross-sensor consistency before perception fails.
+properties:
+  mod: [img, pc, mts]  # Data modality
+  at: [dep, glob]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: [cert, edge]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

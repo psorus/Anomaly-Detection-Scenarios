@@ -1,0 +1,23 @@
+# Dataset D353. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D353
+name: SDSS spectroscopic catalog
+year: "2000"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [rs]
+size: Millions of optical spectra of stars, galaxies and quasars with pipeline classes
+description: "Spectra used for searches for unusual spectra; pipeline classes help define the normal population."
+applications: [SCI-316]
+links:
+  page:
+    url: "https://www.sdss.org/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,21 @@
+# Dataset D361. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D361
+name: SWAN-SF
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [sev, rul]
+modality: [mts]
+size: Multivariate magnetic-field parameter series of solar active regions with flare classes
+description: Space Weather Analytics for Solar Flares benchmark from SDO/HMI data (Angryk et al.).
+applications: [SCI-319]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

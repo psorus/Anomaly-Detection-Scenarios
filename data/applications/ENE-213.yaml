@@ -1,0 +1,26 @@
+# Application ENE-213. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ENE-213
+name: Sewer pipe CCTV inspection
+domain: ENE
+subdomain: Water & wastewater
+description: Cracks, roots, deposits and collapses in sewer inspection videos, graded by severity for rehabilitation.
+properties:
+  mod: [vid, img]  # Data modality
+  at: [glob]  # Anomaly type
+  unit: [reg]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, type, sev]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

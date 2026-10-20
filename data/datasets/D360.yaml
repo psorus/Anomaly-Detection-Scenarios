@@ -1,0 +1,23 @@
+# Dataset D360. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D360
+name: CMS Open Data
+year: "2014"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: Collision data released by the CMS experiment
+description: Real collision data for anomaly searches, without labels.
+applications: [SCI-322, SCI-324]
+links:
+  page:
+    url: "https://opendata.cern.ch/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

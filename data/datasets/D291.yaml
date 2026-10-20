@@ -1,0 +1,21 @@
+# Dataset D291. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D291
+name: NASA DASHlink sample flight data
+year: "2012"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [mts]
+size: Recorded flight parameters from regional jets
+description: Sample flight data recorder data for flight operations quality research.
+applications: [AER-251]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

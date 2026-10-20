@@ -1,0 +1,21 @@
+# Dataset D318. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D318
+name: CheXpert
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, prot]
+modality: [img]
+size: "224,316 chest radiographs of 65,240 patients with 14 observations"
+description: Stanford chest X-rays with uncertain labels extracted from reports.
+applications: [HLT-276]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,25 @@
+# Dataset D035. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D035
+name: AMLworld (IBM synthetic AML)
+year: "2023"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: sim  # real | semi | sim
+annotations: [grp, type, ent]
+modality: [dg, tab]
+size: Six datasets with high or low illicit ratios, up to hundreds of millions of transactions
+description: Multi-agent simulation of a financial ecosystem with labeled laundering patterns such as fan-in, fan-out, cycles and scatter-gather (NeurIPS 2023).
+applications: [FIN-011, FIN-012]
+links:
+  page: {}
+  other:
+    - label: Paper (NeurIPS 2023)
+      url: "https://proceedings.neurips.cc/paper_files/paper/2023/hash/5f38404edff6f3f642d6fa5892479c42-Abstract.html"
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2306.16424"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

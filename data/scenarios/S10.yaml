@@ -1,0 +1,27 @@
+# Scenario S10. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S10
+name: Real-time detection against adaptive adversaries
+family: Adversarial anomalies
+paper: Example 2.3 (real-time variant)
+summary: Transactions, requests, flows or events are scored as they happen, inline or within seconds. Attackers probe and adapt, so anomalies are camouflaged, and blocking or escalating legitimate activity is expensive.
+rule:
+  - match:
+      adv:
+        in: [adapt]
+      pt:
+        in: [hrt, "on"]
+      mod:
+        any: [tab, dg, seq, ts, mts]
+    datasets_need: []
+metrics: "Precision and recall at the operating false-positive rate (for example, 0.1% of legitimate traffic); value-weighted recall (amount saved); performance on held-out attack families; latency at peak throughput."
+protocol: "Temporal splits with label delay; held-out attack types to mimic zero-days; evaluation under adaptive evasion (attacker knows the features); per-segment breakdown for fairness."
+preprocessing: "Velocity and aggregation features computed causally over time windows; entity linkage (device, card, IP) without leaking future labels."
+algorithms: Gradient-boosted trees on engineered features with unsupervised scores as inputs, sequence models over entity histories, streaming graph features, semi-supervised deviation networks (DevNet) when labels are few.
+avoid: "Random splits that leak future fraud; offline graph methods that cannot score within milliseconds."
+gaps: "Public datasets are anonymized and static; adaptive-attacker evaluation and label delay are almost never modeled."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

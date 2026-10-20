@@ -1,0 +1,24 @@
+# Dataset D013. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D013
+name: GADBench
+year: "2023"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [gr]
+size: "10 graphs: Reddit, Weibo, Amazon, YelpChi, T-Finance, Elliptic, Tolokers, Questions, DGraph-Fin, T-Social"
+description: "Supervised graph anomaly detection benchmark (NeurIPS 2023) up to millions of nodes; tree ensembles with neighbor aggregation are strong baselines."
+applications: []
+extra_scenarios: [S18, S11]
+links:
+  page:
+    url: "https://github.com/squareRoot3/GADBench"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

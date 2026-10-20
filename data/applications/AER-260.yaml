@@ -1,0 +1,26 @@
+# Application AER-260. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: AER-260
+name: On-board anomaly detection for small satellites
+domain: AER
+subdomain: Space
+description: Detection running on the satellite itself with tiny compute budgets, so the spacecraft can safe itself between ground contacts.
+properties:
+  mod: [mts]  # Data modality
+  at: [glob, dep]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [type]  # Required outputs
+  oc: [edge, cert]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

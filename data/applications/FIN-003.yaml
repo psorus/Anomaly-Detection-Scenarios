@@ -1,0 +1,26 @@
+# Application FIN-003. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-003
+name: Account takeover in online banking
+domain: FIN
+subdomain: Payments & cards
+description: Logins and sessions whose device fingerprint, typing rhythm, navigation and payee setup deviate from the customer's own baseline. Decision must be made before a payment leaves.
+properties:
+  mod: [seq, tab]  # Data modality
+  at: [ctx, seq]  # Anomaly type
+  unit: [ent, ser]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak, un]  # Supervision
+  pt: hrt  # Processing time
+  ep: [prec, spec]  # Evaluation priority
+  out: [sev, xai]  # Required outputs
+  oc: [drift, cold, priv, fair]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [het, mix]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

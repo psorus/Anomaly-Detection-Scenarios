@@ -1,0 +1,23 @@
+# Dataset D187. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D187
+name: KolektorSDD and KolektorSDD2
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc]
+modality: [img]
+size: "Commutator surfaces; KSDD2 has 3,335 images with 356 defective"
+description: Surface defect segmentation datasets from Kolektor Group with weak and full supervision settings.
+applications: [MFG-138]
+links:
+  page:
+    url: "https://vicos.si/resources/kolektorsdd2/"
+    found_in_search: true
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

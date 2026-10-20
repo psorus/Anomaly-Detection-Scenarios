@@ -1,0 +1,21 @@
+# Dataset D381. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D381
+name: Agriculture-Vision
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type]
+modality: [rs, img]
+size: "94,986 aerial farmland images with nine field anomaly patterns"
+description: Field anomaly segmentation (weed clusters, nutrient deficiency, planter skip, standing water and others).
+applications: [ENV-350]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

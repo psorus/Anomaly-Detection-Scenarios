@@ -1,0 +1,36 @@
+# Application SEC-046. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-046
+name: Flow-based network intrusion detection
+domain: SEC
+subdomain: Network security
+description: "NetFlow/IPFIX records scored for attacks (DoS, scans, exploits, exfiltration). Analysts drown in false positives; attack categories must be reported separately because detectability differs by orders of magnitude."
+properties:
+  mod: [tab, dg]  # Data modality
+  at: [glob, loc, clu, ctx]  # Anomaly type
+  unit: [rec, win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [nov, sup, un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec, spec]  # Evaluation priority
+  out: [type, xai, grp, sev]  # Required outputs
+  oc: [scale, drift, hitl, shift]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [mix]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[2]"
+    citation: "Lazarevic, Ertöz, Kumar, Ozgur and Srivastava (2003). A comparative study of anomaly detection schemes in network intrusion detection. SDM."
+    context: "Introduction: detecting attacks on networks."
+  - ref: "[33]"
+    citation: "Estevez-Tapiador, Garcia-Teodoro and Diaz-Verdejo (2004). Anomaly detection methods in wired networks: a survey and taxonomy. Computer Communications."
+    context: "Section 2.1.1: an application-specific taxonomy."
+    url: "https://www.sciencedirect.com/science/article/pii/S0140366404002385"
+  - ref: "[34]"
+    citation: "Gyanchandani, Rana and Yadav (2012). Taxonomy of anomaly based intrusion detection system: a review. IJSRP."
+    context: "Section 2.1.1: an application-specific taxonomy."
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

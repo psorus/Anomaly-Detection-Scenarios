@@ -1,0 +1,26 @@
+# Application MFG-151. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-151
+name: Packaging and label verification
+domain: MFG
+subdomain: Visual inspection
+description: Print defects, wrong labels, misprinted dates and broken seals on high-speed packaging lines.
+properties:
+  mod: [img, txt]  # Data modality
+  at: [log, glob]  # Anomaly type
+  unit: [obj]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: []  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

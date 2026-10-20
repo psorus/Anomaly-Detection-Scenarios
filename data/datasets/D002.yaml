@@ -1,0 +1,24 @@
+# Dataset D002. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D002
+name: ODDS
+year: "2016"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: About 30 multi-dimensional point datasets plus a few time-series and graph sets
+description: "Outlier Detection DataSets library from Stony Brook; mostly classification datasets whose minority class is relabeled as outliers."
+applications: []
+extra_scenarios: [S32]
+links:
+  page:
+    url: "http://odds.cs.stonybrook.edu/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

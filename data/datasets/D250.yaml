@@ -1,0 +1,21 @@
+# Dataset D250. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D250
+name: Irish CER smart meter trial
+year: "2012"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [prot, ent]
+modality: [ts, tab]
+size: Half-hourly electricity data of over 5,000 homes and businesses with surveys
+description: "Smart metering trial data distributed by ISSDA; no theft labels, so theft is usually simulated."
+applications: [ENE-188, ENE-190]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,30 @@
+# Application TRN-228. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: TRN-228
+name: Corner case mining in driving logs
+domain: TRN
+subdomain: Automated & connected driving
+description: Petabytes of fleet recordings searched for rare, interesting scenes (unusual road users, weather, behavior) to feed training. Value comes from diverse finds, not near-duplicates.
+properties:
+  mod: [vid, pc, mts]  # Data modality
+  at: [sem, ctx]  # Anomaly type
+  unit: [win, obj]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank, disc]  # Required outputs
+  oc: [div, scale]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references:
+  - ref: "[40]"
+    citation: "Bogdoll, Nitsche and Zöllner (2022). Anomaly detection in autonomous driving: A survey. CVPR Workshops."
+    context: "Example 2.1: dangerous events in autonomous driving."
+    url: "https://doi.org/10.1109/CVPRW56347.2022.00495"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

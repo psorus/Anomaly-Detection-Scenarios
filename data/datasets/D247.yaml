@@ -1,0 +1,23 @@
+# Dataset D247. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D247
+name: C-MAPSS
+year: "2008"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: sim  # real | semi | sim
+annotations: [rul, xdom, ent]
+modality: [mts]
+size: Four sub-datasets of simulated turbofan run-to-failure trajectories
+description: Commercial Modular Aero-Propulsion System Simulation data from NASA.
+applications: [MFG-178, AER-252]
+links:
+  page:
+    url: "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,26 @@
+# Application WEB-386. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: WEB-386
+name: Coordinated inauthentic behavior
+domain: WEB
+subdomain: Social media & online platforms
+description: Networks of accounts acting in concert to push narratives. The unit of detection is the campaign, and decisions affect speech, so explanations and fairness matter.
+properties:
+  mod: [dg, txt]  # Data modality
+  at: [clu, str]  # Anomaly type
+  unit: [sub]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [grp, xai]  # Required outputs
+  oc: [fair, div]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

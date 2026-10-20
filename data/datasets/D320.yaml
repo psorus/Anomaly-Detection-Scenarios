@@ -1,0 +1,23 @@
+# Dataset D320. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D320
+name: VinDr-CXR
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type]
+modality: [img]
+size: "18,000 chest X-rays with radiologist boxes for 22 findings"
+description: Vietnamese hospital data annotated by 17 radiologists.
+applications: [HLT-276]
+links:
+  page:
+    url: "https://physionet.org/content/vindr-cxr/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

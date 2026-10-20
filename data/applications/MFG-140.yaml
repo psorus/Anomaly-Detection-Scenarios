@@ -1,0 +1,26 @@
+# Application MFG-140. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MFG-140
+name: "3D geometry inspection with point clouds"
+domain: MFG
+subdomain: Visual inspection
+description: Deformations, holes and missing material in 3D scans of parts, often combined with RGB images.
+properties:
+  mod: [pc, img]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [obj, reg]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: [cold]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,21 @@
+# Dataset D425. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D425
+name: Event2018 French tweets
+year: "2020"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [grp]
+modality: [txt]
+size: About 95,000 annotated French tweets for 257 events
+description: Event detection corpus (Mazoyer et al., LREC 2020).
+applications: [WEB-394]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

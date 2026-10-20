@@ -1,0 +1,27 @@
+# Dataset D212. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D212
+name: IPAD (Industrial Process Anomaly Detection)
+year: "2024"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, xdom]
+modality: [vid]
+size: Synthetic and real videos of industrial devices running periodic processes
+description: Video anomaly dataset for industrial processes (Liu et al.).
+applications: [MFG-158]
+links:
+  page:
+    url: "https://ieee-dataport.org/documents/ipad-industrial-process-anomaly-detection-dataset"
+    found_in_search: true
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2404.15033"
+    - label: Paper (IEEE Xplore)
+      url: "https://ieeexplore.ieee.org/document/10685491"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

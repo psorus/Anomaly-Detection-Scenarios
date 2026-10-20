@@ -1,0 +1,26 @@
+# Application TRN-237. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: TRN-237
+name: Trajectory outlier detection
+domain: TRN
+subdomain: Traffic & urban mobility
+description: Taxi detours, unusual routes and anomalous movement trajectories compared with typical paths between the same origin and destination.
+properties:
+  mod: [st]  # Data modality
+  at: [seq, ctx]  # Anomaly type
+  unit: [ser]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [loc]  # Required outputs
+  oc: []  # Operational constraints
+  adv: conc  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

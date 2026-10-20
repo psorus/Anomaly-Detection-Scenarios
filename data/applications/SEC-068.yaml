@@ -1,0 +1,26 @@
+# Application SEC-068. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-068
+name: Data exfiltration and data loss prevention
+domain: SEC
+subdomain: Identity, access & insider threat
+description: Unusual volumes, destinations or encodings of outbound data per user and system.
+properties:
+  mod: [tab, txt, ts]  # Data modality
+  at: [ctx, glob]  # Anomaly type
+  unit: [ent, rec]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [sev, xai]  # Required outputs
+  oc: [priv]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [het]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

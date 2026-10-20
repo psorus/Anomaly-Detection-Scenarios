@@ -1,0 +1,23 @@
+# Dataset D301. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D301
+name: HiRID
+year: "2020"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [rul, ent]
+modality: [mts]
+size: About 34,000 ICU admissions at two-minute resolution
+description: Bern University Hospital data with circulatory failure labels from the early warning system study.
+applications: [HLT-264]
+links:
+  page:
+    url: "https://physionet.org/content/hirid/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

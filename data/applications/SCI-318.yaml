@@ -1,0 +1,26 @@
+# Application SCI-318. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SCI-318
+name: Technosignature search in radio data
+domain: SCI
+subdomain: Astronomy & astrophysics
+description: Narrowband signals not explained by known interference or astrophysical sources.
+properties:
+  mod: [sig, rs]  # Data modality
+  at: [sem]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [disc]  # Required outputs
+  oc: [div]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

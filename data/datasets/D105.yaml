@@ -1,0 +1,23 @@
+# Dataset D105. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D105
+name: CIC-MalMem-2022
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [tab]
+size: About 58,600 memory dumps, balanced benign and obfuscated malware
+description: Memory-analysis features for spyware, ransomware and trojan families.
+applications: [SEC-063]
+links:
+  page:
+    url: "https://www.unb.ca/cic/datasets/malmem-2022.html"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

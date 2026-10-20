@@ -1,0 +1,30 @@
+# Application SCI-315. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SCI-315
+name: Unusual objects in imaging surveys
+domain: SCI
+subdomain: Astronomy & astrophysics
+description: Galaxy images with rare morphologies, mergers, lenses or artifacts. Astronomers label a few candidates and the system re-ranks (personalized active anomaly detection).
+properties:
+  mod: [img]  # Data modality
+  at: [sem, glob]  # Anomaly type
+  unit: [obj]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [disc, rank]  # Required outputs
+  oc: [div, hitl]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references:
+  - ref: "[42]"
+    citation: "Lochner and Bassett (2021). Astronomaly: Personalised active anomaly detection in astronomical data. Astronomy and Computing."
+    context: "Example 2.2: scientific discovery in astronomy."
+    url: "https://www.sciencedirect.com/science/article/pii/S2213133721000354"
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

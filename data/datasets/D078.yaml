@@ -1,0 +1,23 @@
+# Dataset D078. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D078
+name: N-BaIoT
+year: "2018"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, xdom, ent]
+modality: [tab]
+size: "9 commercial IoT devices infected with Mirai and BASHLITE"
+description: Per-device traffic statistics used for device-specific autoencoders.
+applications: [SEC-087]
+links:
+  page:
+    url: "https://archive.ics.uci.edu/dataset/442/detection+of+iot+botnet+attacks+n+baiot"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

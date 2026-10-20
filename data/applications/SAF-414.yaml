@@ -1,0 +1,26 @@
+# Application SAF-414. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SAF-414
+name: Weakly supervised video anomaly detection
+domain: SAF
+subdomain: Video surveillance & public safety
+description: Fights, accidents, theft and other unusual events in surveillance video, trained with video-level labels. Frame-level localization and privacy constraints matter.
+properties:
+  mod: [vid]  # Data modality
+  at: [seq, sem, ctx]  # Anomaly type
+  unit: [win, reg]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [weak, nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec, prec]  # Evaluation priority
+  out: [loc, type]  # Required outputs
+  oc: [priv, fair, shift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

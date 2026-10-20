@@ -1,0 +1,26 @@
+# Application WEB-398. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: WEB-398
+name: Anomalous users in attributed social graphs
+domain: WEB
+subdomain: Social media & online platforms
+description: Accounts whose attributes and connections deviate from their neighborhood in large social graphs.
+properties:
+  mod: [gr]  # Data modality
+  at: [str, loc]  # Anomaly type
+  unit: [node]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [weak, un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

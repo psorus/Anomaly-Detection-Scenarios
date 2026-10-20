@@ -1,0 +1,23 @@
+# Dataset D120. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D120
+name: ASVspoof challenges
+year: "2015"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, xdom]
+modality: [sig]
+size: Logical access, physical access and deepfake tracks (2015 to 2024 editions)
+description: Spoofed and bona fide speech for speaker verification countermeasures, with unseen attack algorithms in evaluation.
+applications: [SEC-071]
+links:
+  page:
+    url: "https://www.asvspoof.org/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

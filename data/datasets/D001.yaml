@@ -1,0 +1,27 @@
+# Dataset D001. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D001
+name: ADBench
+year: "2022"
+tier: generic  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: "57 datasets: 47 classic tabular sets and 10 CV/NLP embedding sets"
+description: Benchmark of 30 detectors in unsupervised, semi-supervised and supervised settings, plus synthetic local, global, dependency and clustered anomalies. The collection behind the paper's Quantiles experiment.
+applications: []
+extra_scenarios: [S32, S28]
+links:
+  page:
+    url: "https://github.com/Minqi824/ADBench"
+    found_in_search: false
+  other: []
+references:
+  - ref: "[7]"
+    citation: "Han, Hu, Huang, Jiang and Zhao (2022). ADBench: Anomaly detection benchmark. NeurIPS."
+    context: "Figure 1: the Quantiles baseline ranks second on ADBench. Section 2.1.2: per-anomaly-type results reveal differences hidden by aggregation."
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

@@ -1,0 +1,21 @@
+# Dataset D059. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D059
+name: KDD Cup 1999
+year: "1999"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [tab]
+size: About 4.9 million connection records
+description: "Derived from DARPA 1998 testbed traffic; heavily duplicated and known to be flawed, kept for historical comparison."
+applications: [SEC-046]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

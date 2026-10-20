@@ -1,0 +1,27 @@
+# Dataset D215. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D215
+name: Real3D-AD
+year: "2023"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, xdom]
+modality: [pc]
+size: "1,254 high-resolution point clouds of 12 categories"
+description: High-precision 3D scans with only a few training prototypes per class (NeurIPS 2023 Datasets and Benchmarks).
+applications: [MFG-140]
+links:
+  page:
+    url: "https://github.com/M-3LAB/Real3D-AD"
+    found_in_search: false
+  other:
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2309.13226"
+    - label: Paper (NeurIPS 2023)
+      url: "https://papers.neurips.cc/paper_files/paper/2023/file/611b896d447df43c898062358df4c114-Paper-Datasets_and_Benchmarks.pdf"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

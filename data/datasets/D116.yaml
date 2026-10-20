@@ -1,0 +1,23 @@
+# Dataset D116. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D116
+name: PhishTank
+year: "2006"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [txt]
+size: Continuously updated community-verified phishing URLs
+description: "Live feed of reported and verified phishing sites; benign URLs must be sourced separately."
+applications: [SEC-081, SEC-079]
+links:
+  page:
+    url: "https://phishtank.org/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

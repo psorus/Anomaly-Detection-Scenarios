@@ -1,0 +1,26 @@
+# Application SEC-089. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-089
+name: Drone intrusion detection
+domain: SEC
+subdomain: Industrial & cyber-physical security
+description: Unauthorized drones near airports, stadiums or prisons detected from RF, radar and camera feeds.
+properties:
+  mod: [sig, vid]  # Data modality
+  at: [sem]  # Anomaly type
+  unit: [obj]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov, sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [loc, type]  # Required outputs
+  oc: [edge]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

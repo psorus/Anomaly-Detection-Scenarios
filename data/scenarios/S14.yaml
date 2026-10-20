@@ -1,0 +1,37 @@
+# Scenario S14. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S14
+name: Batch detection of diverse novelties
+family: Discovery & data quality
+paper: Example 2.2
+summary: "Offline search for unknown phenomena or quality issues without prior examples. A useful result covers many distinct root causes; fifty variants of one quirk are worth little."
+rule:
+  - match:
+      pt:
+        in: [bat]
+      sup:
+        any: [un]
+      out:
+        any: [disc]
+    datasets_need:
+      - [grp, txt, type]
+  - match:
+      pt:
+        in: [bat]
+      sup:
+        any: [un]
+      oc:
+        any: [div]
+    datasets_need:
+      - [grp, type]
+metrics: "Number of distinct anomaly types or root causes among the top k (coverage); alpha-NDCG or intra-list diversity adapted from recommender systems; expert-rated interestingness; precision@k as a secondary measure."
+protocol: "Annotate root-cause classes, not only binary labels; evaluate with fixed inspection budgets; human-in-the-loop simulations where experts label as they go."
+preprocessing: "Deduplicate near-identical records; avoid projections (such as PCA) that hide rare directions."
+algorithms: Diverse ensembles of detectors with different inductive biases, maximal-marginal-relevance re-ranking of scores, clustering of top-ranked anomalies, active anomaly discovery (Astronomaly-style personalized ranking).
+avoid: Single-detector rankings evaluated only by ROC-AUC, which rewards retrieving many similar anomalies.
+gaps: "No standard diversity metric for anomaly detection; few datasets annotate root causes (the paper's call for diversity metrics)."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

@@ -1,0 +1,26 @@
+# Application HLT-265. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-265
+name: False arrhythmia alarm reduction
+domain: HLT
+subdomain: Patient monitoring
+description: ICU monitors raise many false alarms from motion and lead artifacts. Suppress them without ever silencing a true life-threatening arrhythmia.
+properties:
+  mod: [sig, mts]  # Data modality
+  at: [glob, seq]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [sup]  # Supervision
+  pt: hrt  # Processing time
+  ep: [spec, rec]  # Evaluation priority
+  out: [type]  # Required outputs
+  oc: [cert]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

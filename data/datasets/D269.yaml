@@ -1,0 +1,27 @@
+# Dataset D269. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D269
+name: TIHM dementia remote monitoring
+year: "2023"
+tier: app  # generic | suite | bench | app
+labels: partial  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [loc, type, ent]
+modality: [mts, seq, tab]
+size: In-home sensor, physiology and sleep data of 56 people with dementia, with clinical alerts
+description: Technology Integrated Health Management dataset with labeled agitation and urinary tract infection events (Palermo et al.).
+applications: [HLT-274, HLT-269]
+links:
+  page:
+    url: "https://zenodo.org/records/7622128"
+    found_in_search: true
+  other:
+    - label: Paper (Scientific Data)
+      url: "https://link.springer.com/article/10.1038/s41597-023-02519-y"
+    - label: Paper (PMC)
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10492790/"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

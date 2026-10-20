@@ -1,0 +1,26 @@
+# Application FIN-037. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: FIN-037
+name: Catastrophe and loss-development anomalies
+domain: FIN
+subdomain: Insurance
+description: "Claim surges by region signal events; loss developments deviating from reserving triangles signal reserving problems."
+properties:
+  mod: [ts, st]  # Data modality
+  at: [cp, ctx]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time]  # Evaluation priority
+  out: [sev, loc]  # Required outputs
+  oc: [drift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [hier]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

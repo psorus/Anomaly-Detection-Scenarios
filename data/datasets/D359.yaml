@@ -1,0 +1,25 @@
+# Dataset D359. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D359
+name: ADC2021 LHC dataset at 40 MHz
+year: "2021"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: sim  # real | semi | sim
+annotations: [type]
+modality: [tab]
+size: Millions of simulated Level-1 trigger events with four benchmark signals
+description: Dataset for real-time unsupervised anomaly detection at the LHC trigger (Govorkova et al., Scientific Data 2022).
+applications: [SCI-323]
+links:
+  page: {}
+  other:
+    - label: Paper (Scientific Data, PMC)
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9070018/"
+    - label: Paper (arXiv)
+      url: "https://arxiv.org/abs/2107.02157"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

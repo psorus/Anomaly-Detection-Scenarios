@@ -1,0 +1,21 @@
+# Dataset D173. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D173
+name: CLINC150 out-of-scope
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [txt]
+size: "23,700 queries over 150 intents including 1,200 out-of-scope queries"
+description: Intent classification with out-of-scope requests (Larson et al.).
+applications: [WEB-391]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

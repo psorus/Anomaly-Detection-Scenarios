@@ -1,0 +1,26 @@
+# Application SEC-058. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-058
+name: Provenance-graph APT detection
+domain: SEC
+subdomain: Endpoint & host security
+description: Multi-stage attacks spread over days, reconstructed from system audit logs as provenance graphs. The detector must return the attack subgraph.
+properties:
+  mod: [dg]  # Data modality
+  at: [str, seq, clu]  # Anomaly type
+  unit: [sub]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec, rec]  # Evaluation priority
+  out: [rca, grp, loc]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

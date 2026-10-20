@@ -1,0 +1,26 @@
+# Application LIF-311. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: LIF-311
+name: Image manipulation in scientific publications
+domain: LIF
+subdomain: Lab, bioprocess & drug discovery
+description: Duplicated, spliced or retouched figure panels and fabricated data in papers.
+properties:
+  mod: [img, tab]  # Data modality
+  at: [log, clu]  # Anomaly type
+  unit: [obj, reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [loc, xai]  # Required outputs
+  oc: []  # Operational constraints
+  adv: conc  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

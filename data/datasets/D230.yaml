@@ -1,0 +1,23 @@
+# Dataset D230. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D230
+name: "3W dataset (Petrobras)"
+year: "2019"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, loc]
+modality: [mts]
+size: Real, simulated and hand-drawn instances of 8 undesirable events in offshore wells
+description: Petrobras rare-event dataset with missing and frozen variables, released for realistic benchmarking.
+applications: [MFG-180]
+links:
+  page:
+    url: "https://github.com/petrobras/3W"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

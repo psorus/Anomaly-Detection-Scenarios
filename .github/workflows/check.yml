@@ -1,0 +1,65 @@
+# Runs on every pull request, including pull requests from forks. It only reads the repository:
+# it validates the changed files, computes what the change does to every number on the site,
+# and uploads that report plus a preview of the site. A separate workflow (comment.yml) posts the
+# report on the pull request, so no code from a fork ever runs with write access.
+name: Check pull request
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the pull request
+        uses: actions/checkout@v4
+        with:
+          path: head
+      - name: Check out the base branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.base.sha || github.sha }}
+          path: base
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r head/requirements.txt
+
+      - name: Validate data files
+        id: validate
+        run: python head/scripts/atlas.py check
+      - name: Issue forms match the taxonomy
+        if: always()
+        run: python head/scripts/atlas.py forms --check
+      - name: Unit tests
+        if: always()
+        run: python -m unittest discover -s head/tests -v
+
+      - name: Impact report
+        if: always()
+        run: |
+          python head/scripts/atlas.py report --base base --out report.md
+          cat report.md >> "$GITHUB_STEP_SUMMARY"
+          mkdir -p report
+          mv report.md report/
+          echo "${{ github.event.pull_request.number }}" > report/pr_number
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: atlas-report
+          path: report/
+          retention-days: 7
+
+      - name: Build site preview
+        if: steps.validate.outcome == 'success'
+        run: python head/scripts/atlas.py build --out site-preview
+      - uses: actions/upload-artifact@v4
+        if: steps.validate.outcome == 'success'
+        with:
+          name: site-preview
+          path: site-preview/
+          retention-days: 7

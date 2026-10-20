@@ -1,0 +1,35 @@
+# Scenario S28. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S28
+name: Outlier samples in high-dimensional scientific measurements
+family: Discovery & data quality
+paper: ""
+summary: "Omics profiles, spectra and similar measurements with hundreds to thousands of features and few samples. Outliers are technical artifacts or biologically meaningful cases; both must be found before downstream analysis."
+rule:
+  - match:
+      mod:
+        any: [tab]
+      dim:
+        in: [hi]
+      pt:
+        in: [bat]
+      adv:
+        in: ["no"]
+    datasets_need: []
+  - match:
+      mod:
+        any: [rs]
+      pt:
+        in: [bat]
+    datasets_need: []
+metrics: "AUROC and precision@k against expert or spike-in labels; stability of flagged samples across resampling; downstream effect on clustering or differential analysis."
+protocol: "Spike-in or simulated artifacts with known ground truth; batch effects as explicit confounders; bootstrapped confidence intervals due to small n."
+preprocessing: "Normalization choices (library size, log transforms, spectral baselines) that are standard in the field; the paper's warning applies: dimensionality reduction can discard the low-variance directions that carry the anomaly."
+algorithms: Robust PCA and Mahalanobis distances with shrinkage, kNN in learned embeddings, autoencoder residuals, field-specific detectors (doublet scores, expression outlier tests).
+avoid: "Plain PCA plus thresholding as the only step; methods that need large n."
+gaps: "Ground truth is usually simulated; benchmarks across measurement types are missing."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

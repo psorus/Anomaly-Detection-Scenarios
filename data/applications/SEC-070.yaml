@@ -1,0 +1,26 @@
+# Application SEC-070. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SEC-070
+name: Deepfake image and video detection
+domain: SEC
+subdomain: Identity, access & insider threat
+description: Face swaps and fully generated media. Detectors trained on known generators fail on new ones, so open-set behavior matters.
+properties:
+  mod: [img, vid]  # Data modality
+  at: [sem]  # Anomaly type
+  unit: [obj, reg]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [sup, nov]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec, prec]  # Evaluation priority
+  out: [loc, xai, unc]  # Required outputs
+  oc: [shift, drift]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

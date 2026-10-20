@@ -1,0 +1,23 @@
+# Dataset D345. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D345
+name: TCGA
+year: "2006"
+tier: app  # generic | suite | bench | app
+labels: none  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: []
+modality: [tab]
+size: Multi-omics of over 11,000 tumors in 33 cancer types
+description: "Cancer genomics atlas; outlier genes and samples must be defined by the analyst."
+applications: [LIF-303]
+links:
+  page:
+    url: "https://portal.gdc.cancer.gov/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

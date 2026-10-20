@@ -1,0 +1,26 @@
+# Application ITO-096. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ITO-096
+name: Microservice trace anomaly detection
+domain: ITO
+subdomain: Monitoring & AIOps
+description: Distributed traces where a request's call graph, latency profile or error path deviates from normal. The faulty service must be localized.
+properties:
+  mod: [dg, seq, tab]  # Data modality
+  at: [str, ctx, seq]  # Anomaly type
+  unit: [ser, node]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: "on"  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rca, loc]  # Required outputs
+  oc: [scale, drift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

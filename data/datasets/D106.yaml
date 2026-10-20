@@ -1,0 +1,23 @@
+# Dataset D106. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D106
+name: AIT Log Data Set (AIT-LDS v2)
+year: "2022"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, loc, ent]
+modality: [seq, txt]
+size: Logs from 8 testbed enterprise networks with multi-step attacks
+description: Labeled multi-host logs (web, mail, VPN, DNS, audit) with scripted attack chains (Landauer et al.).
+applications: [ITO-095, SEC-078, SEC-052]
+links:
+  page:
+    url: "https://zenodo.org/records/5789064"
+    found_in_search: true
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

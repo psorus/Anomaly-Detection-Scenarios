@@ -1,0 +1,21 @@
+# Dataset D405. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D405
+name: Cresci-2017 social spambots
+year: "2017"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [grp]
+modality: [tab, txt]
+size: Genuine accounts, traditional spambots and social spambot groups
+description: "Accounts labeled by bot family; used to study coordinated spambots."
+applications: [WEB-385, WEB-386]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

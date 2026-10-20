@@ -1,0 +1,26 @@
+# Application HLT-264. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: HLT-264
+name: ICU deterioration and early warning
+domain: HLT
+subdomain: Patient monitoring
+description: "Vital signs, labs and interventions streamed for each patient. Deterioration (sepsis, shock, respiratory failure) must be caught early; clinicians need a severity level and a reason."
+properties:
+  mod: [mts]  # Data modality
+  at: [ctx, cp, dep]  # Anomaly type
+  unit: [win]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak, sup]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec, time]  # Evaluation priority
+  out: [sev, early, xai]  # Required outputs
+  oc: [reg, cert, fair, rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het, miss, multi]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,26 @@
+# Application PUB-409. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: PUB-409
+name: Improper government payments
+domain: PUB
+subdomain: Tax, customs & benefits
+description: Payments to deceased, duplicate or ineligible recipients and unusual vendor payments.
+properties:
+  mod: [tab]  # Data modality
+  at: [glob, log]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [rank]  # Required outputs
+  oc: [reg]  # Operational constraints
+  adv: conc  # Adversary
+  dq: [mix]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

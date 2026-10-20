@@ -1,0 +1,26 @@
+# Application TRN-233. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: TRN-233
+name: Connected fleet diagnostics
+domain: TRN
+subdomain: Automated & connected driving
+description: Diagnostic trouble codes and telematics across millions of vehicles grouped to detect emerging field issues and recalls.
+properties:
+  mod: [mts, seq]  # Data modality
+  at: [cp, ctx, clu]  # Anomaly type
+  unit: [ent, sub]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [grp, rca, early]  # Required outputs
+  oc: [scale]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [het, hier]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

@@ -1,0 +1,26 @@
+# Application PUB-404. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: PUB-404
+name: VAT carousel fraud
+domain: PUB
+subdomain: Tax, customs & benefits
+description: Missing-trader chains that reclaim VAT on goods circulating across borders, visible only in the invoice network.
+properties:
+  mod: [dg]  # Data modality
+  at: [str, clu, seq]  # Anomaly type
+  unit: [sub]  # Detection unit
+  ar: vl  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [un, weak]  # Supervision
+  pt: bat  # Processing time
+  ep: [prec]  # Evaluation priority
+  out: [grp, xai]  # Required outputs
+  oc: [reg]  # Operational constraints
+  adv: adapt  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

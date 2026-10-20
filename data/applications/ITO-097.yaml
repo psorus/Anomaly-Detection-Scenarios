@@ -1,0 +1,26 @@
+# Application ITO-097. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: ITO-097
+name: Microservice incident root-cause analysis
+domain: ITO
+subdomain: Monitoring & AIOps
+description: When a service-level objective is violated, metrics, logs and traces from dozens of services are combined to find the faulty service and fault type. Fault-injection experiments provide most of the ground truth.
+properties:
+  mod: [mts, seq, dg]  # Data modality
+  at: [dep, str, cp]  # Anomaly type
+  unit: [node, sub]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov, un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [time, prec]  # Evaluation priority
+  out: [rca, loc, rank]  # Required outputs
+  oc: [scale, drift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [multi, hier]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

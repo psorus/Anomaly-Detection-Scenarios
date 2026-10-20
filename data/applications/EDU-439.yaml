@@ -1,0 +1,26 @@
+# Application EDU-439. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: EDU-439
+name: At-risk student detection
+domain: EDU
+subdomain: Education
+description: Students whose engagement and grades deviate early in a course, so instructors can intervene.
+properties:
+  mod: [tab, seq]  # Data modality
+  at: [cp, loc]  # Anomaly type
+  unit: [ent]  # Detection unit
+  ar: mo  # Anomaly ratio
+  dim: me  # Dimensionality
+  sup: [weak]  # Supervision
+  pt: bat  # Processing time
+  ep: [rec, time]  # Evaluation priority
+  out: [early, xai]  # Required outputs
+  oc: [fair, priv]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

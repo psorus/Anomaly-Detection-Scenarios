@@ -1,0 +1,23 @@
+# Dataset D330. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D330
+name: HyperKvasir and Kvasir-SEG
+year: "2020"
+tier: suite  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type, loc]
+modality: [img, vid]
+size: "110,079 images and 374 videos of the GI tract, 10,662 labeled"
+description: Gastrointestinal endoscopy data from Norway with findings and polyp masks.
+applications: [HLT-281]
+links:
+  page:
+    url: "https://datasets.simula.no/hyper-kvasir/"
+    found_in_search: false
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

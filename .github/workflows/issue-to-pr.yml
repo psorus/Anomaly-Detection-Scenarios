@@ -1,0 +1,79 @@
+# When a maintainer adds the label `accepted` to a proposal made with an issue form, this workflow writes the
+# data file from the form and opens a pull request for it, so proposers never have to write YAML.
+# Only people with write access can add labels, so only maintainers can start it.
+name: Proposal to pull request
+
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+jobs:
+  to-pr:
+    if: >-
+      github.event.label.name == 'accepted' && (
+      contains(github.event.issue.labels.*.name, 'new application') ||
+      contains(github.event.issue.labels.*.name, 'new dataset') ||
+      contains(github.event.issue.labels.*.name, 'new scenario'))
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Write the data file from the issue
+        id: write
+        env:
+          BODY: ${{ github.event.issue.body }}
+          LABELS: ${{ join(github.event.issue.labels.*.name, ',') }}
+          NUMBER: ${{ github.event.issue.number }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+        run: |
+          printf '%s' "$BODY" > "$RUNNER_TEMP/issue.md"
+          case ",$LABELS," in
+            *",new application,"*) KIND=application ;;
+            *",new dataset,"*) KIND=dataset ;;
+            *) KIND=scenario ;;
+          esac
+          python scripts/atlas.py issue --body-file "$RUNNER_TEMP/issue.md" --kind "$KIND" \
+            --number "$NUMBER" --author "$AUTHOR" --summary "$RUNNER_TEMP/summary.json"
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          s = json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "summary.json")))
+          print("id=" + s["id"])
+          print("path=" + s["path"])
+          print("nerr=" + str(len(s["errors"])))
+          PY
+      - name: Open the pull request
+        id: pr
+        uses: peter-evans/create-pull-request@v7
+        with:
+          # Pull requests opened with the default token do not start other workflows. Add a fine-grained token or
+          # GitHub App token as the secret ATLAS_BOT_TOKEN so the checks run automatically.
+          token: ${{ secrets.ATLAS_BOT_TOKEN || github.token }}
+          branch: proposal/issue-${{ github.event.issue.number }}
+          add-paths: ${{ steps.write.outputs.path }}
+          commit-message: "Add ${{ steps.write.outputs.id }} from #${{ github.event.issue.number }}"
+          title: "Add ${{ steps.write.outputs.id }}: ${{ github.event.issue.title }}"
+          body: |
+            Written from the proposal in #${{ github.event.issue.number }} by @${{ github.event.issue.user.login }}.
+            Check the generated file, fix anything the form could not express, and merge when reviewers agree.
+
+            Closes #${{ github.event.issue.number }}
+          labels: from proposal
+      - name: Tell the proposer
+        uses: actions/github-script@v7
+        env:
+          PR_URL: ${{ steps.pr.outputs.pull-request-url }}
+          NERR: ${{ steps.write.outputs.nerr }}
+        with:
+          script: |
+            const n = parseInt(process.env.NERR || "0", 10);
+            await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number,
+              body: `Thanks! The proposal is now a pull request: ${process.env.PR_URL}` +
+                    (n ? `\n\nThe form left ${n} field(s) that do not validate yet; the checks on the pull request list them.` : "") });

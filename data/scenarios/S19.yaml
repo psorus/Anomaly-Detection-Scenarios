@@ -1,0 +1,25 @@
+# Scenario S19. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S19
+name: Trajectory and spatio-temporal anomalies
+family: Graphs, space & entities
+paper: ""
+summary: "Moving objects or located observations over time: vessels, vehicles, aircraft, animals, outbreaks. Context (route, zone, time) defines normal, and data has gaps that can themselves be suspicious."
+rule:
+  - match:
+      mod:
+        any: [st]
+      at:
+        any: [seq, ctx, log]
+    datasets_need: []
+metrics: "Trajectory-level AUROC; localization error of the anomalous segment; early detection within a trip; precision for watch-list workflows."
+protocol: "Spatial and temporal holdout; handle sampling irregularity explicitly; report performance on gap-related anomalies separately."
+preprocessing: Map matching, segmentation into trips, resampling with gap flags rather than silent interpolation.
+algorithms: Route-based isolation (iBAT-style), sequence autoencoders on trajectories, space-time scan statistics for clusters, kinematic plausibility checks.
+avoid: Interpolating gaps before detection, which removes anomalies such as transponder switch-off.
+gaps: "Few labeled trajectory benchmarks; privacy limits data sharing."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

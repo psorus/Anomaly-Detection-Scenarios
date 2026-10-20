@@ -1,0 +1,22 @@
+title: "ID: short topic"
+labels: ["dataset"]
+body:
+  - type: markdown
+    attributes:
+      value: "One discussion per dataset. Put its id (for example from the site) at the start of the title so its page can find this thread."
+  - type: input
+    attributes:
+      label: Record
+      description: "Id and name, as shown on the site."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Point
+      description: "What should change or be decided, and why."
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Evidence
+      description: "Papers, documentation or deployment experience."

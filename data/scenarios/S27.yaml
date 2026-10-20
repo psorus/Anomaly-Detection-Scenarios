@@ -1,0 +1,29 @@
+# Scenario S27. An application belongs to this scenario if it matches ANY clause under `rule`;
+# within a clause, ALL conditions must hold. Operators: `in` (single-valued properties), `any`, `all`, `first`, `none`.
+# `datasets_need` lists annotation groups a dataset must have to evaluate this clause; each group is a list of alternatives.
+id: S27
+name: Distribution-shift and regression monitoring
+family: Discovery & data quality
+paper: ""
+summary: "The anomaly is a change in a whole distribution over a window: data feeding a model, a pipeline's output, benchmark results after a commit. Individual records may all look plausible."
+rule:
+  - match:
+      at:
+        any: [cp]
+      unit:
+        any: [win]
+      mod:
+        any: [tab, txt]
+      out:
+        none: [grp, disc]
+    datasets_need: []
+metrics: "Detection delay after a shift; false alarms per month under benign drift; power of two-sample tests at fixed window sizes; correctness of the attributed feature or source."
+protocol: "Synthetic shifts of controlled type and magnitude on real streams; separate covariate, label and concept shift; benign changes (releases, seasons) as negatives."
+preprocessing: "Fixed reference windows; feature-wise and multivariate summaries computed identically in reference and test windows."
+algorithms: Two-sample tests (Kolmogorov-Smirnov, MMD, classifier-based tests), population stability indices, drift detectors (ADWIN, Page-Hinkley), change-point detection on summary statistics.
+avoid: "Record-level outlier scores as a proxy for shift; tests without multiple-testing control across many features."
+gaps: "Little agreement on which drifts matter; links from detected shift to downstream harm are rarely evaluated."
+review:
+  status: draft
+  reviewers: []
+  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.

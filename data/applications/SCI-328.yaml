@@ -1,0 +1,26 @@
+# Application SCI-328. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: SCI-328
+name: Weather station quality control
+domain: SCI
+subdomain: Earth & climate sciences
+description: Station readings checked against neighbors and history for spikes, stuck values and siting changes.
+properties:
+  mod: [ts, st]  # Data modality
+  at: [glob, loc]  # Anomaly type
+  unit: [rec]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: lo  # Dimensionality
+  sup: [un]  # Supervision
+  pt: "on"  # Processing time
+  ep: [rec]  # Evaluation priority
+  out: [fix]  # Required outputs
+  oc: [rob]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: [miss, season]  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

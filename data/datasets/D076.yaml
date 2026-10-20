@@ -1,0 +1,21 @@
+# Dataset D076. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D076
+name: "5G-NIDD"
+year: "2022"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [tab]
+size: Traffic from a real 5G test network with DoS and port scans
+description: Network intrusion dataset from the 5G Test Network Finland (Samarakoon et al.).
+applications: [TEL-381, SEC-046]
+links:
+  page: {}
+  other: []
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

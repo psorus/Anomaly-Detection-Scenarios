@@ -1,0 +1,25 @@
+# Dataset D130. `applications` lists the applications it comes from, most representative first.
+# Scenario membership is computed from those applications, the modality and the annotations.
+id: D130
+name: JailbreakBench
+year: "2024"
+tier: bench  # generic | suite | bench | app
+labels: full  # full | partial | weak | none
+anomaly_origin: real  # real | semi | sim
+annotations: [type]
+modality: [txt]
+size: "100 misuse behaviors with jailbreak artifacts"
+description: Standardized jailbreak prompts and evaluation for LLM robustness.
+applications: [SEC-092]
+links:
+  page:
+    url: "https://arxiv.org/abs/2404.01318"
+    found_in_search: true
+  other:
+    - label: Paper (NeurIPS 2024)
+      url: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/63092d79154adebd7305dfd498cbff70-Abstract.html"
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.

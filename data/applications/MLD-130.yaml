@@ -1,0 +1,26 @@
+# Application MLD-130. Edit any field and open a pull request (see CONTRIBUTING.md).
+# Allowed property values: data/taxonomy/properties.yaml. Scenario membership is computed, never written here.
+id: MLD-130
+name: Out-of-distribution input detection
+domain: MLD
+subdomain: ML model monitoring & reliability
+description: Inputs to a deployed classifier that come from outside the training distribution and should trigger abstention or human review.
+properties:
+  mod: [img, txt, tab]  # Data modality
+  at: [sem, glob]  # Anomaly type
+  unit: [obj]  # Detection unit
+  ar: lo  # Anomaly ratio
+  dim: hi  # Dimensionality
+  sup: [nov]  # Supervision
+  pt: hrt  # Processing time
+  ep: [rec, spec]  # Evaluation priority
+  out: [unc]  # Required outputs
+  oc: [shift]  # Operational constraints
+  adv: "no"  # Adversary
+  dq: []  # Data characteristics
+evidence: {}
+references: []
+review:
+  status: draft
+  reviewers: []
+  note: "Initial coding drafted with Claude (Anthropic) in October 2026 from general knowledge. Not yet checked against sources; please add evidence and review."

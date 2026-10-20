@@ -1,0 +1,332 @@
+# Structural properties used to code applications and to write scenario rules.
+# `paper` names the matching property in Table 1 of arXiv 2507.15584 (empty = extension added by the atlas).
+# `multi: true` means an application lists several values, most important first.
+# Changing a code here requires updating every file that uses it; CI will list them.
+properties:
+  - key: mod
+    label: Data modality
+    multi: true
+    paper: Data modality
+    desc: "The form of the raw data the detector consumes. Paper values: tabular, time series, image/spatial, text, graph. Split here into finer modalities because each implies different inductive biases."
+    values:
+      - code: tab
+        label: Tabular records
+        desc: Rows of numeric and/or categorical attributes (transactions, claims, lab panels, configuration records).
+      - code: ts
+        label: Univariate time series
+        desc: A single metric over time (KPI, meter reading, single sensor).
+      - code: mts
+        label: Multivariate time series
+        desc: Many correlated channels sampled together (SCADA, telemetry, ICU monitors).
+      - code: seq
+        label: Event sequences & logs
+        desc: "Discrete symbolic events in order: log lines, clickstreams, system calls, process traces, DNA reads."
+      - code: sig
+        label: High-frequency signals
+        desc: "Waveforms sampled at Hz–MHz: vibration, acoustic, ultrasound, RF/IQ, ECG/EEG raw signal."
+      - code: img
+        label: Images
+        desc: "2D images: photos, X-ray, microscopy, thermography, document scans."
+      - code: vid
+        label: Video
+        desc: Image sequences where motion and temporal context matter (CCTV, dashcam, endoscopy video).
+      - code: vol
+        label: "3D volumes"
+        desc: Voxel grids such as CT, MRI and OCT volumes or X-ray tomography.
+      - code: pc
+        label: Point clouds & 3D surfaces
+        desc: "Unordered 3D points, meshes or depth maps: industrial 3D scans, LiDAR, structured light."
+      - code: rs
+        label: Remote sensing & spectra
+        desc: Multispectral/hyperspectral cubes, SAR, mass or optical spectra.
+      - code: txt
+        label: Text & documents
+        desc: Free text, reports, emails, reviews, contracts, chat, LLM prompts.
+      - code: code
+        label: Code & binaries
+        desc: Source code, commits, executables, firmware, smart-contract bytecode.
+      - code: gr
+        label: Static graph
+        desc: "A fixed network: ownership graphs, molecules, knowledge graphs, power topology."
+      - code: dg
+        label: Dynamic graph / interactions
+        desc: "Timestamped edges between entities: payments, calls, logins, network flows as a graph."
+      - code: st
+        label: Spatio-temporal & trajectories
+        desc: "Located observations over time: GPS tracks, AIS, sensor grids, epidemiological maps."
+  - key: at
+    label: Anomaly type
+    multi: true
+    paper: Anomaly type
+    desc: "How anomalies differ from normal data. Paper values: global, local, clustered, contextual/sequential. Extended with change, dependency, structural, semantic and logical anomalies."
+    values:
+      - code: glob
+        label: Global
+        desc: Far from all normal data in feature space (extreme values, rare combinations).
+      - code: loc
+        label: Local
+        desc: Normal globally but unusual relative to its neighborhood or peer group (density-relative).
+      - code: clu
+        label: Clustered
+        desc: "Anomalies form small dense groups: coordinated fraud rings, bot farms, repeated systematic errors. Density methods can miss them."
+      - code: ctx
+        label: Contextual
+        desc: A value that is normal in one context (time, place, peer, operating mode) and anomalous in another.
+      - code: seq
+        label: Sequential / collective
+        desc: "An anomalous subsequence, ordering or pattern; each element can look normal alone."
+      - code: cp
+        label: Change / shift
+        desc: Change points, drift, level shifts, regime changes that persist after onset.
+      - code: dep
+        label: Dependency break
+        desc: Each variable looks normal, but a relationship between variables (correlation, physics, causality) breaks.
+      - code: str
+        label: Structural (graph)
+        desc: "Unusual topology: odd nodes, edges, motifs or dense subgraphs."
+      - code: sem
+        label: Semantic novelty / OOD
+        desc: A new class, object or concept that never appeared in training (out-of-distribution).
+      - code: log
+        label: Logical / constraint
+        desc: "Violates domain rules or plausibility: missing or extra components, impossible combinations, broken invariants."
+  - key: unit
+    label: Detection unit
+    multi: true
+    paper: ""
+    desc: What the detector scores. Not in the paper's Table 1, but it determines the algorithm family (point scorer vs. sequence model vs. segmentation vs. graph model) and the metric (point-wise vs. range-based vs. pixel-level).
+    values:
+      - code: rec
+        label: Record / event
+        desc: A single row, event or transaction.
+      - code: win
+        label: Window / interval
+        desc: "A time interval or subsequence; evaluated with range-aware metrics."
+      - code: ser
+        label: Whole series / session
+        desc: An entire time series, sequence, trajectory or session.
+      - code: obj
+        label: Whole sample
+        desc: An entire image, document, file, product or specimen.
+      - code: reg
+        label: Region within sample
+        desc: Pixels, voxels, tokens, spans or channels inside a sample (localization).
+      - code: node
+        label: Node
+        desc: An entity in a graph (account, host, gene, sensor node).
+      - code: edge
+        label: Edge / interaction
+        desc: A single relation or interaction (payment, connection, call).
+      - code: sub
+        label: Group / subgraph
+        desc: A set of entities acting together (ring, community, botnet).
+      - code: ent
+        label: Entity over time
+        desc: A user, account, machine or patient judged across its history.
+  - key: ar
+    label: Anomaly ratio
+    multi: false
+    paper: Anomaly ratio
+    desc: Typical share of anomalies in the data the detector sees. Drives evaluation protocol (bootstrapping, confidence intervals) and contamination assumptions.
+    values:
+      - code: vl
+        label: "Very low (<1%)"
+        desc: "Needle in a haystack; random splits can miss whole anomaly types."
+      - code: lo
+        label: "Low (1–5%)"
+        desc: Rare but not extreme.
+      - code: mo
+        label: "Moderate (>5%)"
+        desc: "Common deviations: defects in early production, noisy sensors, quality issues."
+  - key: dim
+    label: Dimensionality
+    multi: false
+    paper: Data dimensionality
+    desc: Number of features or channels per unit, after typical preprocessing. Raw images, text and genomics count as high.
+    values:
+      - code: lo
+        label: "Low (<10)"
+        desc: A handful of variables.
+      - code: me
+        label: "Medium (10–100)"
+        desc: Typical engineered feature tables or sensor sets.
+      - code: hi
+        label: "High (>100)"
+        desc: Raw media, omics, wide telemetry, embeddings.
+  - key: sup
+    label: Supervision
+    multi: true
+    paper: Supervision
+    desc: Label regimes that are realistic in the application (first listed is the most common). The paper's 'semi-supervised' is split into one-class novelty detection and weak supervision because the two are often conflated.
+    values:
+      - code: un
+        label: Unsupervised
+        desc: Unlabeled data that is itself contaminated with anomalies.
+      - code: nov
+        label: One-class / novelty
+        desc: "Training data known to be (mostly) normal; detect deviations from it."
+      - code: weak
+        label: Weak / semi-supervised
+        desc: A few labeled anomalies, positive-unlabeled data, or noisy labels from past investigations.
+      - code: sup
+        label: Supervised
+        desc: Known anomaly classes with enough labels to train a classifier (with heavy imbalance).
+  - key: pt
+    label: Processing time
+    multi: false
+    paper: Processing time
+    desc: "The strictest latency the application typically requires. The paper uses real-time/online vs batch/offline; real-time is split into hard inline decisions and streaming alerting."
+    values:
+      - code: hrt
+        label: Hard real-time / inline
+        desc: "Milliseconds; the score gates an action (authorize, brake, block, reject part)."
+      - code: "on"
+        label: Online / streaming
+        desc: "Seconds to minutes; alerting on a live stream."
+      - code: bat
+        label: Batch / offline
+        desc: "Hours to months; audits, retrospective analysis, discovery."
+  - key: ep
+    label: Evaluation priority
+    multi: true
+    paper: Evaluation priority
+    desc: Which error matters most (first listed is primary). Determines the metric family. 'Timeliness' is added because detection delay is the key objective in monitoring.
+    values:
+      - code: prec
+        label: Precision
+        desc: "False alarms are costly: limited investigation capacity, alert fatigue. Measure precision@k, PR-AUC at low alert rates."
+      - code: rec
+        label: Recall
+        desc: "Misses are costly: safety, health, liability. Measure recall at fixed alarm rate, ROC-AUC, FNR."
+      - code: spec
+        label: Specificity
+        desc: "Normal operation must not be disrupted: blocked customers, stopped lines, scrapped good parts. Measure FPR on normal data."
+      - code: time
+        label: Timeliness
+        desc: Detection delay or lead time matters as much as correctness. Measure time-to-detect, NAB-style earliness, lead time.
+  - key: out
+    label: Required outputs
+    multi: true
+    may_be_empty: true
+    paper: ""
+    desc: What users need beyond an anomaly flag. Severity, grouping and explanations are rarely benchmarked but often decide whether a detector is usable.
+    values:
+      - code: sev
+        label: Severity score
+        desc: "Graded criticality or impact, not just 'how unusual'; calibrated across entities."
+      - code: rank
+        label: Ranked queue
+        desc: A top-k list for a fixed investigation budget.
+      - code: grp
+        label: Grouping
+        desc: Related anomalies grouped into incidents, rings, campaigns or defect classes.
+      - code: xai
+        label: Explanation
+        desc: Feature attributions, rules, prototypes, counterfactuals or natural-language rationale.
+      - code: loc
+        label: Localization
+        desc: "Where: pixels, time interval, sensor, log line, node, map location."
+      - code: rca
+        label: Root cause
+        desc: Which component, variable or upstream event caused it.
+      - code: type
+        label: Anomaly type
+        desc: Classify the anomaly (fault class, attack category, defect type).
+      - code: early
+        label: Early warning
+        desc: Predict or flag precursors before the event, with lead time.
+      - code: disc
+        label: Discovery
+        desc: "Characterize genuinely new phenomena; a found anomaly is a research result."
+      - code: fix
+        label: Correction
+        desc: Impute, repair or propose the correct value.
+      - code: unc
+        label: Calibrated uncertainty
+        desc: Confidence that supports decision thresholds and abstention.
+  - key: oc
+    label: Operational constraints
+    multi: true
+    may_be_empty: true
+    paper: Operational constraints
+    desc: "Deployment constraints. Paper values: robustness, fairness, diversity. Extended with drift, privacy, edge, scale, regulation, certification, feedback, cold start and transfer."
+    values:
+      - code: rob
+        label: Robustness
+        desc: Noise, contamination, sensor dropouts and missing data must not break the detector.
+      - code: fair
+        label: Fairness
+        desc: "Flags affect people; error rates must not differ unjustly across groups."
+      - code: div
+        label: Diversity
+        desc: Retrieve many distinct anomaly types or root causes, not near-duplicates.
+      - code: drift
+        label: Drift adaptation
+        desc: "Normal behavior changes (seasons, releases, wear); the model must adapt without absorbing anomalies."
+      - code: priv
+        label: Privacy / federated
+        desc: Data cannot be pooled or must be protected (patients, customers, banks).
+      - code: edge
+        label: Edge / embedded
+        desc: "Runs on constrained hardware: sensors, ECUs, implants, satellites."
+      - code: scale
+        label: Extreme scale
+        desc: Millions of entities or events per second.
+      - code: reg
+        label: Regulatory audit
+        desc: Decisions must be documented and defensible (AML, credit, medical devices).
+      - code: cert
+        label: Safety certification
+        desc: Behavior must be verifiable for safety cases (automotive, avionics, nuclear).
+      - code: hitl
+        label: Human feedback loop
+        desc: "Analysts label alerts; the system should learn from feedback (active learning)."
+      - code: cold
+        label: Cold start
+        desc: New assets, users or products with little history.
+      - code: shift
+        label: Cross-domain transfer
+        desc: Must generalize to new sites, machines, scanners or patients.
+  - key: adv
+    label: Adversary
+    multi: false
+    paper: Example 2.3 (adversarial anomalies)
+    desc: "Whether anomalies are produced by an agent that hides them. The paper treats adversarial anomalies as a scenario of their own; here it is an explicit property."
+    values:
+      - code: "no"
+        label: None
+        desc: Natural faults, errors or rare events.
+      - code: conc
+        label: Concealing
+        desc: People hide misconduct (evasion, collusion, doping) but adapt slowly.
+      - code: adapt
+        label: Adaptive adversary
+        desc: "Attackers probe the detector and change tactics; anomalies are camouflaged."
+  - key: dq
+    label: Data characteristics
+    multi: true
+    may_be_empty: true
+    paper: ""
+    desc: Data properties that constrain preprocessing and algorithms (e.g., normalization that compresses tails, encoders for categoricals).
+    values:
+      - code: mix
+        label: Mixed / categorical
+        desc: Mixed numeric and high-cardinality categorical attributes.
+      - code: miss
+        label: Missing / irregular
+        desc: Missing values, irregular or asynchronous sampling.
+      - code: season
+        label: Seasonality
+        desc: Strong daily, weekly or annual cycles.
+      - code: multi
+        label: Multi-source fusion
+        desc: Several modalities or sources must be combined.
+      - code: hier
+        label: Hierarchical
+        desc: "Aggregation levels (item → store → region; sensor → machine → plant)."
+      - code: het
+        label: Heterogeneous entities
+        desc: Each entity has its own notion of normal (per-user, per-machine baselines).
+      - code: small
+        label: Small data
+        desc: "Few samples overall; deep models overfit."
