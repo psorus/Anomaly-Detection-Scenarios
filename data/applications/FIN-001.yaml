@@ -12,7 +12,7 @@ properties:
   ar: vl  # Anomaly ratio
   dim: me  # Dimensionality
   sup: [sup, weak]  # Supervision
-  pt: hrt  # Processing time
+  pt: on  # Processing time
   ep: [prec, spec]  # Evaluation priority
   out: [sev, xai]  # Required outputs
   oc: [scale, drift, reg, hitl]  # Operational constraints
