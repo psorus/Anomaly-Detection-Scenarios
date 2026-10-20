@@ -1,7 +1,6 @@
 # Governance
 
-The atlas aims for a consensus that can be audited: every decision is a pull request with its evidence and review,
-and every number on the website is recomputed from the merged files.
+Every change is a pull request, and every number on the website is recomputed from the merged files.
 
 ## Roles
 
@@ -16,7 +15,7 @@ and every number on the website is recomputed from the merged files.
 |---|---|
 | Typo, wording, a broken or missing link | One maintainer approval |
 | A property value of an application or dataset | A source in `evidence`; one maintainer approval |
-| Marking a record `reviewed` | The reviewer's handle in `review.reviewers`; one approval by someone else |
+| A review batch from the Review tab | A maintainer merges the generated pull request; maintainers may merge their own batches |
 | New application or dataset | Complete file passing the checks; one maintainer approval |
 | New scenario, or a change to a scenario rule | A linked discussion open for at least 7 days; two approvals, one by a maintainer |
 | Taxonomy (adding, removing or redefining a property or value) | A discussion labeled `taxonomy` open for at least 14 days; two maintainer approvals; all affected files updated in the same pull request |

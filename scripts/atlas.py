@@ -7,6 +7,8 @@
   python scripts/atlas.py new application FIN        print the next free id and a template file
   python scripts/atlas.py issue --body-file F --kind application --number 12
                                                      turn a submitted issue form into a data file (used by a workflow)
+  python scripts/atlas.py apply-reviews --body-file F --author LOGIN --number 7
+                                                     apply a batch of verdicts sent from the Review tab
   python scripts/atlas.py forms [--check]            regenerate the GitHub issue forms from the taxonomy
 """
 from __future__ import annotations
@@ -107,7 +109,7 @@ def cmd_build(args):
     if pb.errors:
         print(f"Build stopped: {len(pb.errors)} validation error(s).", file=sys.stderr)
         return 1
-    cat = L.derive(tax, recs, meta)
+    cat = L.derive(tax, recs, meta, L.load_suggestions())
     out = os.path.abspath(args.out)
     os.makedirs(out, exist_ok=True)
     cfg = site_config(meta)
@@ -420,6 +422,119 @@ def cmd_issue(args):
     return 0
 
 
+# ---------------------------------------------------------------- review batches from the website
+
+FOLDERS = {"application": "applications", "dataset": "datasets", "scenario": "scenarios"}
+
+
+def _kind_of(rid):
+    if re.match(r"^[A-Z]{3}-\d+$", rid):
+        return "application"
+    if re.match(r"^D\d+$", rid):
+        return "dataset"
+    if re.match(r"^S\d+$", rid):
+        return "scenario"
+    return None
+
+
+def _source_entry(text):
+    text = str(text).strip()[:500]
+    m = re.search(r"https?://\S+", text)
+    if not m:
+        return {"source": text}
+    url = m.group(0).rstrip(").,;")
+    rest = (text[:m.start()] + text[m.end():]).strip(" -·,;")
+    return {"source": rest or url, "url": url}
+
+
+def parse_review_batch(body):
+    form = parse_issue_form(body)
+    txt = form.get("Reviews", body or "")
+    txt = re.sub(r"^```\w*\s*|\s*```\s*$", "", txt.strip())
+    try:
+        data = L.yaml.load(txt, Loader=L._Loader)
+    except Exception as e:
+        raise ValueError(f"The reviews block is not valid YAML: {e}")
+    if isinstance(data, dict):
+        data = data.get("reviews")
+    if not isinstance(data, list):
+        raise ValueError("The reviews block must be a list of entries.")
+    out = []
+    for x in data[:500]:
+        if isinstance(x, dict) and x.get("id"):
+            out.append({"id": str(x["id"]).strip(), "verdict": str(x.get("verdict", "")).strip(),
+                        "sources": [str(s) for s in (x.get("sources") or []) if str(s).strip()][:10],
+                        "note": str(x.get("note") or "").strip()[:2000]})
+    return out
+
+
+def apply_reviews(entries, author, number, tax):
+    done, unknown, changed = [], [], []
+    for e in entries:
+        kind = _kind_of(e["id"])
+        path = os.path.join(L.DATA, FOLDERS.get(kind, "_"), e["id"] + ".yaml") if kind else None
+        if not path or not os.path.exists(path) or e["verdict"] not in ("correct", "needs-fix"):
+            unknown.append(e["id"])
+            continue
+        rec = L.read_yaml(path)
+        rv = rec.setdefault("review", {"status": "draft", "reviewers": []})
+        srcs = [_source_entry(s) for s in e["sources"]]
+        if e["verdict"] == "correct":
+            rv["status"] = "reviewed"
+            rv["reviewers"] = list(dict.fromkeys((rv.get("reviewers") or []) + [author]))
+            if srcs:
+                ev = rec.get("evidence") or {}
+                have = {json.dumps(x, sort_keys=True) for x in ev.get("general", [])}
+                ev["general"] = (ev.get("general") or []) + [x for x in srcs if json.dumps(x, sort_keys=True) not in have]
+                rec["evidence"] = ev
+            rv["note"] = e["note"] or f"Reviewed by @{author} in #{number}."
+        else:
+            c = {"by": author, "note": e["note"] or "Flagged without a note.", "issue": int(number)}
+            if srcs:
+                c["sources"] = srcs
+            rv["concerns"] = (rv.get("concerns") or []) + [c]
+        # keep a stable key order: review last
+        rec = {k: v for k, v in rec.items() if k != "review"} | {"review": rv}
+        if "evidence" in rec and kind != "application":
+            order = [k for k in rec if k not in ("evidence", "review")]
+            rec = {k: rec[k] for k in order} | {"evidence": rec["evidence"], "review": rv}
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(render(kind, rec, tax))
+        done.append((e["id"], e["verdict"]))
+        changed.append(os.path.relpath(path, L.ROOT))
+    return done, unknown, changed
+
+
+def cmd_apply_reviews(args):
+    tax, _, _ = L.load_all()
+    body = open(args.body_file, encoding="utf-8").read()
+    try:
+        entries = parse_review_batch(body)
+        done, unknown, changed = apply_reviews(entries, args.author, args.number, tax)
+        err = ""
+    except ValueError as e:
+        done, unknown, changed, err = [], [], [], str(e)
+    tax2, recs2, _ = L.load_all()
+    pb = L.validate(tax2, recs2)
+    ok = sum(1 for _, v in done if v == "correct")
+    lines = [f"Reviews from @{args.author} in #{args.number}: {ok} marked correct, {len(done) - ok} flagged."]
+    if unknown:
+        lines.append(f"Skipped (unknown id or verdict): {', '.join(unknown[:30])}.")
+    if err:
+        lines.append(f"Could not read the batch: {err}")
+    if pb.errors:
+        lines.append(f"{len(pb.errors)} validation error(s) after applying; see the checks.")
+    flagged = [i for i, v in done if v == "needs-fix"]
+    if flagged:
+        lines.append("Flagged entries: " + ", ".join(flagged[:50]) + ".")
+    summary = {"n": len(done), "correct": ok, "flagged": len(done) - ok, "paths": "\n".join(changed), "text": "\n\n".join(lines)}
+    if args.summary:
+        with open(args.summary, "w", encoding="utf-8") as f:
+            json.dump(summary, f)
+    print(summary["text"])
+    return 0 if not err else 1
+
+
 # ---------------------------------------------------------------- issue forms generated from the taxonomy
 
 def _form_yaml(name, description, title, labels, body):
@@ -490,6 +605,10 @@ def build_forms(tax):
         "new-application.yml": _form_yaml("Propose an application", "Add an anomaly detection application to the atlas.", "[New application] ", ["new application"], app_body),
         "new-dataset.yml": _form_yaml("Propose a dataset", "Add a dataset and link it to applications.", "[New dataset] ", ["new dataset"], ds_body),
         "new-scenario.yml": _form_yaml("Propose a scenario", "Add a benchmark scenario defined by a rule over structural properties.", "[New scenario] ", ["new scenario"], sc_body),
+        "review.yml": _form_yaml("Send reviews", "Verdicts from the Review tab of the website, sent as one batch.", "Review: ", ["review"], [
+            _md("This form is filled in by the **Review** tab of the website. Check the list below and select **Create**. A workflow turns it into one pull request; a maintainer merges it."),
+            {"type": "textarea", "id": "reviews", "attributes": {"label": "Reviews", "description": "One line per entry, as written by the website.", "render": "yaml"},
+             "validations": {"required": True}}]),
         "change-request.yml": _form_yaml("Request a correction", "Something in an application, dataset, scenario or the taxonomy is wrong.", "[Correction] ", ["change request"], change),
     }
 
@@ -534,10 +653,15 @@ def main(argv=None):
     i.add_argument("--number", required=True)
     i.add_argument("--author")
     i.add_argument("--summary")
+    ar = sub.add_parser("apply-reviews")
+    ar.add_argument("--body-file", required=True)
+    ar.add_argument("--author", required=True)
+    ar.add_argument("--number", required=True)
+    ar.add_argument("--summary")
     fo = sub.add_parser("forms")
     fo.add_argument("--check", action="store_true")
     a = ap.parse_args(argv)
-    return {"forms": cmd_forms, "check": cmd_check, "build": cmd_build, "report": cmd_report, "new": cmd_new, "issue": cmd_issue}[a.cmd](a)
+    return {"apply-reviews": cmd_apply_reviews, "forms": cmd_forms, "check": cmd_check, "build": cmd_build, "report": cmd_report, "new": cmd_new, "issue": cmd_issue}[a.cmd](a)
 
 
 if __name__ == "__main__":

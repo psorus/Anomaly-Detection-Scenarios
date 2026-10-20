@@ -1,19 +1,32 @@
-# TODO before the camera-ready: complete the author list of the paper and set the atlas release DOI (e.g. from Zenodo).
 cff-version: 1.2.0
-message: "If you use the atlas, cite the paper and the release you used; the release's catalog.json reproduces every number."
+message: "If you use the atlas, please cite the paper."
 title: "Anomaly Detection Scenario Atlas"
 type: dataset
 authors:
-  - name: "Anomaly Detection Scenario Atlas contributors"
+  - family-names: "Röchner"
+    given-names: "Philipp"
+  - family-names: "Klüttermann"
+    given-names: "Simon"
+  - family-names: "Rothlauf"
+    given-names: "Franz"
+  - family-names: "Schlör"
+    given-names: "Daniel"
 license: CC-BY-4.0
 repository-code: "https://github.com/psorus/Anomaly-Detection-Scenarios"
+url: "https://psorus.github.io/Anomaly-Detection-Scenarios/"
 preferred-citation:
   type: article
   title: "We Need to Rethink Benchmarking in Anomaly Detection"
   authors:
     - family-names: "Röchner"
+      given-names: "Philipp"
     - family-names: "Klüttermann"
       given-names: "Simon"
+    - family-names: "Rothlauf"
+      given-names: "Franz"
+    - family-names: "Schlör"
+      given-names: "Daniel"
+  year: 2025
   identifiers:
     - type: other
       value: "arXiv:2507.15584"

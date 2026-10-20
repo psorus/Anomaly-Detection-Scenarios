@@ -132,6 +132,30 @@ class TestAtlas(unittest.TestCase):
         finally:
             shutil.rmtree(d)
 
+    def test_review_batch_is_applied(self):
+        d = copy_repo()
+        old = L.DATA
+        try:
+            L.DATA = os.path.join(d, "data")
+            body = ('### Reviews\n\n```yaml\n'
+                    '- {"id":"FIN-001","verdict":"correct","sources":["Smith (2020). A paper. https://doi.org/10.1/x"],"note":""}\n'
+                    '- {"id":"S07","verdict":"needs-fix","sources":[],"note":"Too broad."}\n'
+                    '- {"id":"NOPE-1","verdict":"correct","sources":[],"note":""}\n```\n')
+            entries = atlas.parse_review_batch(body)
+            done, unknown, _ = atlas.apply_reviews(entries, "someone", 5, self.tax)
+            self.assertEqual(unknown, ["NOPE-1"])
+            app = L.read_yaml(os.path.join(d, "data/applications/FIN-001.yaml"))
+            self.assertEqual(app["review"]["status"], "reviewed")
+            self.assertIn("someone", app["review"]["reviewers"])
+            self.assertEqual(app["evidence"]["general"][-1]["url"], "https://doi.org/10.1/x")
+            sc = L.read_yaml(os.path.join(d, "data/scenarios/S07.yaml"))
+            self.assertEqual(sc["review"]["concerns"][-1]["note"], "Too broad.")
+            tax, recs, _ = L.load_all(d)
+            self.assertEqual(L.validate(tax, recs).errors, [])
+        finally:
+            L.DATA = old
+            shutil.rmtree(d)
+
     def test_issue_forms_are_current(self):
         for name, text in atlas.build_forms(self.tax).items():
             path = os.path.join(L.ROOT, ".github", "ISSUE_TEMPLATE", name)

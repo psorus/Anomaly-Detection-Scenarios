@@ -37,8 +37,9 @@ function ghBar(kind, rec) {
 function evidenceHTML(a) {
   const ev = a.evidence || {};
   const keys = Object.keys(ev).filter(k => (ev[k] || []).length);
-  if (!keys.length) return `<div class="sec"><h3>Evidence</h3><p class="hint">No evidence recorded yet for these codings. To support or challenge a value, add a source under <code>evidence</code> in the file, for example <code>pt: [{source: "Author (2024), Section 3", url: "https://…", note: "decisions within 50 ms"}]</code>.</p></div>`;
-  return `<div class="sec"><h3>Evidence</h3><dl class="kv">${keys.map(k => `<dt>${esc(k === "general" ? "General" : P[k] ? P[k].label : k)}</dt><dd><ul class="evl">${ev[k].map(e =>
+  const conc = (a.concerns || []).length ? `<div class="sec"><h3>Open concerns</h3><ul class="evl">${a.concerns.map(c => `<li>${esc(c.note)}<span class="hint"> @${esc(c.by || "")}</span></li>`).join("")}</ul></div>` : "";
+  if (!keys.length) return conc + `<div class="sec"><h3>Sources</h3><p class="hint">No sources recorded yet. Use the <b>Review</b> tab to add one.</p></div>`;
+  return conc + `<div class="sec"><h3>Sources</h3><dl class="kv">${keys.map(k => `<dt>${esc(k === "general" ? "Whole entry" : P[k] ? P[k].label : k)}</dt><dd><ul class="evl">${ev[k].map(e =>
     `<li>${e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.source || hostOf(e.url))}</a>` : esc(e.source)}${e.note ? `<span class="hint"> ${esc(e.note)}</span>` : ""}</li>`).join("")}</ul></dd>`).join("")}</dl></div>`;
 }
 
@@ -123,23 +124,133 @@ function dsTemplate() {
 }
 
 function renderContribute() {
-  const st = CFG.stats || {};
-  const rv = (n, d, what) => `<div class="kpi"><b>${n ?? "–"}<span>/${d}</span></b><span>${what}</span></div>`;
-  $("#k-review").innerHTML = rv(st.reviewed_scenarios, SC.length, "scenarios reviewed") + rv(st.reviewed_applications, APPS.length, "applications reviewed")
-    + rv(st.reviewed_datasets, DS.length, "datasets reviewed") + rv(st.applications_with_evidence, APPS.length, "applications with recorded evidence");
-  $("#new-dom").innerHTML = DOM_ORDER.map(d => `<option value="${d}">${esc(DOM[d])} (${d})</option>`).join("");
   const iss = t => `${GH}/issues/new?template=${t}`;
-  $("#c-issues").innerHTML = [["new-application.yml", "Propose an application"], ["new-dataset.yml", "Propose a dataset"], ["new-scenario.yml", "Propose a scenario"], ["change-request.yml", "Request a correction"]]
+  $("#new-dom").innerHTML = DOM_ORDER.map(d => `<option value="${d}">${esc(DOM[d])}</option>`).join("");
+  $("#c-issues").innerHTML = [["new-application.yml", "Application form"], ["new-dataset.yml", "Dataset form"], ["new-scenario.yml", "Scenario form"]]
     .map(([t, l]) => `<a class="btn gh" href="${esc(iss(t))}" target="_blank" rel="noopener">${l}</a>`).join("");
-  $("#c-links").innerHTML = `<a class="btn gh" href="${esc(GH)}" target="_blank" rel="noopener">Repository</a>
-    <a class="btn gh" href="${esc(GH)}/discussions" target="_blank" rel="noopener">Discussions</a>
+  $("#c-links").innerHTML = `<a class="btn gh" href="${esc(GH)}/discussions" target="_blank" rel="noopener">Discussions</a>
     <a class="btn gh" href="${esc(GH)}/pulls" target="_blank" rel="noopener">Open pull requests</a>
-    <a class="btn gh" href="${esc(GH)}/blob/${BR}/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing guide</a>
-    <a class="btn gh" href="${esc(GH)}/blob/${BR}/GOVERNANCE.md" target="_blank" rel="noopener">How decisions are made</a>`;
-  $("#c-build").innerHTML = `Built from commit <a class="mono" href="${esc(GH)}/commit/${esc(CFG.sha || "")}" target="_blank" rel="noopener">${esc((CFG.sha || "unknown").slice(0, 7))}</a> on ${esc(CFG.built || "")}.
-    Downloads: <a href="catalog.json">catalog.json</a> · <a href="applications.csv">applications.csv</a> · <a href="datasets.csv">datasets.csv</a> · <a href="scenarios.csv">scenarios.csv</a> · <a href="stats.json">stats.json</a>.
-    The code that computes every number: <a href="${esc(ghFile("scripts/atlaslib.py"))}" target="_blank" rel="noopener">scripts/atlaslib.py</a>.`;
+    <a class="btn gh" href="${esc(GH)}/blob/${BR}/CONTRIBUTING.md" target="_blank" rel="noopener">Full guide</a>`;
+  document.querySelectorAll("a.gh-link").forEach(a => {
+    a.href = a.dataset.path ? ghFile(a.dataset.path) : iss(a.dataset.issue);
+    a.target = "_blank"; a.rel = "noopener";
+  });
+  $("#c-build").innerHTML = `Data as of commit <a class="mono" href="${esc(GH)}/commit/${esc(CFG.sha || "")}" target="_blank" rel="noopener">${esc((CFG.sha || "unknown").slice(0, 7))}</a>, ${esc(CFG.built || "")}. Downloads: <a href="catalog.json">catalog.json</a> · <a href="applications.csv">applications.csv</a> · <a href="datasets.csv">datasets.csv</a> · <a href="scenarios.csv">scenarios.csv</a>.`;
 }
+
+/* ---------- Review queue: verdicts collect in this browser and go to GitHub as one batch ---------- */
+const RV = { kind: load("rvKind", "app"), dom: "", all: false, shown: 25, d: load("rvDraft", {}), sent: load("rvSent", {}) };
+if (!["app", "scen", "ds"].includes(RV.kind)) RV.kind = "app";
+const RECS = { app: () => APPS, scen: () => SC, ds: () => DS };
+const byKind = (k, id) => (k === "app" ? BYID : k === "scen" ? SCID : DSID)[id];
+function rvSave() { store("rvDraft", RV.d); store("rvSent", RV.sent); }
+function rvList() {
+  return RECS[RV.kind]().filter(x => {
+    if (RV.dom && RV.kind !== "scen" && !(RV.kind === "app" ? x.dom === RV.dom : x.dom.includes(RV.dom))) return false;
+    if (!RV.all && (x.review === "reviewed" || RV.sent[x.id])) return false;
+    return true;
+  });
+}
+function renderReview() {
+  const kp = (n, d, w) => `<div class="kpi"><b>${n}<span>/${d}</span></b><span>${w}</span></div>`;
+  const rv = list => list.filter(x => x.review === "reviewed").length;
+  $("#k-review").innerHTML = kp(rv(SC), SC.length, "scenarios reviewed") + kp(rv(APPS), APPS.length, "applications reviewed") + kp(rv(DS), DS.length, "datasets reviewed");
+  document.querySelectorAll("[data-rkind]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.rkind === RV.kind)));
+  const sel = $("#r-dom");
+  sel.closest("label").hidden = RV.kind === "scen";
+  sel.innerHTML = `<option value="">All domains</option>` + DOM_ORDER.map(d => `<option value="${d}"${RV.dom === d ? " selected" : ""}>${esc(DOM[d])}</option>`).join("");
+  $("#r-all").checked = RV.all;
+  drawReviewList();
+}
+function rvFacts(k, x) {
+  if (k === "app") return `<ul class="rprops">${PROPS.map(p => `<li><span class="hint">${esc(p.label)}</span> ${vals(x, p.key).length ? vals(x, p.key).map(v => `<span title="${esc(DESC[p.key][v])}">${esc(LBL[p.key][v])}</span>`).join(", ") : "none"}</li>`).join("")}</ul>`;
+  if (k === "scen") return `<div class="sig">${sigTags(x.rule, false)}</div><p class="hint">${x.members.length} applications, for example ${x.members.slice(0, 4).map(i => esc(BYID[i].name)).join("; ")}.</p>`;
+  return `<dl class="kv rkv"><dt>Readiness</dt><dd><span class="chip">${esc(DL.tier[x.tier])}</span></dd><dt>Labels</dt><dd><span class="chip">${esc(DL.lab[x.lab])}</span></dd>
+    <dt>Anomalies</dt><dd><span class="chip">${esc(DL.real[x.real])}</span></dd><dt>Annotations</dt><dd>${x.ann.length ? x.ann.map(v => `<span class="chip">${esc(DL.ann[v])}</span>`).join("") : `<span class="hint">binary labels only</span>`}</dd>
+    <dt>Modality</dt><dd>${x.mod.map(v => `<span class="chip">${esc(LBL.mod[v])}</span>`).join("")}</dd><dt>Size</dt><dd>${esc(x.size || "not stated")}</dd>
+    <dt>Comes from</dt><dd>${x.apps.length ? x.apps.slice(0, 4).map(i => esc(BYID[i].name)).join("; ") : `<span class="hint">a generic collection</span>`}</dd></dl>${x.url ? `<p><a href="${esc(x.url)}" target="_blank" rel="noopener">Dataset page</a></p>` : ""}`;
+}
+function rvSources(k, x) {
+  const have = [];
+  Object.values(x.evidence || {}).forEach(l => (l || []).forEach(e => have.push(e.source || e.url)));
+  const sug = x.sugg || [];
+  return `<div class="rsrc">
+    ${have.length ? `<p class="hint">Already recorded: ${have.map(esc).join("; ")}</p>` : ""}
+    ${sug.length ? `<p class="rsh">Suggested reading <span class="hint">(unverified suggestions; check the paper before choosing it)</span></p>
+      <ul class="sugg">${sug.map((g, i) => `<li><label><input type="checkbox" data-rs="${x.id}" value="${i}"> <span>${esc(g.t)}</span></label> <a href="${esc(g.u || scholarQ(g.t))}" target="_blank" rel="noopener">${g.u ? "Open" : "Find"}</a>${g.why ? `<span class="hint"> ${esc(g.why)}</span>` : ""}</li>`).join("")}</ul>` : `<p class="hint">No suggestions yet for this entry.</p>`}
+    <label class="ro"><span>Other source</span><input type="text" class="btn" id="ro-${x.id}" placeholder="DOI, link, or Author (Year). Title."></label>
+  </div>`;
+}
+function rvCard(k, x) {
+  const d = RV.d[x.id], conc = (x.concerns || []).length;
+  const head = `<div class="rhead"><span class="mono">${x.id}</span>${reviewBadge(x)}${conc ? `<span class="rv warn">${conc} open ${conc === 1 ? "concern" : "concerns"}</span>` : ""}<span class="sp"></span><button type="button" class="linkbtn" data-open-${k === "ds" ? "ds" : k}="${x.id}">Open</button></div>`;
+  if (d) return `<article class="rcard done" id="rc-${x.id}">${head}<h4>${esc(x.name)}</h4>
+    <p class="rdone">${d.v === "ok" ? "Marked correct" : "Flagged"}${d.src.length ? ` · ${d.src.length} source${d.src.length > 1 ? "s" : ""}` : ""}${d.note ? ` · “${esc(d.note)}”` : ""} <button type="button" class="linkbtn" data-rundo="${x.id}">Undo</button></p></article>`;
+  return `<article class="rcard" id="rc-${x.id}">${head}<h4>${esc(x.name)}</h4>
+    <p class="sum">${esc(k === "scen" ? x.summary : x.desc)}</p>
+    ${rvFacts(k, x)}
+    ${rvSources(k, x)}
+    <div class="ract">
+      <button type="button" class="btn gh primary" data-rok="${x.id}">Correct</button>
+      <button type="button" class="btn gh" data-rfix="${x.id}">Something is wrong</button>
+    </div>
+    <div class="rfix" id="rf-${x.id}" hidden><textarea class="btn" id="rn-${x.id}" rows="3" placeholder="What is wrong, and what should it be?"></textarea>
+      <button type="button" class="btn gh primary" data-rfixsave="${x.id}">Save</button></div>
+  </article>`;
+}
+function drawReviewList() {
+  const list = rvList();
+  const cards = list.slice(0, RV.shown).map(x => rvCard(RV.kind, x)).join("");
+  $("#r-list").innerHTML = (list.length ? cards : `<div class="empty">Nothing left to review here. Pick another domain or include reviewed entries.</div>`)
+    + (list.length > RV.shown ? `<button type="button" class="btn" id="r-more">Show ${Math.min(25, list.length - RV.shown)} more (${list.length - RV.shown} left)</button>` : "");
+  drawReviewBar();
+}
+function drawReviewBar(msg) {
+  const n = Object.keys(RV.d).length, sent = Object.keys(RV.sent).length;
+  $("#rbar").hidden = !n && !msg;
+  $("#rbar-n").innerHTML = msg || `<b>${n}</b> ${n === 1 ? "verdict" : "verdicts"} ready${sent ? ` · ${sent} sent earlier from this browser` : ""}`;
+  $("#r-send").hidden = !n;
+}
+function rvPick(id) {
+  const x = byKind(RV.kind, id) || BYID[id] || SCID[id] || DSID[id];
+  const sug = x.sugg || [];
+  const src = [...document.querySelectorAll(`input[data-rs="${CSS.escape(id)}"]:checked`)].map(i => sug[+i.value]).map(g => g.u ? `${g.t} ${g.u}` : g.t);
+  const other = ($("#ro-" + CSS.escape(id)) || {}).value;
+  if (other && other.trim()) src.push(other.trim());
+  return src;
+}
+function rvBatch() {
+  return Object.entries(RV.d).map(([id, d]) => "- " + JSON.stringify({ id, verdict: d.v === "ok" ? "correct" : "needs-fix", sources: d.src, note: d.note || "" })).join("\n");
+}
+function rvSend() {
+  const n = Object.keys(RV.d).length;
+  if (!n) return;
+  const text = rvBatch();
+  const base = `${GH}/issues/new?${qs({ template: "review.yml", title: `Review: ${n} ${n === 1 ? "entry" : "entries"}` })}`;
+  const full = `${base}&reviews=${encodeURIComponent(text)}`;
+  const done = () => { Object.keys(RV.d).forEach(id => { RV.sent[id] = Date.now(); }); RV.d = {}; rvSave(); drawReviewList(); };
+  if (full.length < 7500) { window.open(full, "_blank", "noopener"); done(); drawReviewBar(`Opened GitHub with ${n} ${n === 1 ? "verdict" : "verdicts"}. Select <b>Create</b> there to send them.`); return; }
+  const go = () => { window.open(base, "_blank", "noopener"); done(); drawReviewBar(`${n} verdicts copied. Paste them into the <b>Reviews</b> field on GitHub, then select <b>Create</b>.`); };
+  try { navigator.clipboard.writeText(text).then(go, () => { prompt("Copy these verdicts, then paste them into the Reviews field on GitHub:", text); go(); }); }
+  catch (e) { prompt("Copy these verdicts, then paste them into the Reviews field on GitHub:", text); go(); }
+}
+document.addEventListener("click", e => {
+  const t = e.target.closest("button");
+  if (!t) return;
+  const b = t.dataset;
+  if (b.rkind) { RV.kind = b.rkind; RV.shown = 25; store("rvKind", RV.kind); return renderReview(); }
+  if (b.rok) { RV.d[b.rok] = { v: "ok", src: rvPick(b.rok), note: "" }; rvSave(); return drawReviewList(); }
+  if (b.rfix) { const f = $("#rf-" + CSS.escape(b.rfix)); f.hidden = !f.hidden; if (!f.hidden) $("#rn-" + CSS.escape(b.rfix)).focus(); return; }
+  if (b.rfixsave) { const note = $("#rn-" + CSS.escape(b.rfixsave)).value.trim(); if (!note) return $("#rn-" + CSS.escape(b.rfixsave)).focus(); RV.d[b.rfixsave] = { v: "fix", src: rvPick(b.rfixsave), note }; rvSave(); return drawReviewList(); }
+  if (b.rundo) { delete RV.d[b.rundo]; rvSave(); return drawReviewList(); }
+  if (t.id === "r-more") { RV.shown += 25; return drawReviewList(); }
+  if (t.id === "r-send") return rvSend();
+  if (t.id === "r-clear") { if (Object.keys(RV.d).length && !confirm("Discard the verdicts you have not sent?")) return; RV.d = {}; rvSave(); return drawReviewList(); }
+});
+document.addEventListener("change", e => {
+  if (e.target.id === "r-dom") { RV.dom = e.target.value; RV.shown = 25; drawReviewList(); }
+  if (e.target.id === "r-all") { RV.all = e.target.checked; RV.shown = 25; drawReviewList(); }
+});
 
 function ghFooter() {
   const f = document.getElementById("gh-foot");
