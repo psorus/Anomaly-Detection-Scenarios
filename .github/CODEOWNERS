@@ -1,7 +1,7 @@
 # Maintainers who review changes. Replace OWNER with GitHub handles or a team, e.g. @org/atlas-maintainers.
 # Scenario rules and the taxonomy change what every number means, so they need a maintainer's approval.
-*                   @you @coauthor
-/data/scenarios/    @you @coauthor
-/data/taxonomy/     @you @coauthor
-/scripts/           @you @coauthor
-/.github/           @you @coauthor
+*                   @psorus @coauthor
+/data/scenarios/    @psorus @coauthor
+/data/taxonomy/     @psorus @coauthor
+/scripts/           @psorus @coauthor
+/.github/           @psorus @coauthor
