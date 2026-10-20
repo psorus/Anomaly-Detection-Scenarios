@@ -6,7 +6,7 @@ paper:
   title: We Need to Rethink Benchmarking in Anomaly Detection
   arxiv: "2507.15584"
   url: "https://arxiv.org/abs/2507.15584"
-repository: OWNER/REPO
+repository: psorus/Anomaly-Detection-Scenarios
 branch: main
 discussions:
   applications: applications

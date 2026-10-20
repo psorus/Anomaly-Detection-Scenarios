@@ -59,7 +59,7 @@ python -m unittest discover -s tests
 ## Setting up the repository (maintainers, once)
 
 1. Create the repository on GitHub and push this folder to `main`.
-2. Run `scripts/setup_repository.sh OWNER/REPO @maintainer1 @maintainer2` with the GitHub CLI logged in. It fills
+2. Run `scripts/setup_repository.sh psorus/Anomaly-Detection-Scenarios @maintainer1 @maintainer2` with the GitHub CLI logged in. It fills
    in the repository name and code owners, creates the labels, enables Discussions and switches GitHub Pages to
    GitHub Actions. Commit and push the files it edited.
 3. In the web interface: create the Discussions categories *Scenarios*, *Applications* and *Datasets*, and protect
