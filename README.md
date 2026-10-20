@@ -6,7 +6,7 @@ evaluate each scenario. It implements the call to action of
 [*We Need to Rethink Benchmarking in Anomaly Detection*](https://arxiv.org/abs/2507.15584) (arXiv 2507.15584):
 benchmark per scenario, and agree on the scenarios together.
 
-**Website:** https://OWNER.github.io/REPO/ (rebuilt from this repository after every merged pull request)
+**Website:** https://psorus.github.io/Anomaly-Detection-Scenarios/ (rebuilt from this repository after every merged pull request)
 
 ## How it works
 

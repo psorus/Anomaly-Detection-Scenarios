@@ -8,7 +8,8 @@ MAINTAINERS="${*:-@${REPO%%/*}}"
 cd "$(dirname "$0")/.."
 
 # Fill in the repository name and maintainers in the files that need them; commit and push the result.
-sed -i.bak "s#OWNER/REPO#$REPO#g" atlas.yaml CITATION.cff README.md .github/ISSUE_TEMPLATE/config.yml && rm -f ./*.bak .github/ISSUE_TEMPLATE/*.bak
+OWNER="${REPO%%/*}"; NAME="${REPO#*/}"
+sed -i.bak -e "s#OWNER\.github\.io/REPO#$OWNER.github.io/$NAME#g" -e "s#OWNER/REPO#$REPO#g" atlas.yaml CITATION.cff README.md .github/ISSUE_TEMPLATE/config.yml && rm -f ./*.bak .github/ISSUE_TEMPLATE/*.bak
 sed -i.bak "s#@OWNER#$MAINTAINERS#g" .github/CODEOWNERS && rm -f .github/CODEOWNERS.bak
 
 # Labels used by the issue forms and workflows.

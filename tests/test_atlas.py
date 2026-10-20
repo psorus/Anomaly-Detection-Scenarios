@@ -20,6 +20,17 @@ def copy_repo():
     return d
 
 
+def swap_pt(path, to=None):
+    """Changes an application's processing time to a different valid code, whatever it is now."""
+    with open(path, encoding="utf-8") as f:
+        s = f.read()
+    cur = L.read_yaml(path)["properties"]["pt"]
+    new = to or next(c for c in ("bat", "on", "hrt") if c != cur)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(s.replace(f"  pt: {cur}", f"  pt: {new}", 1))
+    return cur, new
+
+
 def edit(path, old, new):
     with open(path, encoding="utf-8") as f:
         s = f.read()
@@ -57,7 +68,7 @@ class TestAtlas(unittest.TestCase):
     def test_validation_reports_bad_edits(self):
         d = copy_repo()
         try:
-            edit(os.path.join(d, "data/applications/FIN-001.yaml"), "pt: hrt", "pt: realtime")
+            swap_pt(os.path.join(d, "data/applications/FIN-001.yaml"), to="realtime")
             edit(os.path.join(d, "data/datasets/D295.yaml"), "applications: [AER-259]", "applications: [AER-999]")
             edit(os.path.join(d, "data/scenarios/S07.yaml"), "any: [vid]", "most: [vid]")
             shutil.copy(os.path.join(d, "data/applications/FIN-002.yaml"), os.path.join(d, "data/applications/FIN-9999.yaml"))
@@ -74,7 +85,7 @@ class TestAtlas(unittest.TestCase):
     def test_rule_change_moves_members_and_report_shows_it(self):
         d = copy_repo()
         try:
-            edit(os.path.join(d, "data/applications/FIN-001.yaml"), "pt: hrt", "pt: bat")
+            swap_pt(os.path.join(d, "data/applications/FIN-001.yaml"))
             tax, recs, meta = L.load_all(d)
             cat = L.derive(tax, recs, meta)
             before = {s["id"]: set(s["members"]) for s in self.cat["scenarios"]}
