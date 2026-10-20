@@ -1,0 +1,1269 @@
+# Reading suggestions shown in the Review tab to help reviewers find a source quickly.
+# They were drafted with Claude (Anthropic) and are NOT verified: check a paper before choosing it as a source.
+# Nothing here changes any number on the site. Add or correct suggestions freely in a pull request.
+FIN-001:
+  - citation: Dal Pozzolo, Caelen, Le Borgne, Waterschoot and Bontempi (2014). Learned lessons in credit card fraud detection from a practitioner perspective. Expert Systems with Applications.
+  - citation: Bahnsen, Aouada, Stojanovic and Ottersten (2016). Feature engineering strategies for credit card fraud detection. Expert Systems with Applications.
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-002:
+  - citation: "Dal Pozzolo, Boracchi, Caelen, Alippi and Bontempi (2018). Credit card fraud detection: A realistic modeling and a novel learning strategy. IEEE Transactions on Neural Networks and Learning Systems."
+  - citation: Bahnsen, Aouada, Stojanovic and Ottersten (2016). Feature engineering strategies for credit card fraud detection. Expert Systems with Applications.
+FIN-003:
+  - citation: "Carminati, Caron, Maggi, Epifani and Zanero (2015). BankSealer: A decision support system for online banking fraud analysis and investigation. Computers & Security."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+FIN-004:
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+FIN-005:
+  - citation: "Dal Pozzolo, Boracchi, Caelen, Alippi and Bontempi (2018). Credit card fraud detection: A realistic modeling and a novel learning strategy. IEEE Transactions on Neural Networks and Learning Systems."
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-006:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+FIN-007:
+  - citation: Dal Pozzolo, Caelen, Le Borgne, Waterschoot and Bontempi (2014). Learned lessons in credit card fraud detection from a practitioner perspective. Expert Systems with Applications.
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-008:
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-009:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+FIN-010:
+  - citation: Dal Pozzolo, Caelen, Le Borgne, Waterschoot and Bontempi (2014). Learned lessons in credit card fraud detection from a practitioner perspective. Expert Systems with Applications.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+FIN-011:
+  - citation: "Chen et al. (2018). Machine learning techniques for anti-money laundering (AML) solutions in suspicious transaction detection: A review. Knowledge and Information Systems."
+  - citation: "Jullum, Løland, Huseby, Ånonsen and Lorentzen (2020). Detecting money laundering transactions with machine learning. Journal of Money Laundering Control."
+  - citation: Altman et al. (2023). Realistic synthetic financial transactions for anti-money laundering models. NeurIPS Datasets and Benchmarks.
+FIN-012:
+  - citation: "Weber et al. (2019). Anti-money laundering in Bitcoin: Experimenting with graph convolutional networks for financial forensics. KDD Workshop on Anomaly Detection in Finance."
+  - citation: Altman et al. (2023). Realistic synthetic financial transactions for anti-money laundering models. NeurIPS Datasets and Benchmarks.
+FIN-013:
+  - citation: "Chen et al. (2018). Machine learning techniques for anti-money laundering (AML) solutions in suspicious transaction detection: A review. Knowledge and Information Systems."
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-014:
+  - citation: "Chen et al. (2018). Machine learning techniques for anti-money laundering (AML) solutions in suspicious transaction detection: A review. Knowledge and Information Systems."
+  - citation: "Jullum, Løland, Huseby, Ånonsen and Lorentzen (2020). Detecting money laundering transactions with machine learning. Journal of Money Laundering Control."
+FIN-015:
+  - citation: "Weber et al. (2019). Anti-money laundering in Bitcoin: Experimenting with graph convolutional networks for financial forensics. KDD Workshop on Anomaly Detection in Finance."
+  - citation: "Bellei et al. (2024). The shape of money laundering: Subgraph representation learning on the blockchain with the Elliptic2 dataset. arXiv:2404.19109."
+FIN-016:
+  - citation: "Chen et al. (2018). Machine learning techniques for anti-money laundering (AML) solutions in suspicious transaction detection: A review. Knowledge and Information Systems."
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+FIN-017:
+  - citation: "Chen et al. (2018). Machine learning techniques for anti-money laundering (AML) solutions in suspicious transaction detection: A review. Knowledge and Information Systems."
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-018:
+  - citation: Golmohammadi and Zaiane (2015). Time series contextual anomaly detection for detecting market manipulation in stock market. IEEE DSAA.
+  - citation: Cao, Li, Coleman, Belatreche and McGinnity (2014). Detecting price manipulation in the financial market. IEEE CIFEr.
+FIN-019:
+  - citation: Golmohammadi and Zaiane (2015). Time series contextual anomaly detection for detecting market manipulation in stock market. IEEE DSAA.
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-020:
+  - citation: "La Morgia, Mei, Sassi and Stefa (2020). Pump and dumps in the Bitcoin era: Real time detection of cryptocurrency market manipulations. ICCCN."
+  - citation: Golmohammadi and Zaiane (2015). Time series contextual anomaly detection for detecting market manipulation in stock market. IEEE DSAA.
+FIN-021:
+  - citation: "Kirilenko, Kyle, Samadi and Tuzun (2017). The flash crash: High-frequency trading in an electronic market. Journal of Finance."
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-022:
+  - citation: "Brownlees and Gallo (2006). Financial econometric analysis at ultra-high frequency: Data handling concerns. Computational Statistics & Data Analysis."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+FIN-023:
+  - citation: "Kirilenko, Kyle, Samadi and Tuzun (2017). The flash crash: High-frequency trading in an electronic market. Journal of Finance."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+FIN-024:
+  - citation: "Kirilenko, Kyle, Samadi and Tuzun (2017). The flash crash: High-frequency trading in an electronic market. Journal of Finance."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+FIN-025:
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+FIN-026:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+FIN-027:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-028:
+  - citation: "Rabanser, Günnemann and Lipton (2019). Failing loudly: An empirical study of methods for detecting dataset shift. NeurIPS."
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+FIN-029:
+  - citation: Altman (1968). Financial ratios, discriminant analysis and the prediction of corporate bankruptcy. Journal of Finance.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+FIN-030:
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+FIN-031:
+  - citation: "Glasser and Lindauer (2013). Bridging the gap: A pragmatic approach to generating insider threat data. IEEE Security and Privacy Workshops."
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-032:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+FIN-033:
+  - citation: Viaene, Derrig, Baesens and Dedene (2002). A comparison of state-of-the-art classification techniques for expert automobile insurance claim fraud detection. Journal of Risk and Insurance.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+FIN-034:
+  - citation: "Šubelj, Furlan and Bajec (2011). An expert system for detecting automobile insurance fraud using social network analysis. Expert Systems with Applications."
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+FIN-035:
+  - citation: Herland, Khoshgoftaar and Bauder (2018). Big data fraud detection using multiple Medicare data sources. Journal of Big Data.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+FIN-036:
+  - citation: Viaene, Derrig, Baesens and Dedene (2002). A comparison of state-of-the-art classification techniques for expert automobile insurance claim fraud detection. Journal of Risk and Insurance.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+FIN-037:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+FIN-038:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+FIN-039:
+  - citation: "Schreyer, Sattarov, Borth, Dengel and Reimer (2017). Detection of anomalies in large scale accounting data using deep autoencoder networks. arXiv:1709.05254."
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-040:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Schreyer, Sattarov, Borth, Dengel and Reimer (2017). Detection of anomalies in large scale accounting data using deep autoencoder networks. arXiv:1709.05254."
+FIN-041:
+  - citation: "Schreyer, Sattarov, Borth, Dengel and Reimer (2017). Detection of anomalies in large scale accounting data using deep autoencoder networks. arXiv:1709.05254."
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+FIN-042:
+  - citation: Bao, Ke, Li, Yu and Zhang (2020). Detecting accounting fraud in publicly traded U.S. firms using a machine learning approach. Journal of Accounting Research.
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+FIN-043:
+  - citation: "Schreyer, Sattarov, Borth, Dengel and Reimer (2017). Detection of anomalies in large scale accounting data using deep autoencoder networks. arXiv:1709.05254."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+FIN-044:
+  - citation: Schreyer, Hemati, Borth and Vasarhelyi (2022). Federated and privacy-preserving learning of accounting data in financial statement audits. ICAIF.
+  - citation: "Schreyer, Sattarov, Borth, Dengel and Reimer (2017). Detection of anomalies in large scale accounting data using deep autoencoder networks. arXiv:1709.05254."
+FIN-045:
+  - citation: Bao, Ke, Li, Yu and Zhang (2020). Detecting accounting fraud in publicly traded U.S. firms using a machine learning approach. Journal of Accounting Research.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+SEC-046:
+  - citation: "Sommer and Paxson (2010). Outside the closed world: On using machine learning for network intrusion detection. IEEE Symposium on Security and Privacy."
+  - citation: Sarhan, Layeghy and Portmann (2022). Towards a standard feature set for network intrusion detection system datasets. Mobile Networks and Applications.
+  - citation: Sharafaldin, Lashkari and Ghorbani (2018). Toward generating a new intrusion detection dataset and intrusion traffic characterization. ICISSP.
+SEC-047:
+  - citation: "García-Teodoro, Díaz-Verdejo, Maciá-Fernández and Vázquez (2009). Anomaly-based network intrusion detection: Techniques, systems and challenges. Computers & Security."
+  - citation: "Wang, Parekh and Stolfo (2006). Anagram: A content anomaly detector resistant to mimicry attack. RAID."
+SEC-048:
+  - citation: Zargar, Joshi and Tipper (2013). A survey of defense mechanisms against distributed denial of service (DDoS) flooding attacks. IEEE Communications Surveys & Tutorials.
+  - citation: "Mirsky, Doitshman, Elovici and Shabtai (2018). Kitsune: An ensemble of autoencoders for online network intrusion detection. NDSS."
+SEC-049:
+  - citation: "García, Grill, Stiborek and Zunino (2014). An empirical comparison of botnet detection methods. Computers & Security."
+  - citation: "Gu, Perdisci, Zhang and Lee (2008). BotMiner: Clustering analysis of network traffic for protocol- and structure-independent botnet detection. USENIX Security."
+SEC-050:
+  - citation: "Antonakakis et al. (2012). From throw-away traffic to bots: Detecting the rise of DGA-based malware. USENIX Security."
+  - citation: Nadler, Aminov and Shabtai (2019). Detection of malicious and low throughput data exfiltration over the DNS protocol. Computers & Security.
+SEC-051:
+  - citation: Anderson and McGrew (2016). Identifying encrypted malware traffic with contextual flow data. ACM AISec.
+  - citation: "Sommer and Paxson (2010). Outside the closed world: On using machine learning for network intrusion detection. IEEE Symposium on Security and Privacy."
+SEC-052:
+  - citation: Bowman et al. (2020). Detecting lateral movement in enterprise computer networks with unsupervised graph AI. RAID.
+  - citation: Kent (2015). Comprehensive, multi-source cyber-security events. Los Alamos National Laboratory.
+SEC-053:
+  - citation: "Al-Musawi, Branch and Armitage (2017). BGP anomaly detection techniques: A survey. IEEE Communications Surveys & Tutorials."
+SEC-054:
+  - citation: Jung, Paxson, Berger and Balakrishnan (2004). Fast portscan detection using sequential hypothesis testing. IEEE Symposium on Security and Privacy.
+SEC-055:
+  - citation: "Kolias, Kambourakis, Stavrou and Gritzalis (2016). Intrusion detection in 802.11 networks: Empirical evaluation of threats and a public dataset. IEEE Communications Surveys & Tutorials."
+SEC-056:
+  - citation: "Anderson and Roth (2018). EMBER: An open dataset for training static PE malware detection models. arXiv:1804.04637."
+  - citation: "Arp et al. (2014). Drebin: Effective and explainable detection of Android malware in your pocket. NDSS."
+SEC-057:
+  - citation: Forrest, Hofmeyr, Somayaji and Longstaff (1996). A sense of self for Unix processes. IEEE Symposium on Security and Privacy.
+  - citation: "Hassan et al. (2019). NoDoze: Combatting threat alert fatigue with automated provenance triage. NDSS."
+SEC-058:
+  - citation: "Han, Pasquier, Bates, Mickens and Seltzer (2020). Unicorn: Runtime provenance-based detector for advanced persistent threats. NDSS."
+  - citation: "Hassan et al. (2019). NoDoze: Combatting threat alert fatigue with automated provenance triage. NDSS."
+SEC-059:
+  - citation: "Kharraz et al. (2016). UNVEIL: A large-scale, automated approach to detecting ransomware. USENIX Security."
+  - citation: "Continella et al. (2016). ShieldFS: A self-healing, ransomware-aware filesystem. ACSAC."
+SEC-060:
+  - citation: "Barr-Smith, Ugarte-Pedrero, Graziano, Spolaor and Martinovic (2021). Survivalism: Systematic analysis of Windows malware living-off-the-land. IEEE Symposium on Security and Privacy."
+SEC-061:
+  - citation: Chen, Woo, Brumley and Egele (2016). Towards automated dynamic analysis for Linux-based embedded firmware. NDSS.
+SEC-062:
+  - citation: "Ohm, Plate, Sykosch and Meier (2020). Backstabber's knife collection: A review of open source software supply chain attacks. DIMVA."
+  - citation: "Sejfia and Schäfer (2022). Practical automated detection of malicious npm packages. ICSE."
+SEC-063:
+  - citation: Ligh, Case, Levy and Walters (2014). The Art of Memory Forensics. Wiley.
+SEC-064:
+  - citation: "Glasser and Lindauer (2013). Bridging the gap: A pragmatic approach to generating insider threat data. IEEE Security and Privacy Workshops."
+  - citation: Tuor, Kaplan, Hutchinson, Nichols and Robinson (2017). Deep learning for unsupervised insider threat detection in structured cybersecurity data streams. AAAI Workshops.
+SEC-065:
+  - citation: Tuor, Kaplan, Hutchinson, Nichols and Robinson (2017). Deep learning for unsupervised insider threat detection in structured cybersecurity data streams. AAAI Workshops.
+  - citation: Kent (2015). Comprehensive, multi-source cyber-security events. Los Alamos National Laboratory.
+SEC-066:
+  - citation: "Freeman, Jain, Dürmuth, Biggio and Giacinto (2016). Who are you? A statistical approach to measuring user authenticity. NDSS."
+  - citation: "Thomas et al. (2017). Data breaches, phishing, or malware? Understanding the risks of stolen credentials. CCS."
+SEC-067:
+  - citation: Tuor, Kaplan, Hutchinson, Nichols and Robinson (2017). Deep learning for unsupervised insider threat detection in structured cybersecurity data streams. AAAI Workshops.
+  - citation: Kent (2015). Comprehensive, multi-source cyber-security events. Los Alamos National Laboratory.
+SEC-068:
+  - citation: "Ullah et al. (2018). Data exfiltration: A review of external attack vectors and countermeasures. Journal of Network and Computer Applications."
+SEC-069:
+  - citation: "Ramachandra and Busch (2017). Presentation attack detection methods for face recognition systems: A comprehensive survey. ACM Computing Surveys."
+  - citation: Marcel, Nixon, Fierrez and Evans (eds.) (2019). Handbook of Biometric Anti-Spoofing, 2nd edition. Springer.
+SEC-070:
+  - citation: "Rössler et al. (2019). FaceForensics++: Learning to detect manipulated facial images. ICCV."
+  - citation: "Dolhansky et al. (2020). The DeepFake Detection Challenge (DFDC) dataset. arXiv:2006.07397."
+SEC-071:
+  - citation: "Wang et al. (2020). ASVspoof 2019: A large-scale public database of synthesized, converted and replayed speech. Computer Speech & Language."
+SEC-072:
+  - citation: Kruegel and Vigna (2003). Anomaly detection of web-based attacks. CCS.
+SEC-073:
+  - citation: Kruegel and Vigna (2003). Anomaly detection of web-based attacks. CCS.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+SEC-074:
+  - citation: Tuor, Kaplan, Hutchinson, Nichols and Robinson (2017). Deep learning for unsupervised insider threat detection in structured cybersecurity data streams. AAAI Workshops.
+  - citation: "Soldani and Brogi (2022). Anomaly detection and failure root cause analysis in (micro)service-based cloud applications: A survey. ACM Computing Surveys."
+SEC-075:
+  - citation: Forrest, Hofmeyr, Somayaji and Longstaff (1996). A sense of self for Unix processes. IEEE Symposium on Security and Privacy.
+  - citation: "Soldani and Brogi (2022). Anomaly detection and failure root cause analysis in (micro)service-based cloud applications: A survey. ACM Computing Surveys."
+SEC-076:
+  - citation: "Konoth et al. (2018). MineSweeper: An in-depth look into drive-by cryptocurrency mining and its defense. CCS."
+SEC-077:
+  - citation: "Zhou et al. (2023). SoK: Decentralized finance (DeFi) attacks. IEEE Symposium on Security and Privacy."
+SEC-078:
+  - citation: "Hassan et al. (2019). NoDoze: Combatting threat alert fatigue with automated provenance triage. NDSS."
+  - citation: "Alahmadi, Axon and Martinovic (2022). 99% false positives: A qualitative study of SOC analysts' perspectives on security alarms. USENIX Security."
+SEC-079:
+  - citation: Fette, Sadeh and Tomasic (2007). Learning to detect phishing emails. WWW.
+SEC-080:
+  - citation: Cidon, Gavish, Bleier, Korshun, Schweighauser and Tsitkin (2019). High precision detection of business email compromise. USENIX Security.
+SEC-081:
+  - citation: Whittaker, Ryner and Nazif (2010). Large-scale automatic classification of phishing pages. NDSS.
+SEC-082:
+  - citation: "Almeida, Gómez Hidalgo and Yamakami (2011). Contributions to the study of SMS spam filtering: New collection and results. ACM DocEng."
+SEC-083:
+  - citation: Goh, Adepu, Junejo and Mathur (2016). A dataset to support research in the design of secure water treatment systems. CRITIS.
+  - citation: Inoue, Yamagata, Chen, Poskitt and Sun (2017). Anomaly detection for a water treatment system using unsupervised machine learning. ICDM Workshops.
+SEC-084:
+  - citation: Morris and Gao (2014). Industrial control system traffic data sets for intrusion detection research. ICCIP.
+  - citation: Goh, Adepu, Junejo and Mathur (2016). A dataset to support research in the design of secure water treatment systems. CRITIS.
+SEC-085:
+  - citation: Liu, Ning and Reiter (2011). False data injection attacks against state estimation in electric power grids. ACM Transactions on Information and System Security.
+SEC-086:
+  - citation: Song, Woo and Kim (2020). In-vehicle network intrusion detection using deep convolutional neural network. Vehicular Communications.
+  - citation: "Müter and Asaj (2011). Entropy-based anomaly detection for in-vehicle networks. IEEE Intelligent Vehicles Symposium."
+SEC-087:
+  - citation: "Meidan et al. (2018). N-BaIoT: Network-based detection of IoT botnet attacks using deep autoencoders. IEEE Pervasive Computing."
+  - citation: "Mirsky, Doitshman, Elovici and Shabtai (2018). Kitsune: An ensemble of autoencoders for online network intrusion detection. NDSS."
+SEC-088:
+  - citation: Psiaki and Humphreys (2016). GNSS spoofing and detection. Proceedings of the IEEE.
+SEC-089:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Mirsky, Doitshman, Elovici and Shabtai (2018). Kitsune: An ensemble of autoencoders for online network intrusion detection. NDSS."
+SEC-090:
+  - citation: Tehranipoor and Koushanfar (2010). A survey of hardware Trojan taxonomy and detection. IEEE Design & Test of Computers.
+SEC-091:
+  - citation: Tran, Li and Madry (2018). Spectral signatures in backdoor attacks. NeurIPS.
+  - citation: "Wang et al. (2019). Neural Cleanse: Identifying and mitigating backdoor attacks in neural networks. IEEE Symposium on Security and Privacy."
+SEC-092:
+  - citation: "Greshake et al. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. ACM AISec."
+  - citation: "Chao et al. (2024). JailbreakBench: An open robustness benchmark for jailbreaking large language models. NeurIPS Datasets and Benchmarks."
+ITO-093:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: Xu et al. (2018). Unsupervised anomaly detection via variational auto-encoder for seasonal KPIs in web applications. WWW.
+ITO-094:
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+  - citation: "Liu and Paparrizos (2024). The elephant in the room: Towards a reliable time-series anomaly detection benchmark. NeurIPS Datasets and Benchmarks."
+ITO-095:
+  - citation: "Du, Li, Zheng and Srikumar (2017). DeepLog: Anomaly detection and diagnosis from system logs through deep learning. CCS."
+  - citation: "Zhu et al. (2023). Loghub: A large collection of system log datasets for AI-driven log analytics. ISSRE."
+  - citation: "He, Zhu, He, Li and Lyu (2016). Experience report: System log analysis for anomaly detection. ISSRE."
+ITO-096:
+  - citation: Nedelkoski, Cardoso and Kao (2019). Anomaly detection from system tracing data using multimodal deep learning. IEEE CLOUD.
+  - citation: "Soldani and Brogi (2022). Anomaly detection and failure root cause analysis in (micro)service-based cloud applications: A survey. ACM Computing Surveys."
+ITO-097:
+  - citation: "Soldani and Brogi (2022). Anomaly detection and failure root cause analysis in (micro)service-based cloud applications: A survey. ACM Computing Surveys."
+  - citation: "Pham, Ha and Zhang (2024). Root cause analysis for microservices based on causal inference: How far are we? ASE."
+ITO-098:
+  - citation: Li et al. (2019). Generic and robust localization of multi-dimensional root causes. ISSRE.
+  - citation: "Bhagwan et al. (2014). Adtributor: Revenue debugging in advertising systems. NSDI."
+ITO-099:
+  - citation: Zhao et al. (2020). Understanding and handling alert storm for online service systems. ICSE SEIP.
+ITO-100:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+ITO-101:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ITO-102:
+  - citation: Pinheiro, Weber and Barroso (2007). Failure trends in a large disk drive population. USENIX FAST.
+  - citation: Botezatu, Giurgiu, Bogojeska and Wiesmann (2016). Predicting disk replacement towards reliable data centers. KDD.
+ITO-103:
+  - citation: "Huang et al. (2017). Gray failure: The Achilles' heel of cloud-scale systems. HotOS."
+ITO-104:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ITO-105:
+  - citation: Ma et al. (2020). Diagnosing root causes of intermittent slow queries in cloud databases. Proceedings of the VLDB Endowment.
+ITO-106:
+  - citation: Schelter et al. (2018). Automating large-scale data quality verification. Proceedings of the VLDB Endowment.
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+ITO-107:
+  - citation: "Xu and Zhou (2015). Systems approaches to tackling configuration errors: A survey. ACM Computing Surveys."
+ITO-108:
+  - citation: Schroeder and Gibson (2010). A large-scale study of failures in high-performance computing systems. IEEE Transactions on Dependable and Secure Computing.
+ITO-109:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: Xu et al. (2018). Unsupervised anomaly detection via variational auto-encoder for seasonal KPIs in web applications. WWW.
+ITO-110:
+  - citation: "Hao et al. (2016). The tail at store: A revelation from millions of hours of disk and SSD deployments. USENIX FAST."
+ITO-111:
+  - citation: Hochschild et al. (2021). Cores that don't count. HotOS.
+  - citation: "Dixit et al. (2021). Silent data corruptions at scale. arXiv:2102.11245."
+ITO-112:
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ITO-113:
+  - citation: Daly et al. (2020). The use of change point detection to identify software performance regressions in a continuous integration system. ICPE.
+ITO-114:
+  - citation: Luo, Hariri, Eloussi and Marinov (2014). An empirical analysis of flaky tests. FSE.
+ITO-115:
+  - citation: Kamei et al. (2013). A large-scale empirical study of just-in-time quality assurance. IEEE Transactions on Software Engineering.
+ITO-116:
+  - citation: "Dang, Wu, Zhang, Zhou, Hu and Zhang (2012). ReBucket: A method for clustering duplicate crash reports based on call stack similarity. ICSE."
+ITO-117:
+  - citation: Ernst et al. (2007). The Daikon system for dynamic detection of likely invariants. Science of Computer Programming.
+ITO-118:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+ITO-119:
+  - citation: "Kohavi, Tang and Xu (2020). Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing. Cambridge University Press."
+  - citation: Fabijan et al. (2019). Diagnosing sample ratio mismatch in online controlled experiments. KDD.
+ITO-120:
+  - citation: Schelter et al. (2018). Automating large-scale data quality verification. Proceedings of the VLDB Endowment.
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+ITO-121:
+  - citation: Kleinberg (2003). Bursty and hierarchical structure in streams. Data Mining and Knowledge Discovery.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MLD-122:
+  - citation: Schelter et al. (2018). Automating large-scale data quality verification. Proceedings of the VLDB Endowment.
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+MLD-123:
+  - citation: "Abedjan et al. (2016). Detecting data errors: Where are we and what needs to be done? Proceedings of the VLDB Endowment."
+  - citation: "Mahdavi et al. (2019). Raha: A configuration-free error detection system. SIGMOD."
+MLD-124:
+  - citation: "Christen (2012). Data Matching: Concepts and Techniques for Record Linkage, Entity Resolution, and Duplicate Detection. Springer."
+MLD-125:
+  - citation: "Northcutt, Jiang and Chuang (2021). Confident learning: Estimating uncertainty in dataset labels. Journal of Artificial Intelligence Research."
+  - citation: Northcutt, Athalye and Mueller (2021). Pervasive label errors in test sets destabilize machine learning benchmarks. NeurIPS Datasets and Benchmarks.
+MLD-126:
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MLD-127:
+  - citation: "Abedjan et al. (2016). Detecting data errors: Where are we and what needs to be done? Proceedings of the VLDB Endowment."
+  - citation: Schelter et al. (2018). Automating large-scale data quality verification. Proceedings of the VLDB Endowment.
+MLD-128:
+  - citation: Curran (2016). Methods for the detection of carelessly invalid responses in survey data. Journal of Experimental Social Psychology.
+MLD-129:
+  - citation: "Hermans and Murphy-Hill (2015). Enron's spreadsheets and related emails: A dataset and analysis. ICSE SEIP."
+  - citation: "Abedjan et al. (2016). Detecting data errors: Where are we and what needs to be done? Proceedings of the VLDB Endowment."
+MLD-130:
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+  - citation: "Yang et al. (2022). OpenOOD: Benchmarking generalized out-of-distribution detection. NeurIPS Datasets and Benchmarks."
+MLD-131:
+  - citation: "Rabanser, Günnemann and Lipton (2019). Failing loudly: An empirical study of methods for detecting dataset shift. NeurIPS."
+  - citation: "Gama, Žliobaitė, Bifet, Pechenizkiy and Bouchachia (2014). A survey on concept drift adaptation. ACM Computing Surveys."
+MLD-132:
+  - citation: "Manakul, Liusie and Gales (2023). SelfCheckGPT: Zero-resource black-box hallucination detection for generative large language models. EMNLP."
+  - citation: Farquhar, Kossen, Kuhn and Gal (2024). Detecting hallucinations in large language models using semantic entropy. Nature.
+MLD-133:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MLD-134:
+  - citation: Steinhardt, Koh and Liang (2017). Certified defenses for data poisoning attacks. NeurIPS.
+  - citation: Tran, Li and Madry (2018). Spectral signatures in backdoor attacks. NeurIPS.
+MLD-135:
+  - citation: "Rabanser, Günnemann and Lipton (2019). Failing loudly: An empirical study of methods for detecting dataset shift. NeurIPS."
+  - citation: "Gama, Žliobaitė, Bifet, Pechenizkiy and Bouchachia (2014). A survey on concept drift adaptation. ACM Computing Surveys."
+MLD-136:
+  - citation: "Amodei et al. (2016). Concrete problems in AI safety. arXiv:1606.06565."
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+MLD-137:
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+  - citation: "Rabanser, Günnemann and Lipton (2019). Failing loudly: An empirical study of methods for detecting dataset shift. NeurIPS."
+MFG-138:
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+  - citation: Roth et al. (2022). Towards total recall in industrial anomaly detection. CVPR.
+  - citation: Zou, Jeong, Pemula, Zhang and Dabeer (2022). SPot-the-difference self-supervised pre-training for anomaly detection and segmentation. ECCV.
+MFG-139:
+  - citation: "Bergmann, Batzner, Fauser, Sattlegger and Steger (2022). Beyond dents and scratches: Logical constraints in unsupervised anomaly detection and localization. International Journal of Computer Vision."
+MFG-140:
+  - citation: Bergmann, Jin, Sattlegger and Steger (2022). The MVTec 3D-AD dataset for unsupervised 3D anomaly detection and localization. VISAPP.
+  - citation: "Liu et al. (2023). Real3D-AD: A dataset of point cloud anomaly detection. NeurIPS Datasets and Benchmarks."
+MFG-141:
+  - citation: "Zhou et al. (2023). PAD: A dataset and benchmark for pose-agnostic anomaly detection. NeurIPS Datasets and Benchmarks."
+MFG-142:
+  - citation: Wang, Wu, Cui, Qian and Wang (2023). Multimodal industrial anomaly detection via hybrid fusion. CVPR.
+  - citation: Bergmann, Jin, Sattlegger and Steger (2022). The MVTec 3D-AD dataset for unsupervised 3D anomaly detection and localization. VISAPP.
+MFG-143:
+  - citation: Song and Yan (2013). A noise robust method based on completed local binary patterns for hot-rolled steel strip surface defects. Applied Surface Science.
+MFG-144:
+  - citation: "Ngan, Pang and Yung (2011). Automated fabric defect detection: A review. Image and Vision Computing."
+MFG-145:
+  - citation: Zou, Jeong, Pemula, Zhang and Dabeer (2022). SPot-the-difference self-supervised pre-training for anomaly detection and segmentation. ECCV.
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+MFG-146:
+  - citation: Wu, Jang and Chen (2015). Wafer map failure pattern recognition and similarity ranking for large-scale data sets. IEEE Transactions on Semiconductor Manufacturing.
+MFG-147:
+  - citation: Deitsch et al. (2019). Automatic classification of defective photovoltaic module cells in electroluminescence images. Solar Energy.
+MFG-148:
+  - citation: "Mery et al. (2015). GDXray: The database of X-ray images for nondestructive testing. Journal of Nondestructive Evaluation."
+MFG-149:
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+  - citation: Roth et al. (2022). Towards total recall in industrial anomaly detection. CVPR.
+MFG-150:
+  - citation: Zou, Jeong, Pemula, Zhang and Dabeer (2022). SPot-the-difference self-supervised pre-training for anomaly detection and segmentation. ECCV.
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+MFG-151:
+  - citation: "Bergmann, Batzner, Fauser, Sattlegger and Steger (2022). Beyond dents and scratches: Logical constraints in unsupervised anomaly detection and localization. International Journal of Computer Vision."
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+MFG-152:
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+  - citation: Roth et al. (2022). Towards total recall in industrial anomaly detection. CVPR.
+MFG-153:
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+  - citation: Montgomery (2019). Introduction to Statistical Quality Control, 8th edition. Wiley.
+MFG-154:
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+  - citation: "Venkatasubramanian, Rengaswamy, Yin and Kavuri (2003). A review of process fault detection and diagnosis, Part I: Quantitative model-based methods. Computers & Chemical Engineering."
+MFG-155:
+  - citation: Downs and Vogel (1993). A plant-wide industrial process control problem. Computers & Chemical Engineering.
+  - citation: "Venkatasubramanian, Rengaswamy, Yin and Kavuri (2003). A review of process fault detection and diagnosis, Part I: Quantitative model-based methods. Computers & Chemical Engineering."
+MFG-156:
+  - citation: Nomikos and MacGregor (1994). Monitoring batch processes using multiway principal component analysis. AIChE Journal.
+MFG-157:
+  - citation: Everton, Hirsch, Stravroulakis, Leach and Clare (2016). Review of in-situ process monitoring and in-situ metrology for metal additive manufacturing. Materials & Design.
+MFG-158:
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-159:
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-160:
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+  - citation: Nomikos and MacGregor (1994). Monitoring batch processes using multiway principal component analysis. AIChE Journal.
+MFG-161:
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-162:
+  - citation: Teti, Jemielniak, O'Donnell and Dornfeld (2010). Advanced monitoring of machining operations. CIRP Annals.
+MFG-163:
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-164:
+  - citation: Severson et al. (2019). Data-driven prediction of battery cycle life before capacity degradation. Nature Energy.
+MFG-165:
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+  - citation: Li et al. (2019). Generic and robust localization of multi-dimensional root causes. ISSRE.
+MFG-166:
+  - citation: "Wu (2012). Warranty data analysis: A review. Quality and Reliability Engineering International."
+MFG-167:
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-168:
+  - citation: "Guin et al. (2014). Counterfeit integrated circuits: A rising threat in the global semiconductor supply chain. Proceedings of the IEEE."
+MFG-169:
+  - citation: "Randall and Antoni (2011). Rolling element bearing diagnostics: A tutorial. Mechanical Systems and Signal Processing."
+  - citation: "Smith and Randall (2015). Rolling element bearing diagnostics using the Case Western Reserve University data: A benchmark study. Mechanical Systems and Signal Processing."
+MFG-170:
+  - citation: "Purohit et al. (2019). MIMII dataset: Sound dataset for malfunctioning industrial machine investigation and inspection. DCASE Workshop."
+  - citation: "Koizumi et al. (2020). Description and discussion on DCASE2020 Challenge Task 2: Unsupervised anomalous sound detection for machine condition monitoring. DCASE Workshop."
+MFG-171:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Randall and Antoni (2011). Rolling element bearing diagnostics: A tutorial. Mechanical Systems and Signal Processing."
+MFG-172:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-173:
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+MFG-174:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-175:
+  - citation: Benbouzid (2000). A review of induction motor signature analysis as a medium for faults detection. IEEE Transactions on Industrial Electronics.
+MFG-176:
+  - citation: "Purohit et al. (2019). MIMII dataset: Sound dataset for malfunctioning industrial machine investigation and inspection. DCASE Workshop."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-177:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-178:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: Saxena, Goebel, Simon and Eklund (2008). Damage propagation modeling for aircraft engine run-to-failure simulation. International Conference on Prognostics and Health Management.
+MFG-179:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-180:
+  - citation: Vargas et al. (2019). A realistic and public dataset with rare undesirable real events in oil wells. Journal of Petroleum Science and Engineering.
+MFG-181:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Venkatasubramanian, Rengaswamy, Yin and Kavuri (2003). A review of process fault detection and diagnosis, Part I: Quantitative model-based methods. Computers & Chemical Engineering."
+MFG-182:
+  - citation: Vargas et al. (2019). A realistic and public dataset with rare undesirable real events in oil wells. Journal of Petroleum Science and Engineering.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+MFG-183:
+  - citation: Hollender, Skovholt and Evans (2016). Holistic alarm management throughout the plant lifecycle. IEEE International Conference on Industrial Technology.
+  - citation: "Venkatasubramanian, Rengaswamy, Yin and Kavuri (2003). A review of process fault detection and diagnosis, Part I: Quantitative model-based methods. Computers & Chemical Engineering."
+MFG-184:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+MFG-185:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Su et al. (2022). Hyperspectral anomaly detection: A survey. IEEE Geoscience and Remote Sensing Magazine."
+ENE-186:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+ENE-187:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Venkatasubramanian, Rengaswamy, Yin and Kavuri (2003). A review of process fault detection and diagnosis, Part I: Quantitative model-based methods. Computers & Chemical Engineering."
+ENE-188:
+  - citation: "Glauner, Meira, Valtchev, State and Bettinger (2017). The challenge of non-technical loss detection using artificial intelligence: A survey. International Journal of Computational Intelligence Systems."
+  - citation: Zheng, Yang, Niu, Dai and Zhou (2018). Wide and deep convolutional neural networks for electricity-theft detection to secure smart grids. IEEE Transactions on Industrial Informatics.
+ENE-189:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-190:
+  - citation: "Glauner, Meira, Valtchev, State and Bettinger (2017). The challenge of non-technical loss detection using artificial intelligence: A survey. International Journal of Computational Intelligence Systems."
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+ENE-191:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-192:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-193:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+ENE-194:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+ENE-195:
+  - citation: Golmohammadi and Zaiane (2015). Time series contextual anomaly detection for detecting market manipulation in stock market. IEEE DSAA.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-196:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+ENE-197:
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-198:
+  - citation: "Stetco et al. (2019). Machine learning methods for wind turbine condition monitoring: A review. Renewable Energy."
+ENE-199:
+  - citation: "Stetco et al. (2019). Machine learning methods for wind turbine condition monitoring: A review. Renewable Energy."
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+ENE-200:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+ENE-201:
+  - citation: Deitsch et al. (2019). Automatic classification of defective photovoltaic module cells in electroluminescence images. Solar Energy.
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+ENE-202:
+  - citation: Severson et al. (2019). Data-driven prediction of battery cycle life before capacity degradation. Nature Energy.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-203:
+  - citation: Severson et al. (2019). Data-driven prediction of battery cycle life before capacity degradation. Nature Energy.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-204:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+ENE-205:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-206:
+  - citation: "Venkatasubramanian, Rengaswamy, Yin and Kavuri (2003). A review of process fault detection and diagnosis, Part I: Quantitative model-based methods. Computers & Chemical Engineering."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-207:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-208:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+ENE-209:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+ENE-210:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+ENE-211:
+  - citation: "Venkatasubramanian, Rengaswamy, Yin and Kavuri (2003). A review of process fault detection and diagnosis, Part I: Quantitative model-based methods. Computers & Chemical Engineering."
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+ENE-212:
+  - citation: "Glauner, Meira, Valtchev, State and Bettinger (2017). The challenge of non-technical loss detection using artificial intelligence: A survey. International Journal of Computational Intelligence Systems."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENE-213:
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+BLD-214:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+BLD-215:
+  - citation: Kim and Katipamula (2018). A review of fault detection and diagnostics methods for building systems. Science and Technology for the Built Environment.
+BLD-216:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+BLD-217:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+BLD-218:
+  - citation: Tuor, Kaplan, Hutchinson, Nichols and Robinson (2017). Deep learning for unsupervised insider threat detection in structured cybersecurity data streams. AAAI Workshops.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+BLD-219:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+BLD-220:
+  - citation: Farrar and Worden (2007). An introduction to structural health monitoring. Philosophical Transactions of the Royal Society A.
+BLD-221:
+  - citation: Farrar and Worden (2007). An introduction to structural health monitoring. Philosophical Transactions of the Royal Society A.
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+BLD-222:
+  - citation: Farrar and Worden (2007). An introduction to structural health monitoring. Philosophical Transactions of the Royal Society A.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+BLD-223:
+  - citation: Farrar and Worden (2007). An introduction to structural health monitoring. Philosophical Transactions of the Royal Society A.
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+BLD-224:
+  - citation: Farrar and Worden (2007). An introduction to structural health monitoring. Philosophical Transactions of the Royal Society A.
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+BLD-225:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+TRN-226:
+  - citation: "Blum et al. (2021). The Fishyscapes benchmark: Measuring blind spots in semantic segmentation. International Journal of Computer Vision."
+  - citation: "Chan et al. (2021). SegmentMeIfYouCan: A benchmark for anomaly segmentation. NeurIPS Datasets and Benchmarks."
+TRN-227:
+  - citation: "Bogdoll, Nitsche and Zöllner (2022). Anomaly detection in autonomous driving: A survey. CVPR Workshops."
+  - citation: "Chan et al. (2021). SegmentMeIfYouCan: A benchmark for anomaly segmentation. NeurIPS Datasets and Benchmarks."
+TRN-228:
+  - citation: "Bogdoll, Nitsche and Zöllner (2022). Anomaly detection in autonomous driving: A survey. CVPR Workshops."
+TRN-229:
+  - citation: "Yao et al. (2022). DoTA: Unsupervised detection of traffic anomaly in driving videos. IEEE Transactions on Pattern Analysis and Machine Intelligence."
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+TRN-230:
+  - citation: "Bogdoll, Nitsche and Zöllner (2022). Anomaly detection in autonomous driving: A survey. CVPR Workshops."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+TRN-231:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+TRN-232:
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+  - citation: "Venkatasubramanian, Rengaswamy, Yin and Kavuri (2003). A review of process fault detection and diagnosis, Part I: Quantitative model-based methods. Computers & Chemical Engineering."
+TRN-233:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+TRN-234:
+  - citation: "van der Heijden, Lukaseder and Kargl (2018). VeReMi: A dataset for comparable evaluation of misbehavior detection in VANETs. SecureComm."
+TRN-235:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+TRN-236:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Zheng (2015). Trajectory data mining: An overview. ACM Transactions on Intelligent Systems and Technology."
+TRN-237:
+  - citation: "Zheng (2015). Trajectory data mining: An overview. ACM Transactions on Intelligent Systems and Technology."
+  - citation: "Lee, Han and Li (2008). Trajectory outlier detection: A partition-and-detect framework. ICDE."
+TRN-238:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Zheng (2015). Trajectory data mining: An overview. ACM Transactions on Intelligent Systems and Technology."
+TRN-239:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+TRN-240:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Zheng (2015). Trajectory data mining: An overview. ACM Transactions on Intelligent Systems and Technology."
+TRN-241:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+TRN-242:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+TRN-243:
+  - citation: "Du, Li, Zheng and Srikumar (2017). DeepLog: Anomaly detection and diagnosis from system logs through deep learning. CCS."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+TRN-244:
+  - citation: "Riveiro, Pallotta and Vespe (2018). Maritime anomaly detection: A review. WIREs Data Mining and Knowledge Discovery."
+TRN-245:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+TRN-246:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+TRN-247:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+TRN-248:
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+TRN-249:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Schreyer, Sattarov, Borth, Dengel and Reimer (2017). Detection of anomalies in large scale accounting data using deep autoencoder networks. arXiv:1709.05254."
+TRN-250:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+AER-251:
+  - citation: "Das, Matthews, Srivastava and Oza (2010). Multiple kernel learning for heterogeneous anomaly detection: Algorithm and aviation safety case study. KDD."
+  - citation: Matthews, Das, Bhaduri, Das, Martin and Oza (2013). Discovering anomalous aviation safety events using scalable data mining algorithms. Journal of Aerospace Information Systems.
+AER-252:
+  - citation: Saxena, Goebel, Simon and Eklund (2008). Damage propagation modeling for aircraft engine run-to-failure simulation. International Conference on Prognostics and Health Management.
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+AER-253:
+  - citation: Kleinberg (2003). Bursty and hierarchical structure in streams. Data Mining and Knowledge Discovery.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+AER-254:
+  - citation: "Zheng (2015). Trajectory data mining: An overview. ACM Transactions on Intelligent Systems and Technology."
+  - citation: "Das, Matthews, Srivastava and Oza (2010). Multiple kernel learning for heterogeneous anomaly detection: Algorithm and aviation safety case study. KDD."
+AER-255:
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+  - citation: Farrar and Worden (2007). An introduction to structural health monitoring. Philosophical Transactions of the Royal Society A.
+AER-256:
+  - citation: "Venkatasubramanian, Rengaswamy, Yin and Kavuri (2003). A review of process fault detection and diagnosis, Part I: Quantitative model-based methods. Computers & Chemical Engineering."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+AER-257:
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+  - citation: "Hundman, Constantinou, Laporte, Colwell and Söderström (2018). Detecting spacecraft anomalies using LSTMs and nonparametric dynamic thresholding. KDD."
+AER-258:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+AER-259:
+  - citation: "Hundman, Constantinou, Laporte, Colwell and Söderström (2018). Detecting spacecraft anomalies using LSTMs and nonparametric dynamic thresholding. KDD."
+  - citation: "Kotowski et al. (2024). European Space Agency benchmark for anomaly detection in satellite telemetry. arXiv:2406.17826."
+AER-260:
+  - citation: "Hundman, Constantinou, Laporte, Colwell and Söderström (2018). Detecting spacecraft anomalies using LSTMs and nonparametric dynamic thresholding. KDD."
+  - citation: Banbury et al. (2021). MLPerf Tiny benchmark. NeurIPS Datasets and Benchmarks.
+AER-261:
+  - citation: "Zheng (2015). Trajectory data mining: An overview. ACM Transactions on Intelligent Systems and Technology."
+  - citation: "Hundman, Constantinou, Laporte, Colwell and Söderström (2018). Detecting spacecraft anomalies using LSTMs and nonparametric dynamic thresholding. KDD."
+AER-262:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+AER-263:
+  - citation: "Hundman, Constantinou, Laporte, Colwell and Söderström (2018). Detecting spacecraft anomalies using LSTMs and nonparametric dynamic thresholding. KDD."
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+HLT-264:
+  - citation: Churpek et al. (2016). Multicenter comparison of machine learning methods and conventional regression for predicting clinical deterioration on the wards. Critical Care Medicine.
+HLT-265:
+  - citation: "Clifford et al. (2015). The PhysioNet/Computing in Cardiology Challenge 2015: Reducing false arrhythmia alarms in the ICU. Computing in Cardiology."
+HLT-266:
+  - citation: Wagner et al. (2020). PTB-XL, a large publicly available electrocardiography dataset. Scientific Data.
+  - citation: Moody and Mark (2001). The impact of the MIT-BIH Arrhythmia Database. IEEE Engineering in Medicine and Biology Magazine.
+HLT-267:
+  - citation: Shoeb (2009). Application of machine learning to epileptic seizure onset detection and treatment. PhD thesis, MIT.
+HLT-268:
+  - citation: "Mubashir, Shao and Seed (2013). A survey on fall detection: Principles and approaches. Neurocomputing."
+HLT-269:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+HLT-270:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+HLT-271:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+HLT-272:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+HLT-273:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+HLT-274:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+HLT-275:
+  - citation: "Baur, Denner, Wiestler, Navab and Albarqouni (2021). Autoencoders for unsupervised anomaly segmentation in brain MR images: A comparative study. Medical Image Analysis."
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+HLT-276:
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+HLT-277:
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+HLT-278:
+  - citation: Bejnordi et al. (2017). Diagnostic assessment of deep learning algorithms for detection of lymph node metastases in women with breast cancer. JAMA.
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+HLT-279:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+HLT-280:
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+HLT-281:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+HLT-282:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+HLT-283:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+HLT-284:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+HLT-285:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bao et al. (2024). BMAD: Benchmarks for medical anomaly detection. CVPR Workshops."
+HLT-286:
+  - citation: "Röchner and Rothlauf (2023). Unsupervised anomaly detection of implausible electronic health records: A real-world evaluation in cancer registries. BMC Medical Research Methodology."
+HLT-287:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+HLT-288:
+  - citation: "Röchner and Rothlauf (2023). Unsupervised anomaly detection of implausible electronic health records: A real-world evaluation in cancer registries. BMC Medical Research Methodology."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+HLT-289:
+  - citation: "Nolle, Luettgen, Seeliger and Mühlhäuser (2019). BINet: Multi-perspective business process anomaly classification. Information Systems."
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+HLT-290:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: Farrington, Andrews, Beale and Catchpole (1996). A statistical algorithm for the early detection of outbreaks of infectious disease. Journal of the Royal Statistical Society, Series A.
+HLT-291:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+HLT-292:
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+HLT-293:
+  - citation: Herland, Khoshgoftaar and Bauder (2018). Big data fraud detection using multiple Medicare data sources. Journal of Big Data.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+HLT-294:
+  - citation: Farrington, Andrews, Beale and Catchpole (1996). A statistical algorithm for the early detection of outbreaks of infectious disease. Journal of the Royal Statistical Society, Series A.
+  - citation: "Buckeridge (2007). Outbreak detection through automated surveillance: A review of the determinants of detection. Journal of Biomedical Informatics."
+HLT-295:
+  - citation: "Buckeridge (2007). Outbreak detection through automated surveillance: A review of the determinants of detection. Journal of Biomedical Informatics."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+HLT-296:
+  - citation: Farrington, Andrews, Beale and Catchpole (1996). A statistical algorithm for the early detection of outbreaks of infectious disease. Journal of the Royal Statistical Society, Series A.
+  - citation: "Buckeridge (2007). Outbreak detection through automated surveillance: A review of the determinants of detection. Journal of Biomedical Informatics."
+HLT-297:
+  - citation: Kulldorff (2001). Prospective time periodic geographical disease surveillance using a scan statistic. Journal of the Royal Statistical Society, Series A.
+  - citation: "Buckeridge (2007). Outbreak detection through automated surveillance: A review of the determinants of detection. Journal of Biomedical Informatics."
+HLT-298:
+  - citation: Farrington, Andrews, Beale and Catchpole (1996). A statistical algorithm for the early detection of outbreaks of infectious disease. Journal of the Royal Statistical Society, Series A.
+  - citation: "Buckeridge (2007). Outbreak detection through automated surveillance: A review of the determinants of detection. Journal of Biomedical Informatics."
+LIF-299:
+  - citation: "Wolock, Lopez and Klein (2019). Scrublet: Computational identification of cell doublets in single-cell transcriptomic data. Cell Systems."
+LIF-300:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Wolock, Lopez and Klein (2019). Scrublet: Computational identification of cell doublets in single-cell transcriptomic data. Cell Systems."
+LIF-301:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Abedjan et al. (2016). Detecting data errors: Where are we and what needs to be done? Proceedings of the VLDB Endowment."
+LIF-302:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+LIF-303:
+  - citation: "Brechtmann et al. (2018). OUTRIDER: A statistical method for detecting aberrantly expressed genes in RNA sequencing data. American Journal of Human Genetics."
+LIF-304:
+  - citation: "Brechtmann et al. (2018). OUTRIDER: A statistical method for detecting aberrantly expressed genes in RNA sequencing data. American Journal of Human Genetics."
+LIF-305:
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+LIF-306:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+LIF-307:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+LIF-308:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Fernando et al. (2021). Deep learning for medical anomaly detection: A survey. ACM Computing Surveys."
+LIF-309:
+  - citation: Nomikos and MacGregor (1994). Monitoring batch processes using multiway principal component analysis. AIChE Journal.
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+LIF-310:
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+LIF-311:
+  - citation: Bik, Casadevall and Fang (2016). The prevalence of inappropriate image duplication in biomedical research publications. mBio.
+LIF-312:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+LIF-313:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Gama, Žliobaitė, Bifet, Pechenizkiy and Bouchachia (2014). A survey on concept drift adaptation. ACM Computing Surveys."
+SCI-314:
+  - citation: Pruzhinskaya et al. (2019). Anomaly detection in the Open Supernova Catalog. Monthly Notices of the Royal Astronomical Society.
+  - citation: "Lochner and Bassett (2021). ASTRONOMALY: Personalised active anomaly detection in astronomical data. Astronomy and Computing."
+SCI-315:
+  - citation: "Lochner and Bassett (2021). ASTRONOMALY: Personalised active anomaly detection in astronomical data. Astronomy and Computing."
+SCI-316:
+  - citation: "Lochner and Bassett (2021). ASTRONOMALY: Personalised active anomaly detection in astronomical data. Astronomy and Computing."
+  - citation: Pruzhinskaya et al. (2019). Anomaly detection in the Open Supernova Catalog. Monthly Notices of the Royal Astronomical Society.
+SCI-317:
+  - citation: "Lochner and Bassett (2021). ASTRONOMALY: Personalised active anomaly detection in astronomical data. Astronomy and Computing."
+  - citation: Pruzhinskaya et al. (2019). Anomaly detection in the Open Supernova Catalog. Monthly Notices of the Royal Astronomical Society.
+SCI-318:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Lochner and Bassett (2021). ASTRONOMALY: Personalised active anomaly detection in astronomical data. Astronomy and Computing."
+SCI-319:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+SCI-320:
+  - citation: "Zevin et al. (2017). Gravity Spy: Integrating Advanced LIGO detector characterization, machine learning, and citizen science. Classical and Quantum Gravity."
+SCI-321:
+  - citation: "Lochner and Bassett (2021). ASTRONOMALY: Personalised active anomaly detection in astronomical data. Astronomy and Computing."
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+SCI-322:
+  - citation: "Kasieczka et al. (2021). The LHC Olympics 2020: A community challenge for anomaly detection in high energy physics. Reports on Progress in Physics."
+SCI-323:
+  - citation: "Kasieczka et al. (2021). The LHC Olympics 2020: A community challenge for anomaly detection in high energy physics. Reports on Progress in Physics."
+  - citation: Banbury et al. (2021). MLPerf Tiny benchmark. NeurIPS Datasets and Benchmarks.
+SCI-324:
+  - citation: "Kasieczka et al. (2021). The LHC Olympics 2020: A community challenge for anomaly detection in high energy physics. Reports on Progress in Physics."
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+SCI-325:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+SCI-326:
+  - citation: Kates-Harbeck, Svyatkovskiy and Tang (2019). Predicting disruptive instabilities in controlled fusion plasmas through deep learning. Nature.
+SCI-327:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+SCI-328:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+SCI-329:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+SCI-330:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bovolo and Bruzzone (2015). The time variable in data fusion: A change detection perspective. IEEE Geoscience and Remote Sensing Magazine."
+SCI-331:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+SCI-332:
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+SCI-333:
+  - citation: "Bovolo and Bruzzone (2015). The time variable in data fusion: A change detection perspective. IEEE Geoscience and Remote Sensing Magazine."
+SCI-334:
+  - citation: "Su et al. (2022). Hyperspectral anomaly detection: A survey. IEEE Geoscience and Remote Sensing Magazine."
+  - citation: Reed and Yu (1990). Adaptive multiple-band CFAR detection of an optical pattern with unknown spectral distribution. IEEE Transactions on Acoustics, Speech, and Signal Processing.
+SCI-335:
+  - citation: Breck, Polyzotis, Roy, Whang and Zinkevich (2019). Data validation for machine learning. MLSys.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+SCI-336:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Campos et al. (2016). On the evaluation of unsupervised outlier detection: Measures, datasets, and an empirical study. Data Mining and Knowledge Discovery."
+SCI-337:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+SCI-338:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+ENV-339:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+ENV-340:
+  - citation: "Bovolo and Bruzzone (2015). The time variable in data fusion: A change detection perspective. IEEE Geoscience and Remote Sensing Magazine."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENV-341:
+  - citation: "Bovolo and Bruzzone (2015). The time variable in data fusion: A change detection perspective. IEEE Geoscience and Remote Sensing Magazine."
+ENV-342:
+  - citation: "Bovolo and Bruzzone (2015). The time variable in data fusion: A change detection perspective. IEEE Geoscience and Remote Sensing Magazine."
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+ENV-343:
+  - citation: "Bovolo and Bruzzone (2015). The time variable in data fusion: A change detection perspective. IEEE Geoscience and Remote Sensing Magazine."
+ENV-344:
+  - citation: "Bovolo and Bruzzone (2015). The time variable in data fusion: A change detection perspective. IEEE Geoscience and Remote Sensing Magazine."
+  - citation: "Su et al. (2022). Hyperspectral anomaly detection: A survey. IEEE Geoscience and Remote Sensing Magazine."
+ENV-345:
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENV-346:
+  - citation: "Koizumi et al. (2020). Description and discussion on DCASE2020 Challenge Task 2: Unsupervised anomalous sound detection for machine condition monitoring. DCASE Workshop."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENV-347:
+  - citation: "Zheng (2015). Trajectory data mining: An overview. ACM Transactions on Intelligent Systems and Technology."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENV-348:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+ENV-349:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Bovolo and Bruzzone (2015). The time variable in data fusion: A change detection perspective. IEEE Geoscience and Remote Sensing Magazine."
+ENV-350:
+  - citation: "Bovolo and Bruzzone (2015). The time variable in data fusion: A change detection perspective. IEEE Geoscience and Remote Sensing Magazine."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENV-351:
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+ENV-352:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+ENV-353:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: MacGregor and Kourti (1995). Statistical process control of multivariate processes. Control Engineering Practice.
+ENV-354:
+  - citation: Kim and Katipamula (2018). A review of fault detection and diagnostics methods for building systems. Science and Technology for the Built Environment.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+ENV-355:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Su et al. (2022). Hyperspectral anomaly detection: A survey. IEEE Geoscience and Remote Sensing Magazine."
+ENV-356:
+  - citation: "Riveiro, Pallotta and Vespe (2018). Maritime anomaly detection: A review. WIREs Data Mining and Knowledge Discovery."
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+ENV-357:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Koizumi et al. (2020). Description and discussion on DCASE2020 Challenge Task 2: Unsupervised anomalous sound detection for machine condition monitoring. DCASE Workshop."
+RET-358:
+  - citation: Mukherjee, Liu and Glance (2012). Spotting fake reviewer groups in consumer reviews. WWW.
+  - citation: "Rayana and Akoglu (2015). Collective opinion spam detection: Bridging review networks and metadata. KDD."
+RET-359:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Hooi et al. (2016). FRAUDAR: Bounding graph fraud in the face of camouflage. KDD."
+RET-360:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+RET-361:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+RET-362:
+  - citation: Schelter et al. (2018). Automating large-scale data quality verification. Proceedings of the VLDB Endowment.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+RET-363:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+RET-364:
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+RET-365:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: Li et al. (2019). Generic and robust localization of multi-dimensional root causes. ISSRE.
+RET-366:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+RET-367:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Bhagwan et al. (2014). Adtributor: Revenue debugging in advertising systems. NSDI."
+RET-368:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+RET-369:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+RET-370:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+RET-371:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Bhagwan et al. (2014). Adtributor: Revenue debugging in advertising systems. NSDI."
+RET-372:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Abdallah, Maarof and Zainal (2016). Fraud detection system: A survey. Journal of Network and Computer Applications."
+RET-373:
+  - citation: Cresci (2020). A decade of social bot detection. Communications of the ACM.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+TEL-374:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+TEL-375:
+  - citation: Chernov, Cochez and Ristaniemi (2015). Anomaly detection algorithms for the sleeping cell detection in LTE networks. IEEE VTC Spring.
+TEL-376:
+  - citation: Hilas and Mastorocostas (2008). An application of supervised and unsupervised learning approaches to telecommunications fraud detection. Knowledge-Based Systems.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+TEL-377:
+  - citation: Hilas and Mastorocostas (2008). An application of supervised and unsupervised learning approaches to telecommunications fraud detection. Knowledge-Based Systems.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+TEL-378:
+  - citation: Hilas and Mastorocostas (2008). An application of supervised and unsupervised learning approaches to telecommunications fraud detection. Knowledge-Based Systems.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+TEL-379:
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+TEL-380:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+TEL-381:
+  - citation: Su et al. (2019). Robust anomaly detection for multivariate time series through stochastic recurrent neural network. KDD.
+  - citation: "Soldani and Brogi (2022). Anomaly detection and failure root cause analysis in (micro)service-based cloud applications: A survey. ACM Computing Surveys."
+TEL-382:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+TEL-383:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: Li et al. (2019). Generic and robust localization of multi-dimensional root causes. ISSRE.
+TEL-384:
+  - citation: "Sommer and Paxson (2010). Outside the closed world: On using machine learning for network intrusion detection. IEEE Symposium on Security and Privacy."
+  - citation: "García-Teodoro, Díaz-Verdejo, Maciá-Fernández and Vázquez (2009). Anomaly-based network intrusion detection: Techniques, systems and challenges. Computers & Security."
+WEB-385:
+  - citation: Cresci (2020). A decade of social bot detection. Communications of the ACM.
+  - citation: "Feng et al. (2022). TwiBot-22: Towards graph-based Twitter bot detection. NeurIPS Datasets and Benchmarks."
+WEB-386:
+  - citation: "Hooi et al. (2016). FRAUDAR: Bounding graph fraud in the face of camouflage. KDD."
+  - citation: Cresci (2020). A decade of social bot detection. Communications of the ACM.
+WEB-387:
+  - citation: Cresci (2020). A decade of social bot detection. Communications of the ACM.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+WEB-388:
+  - citation: "Shu, Sliva, Wang, Tang and Liu (2017). Fake news detection on social media: A data mining perspective. ACM SIGKDD Explorations."
+WEB-389:
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+WEB-390:
+  - citation: Potthast, Stein and Gerling (2008). Automatic vandalism detection in Wikipedia. ECIR.
+WEB-391:
+  - citation: Larson et al. (2019). An evaluation dataset for intent classification and out-of-scope prediction. EMNLP-IJCNLP.
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+WEB-392:
+  - citation: Ma et al. (2021). A comprehensive survey on graph anomaly detection with deep learning. IEEE Transactions on Knowledge and Data Engineering.
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+WEB-393:
+  - citation: "Hooi et al. (2016). FRAUDAR: Bounding graph fraud in the face of camouflage. KDD."
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+WEB-394:
+  - citation: Kleinberg (2003). Bursty and hierarchical structure in streams. Data Mining and Knowledge Discovery.
+  - citation: "Allan (ed.) (2002). Topic Detection and Tracking: Event-based Information Organization. Springer."
+WEB-395:
+  - citation: Cresci (2020). A decade of social bot detection. Communications of the ACM.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+WEB-396:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+WEB-397:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+WEB-398:
+  - citation: Ma et al. (2021). A comprehensive survey on graph anomaly detection with deep learning. IEEE Transactions on Knowledge and Data Engineering.
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+WEB-399:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Curran (2016). Methods for the detection of carelessly invalid responses in survey data. Journal of Experimental Social Psychology.
+WEB-400:
+  - citation: "Gyöngyi, Garcia-Molina and Pedersen (2004). Combating web spam with TrustRank. VLDB."
+WEB-401:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+FIN-402:
+  - citation: Ma et al. (2021). A comprehensive survey on graph anomaly detection with deep learning. IEEE Transactions on Knowledge and Data Engineering.
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+PUB-403:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+PUB-404:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+PUB-405:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+PUB-406:
+  - citation: "Akçay and Breckon (2022). Towards automatic threat detection: A survey of advances of deep learning within X-ray security imaging. Pattern Recognition."
+PUB-407:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Shekhar, Shah and Akoglu (2021). FairOD: Fairness-aware outlier detection. AIES."
+PUB-408:
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+PUB-409:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Schreyer, Sattarov, Borth, Dengel and Reimer (2017). Detection of anomalies in large scale accounting data using deep autoencoder networks. arXiv:1709.05254."
+PUB-410:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Akoglu, Tong and Koutra (2015). Graph based anomaly detection and description: A survey. Data Mining and Knowledge Discovery."
+PUB-411:
+  - citation: de Waal, Pannekoek and Scholtus (2011). Handbook of Statistical Data Editing and Imputation. Wiley.
+PUB-412:
+  - citation: "Mebane (2008). Election forensics: The second-digit Benford's law test and recent American presidential elections. In Election Fraud: Detecting and Deterring Electoral Manipulation. Brookings."
+PUB-413:
+  - citation: de Waal, Pannekoek and Scholtus (2011). Handbook of Statistical Data Editing and Imputation. Wiley.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+SAF-414:
+  - citation: Sultani, Chen and Shah (2018). Real-world anomaly detection in surveillance videos. CVPR.
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+SAF-415:
+  - citation: Lu, Shi and Jia (2013). Abnormal event detection at 150 FPS in MATLAB. ICCV.
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+SAF-416:
+  - citation: Mehran, Oyama and Shah (2009). Abnormal crowd behavior detection using social force model. CVPR.
+SAF-417:
+  - citation: "Koizumi et al. (2020). Description and discussion on DCASE2020 Challenge Task 2: Unsupervised anomalous sound detection for machine condition monitoring. DCASE Workshop."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+SAF-418:
+  - citation: Farrington, Andrews, Beale and Catchpole (1996). A statistical algorithm for the early detection of outbreaks of infectious disease. Journal of the Royal Statistical Society, Series A.
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+SAF-419:
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+SAF-420:
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+  - citation: Sultani, Chen and Shah (2018). Real-world anomaly detection in surveillance videos. CVPR.
+SAF-421:
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+SAF-422:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Aminikhanghahi and Cook (2017). A survey of methods for time series change point detection. Knowledge and Information Systems.
+SAF-423:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Kulldorff (2001). Prospective time periodic geographical disease surveillance using a scan statistic. Journal of the Royal Statistical Society, Series A.
+SAF-424:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Su et al. (2022). Hyperspectral anomaly detection: A survey. IEEE Geoscience and Remote Sensing Magazine."
+SAF-425:
+  - citation: "Bergmann, Fauser, Sattlegger and Steger (2019). MVTec AD: A comprehensive real-world dataset for unsupervised anomaly detection. CVPR."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+BIZ-426:
+  - citation: "Nolle, Luettgen, Seeliger and Mühlhäuser (2019). BINet: Multi-perspective business process anomaly classification. Information Systems."
+BIZ-427:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Schreyer, Sattarov, Borth, Dengel and Reimer (2017). Detection of anomalies in large scale accounting data using deep autoencoder networks. arXiv:1709.05254."
+BIZ-428:
+  - citation: "Schreyer, Sattarov, Borth, Dengel and Reimer (2017). Detection of anomalies in large scale accounting data using deep autoencoder networks. arXiv:1709.05254."
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+BIZ-429:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Hendrycks and Gimpel (2017). A baseline for detecting misclassified and out-of-distribution examples in neural networks. ICLR.
+BIZ-430:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+BIZ-431:
+  - citation: Schelter et al. (2018). Automating large-scale data quality verification. Proceedings of the VLDB Endowment.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+BIZ-432:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Curran (2016). Methods for the detection of carelessly invalid responses in survey data. Journal of Experimental Social Psychology.
+BIZ-433:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Gama, Žliobaitė, Bifet, Pechenizkiy and Bouchachia (2014). A survey on concept drift adaptation. ACM Computing Surveys."
+BIZ-434:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+BIZ-435:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+BIZ-436:
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+  - citation: "Hilal, Gadsden and Yawney (2022). Financial fraud: A review of anomaly detection techniques and recent advances. Expert Systems with Applications."
+EDU-437:
+  - citation: "Romero and Ventura (2010). Educational data mining: A review of the state of the art. IEEE Transactions on Systems, Man, and Cybernetics, Part C."
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+EDU-438:
+  - citation: "Romero and Ventura (2010). Educational data mining: A review of the state of the art. IEEE Transactions on Systems, Man, and Cybernetics, Part C."
+  - citation: Nayak, Pati and Das (2021). A comprehensive review on deep learning-based methods for video anomaly detection. Image and Vision Computing.
+EDU-439:
+  - citation: "Romero and Ventura (2010). Educational data mining: A review of the state of the art. IEEE Transactions on Systems, Man, and Cybernetics, Part C."
+EDU-440:
+  - citation: "Foltýnek, Meuschke and Gipp (2019). Academic plagiarism detection: A systematic literature review. ACM Computing Surveys."
+EDU-441:
+  - citation: "Romero and Ventura (2010). Educational data mining: A review of the state of the art. IEEE Transactions on Systems, Man, and Cybernetics, Part C."
+  - citation: "Gama, Žliobaitė, Bifet, Pechenizkiy and Bouchachia (2014). A survey on concept drift adaptation. ACM Computing Surveys."
+EDU-442:
+  - citation: Sottas, Robinson, Rabin and Saugy (2011). The athlete biological passport. Clinical Chemistry.
+EDU-443:
+  - citation: Golmohammadi and Zaiane (2015). Time series contextual anomaly detection for detecting market manipulation in stock market. IEEE DSAA.
+  - citation: "Phua, Lee, Smith and Gayler (2010). A comprehensive survey of data mining-based fraud detection research. arXiv:1009.6119."
+EDU-444:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Lei et al. (2018). Machinery health prognostics: A systematic review from data acquisition to RUL prediction. Mechanical Systems and Signal Processing."
+EDU-445:
+  - citation: Ren et al. (2019). Time-series anomaly detection service at Microsoft. KDD.
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+EDU-446:
+  - citation: Mukherjee, Liu and Glance (2012). Spotting fake reviewer groups in consumer reviews. WWW.
+  - citation: "Rayana and Akoglu (2015). Collective opinion spam detection: Bridging review networks and metadata. KDD."
+EDU-447:
+  - citation: "Chandola, Banerjee and Kumar (2009). Anomaly detection: A survey. ACM Computing Surveys."
+  - citation: "Campos et al. (2016). On the evaluation of unsupervised outlier detection: Measures, datasets, and an empirical study. Data Mining and Knowledge Discovery."

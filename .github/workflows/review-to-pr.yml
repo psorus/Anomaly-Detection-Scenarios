@@ -1,0 +1,69 @@
+# Turns a batch of reviews sent from the website's Review tab (an issue made with the "Send reviews" form)
+# into one pull request: entries marked correct become `reviewed`, with the reviewer and the chosen sources;
+# flagged entries get a concern. Editing the issue updates the same pull request.
+name: Reviews to pull request
+
+on:
+  issues:
+    types: [opened, edited]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: review-${{ github.event.issue.number }}
+
+jobs:
+  apply:
+    if: contains(github.event.issue.labels.*.name, 'review') && github.event.issue.state == 'open'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Apply the reviews
+        id: apply
+        env:
+          BODY: ${{ github.event.issue.body }}
+          NUMBER: ${{ github.event.issue.number }}
+          AUTHOR: ${{ github.event.issue.user.login }}
+        run: |
+          printf '%s' "$BODY" > "$RUNNER_TEMP/issue.md"
+          python scripts/atlas.py apply-reviews --body-file "$RUNNER_TEMP/issue.md" --author "$AUTHOR" \
+            --number "$NUMBER" --summary "$RUNNER_TEMP/summary.json" || true
+          python - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          s = json.load(open(os.path.join(os.environ["RUNNER_TEMP"], "summary.json")))
+          print("n=" + str(s["n"]))
+          print("text<<EOT\n" + s["text"] + "\nEOT")
+          PY
+      - name: Open or update the pull request
+        id: pr
+        if: steps.apply.outputs.n != '0'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.ATLAS_BOT_TOKEN || github.token }}
+          branch: review/issue-${{ github.event.issue.number }}
+          add-paths: data/
+          commit-message: "Reviews from @${{ github.event.issue.user.login }} (#${{ github.event.issue.number }})"
+          title: "Reviews from @${{ github.event.issue.user.login }}: ${{ steps.apply.outputs.n }} entries"
+          body: |
+            ${{ steps.apply.outputs.text }}
+
+            Sent from the Review tab of the website. Closes #${{ github.event.issue.number }}
+          labels: review
+      - name: Reply on the issue
+        if: github.event.action == 'opened'
+        uses: actions/github-script@v7
+        env:
+          PR_URL: ${{ steps.pr.outputs.pull-request-url }}
+          TEXT: ${{ steps.apply.outputs.text }}
+        with:
+          script: |
+            const url = process.env.PR_URL;
+            await github.rest.issues.createComment({ ...context.repo, issue_number: context.issue.number,
+              body: (url ? `Thanks! Your reviews are in ${url}; a maintainer will merge them.\n\n` : "No entry could be applied.\n\n") + process.env.TEXT });

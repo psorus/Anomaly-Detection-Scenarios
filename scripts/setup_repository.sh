@@ -25,6 +25,7 @@ from proposal|c5def5|Pull request written from an issue form
 needs evidence|d93f0b|Change needs a source before it can be merged
 scenario rule|b60205|Changes which applications belong to a scenario
 taxonomy|b60205|Changes a property or its values
+review|0e8a16|Batch of reviews sent from the website
 LABELS
 
 # GitHub Pages built by the deploy workflow, and Discussions.

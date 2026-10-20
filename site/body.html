@@ -4,17 +4,21 @@
       <svg class="logo" width="38" height="38" viewBox="0 0 36 36" role="img" aria-label="An anomaly inside an annulus of normal points"><circle class="n" cx="30.15" cy="20.46" r="1.9"/><circle class="n" cx="29.53" cy="25.76" r="1.9"/><circle class="n" cx="24.85" cy="28.34" r="1.9"/><circle class="n" cx="20.66" cy="31.64" r="1.9"/><circle class="n" cx="15.54" cy="30.15" r="1.9"/><circle class="n" cx="10.24" cy="29.53" r="1.9"/><circle class="n" cx="7.66" cy="24.85" r="1.9"/><circle class="n" cx="4.36" cy="20.66" r="1.9"/><circle class="n" cx="5.85" cy="15.54" r="1.9"/><circle class="n" cx="6.47" cy="10.24" r="1.9"/><circle class="n" cx="11.15" cy="7.66" r="1.9"/><circle class="n" cx="15.34" cy="4.36" r="1.9"/><circle class="n" cx="20.46" cy="5.85" r="1.9"/><circle class="n" cx="25.76" cy="6.47" r="1.9"/><circle class="n" cx="28.34" cy="11.15" r="1.9"/><circle class="n" cx="31.64" cy="15.34" r="1.9"/><circle class="a" cx="18" cy="18" r="2.8"/></svg>
       <div>
         <h1>Anomaly Detection Scenario Atlas</h1>
-        <p>A community catalog following Röchner, Klüttermann et al., <a href="https://arxiv.org/abs/2507.15584" target="_blank" rel="noopener">arXiv 2507.15584</a> · <a id="gh-repo" href="#" target="_blank" rel="noopener">Edit on GitHub</a></p>
+        <p>Benchmark scenarios for anomaly detection, after Röchner, Klüttermann, Rothlauf and Schlör, <a href="https://arxiv.org/abs/2507.15584" target="_blank" rel="noopener"><i>We Need to Rethink Benchmarking in Anomaly Detection</i></a> · <a id="gh-repo" href="#" target="_blank" rel="noopener">GitHub</a></p>
       </div>
     </div>
     <nav class="tabs" role="tablist" aria-label="Views">
       <button class="tab" role="tab" id="t-scenarios" data-view="scenarios" aria-selected="true">Scenarios<span class="count" id="c-scen"></span></button>
-      <button class="tab" role="tab" id="t-builder" data-view="builder" aria-selected="false">Scenario builder</button>
       <button class="tab" role="tab" id="t-apps" data-view="apps" aria-selected="false">Applications<span class="count" id="c-apps"></span></button>
       <button class="tab" role="tab" id="t-datasets" data-view="datasets" aria-selected="false">Datasets<span class="count" id="c-ds"></span></button>
-      <button class="tab" role="tab" id="t-dist" data-view="dist" aria-selected="false">Distributions</button>
-      <button class="tab" role="tab" id="t-taxonomy" data-view="taxonomy" aria-selected="false">Taxonomy &amp; matrix</button>
+      <button class="tab" role="tab" id="t-review" data-view="review" aria-selected="false">Review</button>
       <button class="tab" role="tab" id="t-contribute" data-view="contribute" aria-selected="false">Contribute</button>
+      <button class="tab more" type="button" id="t-more" aria-expanded="false" aria-controls="subnav" aria-selected="false">More</button>
+    </nav>
+    <nav class="subnav" id="subnav" aria-label="More views" hidden>
+      <button class="tab" role="tab" id="t-dist" data-view="dist" aria-selected="false">Distributions</button>
+      <button class="tab" role="tab" id="t-taxonomy" data-view="taxonomy" aria-selected="false">Property matrix</button>
+      <button class="tab" role="tab" id="t-builder" data-view="builder" aria-selected="false">Scenario builder</button>
     </nav>
   </div>
 </header>
@@ -23,21 +27,17 @@
   <div class="wrap">
 
     <section class="view" id="v-scenarios" aria-labelledby="t-scenarios">
-      <div class="lead">
-        <span class="eyebrow">Scenario-specific benchmarking</span>
-        <h2 id="scen-h2">Scenarios that group applications by what their algorithms must handle</h2>
-        <p>A scenario groups applications that share structural properties: data modality, anomaly type, supervision, processing time, evaluation priority and operational constraints. Domains are contextual properties and never define a scenario. Each scenario here is an explicit rule over structural properties, and membership is computed from the catalog, so one application can sit in several scenarios.</p>
-      </div>
-      <div class="facts" id="facts"></div>
+      <div class="lead"><h2 id="scen-h2">Find the scenario for your application</h2></div>
+      <div class="finder" id="finder"></div>
+      <p class="result-line" id="scen-result" aria-live="polite"></p>
       <div class="seg scroller" id="fam-filter" role="group" aria-label="Scenario family"></div>
       <div id="scen-list"></div>
     </section>
 
     <section class="view" id="v-builder" aria-labelledby="t-builder" hidden>
       <div class="lead">
-        <span class="eyebrow">Derive scenarios bottom-up</span>
-        <h2>Group applications by the structural properties you choose</h2>
-        <p>Applications that share all selected property values form a candidate scenario. A candidate counts only if it covers enough applications from enough domains, the paper's first guardrail. Add properties to split scenarios; remove them to merge.</p>
+        <h2>Scenario builder</h2>
+        <p>An exploration tool for checking the scenario list, not a replacement for it. Pick properties under "Group by": applications with the same value on every picked property form one group. Groups that are large and span several domains, but match no existing scenario, may point to a missing one.</p>
       </div>
       <div class="builder">
         <div class="panel" id="b-controls"></div>
@@ -50,9 +50,8 @@
 
     <section class="view" id="v-apps" aria-labelledby="t-apps" hidden>
       <div class="lead">
-        <span class="eyebrow">Catalog</span>
-        <h2>Applications and their requirements</h2>
-        <p>Each application is coded with the structural properties of its typical deployment. Filters combine with AND across groups and OR within a group.</p>
+        <h2>Applications</h2>
+        <p>Each application is described by the properties of its typical deployment. Filters combine with AND across groups and OR within a group.</p>
       </div>
       <div class="apps-layout">
         <aside class="rail" id="rail" aria-label="Filters">
@@ -78,9 +77,8 @@
 
     <section class="view" id="v-datasets" aria-labelledby="t-datasets" hidden>
       <div class="lead">
-        <span class="eyebrow">Datasets per scenario</span>
-        <h2 id="ds-h2">Datasets mapped to scenarios</h2>
-        <p>Every dataset is linked to the applications it comes from and graded by readiness: benchmark suites and benchmark datasets have curated labels and protocols, application data was released with applied work and is closer to deployment, with gaps, irregular sampling and partial labels. A dataset counts for a scenario only if it is labeled, comes from a member application, fits the scenario's modality and carries the annotations the scenario's required outputs need, such as severity grades or root causes. Generic collections like ADBench are shown but not counted.</p>
+        <h2 id="ds-h2">Datasets</h2>
+        <p>A dataset counts for a scenario if it is labeled, comes from one of the scenario's applications, has the right modality and carries the annotations the scenario needs, such as severity grades or root causes. Generic collections like ADBench are listed but not counted.</p>
       </div>
       <div class="facts" id="ds-facts"></div>
       <div class="chartcard">
@@ -151,37 +149,60 @@
       <div class="fam"><h3>The extended taxonomy</h3><span>Table 1 of the paper, refined and extended. Counts are applications in this catalog.</span></div>
       <div class="props" id="props"></div>
       <div class="note">
-        <h4>How the catalog was built</h4>
-        <p>The first version was drafted with Claude (Anthropic) in October 2026, and every record starts as a draft until a contributor checks it against sources. Claude compiled the applications from the anomaly detection literature and practice across 20 domains and coded each one with the structural properties of its most common deployment. Real deployments vary; where one domain runs two very different setups (an inline payment scorer and a batch investigation queue), they appear as two applications.</p>
-        <p>The dataset catalog links each dataset to the applications it comes from. Recent datasets (2023 to 2026) were checked against their papers or project pages. Links marked found in search appeared in search results while the catalog was built; other dataset-page addresses come from Claude's knowledge and were not checked one by one. Every dataset also has a Google Scholar search link. Sizes are given only where they could be stated with confidence. Many applications still have no public dataset, which is itself a gap for scenario-specific benchmarking.</p>
-        <p>Where the paper itself cites a source for an application or dataset, its sheet shows the reference under In the paper.</p>
-        <p>Treat draft codes as a starting point for the taxonomy workshops the paper proposes. Each sheet shows whether a record is still a draft or has been reviewed, and links to the file, its history and its discussion on GitHub.</p>
-        <p>Scenario rules are explicit (open any scenario to see its rule). The builder tab derives scenarios bottom-up from the same codes, so curated and data-driven groupings can be compared.</p>
+        <h4>About the codings</h4>
+        <p>Each application is coded for its most common deployment. Where one domain runs two very different setups, such as inline payment scoring and batch investigation, they appear as two applications. The first version was drafted with Claude (Anthropic); entries stay marked as drafts until someone reviews them.</p>
+      </div>
+    </section>
+
+    <section class="view" id="v-review" aria-labelledby="t-review" hidden>
+      <div class="lead">
+        <h2>Review entries</h2>
+        <p>Go through the entries, mark each as correct or flag what is wrong, and pick a source that supports it. Your verdicts stay in this browser until you send them. Everything you send at once becomes one pull request that a maintainer merges.</p>
+      </div>
+      <div class="kpis" id="k-review"></div>
+      <div class="toolbar rv-ctl">
+        <div class="seg" role="group" aria-label="What to review"><button type="button" data-rkind="app">Applications</button><button type="button" data-rkind="scen">Scenarios</button><button type="button" data-rkind="ds">Datasets</button></div>
+        <label class="selwrap" for="r-dom"><span>Domain</span><select id="r-dom" class="btn"></select></label>
+        <label class="hint chk" for="r-all"><input type="checkbox" id="r-all"> Include reviewed entries</label>
+      </div>
+      <div id="r-list" class="rlist"></div>
+      <div class="rbar" id="rbar" hidden>
+        <span id="rbar-n"></span>
+        <span class="sp"></span>
+        <button type="button" class="btn" id="r-clear">Discard</button>
+        <button type="button" class="btn gh primary" id="r-send">Send to GitHub</button>
       </div>
     </section>
 
     <section class="view" id="v-contribute" aria-labelledby="t-contribute" hidden>
       <div class="lead">
-        <span class="eyebrow">Contribute</span>
-        <h2>Every number here comes from a file anyone can change</h2>
-        <p>Each application, dataset and scenario is one small text file in the GitHub repository. Change a file through a pull request and, once it is merged, this site rebuilds itself and every count, pie and scenario member list is recomputed from the files. Nothing on the site is typed in by hand.</p>
+        <h2>Contribute</h2>
+        <p>Every entry is a small text file in the GitHub repository. You need a GitHub account; nothing has to be installed.</p>
       </div>
-      <div class="kpis" id="k-review"></div>
       <div class="cgrid">
-        <article class="ccard"><h3>Fix what you see</h3><p>Open any scenario, application or dataset. <b>Edit on GitHub</b> opens its file in GitHub's editor; GitHub forks the repository for you and turns the edit into a pull request. A bot then posts which scenarios and counts your change affects.</p><p class="hint">Back every changed property with a source under <code>evidence</code>. Reviewers merge changes that are backed by evidence.</p></article>
-        <article class="ccard"><h3>Propose something new, without YAML</h3><p>Fill in a form. A maintainer checks it and a workflow turns it into a pull request with the file already written.</p><div class="ghbar" id="c-issues"></div></article>
-        <article class="ccard"><h3>Write the file yourself</h3><p>Start from a template with the next free id filled in.</p>
-          <div class="ghbar"><label class="selwrap" for="new-dom"><span>Domain</span><select id="new-dom" class="btn"></select></label><button type="button" class="btn gh primary" id="new-app">New application</button></div>
-          <div class="ghbar"><button type="button" class="btn gh" id="new-ds">New dataset</button><button type="button" class="btn gh" id="new-scen">New scenario</button></div>
-          <p class="hint">The scenario builder can also turn any group it finds into a scenario file with the rule filled in.</p></article>
-        <article class="ccard"><h3>Debate a scenario</h3><p>Disagreements about requirements, rules or metrics belong in GitHub Discussions, one thread per record. Every sheet links to its thread. Decisions are recorded in the pull request that changes the file.</p><div class="ghbar" id="c-links"></div></article>
+        <article class="ccard"><h3>Review entries</h3>
+          <p>The quickest way to help. Mark entries as correct or flag problems, with a source, and send them all in one go.</p>
+          <div class="ghbar"><button type="button" class="btn gh primary" data-view="review">Open the review queue</button></div></article>
+        <article class="ccard"><h3>Fix a mistake</h3>
+          <ol class="steps">
+            <li>Open the entry on this site and select <b>Edit on GitHub</b>.</li>
+            <li>Change the value in GitHub's editor. Allowed values are listed in the file's comments and in <a class="gh-link" data-path="data/taxonomy/properties.yaml" href="#">properties.yaml</a>.</li>
+            <li>Select <b>Commit changes</b>, write one sentence on why, and choose <b>Propose changes</b>, then <b>Create pull request</b>.</li>
+            <li>A bot comments with what the change does to the scenarios. A maintainer merges it, and the site updates a few minutes later.</li>
+          </ol>
+          <p class="hint">Not sure how to edit? <a class="gh-link" data-issue="change-request.yml" href="#">Describe the problem</a> instead.</p></article>
+        <article class="ccard"><h3>Add an application, dataset or scenario</h3>
+          <p><b>With a form</b>, no file format to learn: fill it in, a maintainer accepts it, and the pull request is written for you.</p>
+          <div class="ghbar" id="c-issues"></div>
+          <p><b>As a file</b>, starting from a template with the next free id:</p>
+          <div class="newrow"><label class="selwrap" for="new-dom"><span>Application domain</span><select id="new-dom" class="btn"></select></label><button type="button" class="btn gh" id="new-app">New application file</button></div>
+          <div class="newrow"><button type="button" class="btn gh" id="new-ds">New dataset file</button><button type="button" class="btn gh" id="new-scen">New scenario file</button></div>
+          <p class="hint">Scenarios are not tied to a domain: membership comes from the rule, so one scenario can collect applications from any field.</p></article>
+        <article class="ccard"><h3>Discuss</h3>
+          <p>Questions about a scenario's requirements, rules or metrics go to GitHub Discussions. Each entry links to its own threads.</p>
+          <div class="ghbar" id="c-links"></div></article>
       </div>
-      <div class="note">
-        <h4>Why the numbers are defensible</h4>
-        <p>Only primary facts are stored: how each application is coded, each scenario's rule, each dataset's properties and links, and the evidence for them. Everything else is derived by one script: an application belongs to a scenario if it matches the scenario's rule; a dataset qualifies for a scenario if one of its applications is a member and it has the modality and annotations the scenario needs; a dataset counts toward a scenario's minimum unless it is a generic collection or unlabeled.</p>
-        <p>Each change is a commit with an author, a reason and a review, so any number can be traced back to the edits that produced it. To cite a fixed state, cite a tagged release; its <code>catalog.json</code> reproduces every number on the site.</p>
-        <p id="c-build"></p>
-      </div>
+      <p class="hint" id="c-build"></p>
     </section>
 
   </div>

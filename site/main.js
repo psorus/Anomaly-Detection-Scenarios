@@ -52,7 +52,8 @@ function sigTags(rule, compact) {
 }
 
 /* ---------- Views ---------- */
-const VIEWS = ["scenarios", "builder", "apps", "datasets", "dist", "taxonomy", "contribute"];
+const VIEWS = ["scenarios", "apps", "datasets", "review", "contribute", "dist", "taxonomy", "builder"];
+const SECONDARY = ["dist", "taxonomy", "builder"];
 let current = null;
 const rendered = {};
 function setView(v, opts = {}) {
@@ -62,6 +63,10 @@ function setView(v, opts = {}) {
     $("#v-" + x).hidden = x !== v;
     $("#t-" + x).setAttribute("aria-selected", String(x === v));
   });
+  const sec = SECONDARY.includes(v);
+  $("#t-more").setAttribute("aria-selected", String(sec));
+  $("#subnav").hidden = !sec;
+  $("#t-more").setAttribute("aria-expanded", String(sec));
   if (!rendered[v] || opts.force) { RENDER[v](); rendered[v] = true; }
   store("view", v);
   try { history.replaceState(null, "", "#" + v); } catch (e) { /* ignore */ }
@@ -69,35 +74,56 @@ function setView(v, opts = {}) {
 }
 
 /* ---------- Scenarios view ---------- */
-const state = { fam: "All" };
+const state = { fam: "All", q: "", pick: {} };
+const FINDER = [["mf", "Data", () => FAMS_ORDER, v => v], ["pt", "Decision speed", () => P.pt.values.map(v => v[0]), v => LBL.pt[v]],
+  ["sup", "Labels available", () => P.sup.values.map(v => v[0]), v => LBL.sup[v]], ["adv", "Adversary", () => P.adv.values.map(v => v[0]), v => LBL.adv[v]],
+  ["out", "Must also deliver", () => P.out.values.map(v => v[0]), v => LBL.out[v]]];
+const FAMS_ORDER = ["Tabular", "Time series & signals", "Sequences & logs", "Vision", "Text & code", "Graphs", "Spatio-temporal"];
+function appHas(a, k, v) { return k === "mf" ? a.mod.some(m => MF[m] === v) : k === "sup" ? a.sup[0] === v : vals(a, k).includes(v); }
+function scenScore(s) {
+  const picks = Object.entries(state.pick).filter(([, v]) => v);
+  const q = state.q.toLowerCase().split(/\s+/).filter(Boolean);
+  if (q.length) {
+    const text = [s.id, s.name, s.summary, s.family, ...s.members.map(i => BYID[i].name)].join(" ").toLowerCase();
+    if (!q.every(t => text.includes(t))) return null;
+  }
+  if (!picks.length) return { share: 1, n: s.members.length };
+  const n = s.members.filter(i => picks.every(([k, v]) => appHas(BYID[i], k, v))).length;
+  return n ? { share: n / s.members.length, n } : null;
+}
 function renderScenarios() {
-  const covered = APPS.filter(a => a.scen.length).length;
-  const fromPaper = SC.filter(s => s.paper).length;
-  $("#scen-h2").textContent = `${SC.length} scenarios that group ${APPS.length} applications by what their algorithms must handle`;
-  $("#facts").innerHTML = [
-    [APPS.length, "applications"], [TAX.domains.length, "domains"], [PROPS.length, "structural properties"],
-    [SC.length, "scenarios"], [`${covered}/${APPS.length}`, "applications in at least one scenario"],
-    [fromPaper, "built from the paper's examples"], [DS.length, "datasets mapped to scenarios"]
-  ].map(([n, l]) => `<span><b>${n}</b>${l}</span>`).join("");
+  $("#finder").innerHTML = `<label class="search" for="sq"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg><input id="sq" type="search" placeholder="Search scenarios or applications, e.g. fraud, MRI, telemetry" autocomplete="off" value="${esc(state.q)}"></label>
+    <div class="pickers">${FINDER.map(([k, l, vs, lab]) => `<label class="selwrap" for="sf-${k}"><span>${esc(l)}</span><select id="sf-${k}" class="btn" data-sf="${k}"><option value="">Any</option>${vs().map(v => `<option value="${esc(v)}"${state.pick[k] === v ? " selected" : ""}>${esc(lab(v))}</option>`).join("")}</select></label>`).join("")}
+    <button type="button" class="btn" id="sf-clear">Clear</button></div>`;
   const fams = ["All", ...families()];
   $("#fam-filter").innerHTML = fams.map(f => `<button type="button" data-fam="${esc(f)}" aria-pressed="${f === state.fam}">${esc(f)}</button>`).join("");
   drawScenarioList();
 }
 function drawScenarioList() {
+  const active = state.q || Object.values(state.pick).some(Boolean);
+  const scored = SC.map(s => [s, scenScore(s)]).filter(([, r]) => r);
+  $("#fam-filter").hidden = !!active;
+  if (active) {
+    scored.sort((a, b) => b[1].share - a[1].share || b[1].n - a[1].n);
+    $("#scen-result").textContent = scored.length ? `${scored.length} of ${SC.length} scenarios contain matching applications, best fit first.` : "No scenario contains an application with all of these properties.";
+    $("#scen-list").innerHTML = `<div class="grid">${scored.map(([s, r]) => cardHTML(s, Object.values(state.pick).some(Boolean) ? r : null)).join("")}</div>`;
+    return;
+  }
+  $("#scen-result").textContent = "";
   const fams = families().filter(f => state.fam === "All" || f === state.fam);
   $("#scen-list").innerHTML = fams.map(f => {
     const list = SC.filter(s => s.family === f);
-    return `<div class="fam"><h3>${esc(f)}</h3><span>${list.length} scenario${list.length > 1 ? "s" : ""}</span></div>
-      <div class="grid">${list.map(cardHTML).join("")}</div>`;
+    return `<div class="fam"><h3>${esc(f)}</h3><span>${list.length}</span></div>
+      <div class="grid">${list.map(s => cardHTML(s)).join("")}</div>`;
   }).join("");
 }
-function cardHTML(s) {
+function cardHTML(s, r) {
   return `<button type="button" class="card" data-open-scen="${s.id}">
-    <span class="meta"><span class="mono">${s.id}</span>${s.paper ? `<span class="badge-paper">Paper, ${esc(s.paper.replace(/ \(.*\)/, ""))}</span>` : ""}</span>
+    <span class="meta"><span class="mono">${s.id}</span>${r ? `<span class="fit">${Math.round(100 * r.share)}% of its applications match</span>` : ""}</span>
     <h4>${esc(s.name)}</h4>
     <p>${esc(s.summary)}</p>
     <span class="sig">${sigTags(s.rule, true)}</span>
-    <span class="foot"><span><b>${s.members.length}</b> applications · <b>${s.domains.length}</b> domains · <b>${s.ds.length}</b> datasets</span><span>${esc(domSummary(s.members, 3))}</span></span>
+    <span class="foot"><span><b>${s.members.length}</b> applications · <b>${s.ds.length}</b> datasets</span><span>${esc(domSummary(s.members, 3))}</span></span>
   </button>`;
 }
 
@@ -150,10 +176,11 @@ function scenDetail(s) {
   const G = [["Metrics", s.metrics], ["Evaluation protocol", s.protocol], ["Preprocessing constraints", s.preprocessing],
     ["Algorithm families that fit", s.algorithms], ["Likely unsuitable", s.avoid], ["Open gaps", s.gaps]];
   return `<div class="card-meta meta" style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;color:var(--muted);font-size:12.5px">
-      <span class="mono">${s.id}</span><span>${esc(s.family)}</span>${s.paper ? `<span class="badge-paper">Paper, ${esc(s.paper)}</span>` : ""}${reviewBadge(s)}</div>
+      <span class="mono">${s.id}</span><span>${esc(s.family)}</span>${reviewBadge(s)}</div>
     <div><h2>${esc(s.name)}</h2></div>
     <p class="sum">${esc(s.summary)}</p>
     ${ghBar("scen", s)}
+    ${evidenceHTML(s)}
     <div class="sec"><h3>Structural signature</h3>${clauses}
       <p class="hint">${s.members.length} applications from ${s.domains.length} domains match this rule.</p></div>
     <div class="sec"><h3>Evaluation guidance</h3><div class="guid">${G.map(([h, t]) => `<div class="g"><h4>${h}</h4><p>${esc(t)}</p></div>`).join("")}</div></div>
@@ -376,12 +403,14 @@ function drawCellInfo() {
 }
 
 /* ---------- Events ---------- */
-const RENDER = { scenarios: renderScenarios, builder: renderBuilder, apps: renderApps, datasets: renderDatasets, dist: renderPies, taxonomy: renderTaxonomy, contribute: renderContribute };
+const RENDER = { scenarios: renderScenarios, builder: renderBuilder, apps: renderApps, datasets: renderDatasets, dist: renderPies, taxonomy: renderTaxonomy, contribute: renderContribute, review: renderReview };
 document.addEventListener("click", e => {
   const t = e.target.closest("button, [data-close]");
   if (!t) return;
   const ds = t.dataset;
   if (ds.view) return setView(ds.view);
+  if (t.id === "sf-clear") { state.q = ""; state.pick = {}; return renderScenarios(); }
+  if (t.id === "t-more") { const open = t.getAttribute("aria-expanded") !== "true"; t.setAttribute("aria-expanded", String(open)); $("#subnav").hidden = !open && !SECONDARY.includes(current); return; }
   if (ds.fam) { state.fam = ds.fam; document.querySelectorAll("#fam-filter button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.fam === state.fam))); return drawScenarioList(); }
   if (ds.openScen) return openDetail("scen", ds.openScen, stack.length > 0);
   if (ds.openApp) return openDetail("app", ds.openApp, stack.length > 0);
@@ -411,12 +440,14 @@ document.addEventListener("click", e => {
 document.addEventListener("input", e => {
   const t = e.target;
   if (t.id === "q") { F.q = t.value.trim(); drawAppList(); drawFiltersSoon(); }
+  if (t.id === "sq") { state.q = t.value.trim(); drawScenarioList(); }
   if (t.id === "b-min") { B.minApps = +t.value; $("#b-min-o").textContent = t.value; drawBuilderResults(); }
   if (t.id === "b-dom") { B.minDom = +t.value; $("#b-dom-o").textContent = t.value; drawBuilderResults(); }
 });
 document.addEventListener("change", e => {
   const t = e.target;
   if (t.id === "f-scen") { F.scen = t.value; renderApps(); }
+  if (t.dataset && t.dataset.sf) { state.pick[t.dataset.sf] = t.value; drawScenarioList(); }
   if (t.id === "b-weak") { B.weak = t.checked; drawBuilderResults(); }
 });
 let ftimer = null;
@@ -535,6 +566,7 @@ function dsDetail(d) {
     ${ghBar("ds", d)}
     ${linksHTML(d)}
     ${refsHTML(d.refs)}
+    ${evidenceHTML(d)}
     <div class="sec"><h3>Properties</h3><dl class="kv">
       <dt>${esc(DSP.tier.label)}</dt><dd><span class="chip" title="${esc(DD.tier[d.tier])}">${esc(DL.tier[d.tier])}</span></dd>
       <dt>${esc(DSP.lab.label)}</dt><dd><span class="chip" title="${esc(DD.lab[d.lab])}">${esc(DL.lab[d.lab])}</span></dd>
@@ -577,13 +609,9 @@ function renderDatasets() {
   const med = per[Math.floor(per.length / 2)];
   const minS = SC.reduce((m, s) => (s.ds.length < m.ds.length ? s : m), SC[0]);
   const appsWith = APPS.filter(a => a.ds.some(i => DSID[i].counted)).length;
-  $("#ds-h2").textContent = `${DS.length} datasets mapped to ${SC.length} scenarios`;
   $("#ds-facts").innerHTML = [
     [t.get("suite") || 0, "benchmark suites"], [t.get("bench") || 0, "benchmark datasets"], [t.get("app") || 0, "application datasets"],
-    [t.get("generic") || 0, "generic collections"], [l.get("none") || 0, "unlabeled"],
-    [`${med}`, "median qualifying datasets per scenario"], [`${minS.ds.length}`, `minimum (${minS.id})`],
-    [`${appsWith}/${APPS.length}`, "applications with a labeled dataset"],
-    [`${DS.filter(d => d.url || d.src.length).length}/${DS.length}`, "datasets with a direct link"]
+    [t.get("generic") || 0, "generic collections"], [l.get("none") || 0, "unlabeled"]
   ].map(([n, x]) => `<span><b>${n}</b>${esc(x)}</span>`).join("");
   $("#ds-legend").innerHTML = ["suite", "bench", "app", "generic"].map(k =>
     `<span class="lg"><i class="sw t-${k}"></i>${k === "generic" ? "Generic collection (not counted)" : esc(DL.tier[k])}</span>`).join("") +
@@ -643,7 +671,7 @@ function drawDsFilters() {
       const sel = FD.sel[k];
       const valsK = dValues(k).filter(v => cnt.get(v) || sel.has(v));
       return `<div class="fgroup"><h5><span>${esc(dLabel(k))}</span>${sel.size ? `<button type="button" class="chip" data-dclear="${k}" style="padding:0 8px;font-size:11px">clear</button>` : ""}</h5><div class="chips">${valsK.map(v =>
-        `<button type="button" class="chip" data-df="${k}:${v}" aria-pressed="${sel.has(v)}">${k === "tier" ? tierDot(v) : ""}${esc(dvLabel(k, v))}<span class="n">${cnt.get(v) || 0}</span></button>`).join("")}</div></div>`;
+        `<button type="button" class="chip" data-df="${k}:${v}" aria-pressed="${sel.has(v)}">${k === "tier" ? tierDot(v) : ""}${esc(dvLabel(k, v))}<span class="n">${cnt.get(v) || 0}</span></button>`).join("")}</div>${k === "tier" ? `<dl class="defs">${DSP.tier.values.map(([c, l, d]) => `<dt>${tierDot(c)}${esc(l)}</dt><dd>${esc(d)}</dd>`).join("")}</dl>` : ""}</div>`;
     }).join("");
   if (focusKey) { const el = document.querySelector(`[data-df="${CSS.escape(focusKey)}"]`); if (el) el.focus(); }
 }

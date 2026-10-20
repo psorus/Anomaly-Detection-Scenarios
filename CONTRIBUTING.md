@@ -2,24 +2,32 @@
 
 Anyone with a GitHub account can change anything in the atlas. There are four ways, from least to most effort.
 
-## 1. Discuss
+## 1. Review entries (easiest)
 
-Every record on the website links to its GitHub Discussions thread (search by id) and can start a new one. Use
-Discussions for questions such as "should S07 require temporal localization?" or "is card-present fraud really hard
-real-time?". Start the title with the record's id, for example `S07: drop the early-warning clause`.
+Open the **Review** tab on the website. It shows one entry after another (applications, scenarios or datasets),
+each with a few suggested papers. For each entry, tick the paper that supports it (or paste another source) and
+select **Correct**, or select **Something is wrong** and say what. Skip anything you are unsure about.
 
-## 2. Report a problem or propose a record with a form
+Your verdicts stay in your browser until you select **Send to GitHub**. That opens a pre-filled issue; select
+**Create**. A workflow turns the whole batch into one pull request, which a maintainer merges. Entries marked
+correct become `reviewed`, with your handle and the source; flagged entries get a concern that is shown on the site.
 
-The **Contribute** tab on the website and the repository's *New issue* page have forms for a new application, dataset
-or scenario, and for corrections. A maintainer reviews the proposal and adds the `accepted` label; a workflow then
-writes the YAML file and opens the pull request for you.
+The suggested papers were drafted with Claude and are not verified, so open a paper before choosing it.
 
-## 3. Edit a file in the browser
+## 2. Discuss
 
-Click **Edit on GitHub** on any record. GitHub forks the repository, opens the file in its editor and turns your
-commit into a pull request. Within a few minutes the checks run and a bot comments with what your change does:
-numbers that change, applications that join or leave scenarios, datasets that start or stop qualifying. If a check
-fails, the *Files changed* tab marks the exact line.
+Every entry on the website links to its GitHub Discussions threads and can start a new one. Use Discussions for
+questions such as "should S07 require temporal localization?". Start the title with the entry's id, for example
+`S07: drop the early-warning clause`.
+
+## 3. Propose with a form, or edit a file in the browser
+
+The **Contribute** tab has forms for a new application, dataset or scenario, and for corrections. A maintainer adds
+the `accepted` label and a workflow writes the file and opens the pull request for you.
+
+To change a file directly, select **Edit on GitHub** on any entry. GitHub forks the repository, opens the file in
+its editor and turns your commit into a pull request. A bot then comments with what your change does to the
+scenarios; if a check fails, the *Files changed* tab marks the exact line.
 
 ## 4. Work locally
 

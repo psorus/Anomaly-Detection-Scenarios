@@ -12,18 +12,18 @@ benchmark per scenario, and agree on the scenarios together.
 
 ```
 data/                        primary facts, one small YAML file per record
-  applications/FIN-001.yaml  how one application is coded, with evidence
+  applications/FIN-001.yaml  how one application is coded, with its sources
   datasets/D295.yaml         one dataset: properties, links, the applications it comes from
   scenarios/S07.yaml         one scenario: its rule and evaluation guidance
   taxonomy/                  the properties and their allowed values
 scripts/atlaslib.py          validation and the derivation of every number on the site
-scripts/atlas.py             command line: check, build, report, new, issue, forms
+suggestions/                 reading suggestions shown while reviewing (not evidence; changes no number)
+scripts/atlas.py             command line: check, build, report, new, issue, apply-reviews, forms
 site/                        the web page (HTML, CSS, JavaScript; no framework)
 .github/workflows/           check pull requests, comment their impact, deploy the site, turn proposals into PRs
 ```
 
-Only primary facts are stored. Scenario membership, dataset qualification and every count are computed by
-`scripts/atlaslib.py`, so a number on the site can always be traced to the files and commits that produced it:
+Scenario membership, dataset qualification and every count are computed by `scripts/atlaslib.py` from the files:
 
 - an application belongs to a scenario if it matches any clause of the scenario's `rule`;
 - a dataset qualifies for a scenario if one of its `applications` is a member (or, for generic collections, the
@@ -31,19 +31,18 @@ Only primary facts are stored. Scenario membership, dataset qualification and ev
   lists under `datasets_need`;
 - a qualifying dataset counts toward a scenario's minimum unless it is a generic collection or unlabeled.
 
-Every pull request gets an automatic comment with the numbers that change, the applications that join or leave each
-scenario, and the datasets that start or stop qualifying.
+Every pull request gets an automatic comment listing the applications that join or leave each scenario and the
+datasets that start or stop qualifying.
 
 ## Contributing
 
-No local setup is needed. On the website, every scenario, application and dataset has **Edit on GitHub**,
-**Discussions**, **Report a problem** and **History** buttons, and the **Contribute** tab has forms for new records.
-See [CONTRIBUTING.md](CONTRIBUTING.md) for the file format and [GOVERNANCE.md](GOVERNANCE.md) for how changes are
-decided.
+No local setup is needed, only a GitHub account. On the website:
 
-The initial content (447 applications, 442 datasets, 37 scenarios) was drafted with Claude (Anthropic) in October 2026
-and is marked `review: {status: draft}` throughout. Reviewing records against sources, and recording that evidence, is
-the most valuable contribution right now.
+- **Review** shows one entry after another with suggested papers. Mark it correct (and pick the paper that supports it) or say what is wrong. Everything you mark is sent in one go and becomes one pull request.
+- **Edit on GitHub** on any entry opens its file in GitHub's editor and turns your change into a pull request.
+- **Contribute** has forms for new applications, datasets and scenarios.
+
+Details: [CONTRIBUTING.md](CONTRIBUTING.md). How changes are decided: [GOVERNANCE.md](GOVERNANCE.md).
 
 ## Working locally
 
@@ -56,6 +55,7 @@ python scripts/atlas.py new application FIN --write      # new file with the nex
 python -m unittest discover -s tests
 ```
 
+<!--
 ## Setting up the repository (maintainers, once)
 
 1. Create the repository on GitHub and push this folder to `main`.
@@ -65,10 +65,19 @@ python -m unittest discover -s tests
 3. In the web interface: create the Discussions categories *Scenarios*, *Applications* and *Datasets*, and protect
    `main` (require the `check` status and one review; code owners for `data/scenarios/` and `data/taxonomy/`).
 4. Optional: add a token as the secret `ATLAS_BOT_TOKEN` so pull requests opened from issue forms run checks.
+-->
 
 ## Citing
 
-Cite the paper, and the tagged release of the atlas you used; its `catalog.json` (also on the website) contains the
-commit and reproduces every number. See [CITATION.cff](CITATION.cff).
+```bibtex
+@misc{roechner2025rethinking,
+  title         = {We Need to Rethink Benchmarking in Anomaly Detection},
+  author        = {R{\"o}chner, Philipp and Kl{\"u}ttermann, Simon and Rothlauf, Franz and Schl{\"o}r, Daniel},
+  year          = {2025},
+  eprint        = {2507.15584},
+  archivePrefix = {arXiv},
+  url           = {https://arxiv.org/abs/2507.15584}
+}
+```
 
 Code: MIT ([LICENSE](LICENSE)). Data: CC BY 4.0 ([LICENSE-DATA.md](LICENSE-DATA.md)).

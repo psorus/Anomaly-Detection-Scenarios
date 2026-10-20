@@ -224,6 +224,20 @@ def validate(tax, recs):
             elif ref.get("url") and not _is_url(ref["url"]):
                 pb.error(path, f"references[{i}].url is not an http(s) address.", "references")
 
+    def check_evidence(path, r, keys):
+        ev = r.get("evidence") or {}
+        if not isinstance(ev, dict):
+            pb.error(path, "`evidence` must map property codes (or `general`) to lists of sources.", "evidence")
+            return
+        for k, items in ev.items():
+            if k not in keys and k != "general":
+                pb.error(path, f"evidence for unknown property `{k}`.", "evidence")
+            for i, it in enumerate(items if isinstance(items, list) else [None]):
+                if not isinstance(it, dict) or not (it.get("source") or it.get("url")):
+                    pb.error(path, f"evidence.{k}[{i}] needs a `source` (citation or DOI) or a `url`.", "evidence")
+                elif it.get("url") and not _is_url(it["url"]):
+                    pb.error(path, f"evidence.{k}[{i}].url is not an http(s) address.", "evidence")
+
     def check_review(path, r):
         rv = r.get("review")
         if not isinstance(rv, dict) or rv.get("status") not in REVIEW_STATUS:
@@ -231,6 +245,9 @@ def validate(tax, recs):
             return
         if rv["status"] == "reviewed" and not rv.get("reviewers"):
             pb.error(path, "A reviewed record must list at least one GitHub handle under `review.reviewers`.", "reviewers")
+        for i, c in enumerate(rv.get("concerns") or []):
+            if not isinstance(c, dict) or not isinstance(c.get("note"), str) or not c["note"].strip():
+                pb.error(path, f"review.concerns[{i}] needs a `note`.", "concerns")
 
     def check_id(path, r, kind, pattern, example):
         rid = r.get("id")
@@ -293,18 +310,7 @@ def validate(tax, recs):
             else:
                 if v not in codes[k]:
                     pb.error(path, f"`{k}` ({label}) must be one of {', '.join(codes[k])}; got {v!r}.", k)
-        ev = r.get("evidence") or {}
-        if not isinstance(ev, dict):
-            pb.error(path, "`evidence` must map property codes to lists of sources.", "evidence")
-            ev = {}
-        for k, items in ev.items():
-            if k not in P and k != "general":
-                pb.error(path, f"evidence for unknown property `{k}`.", "evidence")
-            for i, it in enumerate(items if isinstance(items, list) else [None]):
-                if not isinstance(it, dict) or not (it.get("source") or it.get("url")):
-                    pb.error(path, f"evidence.{k}[{i}] needs a `source` (citation or DOI) or a `url`.", "evidence")
-                elif it.get("url") and not _is_url(it["url"]):
-                    pb.error(path, f"evidence.{k}[{i}].url is not an http(s) address.", "evidence")
+        check_evidence(path, r, P)
         check_refs(path, r)
         check_review(path, r)
 
@@ -348,6 +354,7 @@ def validate(tax, recs):
                 pb.error(path, f"links.other[{i}] needs a `label` and an http(s) `url`.", "other")
         if not la and r.get("tier") != "generic":
             pb.warning(path, "This dataset is not linked to any application, so it reaches no scenario.", "applications")
+        check_evidence(path, r, ())
         check_refs(path, r)
         check_review(path, r)
 
@@ -379,6 +386,7 @@ def validate(tax, recs):
             for gi, alts in enumerate(cl.get("datasets_need") or []):
                 if not isinstance(alts, list) or not alts or any(a not in DSP["ann"] + [MULTIMOD] for a in alts):
                     pb.error(path, f"rule[{ci}].datasets_need[{gi}] must list annotation codes ({', '.join(DSP['ann'])}) or {MULTIMOD}.", "datasets_need")
+        check_evidence(path, r, ())
         check_review(path, r)
     return pb
 
@@ -409,7 +417,34 @@ def _cond(vs, cond):
     return all(_op(vs, op, arg) for op, arg in cond.items())
 
 
-def derive(tax, recs, meta):
+def load_suggestions(repo_root=None):
+    """Reading suggestions for reviewers, by record id. Not evidence: nothing in them changes a number."""
+    d = os.path.join(repo_root or ROOT, "suggestions")
+    out = {}
+    if os.path.isdir(d):
+        for f in sorted(os.listdir(d)):
+            if f.endswith((".yaml", ".yml")):
+                data = read_yaml(os.path.join(d, f)) or {}
+                for rid, items in data.items():
+                    for it in items or []:
+                        if isinstance(it, dict) and it.get("citation"):
+                            o = {"t": it["citation"]}
+                            if it.get("url"):
+                                o["u"] = it["url"]
+                            if it.get("why"):
+                                o["why"] = it["why"]
+                            out.setdefault(str(rid), []).append(o)
+    return out
+
+
+def _review_out(r):
+    rv = r.get("review") or {}
+    return {"review": rv.get("status", "draft"), "reviewers": rv.get("reviewers") or [],
+            "concerns": [{"note": c.get("note", ""), "by": c.get("by", "")} for c in rv.get("concerns") or []],
+            "evidence": r.get("evidence") or {}}
+
+
+def derive(tax, recs, meta, suggestions=None):
     """Turns the records into the catalog the site renders. Every count on the site comes from here."""
     single = {p["key"] for p in tax["properties"] if not p.get("multi")}
     apps = [r for _, r in recs["applications"]]
@@ -479,7 +514,7 @@ def derive(tax, recs, meta):
             "dsUnlabeled": [d["id"] for d in q if d["tier"] != "generic" and d["labels"] == "none"],
             "dsLacking": lack,
             "appsWithData": [i for i in members[s["id"]] if main_set.intersection(app_ds_all.get(i, []))],
-            "review": (s.get("review") or {}).get("status", "draft"),
+            **_review_out(s), "sugg": (suggestions or {}).get(s["id"], []),
             "_file": "data/scenarios/" + s["id"] + ".yaml",
         })
     app_ds = {a["id"]: [] for a in apps}
@@ -495,9 +530,8 @@ def derive(tax, recs, meta):
         o["scen"] = app_scen[a["id"]]
         o["ds"] = app_ds[a["id"]]
         o["refs"] = [_ref_out(x) for x in a.get("references") or []]
-        o["evidence"] = a.get("evidence") or {}
-        o["review"] = (a.get("review") or {}).get("status", "draft")
-        o["reviewers"] = (a.get("review") or {}).get("reviewers") or []
+        o.update(_review_out(a))
+        o["sugg"] = (suggestions or {}).get(a["id"], [])
         o["_file"] = "data/applications/" + a["id"] + ".yaml"
         out_apps.append(o)
     for d in dss:
@@ -512,7 +546,7 @@ def derive(tax, recs, meta):
              "apps": list(d.get("applications") or []), "scenx": list(d.get("extra_scenarios") or []),
              "dom": sorted({A[i]["domain"] for i in d.get("applications") or [] if i in A}),
              "scen": ds_scen[d["id"]], "counted": counted(d),
-             "review": (d.get("review") or {}).get("status", "draft"),
+             **_review_out(d), "sugg": (suggestions or {}).get(d["id"], []),
              "_file": "data/datasets/" + d["id"] + ".yaml"}
         out_ds.append(o)
     taxonomy = {
