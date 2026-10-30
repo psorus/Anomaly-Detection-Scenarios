@@ -156,6 +156,16 @@ class TestAtlas(unittest.TestCase):
             L.DATA = old
             shutil.rmtree(d)
 
+    def test_public_catalog_has_only_reviewed_entries(self):
+        pub = L.derive(self.tax, L.reviewed_only(self.recs), self.meta)
+        for kind in ("apps", "scenarios", "datasets"):
+            self.assertTrue(all(x["review"] == "reviewed" for x in pub[kind]), kind)
+        ids = {a["id"] for a in pub["apps"]}
+        for s in pub["scenarios"]:
+            self.assertTrue(set(s["members"]) <= ids)
+        for d in pub["datasets"]:
+            self.assertTrue(set(d["apps"]) <= ids)
+
     def test_issue_forms_are_current(self):
         for name, text in atlas.build_forms(self.tax).items():
             path = os.path.join(L.ROOT, ".github", "ISSUE_TEMPLATE", name)

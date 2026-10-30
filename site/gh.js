@@ -1,5 +1,8 @@
 
 /* ---------- GitHub: edit, history, discussion and proposal links ---------- */
+const RD = (() => { try { return JSON.parse(document.getElementById("atlas-review").textContent); } catch (e) { return { apps: APPS, scenarios: SC, datasets: DS }; } })();
+const RA = RD.apps, RS = RD.scenarios, RDS = RD.datasets;
+const RBYID = Object.fromEntries(RA.map(a => [a.id, a])), RSCID = Object.fromEntries(RS.map(s => [s.id, s])), RDSID = Object.fromEntries(RDS.map(d => [d.id, d]));
 const CFG = (() => { try { return JSON.parse(document.getElementById("atlas-config").textContent); } catch (e) { return {}; } })();
 const GH = CFG.repoUrl || "https://github.com/OWNER/REPO";
 const BR = encodeURIComponent(CFG.branch || "main");
@@ -77,7 +80,7 @@ function scenarioYAML(id, m, g) {
   const doms = [...new Set(g.members.map(a => DOM[a.dom]))];
   const lines = [
     `# Scenario ${id}, proposed from the scenario builder. Members are computed from the rule; edit the text fields and open a pull request.`,
-    `id: ${id}`, `name: ${yq("Name this scenario")}`, `family: ${yq(SC[0].family)}`, `paper: ""`,
+    `id: ${id}`, `name: ${yq("Name this scenario")}`, `family: ${yq((RS[0] || {}).family || "Sequential monitoring")}`, `paper: ""`,
     `summary: ${yq(`${g.members.length} applications from ${doms.length} domains (${doms.slice(0, 4).join(", ")}${doms.length > 4 ? ", …" : ""}) that share these properties. Describe what they have in common.`)}`,
     `rule:`, `  - match:`];
   Object.entries(m).forEach(([k, c]) => {
@@ -93,7 +96,7 @@ function proposeGroup(i) {
   const g = (window.__groups || [])[i];
   if (!g) return;
   const m = groupRule(g);
-  const id = nextId("S", SC, 2);
+  const id = nextId("S", RS, 2);
   window.open(ghNewFile("data/scenarios", `${id}.yaml`, scenarioYAML(id, m, g)), "_blank", "noopener");
 }
 function proposeButton(g, i) {
@@ -105,7 +108,7 @@ function proposeButton(g, i) {
 
 /* Templates for brand-new records, opened in GitHub's file editor. */
 function appTemplate(dom) {
-  const id = nextId(dom + "-", APPS, 3);
+  const id = nextId(dom + "-", RA, 3);
   const L = [`# Application ${id}. Allowed values: data/taxonomy/properties.yaml. Remove this line's # comments if you like.`, `id: ${id}`,
     `name: ${yq("Short name of the application")}`, `domain: ${dom}`, `subdomain: ${yq("Subdomain")}`,
     `description: ${yq("Two or three sentences: what is scored, what counts as an anomaly, who acts on it.")}`, `properties:`];
@@ -114,7 +117,7 @@ function appTemplate(dom) {
   return [id, L.join("\n") + "\n"];
 }
 function dsTemplate() {
-  const id = nextId("D", DS, 3);
+  const id = nextId("D", RDS, 3);
   return [id, [`# Dataset ${id}. Codes: data/taxonomy/dataset-properties.yaml and data/taxonomy/properties.yaml (modality).`, `id: ${id}`,
     `name: ${yq("Dataset name")}`, `year: "${new Date().getFullYear()}"`, `tier: app  # generic | suite | bench | app`, `labels: full  # full | partial | weak | none`,
     `anomaly_origin: real  # real | semi | sim`, `annotations: []  # ${DSP.ann.values.map(v => v[0]).join(" | ")}`, `modality: [tab]  # ${P.mod.values.map(v => v[0]).join(" | ")}`,
@@ -135,14 +138,14 @@ function renderContribute() {
     a.href = a.dataset.path ? ghFile(a.dataset.path) : iss(a.dataset.issue);
     a.target = "_blank"; a.rel = "noopener";
   });
-  $("#c-build").innerHTML = `Data as of commit <a class="mono" href="${esc(GH)}/commit/${esc(CFG.sha || "")}" target="_blank" rel="noopener">${esc((CFG.sha || "unknown").slice(0, 7))}</a>, ${esc(CFG.built || "")}. Downloads: <a href="catalog.json">catalog.json</a> · <a href="applications.csv">applications.csv</a> · <a href="datasets.csv">datasets.csv</a> · <a href="scenarios.csv">scenarios.csv</a>.`;
+  $("#c-build").innerHTML = `Data as of commit <a class="mono" href="${esc(GH)}/commit/${esc(CFG.sha || "")}" target="_blank" rel="noopener">${esc((CFG.sha || "unknown").slice(0, 7))}</a>, ${esc(CFG.built || "")}. Downloads (reviewed entries): <a href="catalog.json">catalog.json</a> · <a href="applications.csv">applications.csv</a> · <a href="datasets.csv">datasets.csv</a> · <a href="scenarios.csv">scenarios.csv</a>. Everything including drafts: <a href="catalog-all.json">catalog-all.json</a>.`;
 }
 
 /* ---------- Review queue: verdicts collect in this browser and go to GitHub as one batch ---------- */
 const RV = { kind: load("rvKind", "app"), dom: "", all: false, shown: 25, d: load("rvDraft", {}), sent: load("rvSent", {}) };
 if (!["app", "scen", "ds"].includes(RV.kind)) RV.kind = "app";
-const RECS = { app: () => APPS, scen: () => SC, ds: () => DS };
-const byKind = (k, id) => (k === "app" ? BYID : k === "scen" ? SCID : DSID)[id];
+const RECS = { app: () => RA, scen: () => RS, ds: () => RDS };
+const byKind = (k, id) => (k === "app" ? RBYID : k === "scen" ? RSCID : RDSID)[id];
 function rvSave() { store("rvDraft", RV.d); store("rvSent", RV.sent); }
 function rvList() {
   return RECS[RV.kind]().filter(x => {
@@ -154,7 +157,7 @@ function rvList() {
 function renderReview() {
   const kp = (n, d, w) => `<div class="kpi"><b>${n}<span>/${d}</span></b><span>${w}</span></div>`;
   const rv = list => list.filter(x => x.review === "reviewed").length;
-  $("#k-review").innerHTML = kp(rv(SC), SC.length, "scenarios reviewed") + kp(rv(APPS), APPS.length, "applications reviewed") + kp(rv(DS), DS.length, "datasets reviewed");
+  $("#k-review").innerHTML = kp(rv(RS), RS.length, "scenarios reviewed") + kp(rv(RA), RA.length, "applications reviewed") + kp(rv(RDS), RDS.length, "datasets reviewed");
   document.querySelectorAll("[data-rkind]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.rkind === RV.kind)));
   const sel = $("#r-dom");
   sel.closest("label").hidden = RV.kind === "scen";
@@ -164,11 +167,11 @@ function renderReview() {
 }
 function rvFacts(k, x) {
   if (k === "app") return `<ul class="rprops">${PROPS.map(p => `<li><span class="hint">${esc(p.label)}</span> ${vals(x, p.key).length ? vals(x, p.key).map(v => `<span title="${esc(DESC[p.key][v])}">${esc(LBL[p.key][v])}</span>`).join(", ") : "none"}</li>`).join("")}</ul>`;
-  if (k === "scen") return `<div class="sig">${sigTags(x.rule, false)}</div><p class="hint">${x.members.length} applications, for example ${x.members.slice(0, 4).map(i => esc(BYID[i].name)).join("; ")}.</p>`;
+  if (k === "scen") return `<div class="sig">${sigTags(x.rule, false)}</div><p class="hint">${x.members.length} applications, for example ${x.members.slice(0, 4).map(i => esc(RBYID[i].name)).join("; ")}.</p>`;
   return `<dl class="kv rkv"><dt>Readiness</dt><dd><span class="chip">${esc(DL.tier[x.tier])}</span></dd><dt>Labels</dt><dd><span class="chip">${esc(DL.lab[x.lab])}</span></dd>
     <dt>Anomalies</dt><dd><span class="chip">${esc(DL.real[x.real])}</span></dd><dt>Annotations</dt><dd>${x.ann.length ? x.ann.map(v => `<span class="chip">${esc(DL.ann[v])}</span>`).join("") : `<span class="hint">binary labels only</span>`}</dd>
     <dt>Modality</dt><dd>${x.mod.map(v => `<span class="chip">${esc(LBL.mod[v])}</span>`).join("")}</dd><dt>Size</dt><dd>${esc(x.size || "not stated")}</dd>
-    <dt>Comes from</dt><dd>${x.apps.length ? x.apps.slice(0, 4).map(i => esc(BYID[i].name)).join("; ") : `<span class="hint">a generic collection</span>`}</dd></dl>${x.url ? `<p><a href="${esc(x.url)}" target="_blank" rel="noopener">Dataset page</a></p>` : ""}`;
+    <dt>Comes from</dt><dd>${x.apps.length ? x.apps.slice(0, 4).map(i => esc(RBYID[i].name)).join("; ") : `<span class="hint">a generic collection</span>`}</dd></dl>${x.url ? `<p><a href="${esc(x.url)}" target="_blank" rel="noopener">Dataset page</a></p>` : ""}`;
 }
 function rvSources(k, x) {
   const have = [];
@@ -177,13 +180,13 @@ function rvSources(k, x) {
   return `<div class="rsrc">
     ${have.length ? `<p class="hint">Already recorded: ${have.map(esc).join("; ")}</p>` : ""}
     ${sug.length ? `<p class="rsh">Suggested reading <span class="hint">(unverified suggestions; check the paper before choosing it)</span></p>
-      <ul class="sugg">${sug.map((g, i) => `<li><label><input type="checkbox" data-rs="${x.id}" value="${i}"> <span>${esc(g.t)}</span></label> <a href="${esc(g.u || scholarQ(g.t))}" target="_blank" rel="noopener">${g.u ? "Open" : "Find"}</a>${g.why ? `<span class="hint"> ${esc(g.why)}</span>` : ""}</li>`).join("")}</ul>` : `<p class="hint">No suggestions yet for this entry.</p>`}
+      <ul class="sugg">${sug.map((g, i) => g.s ? `<li><a href="${esc(g.u)}" target="_blank" rel="noopener">${esc(g.t)}</a><span class="hint"> then paste the paper under Other source</span></li>` : `<li><label><input type="checkbox" data-rs="${x.id}" value="${i}"> <span>${esc(g.t)}</span></label> <a href="${esc(g.u || scholarQ(g.t))}" target="_blank" rel="noopener">${g.u ? "Open" : "Find"}</a>${g.why ? `<span class="hint"> ${esc(g.why)}</span>` : ""}</li>`).join("")}</ul>` : `<p class="hint">No suggestions yet for this entry.</p>`}
     <label class="ro"><span>Other source</span><input type="text" class="btn" id="ro-${x.id}" placeholder="DOI, link, or Author (Year). Title."></label>
   </div>`;
 }
 function rvCard(k, x) {
   const d = RV.d[x.id], conc = (x.concerns || []).length;
-  const head = `<div class="rhead"><span class="mono">${x.id}</span>${reviewBadge(x)}${conc ? `<span class="rv warn">${conc} open ${conc === 1 ? "concern" : "concerns"}</span>` : ""}<span class="sp"></span><button type="button" class="linkbtn" data-open-${k === "ds" ? "ds" : k}="${x.id}">Open</button></div>`;
+  const head = `<div class="rhead"><span class="mono">${x.id}</span>${reviewBadge(x)}${conc ? `<span class="rv warn">${conc} open ${conc === 1 ? "concern" : "concerns"}</span>` : ""}<span class="sp"></span>${(k === "app" ? BYID : k === "scen" ? SCID : DSID)[x.id] ? `<button type="button" class="linkbtn" data-open-${k}="${x.id}">Open</button>` : `<a class="linkbtn" href="${esc(ghFile(x._file))}" target="_blank" rel="noopener">File on GitHub</a>`}</div>`;
   if (d) return `<article class="rcard done" id="rc-${x.id}">${head}<h4>${esc(x.name)}</h4>
     <p class="rdone">${d.v === "ok" ? "Marked correct" : "Flagged"}${d.src.length ? ` · ${d.src.length} source${d.src.length > 1 ? "s" : ""}` : ""}${d.note ? ` · “${esc(d.note)}”` : ""} <button type="button" class="linkbtn" data-rundo="${x.id}">Undo</button></p></article>`;
   return `<article class="rcard" id="rc-${x.id}">${head}<h4>${esc(x.name)}</h4>
@@ -212,7 +215,7 @@ function drawReviewBar(msg) {
   $("#r-send").hidden = !n;
 }
 function rvPick(id) {
-  const x = byKind(RV.kind, id) || BYID[id] || SCID[id] || DSID[id];
+  const x = byKind(RV.kind, id) || RBYID[id] || RSCID[id] || RDSID[id];
   const sug = x.sugg || [];
   const src = [...document.querySelectorAll(`input[data-rs="${CSS.escape(id)}"]:checked`)].map(i => sug[+i.value]).map(g => g.u ? `${g.t} ${g.u}` : g.t);
   const other = ($("#ro-" + CSS.escape(id)) || {}).value;
@@ -267,7 +270,7 @@ document.addEventListener("click", e => {
   if (t.id === "new-app") { const [id, y] = appTemplate($("#new-dom").value); window.open(ghNewFile("data/applications", `${id}.yaml`, y), "_blank", "noopener"); }
   if (t.id === "new-ds") { const [id, y] = dsTemplate(); window.open(ghNewFile("data/datasets", `${id}.yaml`, y), "_blank", "noopener"); }
   if (t.id === "new-scen") {
-    const id = nextId("S", SC, 2);
+    const id = nextId("S", RS, 2);
     const g = { members: [] };
     window.open(ghNewFile("data/scenarios", `${id}.yaml`, scenarioYAML(id, { pt: { in: ["on"] }, mod: { any: ["mts"] } }, g).replace(/0 applications from 0 domains \(\) that share these properties\. /, "")), "_blank", "noopener");
   }
