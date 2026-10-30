@@ -109,15 +109,19 @@ def cmd_build(args):
     if pb.errors:
         print(f"Build stopped: {len(pb.errors)} validation error(s).", file=sys.stderr)
         return 1
-    cat = L.derive(tax, recs, meta, L.load_suggestions())
+    sugg = L.load_suggestions()
+    full = L.derive(tax, recs, meta, sugg)
+    cat = L.derive(tax, L.reviewed_only(recs), meta, sugg)
     out = os.path.abspath(args.out)
     os.makedirs(out, exist_ok=True)
     cfg = site_config(meta)
-    st = L.stats(cat)
+    st = L.stats(full)
+    st.update({"published_" + k: v for k, v in L.stats(cat).items() if k in ("applications", "scenarios", "datasets")})
     cfg["stats"] = st
     site = os.path.join(L.ROOT, "site")
     rd = lambda n: open(os.path.join(site, n), encoding="utf-8").read()
     payload = json.dumps(cat, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    review_payload = json.dumps({k: full[k] for k in ("apps", "scenarios", "datasets")}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     cfg_json = json.dumps(cfg, ensure_ascii=False).replace("</", "<\\/")
     js = rd("main.js") + rd("dist.js") + rd("gh.js") + rd("init.js")
     title = html.escape(meta.get("title") or "Anomaly Detection Scenario Atlas")
@@ -129,13 +133,16 @@ def cmd_build(args):
             "<link rel=\"icon\" href=\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36 36'%3E%3Ccircle cx='18' cy='18' r='13' fill='none' stroke='%232f7f90' stroke-width='3' stroke-dasharray='2 4'/%3E%3Ccircle cx='18' cy='18' r='3.5' fill='%23d95926'/%3E%3C/svg%3E\">\n"
             + rd("head.html") + "\n</head>\n<body>\n" + rd("body.html")
             + f'\n<script type="application/json" id="atlas-config">{cfg_json}</script>'
-            + f'\n<script type="application/json" id="atlas-data">{payload}</script>\n<script>\n{js}\n</script>\n</body>\n</html>\n')
+            + f'\n<script type="application/json" id="atlas-data">{payload}</script>'
+            + f'\n<script type="application/json" id="atlas-review">{review_payload}</script>\n<script>\n{js}\n</script>\n</body>\n</html>\n')
     with open(os.path.join(out, "index.html"), "w", encoding="utf-8") as f:
         f.write(page)
     with open(os.path.join(out, "catalog.json"), "w", encoding="utf-8") as f:
         json.dump({"built": cfg["built"], "commit": cfg["sha"], "stats": st, **cat}, f, ensure_ascii=False, indent=1)
     with open(os.path.join(out, "stats.json"), "w", encoding="utf-8") as f:
         json.dump({"built": cfg["built"], "commit": cfg["sha"], **st}, f, indent=2)
+    with open(os.path.join(out, "catalog-all.json"), "w", encoding="utf-8") as f:
+        json.dump({"built": cfg["built"], "commit": cfg["sha"], "note": "Includes entries that are not reviewed yet.", **full}, f, ensure_ascii=False, indent=1)
     write_csvs(cat, out)
     open(os.path.join(out, ".nojekyll"), "w").close()
     print(f"Built {out}/index.html ({len(page) // 1024} KB) from commit {cfg['sha'][:7] or 'unknown'}.")

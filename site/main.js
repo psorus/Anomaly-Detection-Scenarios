@@ -67,10 +67,20 @@ function setView(v, opts = {}) {
   $("#t-more").setAttribute("aria-selected", String(sec));
   $("#subnav").hidden = !sec;
   $("#t-more").setAttribute("aria-expanded", String(sec));
-  if (!rendered[v] || opts.force) { RENDER[v](); rendered[v] = true; }
+  if (!rendered[v] || opts.force) { if (!emptyView(v)) RENDER[v](); rendered[v] = true; }
   store("view", v);
   try { history.replaceState(null, "", "#" + v); } catch (e) { /* ignore */ }
   if (!opts.keepScroll) window.scrollTo(0, 0);
+}
+
+/* ---------- Only reviewed entries are public; views without any show a pointer to the Review tab ---------- */
+const NEEDS = { scenarios: () => SC.length, apps: () => APPS.length, datasets: () => DS.length, dist: () => APPS.length || DS.length, taxonomy: () => APPS.length, builder: () => APPS.length };
+const WHAT = { scenarios: "scenarios", apps: "applications", datasets: "datasets", dist: "applications or datasets", taxonomy: "applications", builder: "applications" };
+function emptyView(v) {
+  if (!NEEDS[v] || NEEDS[v]()) return false;
+  $("#v-" + v).innerHTML = `<div class="lead"><h2>Nothing here yet</h2><p>Entries appear on this site once they have been reviewed. No ${WHAT[v]} have been reviewed so far.</p></div>
+    <div class="ghbar"><button type="button" class="btn gh primary" data-view="review">Help review</button></div>`;
+  return true;
 }
 
 /* ---------- Scenarios view ---------- */

@@ -433,6 +433,8 @@ def load_suggestions(repo_root=None):
                                 o["u"] = it["url"]
                             if it.get("why"):
                                 o["why"] = it["why"]
+                            if it.get("search"):
+                                o["s"] = 1
                             out.setdefault(str(rid), []).append(o)
     return out
 
@@ -543,7 +545,8 @@ def derive(tax, recs, meta, suggestions=None):
              "chk": bool(page.get("url") and page.get("found_in_search")),
              "src": [[l["label"], l["url"]] for l in links.get("other") or []],
              "refs": [_ref_out(x) for x in d.get("references") or []],
-             "apps": list(d.get("applications") or []), "scenx": list(d.get("extra_scenarios") or []),
+             "apps": [i for i in d.get("applications") or [] if i in A],
+             "scenx": [i for i in d.get("extra_scenarios") or [] if i in {x["id"] for x in scs}],
              "dom": sorted({A[i]["domain"] for i in d.get("applications") or [] if i in A}),
              "scen": ds_scen[d["id"]], "counted": counted(d),
              **_review_out(d), "sugg": (suggestions or {}).get(d["id"], []),
@@ -582,6 +585,13 @@ def stats(cat):
         ("reviewed_scenarios", sum(1 for s in sc if s["review"] == "reviewed")),
         ("applications_with_evidence", sum(1 for a in apps if a["evidence"])),
     ])
+
+
+def reviewed_only(recs):
+    """The records the public views show: only entries whose review.status is `reviewed`.
+    Scenario membership and dataset qualification are then derived from reviewed entries alone."""
+    ok = lambda r: (r.get("review") or {}).get("status") == "reviewed"
+    return {k: [(p, r) for p, r in v if ok(r)] for k, v in recs.items()}
 
 
 def load_all(repo_root=None):

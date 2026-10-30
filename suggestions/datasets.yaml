@@ -6,20 +6,25 @@ D001:
     url: "https://github.com/Minqi824/ADBench"
   - citation: Search for the paper that introduced ADBench
     url: "https://scholar.google.com/scholar?q=ADBench%20dataset%20anomaly"
+    search: true
 D002:
   - citation: "Dataset page: odds.cs.stonybrook.edu"
     url: "http://odds.cs.stonybrook.edu/"
   - citation: Search for the paper that introduced ODDS
     url: "https://scholar.google.com/scholar?q=ODDS%20dataset%20anomaly"
+    search: true
 D003:
   - citation: Search for the paper that introduced DAMI outlier evaluation repository (Campos et al.)
     url: "https://scholar.google.com/scholar?q=DAMI%20outlier%20evaluation%20repository%20%28Campos%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D004:
   - citation: Search for the paper that introduced Unsupervised anomaly detection benchmark (Goldstein and Uchida)
     url: "https://scholar.google.com/scholar?q=Unsupervised%20anomaly%20detection%20benchmark%20%28Goldstein%20and%20Uchida%29%20dataset%20anomaly"
+    search: true
 D005:
   - citation: Search for the paper that introduced Meta-analysis benchmark collection (Emmott et al.)
     url: "https://scholar.google.com/scholar?q=Meta-analysis%20benchmark%20collection%20%28Emmott%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D006:
   - citation: "Dataset page: huggingface.co"
     url: "https://huggingface.co/MacrOData-CMU"
@@ -29,9 +34,11 @@ D006:
     url: "https://macrodata-cmu-macrodata.hf.space/"
   - citation: Search for the paper that introduced MacrOData
     url: "https://scholar.google.com/scholar?q=MacrOData%20dataset%20anomaly"
+    search: true
 D007:
   - citation: Search for the paper that introduced Real-world tabular collection (Bouman et al.)
     url: "https://scholar.google.com/scholar?q=Real-world%20tabular%20collection%20%28Bouman%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D008:
   - citation: "Dataset page: github.com"
     url: "https://github.com/USC-FORTIS/NLP-ADBench"
@@ -39,16 +46,19 @@ D008:
     url: "https://arxiv.org/abs/2412.04784"
   - citation: Search for the paper that introduced NLP-ADBench
     url: "https://scholar.google.com/scholar?q=NLP-ADBench%20dataset%20anomaly"
+    search: true
 D009:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2501.11960"
   - citation: Search for the paper that introduced TAD-Bench
     url: "https://scholar.google.com/scholar?q=TAD-Bench%20dataset%20anomaly"
+    search: true
 D010:
   - citation: "Dataset page: github.com"
     url: "https://github.com/Jingkang50/OpenOOD"
   - citation: Search for the paper that introduced OpenOOD
     url: "https://scholar.google.com/scholar?q=OpenOOD%20dataset%20anomaly"
+    search: true
 D011:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2406.15523"
@@ -56,16 +66,19 @@ D011:
     url: "https://proceedings.iclr.cc/paper_files/paper/2025/hash/e58fa42d4b7a798eef8d0d75098f87ad-Abstract-Conference.html"
   - citation: Search for the paper that introduced UB-GOLD
     url: "https://scholar.google.com/scholar?q=UB-GOLD%20dataset%20anomaly"
+    search: true
 D012:
   - citation: "Dataset page: github.com"
     url: "https://github.com/pygod-team/pygod"
   - citation: Search for the paper that introduced BOND
     url: "https://scholar.google.com/scholar?q=BOND%20dataset%20anomaly"
+    search: true
 D013:
   - citation: "Dataset page: github.com"
     url: "https://github.com/squareRoot3/GADBench"
   - citation: Search for the paper that introduced GADBench
     url: "https://scholar.google.com/scholar?q=GADBench%20dataset%20anomaly"
+    search: true
 D014:
   - citation: "Dataset page: github.com"
     url: "https://github.com/TheDatumOrg/TSB-AD"
@@ -75,6 +88,7 @@ D014:
     url: "https://pypi.org/project/tsb-ad"
   - citation: Search for the paper that introduced TSB-AD
     url: "https://scholar.google.com/scholar?q=TSB-AD%20dataset%20anomaly"
+    search: true
 D015:
   - citation: "Dataset page: github.com"
     url: "https://github.com/TheDatumOrg/TSB-UAD"
@@ -82,6 +96,7 @@ D015:
     url: "https://tsb-uad.readthedocs.io"
   - citation: Search for the paper that introduced TSB-UAD
     url: "https://scholar.google.com/scholar?q=TSB-UAD%20dataset%20anomaly"
+    search: true
 D016:
   - citation: "Dataset page: www.hpi.uni-potsdam.de"
     url: "https://www.hpi.uni-potsdam.de/naumann/s/time-series-anomaly-detection-evaluation.html"
@@ -89,11 +104,13 @@ D016:
     url: "https://timeeval.readthedocs.io/en/latest/user/usage-timeeval.html"
   - citation: Search for the paper that introduced TimeEval benchmark
     url: "https://scholar.google.com/scholar?q=TimeEval%20benchmark%20dataset%20anomaly"
+    search: true
 D017:
   - citation: "Dataset page: www.cs.ucr.edu"
     url: "https://www.cs.ucr.edu/~eamonn/time_series_data_2018/UCR_TimeSeriesAnomalyDatasets2021.zip"
   - citation: Search for the paper that introduced UCR Time Series Anomaly Archive
     url: "https://scholar.google.com/scholar?q=UCR%20Time%20Series%20Anomaly%20Archive%20dataset%20anomaly"
+    search: true
 D018:
   - citation: "Dataset page: github.com"
     url: "https://github.com/decisionintelligence/TAB"
@@ -103,16 +120,19 @@ D018:
     url: "https://vldb.org/pvldb/volumes/18/paper/TAB%3A%20Unified%20Benchmarking%20of%20Time%20Series%20Anomaly%20Detection%20Methods"
   - citation: Search for the paper that introduced TAB (Time series Anomaly Benchmark)
     url: "https://scholar.google.com/scholar?q=TAB%20%28Time%20series%20Anomaly%20Benchmark%29%20dataset%20anomaly"
+    search: true
 D019:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2506.21550"
   - citation: Search for the paper that introduced mTSBench
     url: "https://scholar.google.com/scholar?q=mTSBench%20dataset%20anomaly"
+    search: true
 D020:
   - citation: "Dataset page: github.com"
     url: "https://github.com/numenta/NAB"
   - citation: Search for the paper that introduced NAB (Numenta Anomaly Benchmark)
     url: "https://scholar.google.com/scholar?q=NAB%20%28Numenta%20Anomaly%20Benchmark%29%20dataset%20anomaly"
+    search: true
 D021:
   - citation: "Dataset page: github.com"
     url: "https://github.com/alan-turing-institute/TCPDBench"
@@ -120,45 +140,55 @@ D021:
     url: "https://arxiv.org/abs/2003.06222"
   - citation: Search for the paper that introduced TCPDBench (Turing change point dataset)
     url: "https://scholar.google.com/scholar?q=TCPDBench%20%28Turing%20change%20point%20dataset%29%20dataset%20anomaly"
+    search: true
 D022:
   - citation: "Dataset page: wilds.stanford.edu"
     url: "https://wilds.stanford.edu/"
   - citation: Search for the paper that introduced WILDS
     url: "https://scholar.google.com/scholar?q=WILDS%20dataset%20anomaly"
+    search: true
 D023:
   - citation: "Dataset page: github.com"
     url: "https://github.com/huaxiuyao/Wild-Time"
   - citation: Search for the paper that introduced Wild-Time
     url: "https://scholar.google.com/scholar?q=Wild-Time%20dataset%20anomaly"
+    search: true
 D024:
   - citation: Search for the paper that introduced Shifts
     url: "https://scholar.google.com/scholar?q=Shifts%20dataset%20anomaly"
+    search: true
 D025:
   - citation: "Dataset page: tableshift.org"
     url: "https://tableshift.org/"
   - citation: Search for the paper that introduced TableShift
     url: "https://scholar.google.com/scholar?q=TableShift%20dataset%20anomaly"
+    search: true
 D026:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud"
   - citation: Search for the paper that introduced ULB Credit Card Fraud
     url: "https://scholar.google.com/scholar?q=ULB%20Credit%20Card%20Fraud%20dataset%20anomaly"
+    search: true
 D027:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/ieee-fraud-detection"
   - citation: Search for the paper that introduced IEEE-CIS Fraud Detection (Vesta)
     url: "https://scholar.google.com/scholar?q=IEEE-CIS%20Fraud%20Detection%20%28Vesta%29%20dataset%20anomaly"
+    search: true
 D028:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/datasets/ealaxi/paysim1"
   - citation: Search for the paper that introduced PaySim
     url: "https://scholar.google.com/scholar?q=PaySim%20dataset%20anomaly"
+    search: true
 D029:
   - citation: Search for the paper that introduced BankSim
     url: "https://scholar.google.com/scholar?q=BankSim%20dataset%20anomaly"
+    search: true
 D030:
   - citation: Search for the paper that introduced Sparkov simulated card transactions
     url: "https://scholar.google.com/scholar?q=Sparkov%20simulated%20card%20transactions%20dataset%20anomaly"
+    search: true
 D031:
   - citation: "Dataset page: github.com"
     url: "https://github.com/feedzai/bank-account-fraud"
@@ -168,21 +198,25 @@ D031:
     url: "https://arxiv.org/abs/2211.13358"
   - citation: Search for the paper that introduced Bank Account Fraud (BAF) suite
     url: "https://scholar.google.com/scholar?q=Bank%20Account%20Fraud%20%28BAF%29%20suite%20dataset%20anomaly"
+    search: true
 D032:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/datasets/ellipticco/elliptic-data-set"
   - citation: Search for the paper that introduced Elliptic Bitcoin Dataset
     url: "https://scholar.google.com/scholar?q=Elliptic%20Bitcoin%20Dataset%20dataset%20anomaly"
+    search: true
 D033:
   - citation: "Dataset page: github.com"
     url: "https://github.com/git-disl/EllipticPlusPlus"
   - citation: Search for the paper that introduced Elliptic++
     url: "https://scholar.google.com/scholar?q=Elliptic%2B%2B%20dataset%20anomaly"
+    search: true
 D034:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2404.19109"
   - citation: Search for the paper that introduced Elliptic2
     url: "https://scholar.google.com/scholar?q=Elliptic2%20dataset%20anomaly"
+    search: true
 D035:
   - citation: "Paper (NeurIPS 2023): proceedings.neurips.cc"
     url: "https://proceedings.neurips.cc/paper_files/paper/2023/hash/5f38404edff6f3f642d6fa5892479c42-Abstract.html"
@@ -190,15 +224,19 @@ D035:
     url: "https://arxiv.org/abs/2306.16424"
   - citation: Search for the paper that introduced AMLworld (IBM synthetic AML)
     url: "https://scholar.google.com/scholar?q=AMLworld%20%28IBM%20synthetic%20AML%29%20dataset%20anomaly"
+    search: true
 D036:
   - citation: Search for the paper that introduced SAML-D
     url: "https://scholar.google.com/scholar?q=SAML-D%20dataset%20anomaly"
+    search: true
 D037:
   - citation: Search for the paper that introduced Ethereum phishing transaction network
     url: "https://scholar.google.com/scholar?q=Ethereum%20phishing%20transaction%20network%20dataset%20anomaly"
+    search: true
 D038:
   - citation: Search for the paper that introduced BitcoinHeist ransomware addresses
     url: "https://scholar.google.com/scholar?q=BitcoinHeist%20ransomware%20addresses%20dataset%20anomaly"
+    search: true
 D039:
   - citation: "Dataset page: arxiv.org"
     url: "https://arxiv.org/abs/2207.03579"
@@ -206,27 +244,33 @@ D039:
     url: "https://papers.neurips.cc/paper_files/paper/2022/file/8f1918f71972789db39ec0d85bb31110-Paper-Datasets_and_Benchmarks.pdf"
   - citation: Search for the paper that introduced DGraph-Fin
     url: "https://scholar.google.com/scholar?q=DGraph-Fin%20dataset%20anomaly"
+    search: true
 D040:
   - citation: Search for the paper that introduced T-Finance
     url: "https://scholar.google.com/scholar?q=T-Finance%20dataset%20anomaly"
+    search: true
 D041:
   - citation: Search for the paper that introduced Vehicle insurance claims fraud (carclaims)
     url: "https://scholar.google.com/scholar?q=Vehicle%20insurance%20claims%20fraud%20%28carclaims%29%20dataset%20anomaly"
+    search: true
 D042:
   - citation: "Dataset page: data.cms.gov"
     url: "https://data.cms.gov/"
   - citation: Search for the paper that introduced CMS Medicare Part B with LEIE exclusions
     url: "https://scholar.google.com/scholar?q=CMS%20Medicare%20Part%20B%20with%20LEIE%20exclusions%20dataset%20anomaly"
+    search: true
 D043:
   - citation: "Dataset page: data.cms.gov"
     url: "https://data.cms.gov/"
   - citation: Search for the paper that introduced CMS Medicare Part D prescribers with LEIE
     url: "https://scholar.google.com/scholar?q=CMS%20Medicare%20Part%20D%20prescribers%20with%20LEIE%20dataset%20anomaly"
+    search: true
 D044:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2105.00733"
   - citation: Search for the paper that introduced Pump-and-dump events (La Morgia et al.)
     url: "https://scholar.google.com/scholar?q=Pump-and-dump%20events%20%28La%20Morgia%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D045:
   - citation: "Dataset page: github.com"
     url: "https://github.com/JarFraud/FraudDetection"
@@ -236,129 +280,159 @@ D045:
     url: "https://gitee.com/dufefintech/FraudDetection"
   - citation: Search for the paper that introduced AAER accounting fraud data (Bao et al.)
     url: "https://scholar.google.com/scholar?q=AAER%20accounting%20fraud%20data%20%28Bao%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D046:
   - citation: "Dataset page: archive.ics.uci.edu"
     url: "https://archive.ics.uci.edu/dataset/365/polish+companies+bankruptcy+data"
   - citation: Search for the paper that introduced Polish companies bankruptcy
     url: "https://scholar.google.com/scholar?q=Polish%20companies%20bankruptcy%20dataset%20anomaly"
+    search: true
 D047:
   - citation: Search for the paper that introduced Taiwanese bankruptcy prediction
     url: "https://scholar.google.com/scholar?q=Taiwanese%20bankruptcy%20prediction%20dataset%20anomaly"
+    search: true
 D048:
   - citation: "Dataset page: archive.ics.uci.edu"
     url: "https://archive.ics.uci.edu/dataset/350/default+of+credit+card+clients"
   - citation: Search for the paper that introduced Default of credit card clients (Taiwan)
     url: "https://scholar.google.com/scholar?q=Default%20of%20credit%20card%20clients%20%28Taiwan%29%20dataset%20anomaly"
+    search: true
 D049:
   - citation: "Dataset page: www.freddiemac.com"
     url: "https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset"
   - citation: Search for the paper that introduced Freddie Mac Single-Family Loan-Level Dataset
     url: "https://scholar.google.com/scholar?q=Freddie%20Mac%20Single-Family%20Loan-Level%20Dataset%20dataset%20anomaly"
+    search: true
 D050:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/home-credit-default-risk"
   - citation: Search for the paper that introduced Home Credit Default Risk
     url: "https://scholar.google.com/scholar?q=Home%20Credit%20Default%20Risk%20dataset%20anomaly"
+    search: true
 D051:
   - citation: Search for the paper that introduced Lending Club loan data
     url: "https://scholar.google.com/scholar?q=Lending%20Club%20loan%20data%20dataset%20anomaly"
+    search: true
 D052:
   - citation: Search for the paper that introduced YelpChi
     url: "https://scholar.google.com/scholar?q=YelpChi%20dataset%20anomaly"
+    search: true
 D053:
   - citation: Search for the paper that introduced Amazon user fraud graph
     url: "https://scholar.google.com/scholar?q=Amazon%20user%20fraud%20graph%20dataset%20anomaly"
+    search: true
 D054:
   - citation: Search for the paper that introduced YelpNYC and YelpZip
     url: "https://scholar.google.com/scholar?q=YelpNYC%20and%20YelpZip%20dataset%20anomaly"
+    search: true
 D055:
   - citation: Search for the paper that introduced Deceptive Opinion Spam Corpus (Ott et al.)
     url: "https://scholar.google.com/scholar?q=Deceptive%20Opinion%20Spam%20Corpus%20%28Ott%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D056:
   - citation: "Dataset page: www.consumerfinance.gov"
     url: "https://www.consumerfinance.gov/data-research/consumer-complaints/"
   - citation: Search for the paper that introduced CFPB Consumer Complaint Database
     url: "https://scholar.google.com/scholar?q=CFPB%20Consumer%20Complaint%20Database%20dataset%20anomaly"
+    search: true
 D057:
   - citation: Search for the paper that introduced Audit risk data (UCI)
     url: "https://scholar.google.com/scholar?q=Audit%20risk%20data%20%28UCI%29%20dataset%20anomaly"
+    search: true
 D058:
   - citation: "Dataset page: archive.ics.uci.edu"
     url: "https://archive.ics.uci.edu/dataset/144/statlog+german+credit+data"
   - citation: Search for the paper that introduced Statlog German Credit
     url: "https://scholar.google.com/scholar?q=Statlog%20German%20Credit%20dataset%20anomaly"
+    search: true
 D059:
   - citation: Search for the paper that introduced KDD Cup 1999
     url: "https://scholar.google.com/scholar?q=KDD%20Cup%201999%20dataset%20anomaly"
+    search: true
 D060:
   - citation: "Dataset page: www.unb.ca"
     url: "https://www.unb.ca/cic/datasets/nsl.html"
   - citation: Search for the paper that introduced NSL-KDD
     url: "https://scholar.google.com/scholar?q=NSL-KDD%20dataset%20anomaly"
+    search: true
 D061:
   - citation: "Dataset page: research.unsw.edu.au"
     url: "https://research.unsw.edu.au/projects/unsw-nb15-dataset"
   - citation: Search for the paper that introduced UNSW-NB15
     url: "https://scholar.google.com/scholar?q=UNSW-NB15%20dataset%20anomaly"
+    search: true
 D062:
   - citation: "Dataset page: www.unb.ca"
     url: "https://www.unb.ca/cic/datasets/ids-2017.html"
   - citation: Search for the paper that introduced CIC-IDS2017
     url: "https://scholar.google.com/scholar?q=CIC-IDS2017%20dataset%20anomaly"
+    search: true
 D063:
   - citation: "Dataset page: www.unb.ca"
     url: "https://www.unb.ca/cic/datasets/ids-2018.html"
   - citation: Search for the paper that introduced CSE-CIC-IDS2018
     url: "https://scholar.google.com/scholar?q=CSE-CIC-IDS2018%20dataset%20anomaly"
+    search: true
 D064:
   - citation: Search for the paper that introduced NetFlow V2 datasets (NF-UQ-NIDS-v2 and components)
     url: "https://scholar.google.com/scholar?q=NetFlow%20V2%20datasets%20%28NF-UQ-NIDS-v2%20and%20components%29%20dataset%20anomaly"
+    search: true
 D065:
   - citation: "Dataset page: www.stratosphereips.org"
     url: "https://www.stratosphereips.org/datasets-ctu13"
   - citation: Search for the paper that introduced CTU-13
     url: "https://scholar.google.com/scholar?q=CTU-13%20dataset%20anomaly"
+    search: true
 D066:
   - citation: "Dataset page: www.unb.ca"
     url: "https://www.unb.ca/cic/datasets/ddos-2019.html"
   - citation: Search for the paper that introduced CIC-DDoS2019
     url: "https://scholar.google.com/scholar?q=CIC-DDoS2019%20dataset%20anomaly"
+    search: true
 D067:
   - citation: Search for the paper that introduced CAIDA DDoS Attack 2007
     url: "https://scholar.google.com/scholar?q=CAIDA%20DDoS%20Attack%202007%20dataset%20anomaly"
+    search: true
 D068:
   - citation: "Source traces (MAWI archive): mawi.wide.ad.jp"
     url: "https://mawi.wide.ad.jp/mawi/"
   - citation: Search for the paper that introduced MAWILab
     url: "https://scholar.google.com/scholar?q=MAWILab%20dataset%20anomaly"
+    search: true
 D069:
   - citation: "Dataset page: nesg.ugr.es"
     url: "https://nesg.ugr.es/veritas/index.php/nesg-ugr16"
   - citation: Search for the paper that introduced UGR'16
     url: "https://scholar.google.com/scholar?q=UGR%2716%20dataset%20anomaly"
+    search: true
 D070:
   - citation: Search for the paper that introduced Kitsune network attack dataset
     url: "https://scholar.google.com/scholar?q=Kitsune%20network%20attack%20dataset%20dataset%20anomaly"
+    search: true
 D071:
   - citation: "Dataset page: www.unb.ca"
     url: "https://www.unb.ca/cic/datasets/vpn.html"
   - citation: Search for the paper that introduced ISCX VPN-nonVPN
     url: "https://scholar.google.com/scholar?q=ISCX%20VPN-nonVPN%20dataset%20anomaly"
+    search: true
 D072:
   - citation: "Dataset page: www.unb.ca"
     url: "https://www.unb.ca/cic/datasets/darknet2020.html"
   - citation: Search for the paper that introduced CIC-Darknet2020
     url: "https://scholar.google.com/scholar?q=CIC-Darknet2020%20dataset%20anomaly"
+    search: true
 D073:
   - citation: "Dataset page: www.unb.ca"
     url: "https://www.unb.ca/cic/datasets/dohbrw-2020.html"
   - citation: Search for the paper that introduced CIRA-CIC-DoHBrw-2020
     url: "https://scholar.google.com/scholar?q=CIRA-CIC-DoHBrw-2020%20dataset%20anomaly"
+    search: true
 D074:
   - citation: "Dataset page: dgarchive.caad.fkie.fraunhofer.de"
     url: "https://dgarchive.caad.fkie.fraunhofer.de/"
   - citation: Search for the paper that introduced DGArchive
     url: "https://scholar.google.com/scholar?q=DGArchive%20dataset%20anomaly"
+    search: true
 D075:
   - citation: "Dataset page: icsdweb.aegean.gr"
     url: "https://icsdweb.aegean.gr/awid/awid3"
@@ -366,81 +440,99 @@ D075:
     url: "https://icsdweb.aegean.gr/awid/"
   - citation: Search for the paper that introduced AWID3
     url: "https://scholar.google.com/scholar?q=AWID3%20dataset%20anomaly"
+    search: true
 D076:
   - citation: Search for the paper that introduced 5G-NIDD
     url: "https://scholar.google.com/scholar?q=5G-NIDD%20dataset%20anomaly"
+    search: true
 D077:
   - citation: "Dataset page: www.stratosphereips.org"
     url: "https://www.stratosphereips.org/datasets-iot23"
   - citation: Search for the paper that introduced IoT-23
     url: "https://scholar.google.com/scholar?q=IoT-23%20dataset%20anomaly"
+    search: true
 D078:
   - citation: "Dataset page: archive.ics.uci.edu"
     url: "https://archive.ics.uci.edu/dataset/442/detection+of+iot+botnet+attacks+n+baiot"
   - citation: Search for the paper that introduced N-BaIoT
     url: "https://scholar.google.com/scholar?q=N-BaIoT%20dataset%20anomaly"
+    search: true
 D079:
   - citation: "Dataset page: research.unsw.edu.au"
     url: "https://research.unsw.edu.au/projects/bot-iot-dataset"
   - citation: Search for the paper that introduced BoT-IoT
     url: "https://scholar.google.com/scholar?q=BoT-IoT%20dataset%20anomaly"
+    search: true
 D080:
   - citation: "Dataset page: research.unsw.edu.au"
     url: "https://research.unsw.edu.au/projects/toniot-datasets"
   - citation: Search for the paper that introduced ToN-IoT
     url: "https://scholar.google.com/scholar?q=ToN-IoT%20dataset%20anomaly"
+    search: true
 D081:
   - citation: Search for the paper that introduced Edge-IIoTset
     url: "https://scholar.google.com/scholar?q=Edge-IIoTset%20dataset%20anomaly"
+    search: true
 D082:
   - citation: Search for the paper that introduced X-IIoTID
     url: "https://scholar.google.com/scholar?q=X-IIoTID%20dataset%20anomaly"
+    search: true
 D083:
   - citation: "Dataset page: www.sites.google.com"
     url: "https://www.sites.google.com/a/uah.edu/tommy-morris-uah/ics-data-sets"
   - citation: Search for the paper that introduced ICS cyber attack datasets (Morris)
     url: "https://scholar.google.com/scholar?q=ICS%20cyber%20attack%20datasets%20%28Morris%29%20dataset%20anomaly"
+    search: true
 D084:
   - citation: "Dataset page: itrust.sutd.edu.sg"
     url: "https://itrust.sutd.edu.sg/itrust-labs_datasets/"
   - citation: Search for the paper that introduced SWaT
     url: "https://scholar.google.com/scholar?q=SWaT%20dataset%20anomaly"
+    search: true
 D085:
   - citation: "Dataset page: itrust.sutd.edu.sg"
     url: "https://itrust.sutd.edu.sg/itrust-labs_datasets/"
   - citation: Search for the paper that introduced WADI
     url: "https://scholar.google.com/scholar?q=WADI%20dataset%20anomaly"
+    search: true
 D086:
   - citation: "Dataset page: github.com"
     url: "https://github.com/icsdataset/hai"
   - citation: Search for the paper that introduced HAI (HIL-based Augmented ICS)
     url: "https://scholar.google.com/scholar?q=HAI%20%28HIL-based%20Augmented%20ICS%29%20dataset%20anomaly"
+    search: true
 D087:
   - citation: "Dataset page: www.batadal.net"
     url: "https://www.batadal.net/"
   - citation: Search for the paper that introduced BATADAL
     url: "https://scholar.google.com/scholar?q=BATADAL%20dataset%20anomaly"
+    search: true
 D088:
   - citation: Search for the paper that introduced GHL (Gasoil Heating Loop)
     url: "https://scholar.google.com/scholar?q=GHL%20%28Gasoil%20Heating%20Loop%29%20dataset%20anomaly"
+    search: true
 D089:
   - citation: Search for the paper that introduced TEXBAT
     url: "https://scholar.google.com/scholar?q=TEXBAT%20dataset%20anomaly"
+    search: true
 D090:
   - citation: "Dataset record (TIB): service.tib.eu"
     url: "https://service.tib.eu/ldmservice/dataset/car-hacking-dataset"
   - citation: Search for the paper that introduced HCRL Car-Hacking Dataset
     url: "https://scholar.google.com/scholar?q=HCRL%20Car-Hacking%20Dataset%20dataset%20anomaly"
+    search: true
 D091:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2012.14600"
   - citation: Search for the paper that introduced ROAD (Real ORNL Automotive Dynamometer)
     url: "https://scholar.google.com/scholar?q=ROAD%20%28Real%20ORNL%20Automotive%20Dynamometer%29%20dataset%20anomaly"
+    search: true
 D092:
   - citation: "Dataset page: github.com"
     url: "https://github.com/etas/SynCAN"
   - citation: Search for the paper that introduced SynCAN
     url: "https://scholar.google.com/scholar?q=SynCAN%20dataset%20anomaly"
+    search: true
 D093:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2308.04972"
@@ -448,129 +540,161 @@ D093:
     url: "https://orbit.dtu.dk/en/publications/can-train-and-test-a-new-can-intrusion-detection-dataset/"
   - citation: Search for the paper that introduced can-train-and-test
     url: "https://scholar.google.com/scholar?q=can-train-and-test%20dataset%20anomaly"
+    search: true
 D094:
   - citation: Search for the paper that introduced VeReMi
     url: "https://scholar.google.com/scholar?q=VeReMi%20dataset%20anomaly"
+    search: true
 D095:
   - citation: Search for the paper that introduced VeReMi Extension
     url: "https://scholar.google.com/scholar?q=VeReMi%20Extension%20dataset%20anomaly"
+    search: true
 D096:
   - citation: Search for the paper that introduced DroneRF
     url: "https://scholar.google.com/scholar?q=DroneRF%20dataset%20anomaly"
+    search: true
 D097:
   - citation: "Dataset page: csr.lanl.gov"
     url: "https://csr.lanl.gov/data/cyber1/"
   - citation: Search for the paper that introduced LANL Comprehensive Multi-Source Cyber-Security Events
     url: "https://scholar.google.com/scholar?q=LANL%20Comprehensive%20Multi-Source%20Cyber-Security%20Events%20dataset%20anomaly"
+    search: true
 D098:
   - citation: "Dataset page: csr.lanl.gov"
     url: "https://csr.lanl.gov/data/2017/"
   - citation: Search for the paper that introduced LANL Unified Host and Network Dataset
     url: "https://scholar.google.com/scholar?q=LANL%20Unified%20Host%20and%20Network%20Dataset%20dataset%20anomaly"
+    search: true
 D099:
   - citation: "Dataset page: github.com"
     url: "https://github.com/darpa-i2o/Transparent-Computing"
   - citation: Search for the paper that introduced DARPA Transparent Computing (E3, E5)
     url: "https://scholar.google.com/scholar?q=DARPA%20Transparent%20Computing%20%28E3%2C%20E5%29%20dataset%20anomaly"
+    search: true
 D100:
   - citation: Search for the paper that introduced DARPA OpTC
     url: "https://scholar.google.com/scholar?q=DARPA%20OpTC%20dataset%20anomaly"
+    search: true
 D101:
   - citation: "Dataset page: arxiv.org"
     url: "https://arxiv.org/abs/1602.04844"
   - citation: Search for the paper that introduced StreamSpot
     url: "https://scholar.google.com/scholar?q=StreamSpot%20dataset%20anomaly"
+    search: true
 D102:
   - citation: Search for the paper that introduced ADFA-LD and ADFA-WD
     url: "https://scholar.google.com/scholar?q=ADFA-LD%20and%20ADFA-WD%20dataset%20anomaly"
+    search: true
 D103:
   - citation: "Dataset page: kilthub.cmu.edu"
     url: "https://kilthub.cmu.edu/articles/dataset/Insider_Threat_Test_Dataset/12841247"
   - citation: Search for the paper that introduced CERT Insider Threat Test Dataset
     url: "https://scholar.google.com/scholar?q=CERT%20Insider%20Threat%20Test%20Dataset%20dataset%20anomaly"
+    search: true
 D104:
   - citation: Search for the paper that introduced RanSAP
     url: "https://scholar.google.com/scholar?q=RanSAP%20dataset%20anomaly"
+    search: true
 D105:
   - citation: "Dataset page: www.unb.ca"
     url: "https://www.unb.ca/cic/datasets/malmem-2022.html"
   - citation: Search for the paper that introduced CIC-MalMem-2022
     url: "https://scholar.google.com/scholar?q=CIC-MalMem-2022%20dataset%20anomaly"
+    search: true
 D106:
   - citation: "Dataset page: zenodo.org"
     url: "https://zenodo.org/records/5789064"
   - citation: Search for the paper that introduced AIT Log Data Set (AIT-LDS v2)
     url: "https://scholar.google.com/scholar?q=AIT%20Log%20Data%20Set%20%28AIT-LDS%20v2%29%20dataset%20anomaly"
+    search: true
 D107:
   - citation: Search for the paper that introduced AIT Alert Data Set
     url: "https://scholar.google.com/scholar?q=AIT%20Alert%20Data%20Set%20dataset%20anomaly"
+    search: true
 D108:
   - citation: "Dataset page: github.com"
     url: "https://github.com/elastic/ember"
   - citation: Search for the paper that introduced EMBER
     url: "https://scholar.google.com/scholar?q=EMBER%20dataset%20anomaly"
+    search: true
 D109:
   - citation: "Dataset page: github.com"
     url: "https://github.com/sophos/SOREL-20M"
   - citation: Search for the paper that introduced SOREL-20M
     url: "https://scholar.google.com/scholar?q=SOREL-20M%20dataset%20anomaly"
+    search: true
 D110:
   - citation: Search for the paper that introduced BODMAS
     url: "https://scholar.google.com/scholar?q=BODMAS%20dataset%20anomaly"
+    search: true
 D111:
   - citation: Search for the paper that introduced Drebin
     url: "https://scholar.google.com/scholar?q=Drebin%20dataset%20anomaly"
+    search: true
 D112:
   - citation: Search for the paper that introduced Backstabber's Knife Collection
     url: "https://scholar.google.com/scholar?q=Backstabber%27s%20Knife%20Collection%20dataset%20anomaly"
+    search: true
 D113:
   - citation: "Dataset page: github.com"
     url: "https://github.com/SunWeb3Sec/DeFiHackLabs"
   - citation: Search for the paper that introduced DeFiHackLabs incident reproductions
     url: "https://scholar.google.com/scholar?q=DeFiHackLabs%20incident%20reproductions%20dataset%20anomaly"
+    search: true
 D114:
   - citation: Search for the paper that introduced CSIC 2010 HTTP Dataset
     url: "https://scholar.google.com/scholar?q=CSIC%202010%20HTTP%20Dataset%20dataset%20anomaly"
+    search: true
 D115:
   - citation: "Dataset page: pages.nist.gov"
     url: "https://pages.nist.gov/trojai/"
   - citation: Search for the paper that introduced TrojAI
     url: "https://scholar.google.com/scholar?q=TrojAI%20dataset%20anomaly"
+    search: true
 D116:
   - citation: "Dataset page: phishtank.org"
     url: "https://phishtank.org/"
   - citation: Search for the paper that introduced PhishTank
     url: "https://scholar.google.com/scholar?q=PhishTank%20dataset%20anomaly"
+    search: true
 D117:
   - citation: Search for the paper that introduced SpamAssassin Public Corpus
     url: "https://scholar.google.com/scholar?q=SpamAssassin%20Public%20Corpus%20dataset%20anomaly"
+    search: true
 D118:
   - citation: Search for the paper that introduced Enron-Spam
     url: "https://scholar.google.com/scholar?q=Enron-Spam%20dataset%20anomaly"
+    search: true
 D119:
   - citation: "Dataset page: archive.ics.uci.edu"
     url: "https://archive.ics.uci.edu/dataset/228/sms+spam+collection"
   - citation: Search for the paper that introduced SMS Spam Collection
     url: "https://scholar.google.com/scholar?q=SMS%20Spam%20Collection%20dataset%20anomaly"
+    search: true
 D120:
   - citation: "Dataset page: www.asvspoof.org"
     url: "https://www.asvspoof.org/"
   - citation: Search for the paper that introduced ASVspoof challenges
     url: "https://scholar.google.com/scholar?q=ASVspoof%20challenges%20dataset%20anomaly"
+    search: true
 D121:
   - citation: Search for the paper that introduced In-the-Wild audio deepfakes
     url: "https://scholar.google.com/scholar?q=In-the-Wild%20audio%20deepfakes%20dataset%20anomaly"
+    search: true
 D122:
   - citation: "Dataset page: github.com"
     url: "https://github.com/ondyari/FaceForensics"
   - citation: Search for the paper that introduced FaceForensics++
     url: "https://scholar.google.com/scholar?q=FaceForensics%2B%2B%20dataset%20anomaly"
+    search: true
 D123:
   - citation: Search for the paper that introduced DFDC (Deepfake Detection Challenge)
     url: "https://scholar.google.com/scholar?q=DFDC%20%28Deepfake%20Detection%20Challenge%29%20dataset%20anomaly"
+    search: true
 D124:
   - citation: Search for the paper that introduced Celeb-DF
     url: "https://scholar.google.com/scholar?q=Celeb-DF%20dataset%20anomaly"
+    search: true
 D125:
   - citation: "Dataset page: github.com"
     url: "https://github.com/weili-thu/genimage"
@@ -578,22 +702,27 @@ D125:
     url: "https://arxiv.org/abs/2306.08571"
   - citation: Search for the paper that introduced GenImage
     url: "https://scholar.google.com/scholar?q=GenImage%20dataset%20anomaly"
+    search: true
 D126:
   - citation: Search for the paper that introduced OULU-NPU
     url: "https://scholar.google.com/scholar?q=OULU-NPU%20dataset%20anomaly"
+    search: true
 D127:
   - citation: "Dataset page: livdet.org"
     url: "https://livdet.org/"
   - citation: Search for the paper that introduced LivDet fingerprint liveness competitions
     url: "https://scholar.google.com/scholar?q=LivDet%20fingerprint%20liveness%20competitions%20dataset%20anomaly"
+    search: true
 D128:
   - citation: "Dataset page: huggingface.co"
     url: "https://huggingface.co/datasets/deepset/prompt-injections"
   - citation: Search for the paper that introduced deepset prompt injections
     url: "https://scholar.google.com/scholar?q=deepset%20prompt%20injections%20dataset%20anomaly"
+    search: true
 D129:
   - citation: Search for the paper that introduced BIPIA
     url: "https://scholar.google.com/scholar?q=BIPIA%20dataset%20anomaly"
+    search: true
 D130:
   - citation: "Dataset page: arxiv.org"
     url: "https://arxiv.org/abs/2404.01318"
@@ -601,12 +730,15 @@ D130:
     url: "https://proceedings.neurips.cc/paper_files/paper/2024/hash/63092d79154adebd7305dfd498cbff70-Abstract.html"
   - citation: Search for the paper that introduced JailbreakBench
     url: "https://scholar.google.com/scholar?q=JailbreakBench%20dataset%20anomaly"
+    search: true
 D131:
   - citation: Search for the paper that introduced AgentDojo
     url: "https://scholar.google.com/scholar?q=AgentDojo%20dataset%20anomaly"
+    search: true
 D132:
   - citation: Search for the paper that introduced M4 machine-generated text
     url: "https://scholar.google.com/scholar?q=M4%20machine-generated%20text%20dataset%20anomaly"
+    search: true
 D133:
   - citation: "Dataset page: arxiv.org"
     url: "https://arxiv.org/abs/2405.07940"
@@ -614,33 +746,41 @@ D133:
     url: "https://pypi.org/project/raid-bench"
   - citation: Search for the paper that introduced RAID
     url: "https://scholar.google.com/scholar?q=RAID%20dataset%20anomaly"
+    search: true
 D134:
   - citation: Search for the paper that introduced HC3
     url: "https://scholar.google.com/scholar?q=HC3%20dataset%20anomaly"
+    search: true
 D135:
   - citation: Search for the paper that introduced PAN plagiarism corpus 2011
     url: "https://scholar.google.com/scholar?q=PAN%20plagiarism%20corpus%202011%20dataset%20anomaly"
+    search: true
 D136:
   - citation: Search for the paper that introduced Yahoo Webscope S5
     url: "https://scholar.google.com/scholar?q=Yahoo%20Webscope%20S5%20dataset%20anomaly"
+    search: true
 D137:
   - citation: Search for the paper that introduced AIOps Challenge 2018 KPI dataset
     url: "https://scholar.google.com/scholar?q=AIOps%20Challenge%202018%20KPI%20dataset%20dataset%20anomaly"
+    search: true
 D138:
   - citation: "Dataset page: github.com"
     url: "https://github.com/NetManAIOps/OmniAnomaly"
   - citation: Search for the paper that introduced Server Machine Dataset (SMD)
     url: "https://scholar.google.com/scholar?q=Server%20Machine%20Dataset%20%28SMD%29%20dataset%20anomaly"
+    search: true
 D139:
   - citation: "Dataset page: github.com"
     url: "https://github.com/zhhlee/InterFusion"
   - citation: Search for the paper that introduced Application Server Dataset (ASD)
     url: "https://scholar.google.com/scholar?q=Application%20Server%20Dataset%20%28ASD%29%20dataset%20anomaly"
+    search: true
 D140:
   - citation: "Dataset page: github.com"
     url: "https://github.com/eBay/RANSynCoders"
   - citation: Search for the paper that introduced PSM (Pooled Server Metrics)
     url: "https://scholar.google.com/scholar?q=PSM%20%28Pooled%20Server%20Metrics%29%20dataset%20anomaly"
+    search: true
 D141:
   - citation: "Dataset page: github.com"
     url: "https://github.com/exathlonbenchmark/exathlon"
@@ -648,6 +788,7 @@ D141:
     url: "https://arxiv.org/abs/2010.05073"
   - citation: Search for the paper that introduced Exathlon
     url: "https://scholar.google.com/scholar?q=Exathlon%20dataset%20anomaly"
+    search: true
 D142:
   - citation: "Dataset page: zenodo.org"
     url: "https://zenodo.org/records/8338435"
@@ -655,21 +796,25 @@ D142:
     url: "https://huggingface.co/datasets/patrickfleith/controlled-anomalies-time-series-dataset"
   - citation: Search for the paper that introduced CATS (Controlled Anomalies Time Series)
     url: "https://scholar.google.com/scholar?q=CATS%20%28Controlled%20Anomalies%20Time%20Series%29%20dataset%20anomaly"
+    search: true
 D143:
   - citation: "Dataset page: www.backblaze.com"
     url: "https://www.backblaze.com/cloud-storage/resources/hard-drive-test-data"
   - citation: Search for the paper that introduced Backblaze Hard Drive Stats
     url: "https://scholar.google.com/scholar?q=Backblaze%20Hard%20Drive%20Stats%20dataset%20anomaly"
+    search: true
 D144:
   - citation: "Dataset page: github.com"
     url: "https://github.com/alibaba/clusterdata"
   - citation: Search for the paper that introduced Alibaba cluster traces
     url: "https://scholar.google.com/scholar?q=Alibaba%20cluster%20traces%20dataset%20anomaly"
+    search: true
 D145:
   - citation: "Dataset page: github.com"
     url: "https://github.com/google/cluster-data"
   - citation: Search for the paper that introduced Google cluster traces
     url: "https://scholar.google.com/scholar?q=Google%20cluster%20traces%20dataset%20anomaly"
+    search: true
 D146:
   - citation: "Dataset page: doi.org"
     url: "https://doi.org/10.5281/zenodo.20382322"
@@ -677,17 +822,21 @@ D146:
     url: "https://arxiv.org/abs/2606.18377"
   - citation: Search for the paper that introduced Mozilla performance change-point annotations
     url: "https://scholar.google.com/scholar?q=Mozilla%20performance%20change-point%20annotations%20dataset%20anomaly"
+    search: true
 D147:
   - citation: "Dataset page: github.com"
     url: "https://github.com/logpai/loghub"
   - citation: Search for the paper that introduced LogHub
     url: "https://scholar.google.com/scholar?q=LogHub%20dataset%20anomaly"
+    search: true
 D148:
   - citation: Search for the paper that introduced HDFS log dataset
     url: "https://scholar.google.com/scholar?q=HDFS%20log%20dataset%20dataset%20anomaly"
+    search: true
 D149:
   - citation: Search for the paper that introduced CFDR supercomputer logs (BGL, Thunderbird, Spirit, Liberty)
     url: "https://scholar.google.com/scholar?q=CFDR%20supercomputer%20logs%20%28BGL%2C%20Thunderbird%2C%20Spirit%2C%20Liberty%29%20dataset%20anomaly"
+    search: true
 D150:
   - citation: "Dataset page: github.com"
     url: "https://github.com/CloudWise-OpenSource/GAIA-DataSet"
@@ -695,11 +844,13 @@ D150:
     url: "https://docs.aiops.cloudwise.com/en/gaia/overview.html"
   - citation: Search for the paper that introduced GAIA dataset (CloudWise)
     url: "https://scholar.google.com/scholar?q=GAIA%20dataset%20%28CloudWise%29%20dataset%20anomaly"
+    search: true
 D151:
   - citation: "Dataset page: github.com"
     url: "https://github.com/FudanSELab/train-ticket"
   - citation: Search for the paper that introduced Train-Ticket fault cases
     url: "https://scholar.google.com/scholar?q=Train-Ticket%20fault%20cases%20dataset%20anomaly"
+    search: true
 D152:
   - citation: "Dataset page: zenodo.org"
     url: "https://zenodo.org/records/14504481"
@@ -707,6 +858,7 @@ D152:
     url: "https://arxiv.org/abs/2412.17015"
   - citation: Search for the paper that introduced RCAEval
     url: "https://scholar.google.com/scholar?q=RCAEval%20dataset%20anomaly"
+    search: true
 D153:
   - citation: "Dataset page: amazon.science"
     url: "https://amazon.science/code-and-datasets/petshop"
@@ -716,19 +868,23 @@ D153:
     url: "https://arxiv.org/abs/2311.04806"
   - citation: Search for the paper that introduced PetShop
     url: "https://scholar.google.com/scholar?q=PetShop%20dataset%20anomaly"
+    search: true
 D154:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2406.05375"
   - citation: Search for the paper that introduced LEMMA-RCA
     url: "https://scholar.google.com/scholar?q=LEMMA-RCA%20dataset%20anomaly"
+    search: true
 D155:
   - citation: "Dataset page: github.com"
     url: "https://github.com/NetManAIOps/Squeeze"
   - citation: Search for the paper that introduced Squeeze multi-dimensional root cause dataset
     url: "https://scholar.google.com/scholar?q=Squeeze%20multi-dimensional%20root%20cause%20dataset%20dataset%20anomaly"
+    search: true
 D156:
   - citation: Search for the paper that introduced Duplicate bug report datasets (Lazar et al.)
     url: "https://scholar.google.com/scholar?q=Duplicate%20bug%20report%20datasets%20%28Lazar%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D157:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2103.10526"
@@ -736,16 +892,19 @@ D157:
     url: "https://2021.msrconf.org/details/msr-2021-technical-papers/26/S3M-Siamese-Stack-Trace-Similarity-Measure"
   - citation: Search for the paper that introduced JetBrains crash report dataset (S3M)
     url: "https://scholar.google.com/scholar?q=JetBrains%20crash%20report%20dataset%20%28S3M%29%20dataset%20anomaly"
+    search: true
 D158:
   - citation: "Dataset page: github.com"
     url: "https://github.com/BigDaMa/raha"
   - citation: Search for the paper that introduced Raha and Baran error detection datasets
     url: "https://scholar.google.com/scholar?q=Raha%20and%20Baran%20error%20detection%20datasets%20dataset%20anomaly"
+    search: true
 D159:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2302.04702"
   - citation: Search for the paper that introduced REIN benchmark
     url: "https://scholar.google.com/scholar?q=REIN%20benchmark%20dataset%20anomaly"
+    search: true
 D160:
   - citation: "Dataset page: github.com"
     url: "https://github.com/D2IP-TUB/Clean-Me-If-You-Can"
@@ -753,70 +912,89 @@ D160:
     url: "https://arxiv.org/abs/2606.31983"
   - citation: Search for the paper that introduced Clean Me If You Can (real-world addresses)
     url: "https://scholar.google.com/scholar?q=Clean%20Me%20If%20You%20Can%20%28real-world%20addresses%29%20dataset%20anomaly"
+    search: true
 D161:
   - citation: Search for the paper that introduced Entity resolution benchmarks (Abt-Buy, Amazon-Google, DBLP-ACM, DBLP-Scholar)
     url: "https://scholar.google.com/scholar?q=Entity%20resolution%20benchmarks%20%28Abt-Buy%2C%20Amazon-Google%2C%20DBLP-ACM%2C%20DBLP-Scholar%29%20dataset%20anomaly"
+    search: true
 D162:
   - citation: "Dataset page: labelerrors.com"
     url: "https://labelerrors.com/"
   - citation: Search for the paper that introduced Label errors in test sets (Northcutt et al.)
     url: "https://scholar.google.com/scholar?q=Label%20errors%20in%20test%20sets%20%28Northcutt%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D163:
   - citation: "Dataset page: noisylabels.com"
     url: "http://noisylabels.com/"
   - citation: Search for the paper that introduced CIFAR-10N and CIFAR-100N
     url: "https://scholar.google.com/scholar?q=CIFAR-10N%20and%20CIFAR-100N%20dataset%20anomaly"
+    search: true
 D164:
   - citation: Search for the paper that introduced Clothing1M
     url: "https://scholar.google.com/scholar?q=Clothing1M%20dataset%20anomaly"
+    search: true
 D165:
   - citation: Search for the paper that introduced INSECTS data streams
     url: "https://scholar.google.com/scholar?q=INSECTS%20data%20streams%20dataset%20anomaly"
+    search: true
 D166:
   - citation: Search for the paper that introduced ImageNet-O
     url: "https://scholar.google.com/scholar?q=ImageNet-O%20dataset%20anomaly"
+    search: true
 D167:
   - citation: Search for the paper that introduced NINCO
     url: "https://scholar.google.com/scholar?q=NINCO%20dataset%20anomaly"
+    search: true
 D168:
   - citation: Search for the paper that introduced Semantic Shift Benchmark (SSB)
     url: "https://scholar.google.com/scholar?q=Semantic%20Shift%20Benchmark%20%28SSB%29%20dataset%20anomaly"
+    search: true
 D169:
   - citation: Search for the paper that introduced HaluEval
     url: "https://scholar.google.com/scholar?q=HaluEval%20dataset%20anomaly"
+    search: true
 D170:
   - citation: Search for the paper that introduced RAGTruth
     url: "https://scholar.google.com/scholar?q=RAGTruth%20dataset%20anomaly"
+    search: true
 D171:
   - citation: Search for the paper that introduced TruthfulQA
     url: "https://scholar.google.com/scholar?q=TruthfulQA%20dataset%20anomaly"
+    search: true
 D172:
   - citation: Search for the paper that introduced SelfCheckGPT WikiBio
     url: "https://scholar.google.com/scholar?q=SelfCheckGPT%20WikiBio%20dataset%20anomaly"
+    search: true
 D173:
   - citation: Search for the paper that introduced CLINC150 out-of-scope
     url: "https://scholar.google.com/scholar?q=CLINC150%20out-of-scope%20dataset%20anomaly"
+    search: true
 D174:
   - citation: Search for the paper that introduced Banking77-OOS
     url: "https://scholar.google.com/scholar?q=Banking77-OOS%20dataset%20anomaly"
+    search: true
 D175:
   - citation: Search for the paper that introduced ROSTD
     url: "https://scholar.google.com/scholar?q=ROSTD%20dataset%20anomaly"
+    search: true
 D176:
   - citation: "Dataset page: github.com"
     url: "https://github.com/socialfoundations/folktables"
   - citation: Search for the paper that introduced Folktables (American Community Survey tasks)
     url: "https://scholar.google.com/scholar?q=Folktables%20%28American%20Community%20Survey%20tasks%29%20dataset%20anomaly"
+    search: true
 D177:
   - citation: "Dataset page: github.com"
     url: "https://github.com/beir-cellar/beir"
   - citation: Search for the paper that introduced BEIR
     url: "https://scholar.google.com/scholar?q=BEIR%20dataset%20anomaly"
+    search: true
 D178:
   - citation: "Dataset page: www.mvtec.com"
     url: "https://www.mvtec.com/company/research/datasets/mvtec-ad"
   - citation: Search for the paper that introduced MVTec AD
     url: "https://scholar.google.com/scholar?q=MVTec%20AD%20dataset%20anomaly"
+    search: true
 D179:
   - citation: "Dataset page: www.mvtec.com"
     url: "https://www.mvtec.com/company/research/datasets/mvtec-ad-2"
@@ -824,21 +1002,25 @@ D179:
     url: "https://arxiv.org/abs/2503.21622"
   - citation: Search for the paper that introduced MVTec AD 2
     url: "https://scholar.google.com/scholar?q=MVTec%20AD%202%20dataset%20anomaly"
+    search: true
 D180:
   - citation: "Dataset page: www.mvtec.com"
     url: "https://www.mvtec.com/company/research/datasets/mvtec-loco"
   - citation: Search for the paper that introduced MVTec LOCO AD
     url: "https://scholar.google.com/scholar?q=MVTec%20LOCO%20AD%20dataset%20anomaly"
+    search: true
 D181:
   - citation: "Dataset page: github.com"
     url: "https://github.com/amazon-science/spot-diff"
   - citation: Search for the paper that introduced VisA
     url: "https://scholar.google.com/scholar?q=VisA%20dataset%20anomaly"
+    search: true
 D182:
   - citation: "Dataset page: arxiv.org"
     url: "https://arxiv.org/abs/2403.12580"
   - citation: Search for the paper that introduced Real-IAD
     url: "https://scholar.google.com/scholar?q=Real-IAD%20dataset%20anomaly"
+    search: true
 D183:
   - citation: "Paper (CVPR 2025): openaccess.thecvf.com"
     url: "https://openaccess.thecvf.com/content/CVPR2025/html/Fan_MANTA_A_Large-Scale_Multi-View_and_Visual-Text_Anomaly_Detection_Dataset_for_CVPR_2025_paper.html"
@@ -846,6 +1028,7 @@ D183:
     url: "https://arxiv.org/abs/2412.04867"
   - citation: Search for the paper that introduced MANTA
     url: "https://scholar.google.com/scholar?q=MANTA%20dataset%20anomaly"
+    search: true
 D184:
   - citation: "Paper (NeurIPS 2023): proceedings.neurips.cc"
     url: "https://proceedings.neurips.cc/paper_files/paper/2023/hash/8bc5aef775aacc1650a9790f1428bcea-Abstract.html"
@@ -853,99 +1036,127 @@ D184:
     url: "https://arxiv.org/abs/2310.07716"
   - citation: Search for the paper that introduced MAD (Pose-agnostic Anomaly Detection)
     url: "https://scholar.google.com/scholar?q=MAD%20%28Pose-agnostic%20Anomaly%20Detection%29%20dataset%20anomaly"
+    search: true
 D185:
   - citation: Search for the paper that introduced MPDD
     url: "https://scholar.google.com/scholar?q=MPDD%20dataset%20anomaly"
+    search: true
 D186:
   - citation: Search for the paper that introduced BTAD
     url: "https://scholar.google.com/scholar?q=BTAD%20dataset%20anomaly"
+    search: true
 D187:
   - citation: "Dataset page: vicos.si"
     url: "https://vicos.si/resources/kolektorsdd2/"
   - citation: Search for the paper that introduced KolektorSDD and KolektorSDD2
     url: "https://scholar.google.com/scholar?q=KolektorSDD%20and%20KolektorSDD2%20dataset%20anomaly"
+    search: true
 D188:
   - citation: Search for the paper that introduced DAGM 2007
     url: "https://scholar.google.com/scholar?q=DAGM%202007%20dataset%20anomaly"
+    search: true
 D189:
   - citation: Search for the paper that introduced Magnetic tile defects
     url: "https://scholar.google.com/scholar?q=Magnetic%20tile%20defects%20dataset%20anomaly"
+    search: true
 D190:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/severstal-steel-defect-detection"
   - citation: Search for the paper that introduced Severstal Steel Defect Detection
     url: "https://scholar.google.com/scholar?q=Severstal%20Steel%20Defect%20Detection%20dataset%20anomaly"
+    search: true
 D191:
   - citation: Search for the paper that introduced NEU surface defect database
     url: "https://scholar.google.com/scholar?q=NEU%20surface%20defect%20database%20dataset%20anomaly"
+    search: true
 D192:
   - citation: Search for the paper that introduced AITEX fabric defects
     url: "https://scholar.google.com/scholar?q=AITEX%20fabric%20defects%20dataset%20anomaly"
+    search: true
 D193:
   - citation: Search for the paper that introduced TILDA textile texture database
     url: "https://scholar.google.com/scholar?q=TILDA%20textile%20texture%20database%20dataset%20anomaly"
+    search: true
 D194:
   - citation: "Dataset page: github.com"
     url: "https://github.com/tangsanli5201/DeepPCB"
   - citation: Search for the paper that introduced DeepPCB
     url: "https://scholar.google.com/scholar?q=DeepPCB%20dataset%20anomaly"
+    search: true
 D195:
   - citation: Search for the paper that introduced WM-811K
     url: "https://scholar.google.com/scholar?q=WM-811K%20dataset%20anomaly"
+    search: true
 D196:
   - citation: Search for the paper that introduced MixedWM38
     url: "https://scholar.google.com/scholar?q=MixedWM38%20dataset%20anomaly"
+    search: true
 D197:
   - citation: "Dataset page: github.com"
     url: "https://github.com/zae-bayern/elpv-dataset"
   - citation: Search for the paper that introduced ELPV
     url: "https://scholar.google.com/scholar?q=ELPV%20dataset%20anomaly"
+    search: true
 D198:
   - citation: Search for the paper that introduced PVEL-AD
     url: "https://scholar.google.com/scholar?q=PVEL-AD%20dataset%20anomaly"
+    search: true
 D199:
   - citation: "Dataset page: domingomery.ing.puc.cl"
     url: "https://domingomery.ing.puc.cl/material/gdxray/"
   - citation: Search for the paper that introduced GDXray
     url: "https://scholar.google.com/scholar?q=GDXray%20dataset%20anomaly"
+    search: true
 D200:
   - citation: Search for the paper that introduced TIG aluminium 5083 weld images
     url: "https://scholar.google.com/scholar?q=TIG%20aluminium%205083%20weld%20images%20dataset%20anomaly"
+    search: true
 D201:
   - citation: "Talk (ICLR 2020 workshop): slideslive.com"
     url: "https://slideslive.com/38926354/"
   - citation: Search for the paper that introduced InfraredSolarModules
     url: "https://scholar.google.com/scholar?q=InfraredSolarModules%20dataset%20anomaly"
+    search: true
 D202:
   - citation: Search for the paper that introduced DTU drone inspection images of wind turbines
     url: "https://scholar.google.com/scholar?q=DTU%20drone%20inspection%20images%20of%20wind%20turbines%20dataset%20anomaly"
+    search: true
 D203:
   - citation: Search for the paper that introduced Sewer-ML
     url: "https://scholar.google.com/scholar?q=Sewer-ML%20dataset%20anomaly"
+    search: true
 D204:
   - citation: Search for the paper that introduced SDNET2018
     url: "https://scholar.google.com/scholar?q=SDNET2018%20dataset%20anomaly"
+    search: true
 D205:
   - citation: Search for the paper that introduced CODEBRIM
     url: "https://scholar.google.com/scholar?q=CODEBRIM%20dataset%20anomaly"
+    search: true
 D206:
   - citation: Search for the paper that introduced DeepCrack
     url: "https://scholar.google.com/scholar?q=DeepCrack%20dataset%20anomaly"
+    search: true
 D207:
   - citation: Search for the paper that introduced RDD2022
     url: "https://scholar.google.com/scholar?q=RDD2022%20dataset%20anomaly"
+    search: true
 D208:
   - citation: Search for the paper that introduced RSDDs rail surface defects
     url: "https://scholar.google.com/scholar?q=RSDDs%20rail%20surface%20defects%20dataset%20anomaly"
+    search: true
 D209:
   - citation: Search for the paper that introduced SIXray
     url: "https://scholar.google.com/scholar?q=SIXray%20dataset%20anomaly"
+    search: true
 D210:
   - citation: Search for the paper that introduced OPIXray
     url: "https://scholar.google.com/scholar?q=OPIXray%20dataset%20anomaly"
+    search: true
 D211:
   - citation: Search for the paper that introduced PIDray
     url: "https://scholar.google.com/scholar?q=PIDray%20dataset%20anomaly"
+    search: true
 D212:
   - citation: "Dataset page: ieee-dataport.org"
     url: "https://ieee-dataport.org/documents/ipad-industrial-process-anomaly-detection-dataset"
@@ -955,11 +1166,13 @@ D212:
     url: "https://ieeexplore.ieee.org/document/10685491"
   - citation: Search for the paper that introduced IPAD (Industrial Process Anomaly Detection)
     url: "https://scholar.google.com/scholar?q=IPAD%20%28Industrial%20Process%20Anomaly%20Detection%29%20dataset%20anomaly"
+    search: true
 D213:
   - citation: "Dataset page: www.mvtec.com"
     url: "https://www.mvtec.com/company/research/datasets/mvtec-3d-ad"
   - citation: Search for the paper that introduced MVTec 3D-AD
     url: "https://scholar.google.com/scholar?q=MVTec%203D-AD%20dataset%20anomaly"
+    search: true
 D214:
   - citation: "Dataset page: arxiv.org"
     url: "https://arxiv.org/abs/2210.04570"
@@ -967,6 +1180,7 @@ D214:
     url: "https://openaccess.thecvf.com/content/ACCV2022/html/Bonfiglioli_The_Eyecandies_Dataset_for_Unsupervised_Multimodal_Anomaly_Detection_and_Localization_ACCV_2022_paper.html"
   - citation: Search for the paper that introduced Eyecandies
     url: "https://scholar.google.com/scholar?q=Eyecandies%20dataset%20anomaly"
+    search: true
 D215:
   - citation: "Dataset page: github.com"
     url: "https://github.com/M-3LAB/Real3D-AD"
@@ -976,6 +1190,7 @@ D215:
     url: "https://papers.neurips.cc/paper_files/paper/2023/file/611b896d447df43c898062358df4c114-Paper-Datasets_and_Benchmarks.pdf"
   - citation: Search for the paper that introduced Real3D-AD
     url: "https://scholar.google.com/scholar?q=Real3D-AD%20dataset%20anomaly"
+    search: true
 D216:
   - citation: "Paper (CVPR 2024): openaccess.thecvf.com"
     url: "https://openaccess.thecvf.com/content/CVPR2024/html/Li_Towards_Scalable_3D_Anomaly_Detection_and_Localization_A_Benchmark_via_CVPR_2024_paper.html"
@@ -983,19 +1198,23 @@ D216:
     url: "https://arxiv.org/abs/2311.14897"
   - citation: Search for the paper that introduced Anomaly-ShapeNet
     url: "https://scholar.google.com/scholar?q=Anomaly-ShapeNet%20dataset%20anomaly"
+    search: true
 D217:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2504.14221"
   - citation: Search for the paper that introduced Real-IAD D3
     url: "https://scholar.google.com/scholar?q=Real-IAD%20D3%20dataset%20anomaly"
+    search: true
 D218:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2412.14592"
   - citation: Search for the paper that introduced MulSen-AD
     url: "https://scholar.google.com/scholar?q=MulSen-AD%20dataset%20anomaly"
+    search: true
 D219:
   - citation: Search for the paper that introduced Tennessee Eastman Process (extended simulation)
     url: "https://scholar.google.com/scholar?q=Tennessee%20Eastman%20Process%20%28extended%20simulation%29%20dataset%20anomaly"
+    search: true
 D220:
   - citation: "Dataset page: data.mendeley.com"
     url: "https://data.mendeley.com/datasets/pdnjz7zz5x"
@@ -1003,19 +1222,23 @@ D220:
     url: "https://hub.ibisba.eu/publications/15"
   - citation: Search for the paper that introduced IndPenSim
     url: "https://scholar.google.com/scholar?q=IndPenSim%20dataset%20anomaly"
+    search: true
 D221:
   - citation: "Dataset page: archive.ics.uci.edu"
     url: "https://archive.ics.uci.edu/dataset/179/secom"
   - citation: Search for the paper that introduced SECOM
     url: "https://scholar.google.com/scholar?q=SECOM%20dataset%20anomaly"
+    search: true
 D222:
   - citation: Search for the paper that introduced PHM 2018 ion mill etch challenge
     url: "https://scholar.google.com/scholar?q=PHM%202018%20ion%20mill%20etch%20challenge%20dataset%20anomaly"
+    search: true
 D223:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/bosch-production-line-performance"
   - citation: Search for the paper that introduced Bosch Production Line Performance
     url: "https://scholar.google.com/scholar?q=Bosch%20Production%20Line%20Performance%20dataset%20anomaly"
+    search: true
 D224:
   - citation: "Dataset record (ORNL): impact.ornl.gov"
     url: "https://impact.ornl.gov/en/datasets/a-co-registered-in-situ-and-ex-situ-dataset-from-a-laser-powder-b/"
@@ -1023,6 +1246,7 @@ D224:
     url: "https://www.ornl.gov/organization-news/peregrine-releases-new-dataset-smarter-3d-printing"
   - citation: Search for the paper that introduced Peregrine powder bed fusion datasets (ORNL)
     url: "https://scholar.google.com/scholar?q=Peregrine%20powder%20bed%20fusion%20datasets%20%28ORNL%29%20dataset%20anomaly"
+    search: true
 D225:
   - citation: "Dataset page: doi.org"
     url: "https://doi.org/10.5281/zenodo.14729547"
@@ -1036,55 +1260,69 @@ D225:
     url: "https://zenodo.org/records/15393134"
   - citation: Search for the paper that introduced PyScrew
     url: "https://scholar.google.com/scholar?q=PyScrew%20dataset%20anomaly"
+    search: true
 D226:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2311.04765"
   - citation: Search for the paper that introduced voraus-AD
     url: "https://scholar.google.com/scholar?q=voraus-AD%20dataset%20anomaly"
+    search: true
 D227:
   - citation: "Dataset page: github.com"
     url: "https://github.com/waico/SKAB"
   - citation: Search for the paper that introduced SKAB (Skoltech Anomaly Benchmark)
     url: "https://scholar.google.com/scholar?q=SKAB%20%28Skoltech%20Anomaly%20Benchmark%29%20dataset%20anomaly"
+    search: true
 D228:
   - citation: "Dataset page: archive.ics.uci.edu"
     url: "https://archive.ics.uci.edu/dataset/447/condition+monitoring+of+hydraulic+systems"
   - citation: Search for the paper that introduced Hydraulic system condition monitoring (UCI)
     url: "https://scholar.google.com/scholar?q=Hydraulic%20system%20condition%20monitoring%20%28UCI%29%20dataset%20anomaly"
+    search: true
 D229:
   - citation: Search for the paper that introduced Pump sensor data (Kaggle)
     url: "https://scholar.google.com/scholar?q=Pump%20sensor%20data%20%28Kaggle%29%20dataset%20anomaly"
+    search: true
 D230:
   - citation: "Dataset page: github.com"
     url: "https://github.com/petrobras/3W"
   - citation: Search for the paper that introduced 3W dataset (Petrobras)
     url: "https://scholar.google.com/scholar?q=3W%20dataset%20%28Petrobras%29%20dataset%20anomaly"
+    search: true
 D231:
   - citation: Search for the paper that introduced GasVid
     url: "https://scholar.google.com/scholar?q=GasVid%20dataset%20anomaly"
+    search: true
 D232:
   - citation: Search for the paper that introduced STARCOP
     url: "https://scholar.google.com/scholar?q=STARCOP%20dataset%20anomaly"
+    search: true
 D233:
   - citation: "Dataset page: engineering.case.edu"
     url: "https://engineering.case.edu/bearingdatacenter"
   - citation: Search for the paper that introduced CWRU Bearing Data
     url: "https://scholar.google.com/scholar?q=CWRU%20Bearing%20Data%20dataset%20anomaly"
+    search: true
 D234:
   - citation: Search for the paper that introduced Paderborn bearing dataset
     url: "https://scholar.google.com/scholar?q=Paderborn%20bearing%20dataset%20dataset%20anomaly"
+    search: true
 D235:
   - citation: Search for the paper that introduced IMS bearing dataset (NASA)
     url: "https://scholar.google.com/scholar?q=IMS%20bearing%20dataset%20%28NASA%29%20dataset%20anomaly"
+    search: true
 D236:
   - citation: Search for the paper that introduced FEMTO / PRONOSTIA bearings
     url: "https://scholar.google.com/scholar?q=FEMTO%20/%20PRONOSTIA%20bearings%20dataset%20anomaly"
+    search: true
 D237:
   - citation: Search for the paper that introduced XJTU-SY bearings
     url: "https://scholar.google.com/scholar?q=XJTU-SY%20bearings%20dataset%20anomaly"
+    search: true
 D238:
   - citation: Search for the paper that introduced MAFAULDA
     url: "https://scholar.google.com/scholar?q=MAFAULDA%20dataset%20anomaly"
+    search: true
 D239:
   - citation: "Dataset page: zenodo.org"
     url: "https://zenodo.org/records/3384388"
@@ -1092,52 +1330,65 @@ D239:
     url: "https://arxiv.org/abs/1909.09347"
   - citation: Search for the paper that introduced MIMII
     url: "https://scholar.google.com/scholar?q=MIMII%20dataset%20anomaly"
+    search: true
 D240:
   - citation: Search for the paper that introduced ToyADMOS and ToyADMOS2
     url: "https://scholar.google.com/scholar?q=ToyADMOS%20and%20ToyADMOS2%20dataset%20anomaly"
+    search: true
 D241:
   - citation: "Dataset page: dcase.community"
     url: "https://dcase.community/"
   - citation: Search for the paper that introduced DCASE machine condition monitoring (Task 2)
     url: "https://scholar.google.com/scholar?q=DCASE%20machine%20condition%20monitoring%20%28Task%202%29%20dataset%20anomaly"
+    search: true
 D242:
   - citation: Search for the paper that introduced MIMII DG
     url: "https://scholar.google.com/scholar?q=MIMII%20DG%20dataset%20anomaly"
+    search: true
 D243:
   - citation: "Dataset page: github.com"
     url: "https://github.com/mlcommons/tiny"
   - citation: Search for the paper that introduced MLPerf Tiny anomaly detection task
     url: "https://scholar.google.com/scholar?q=MLPerf%20Tiny%20anomaly%20detection%20task%20dataset%20anomaly"
+    search: true
 D244:
   - citation: Search for the paper that introduced NASA milling dataset
     url: "https://scholar.google.com/scholar?q=NASA%20milling%20dataset%20dataset%20anomaly"
+    search: true
 D245:
   - citation: Search for the paper that introduced PHM 2010 milling challenge
     url: "https://scholar.google.com/scholar?q=PHM%202010%20milling%20challenge%20dataset%20anomaly"
+    search: true
 D246:
   - citation: "Dataset page: archive.ics.uci.edu"
     url: "https://archive.ics.uci.edu/dataset/752/bosch+cnc+machining+dataset"
   - citation: Search for the paper that introduced Bosch CNC Machining Dataset
     url: "https://scholar.google.com/scholar?q=Bosch%20CNC%20Machining%20Dataset%20dataset%20anomaly"
+    search: true
 D247:
   - citation: "Dataset page: www.nasa.gov"
     url: "https://www.nasa.gov/intelligent-systems-division/discovery-and-systems-health/pcoe/pcoe-data-set-repository/"
   - citation: Search for the paper that introduced C-MAPSS
     url: "https://scholar.google.com/scholar?q=C-MAPSS%20dataset%20anomaly"
+    search: true
 D248:
   - citation: Search for the paper that introduced N-CMAPSS
     url: "https://scholar.google.com/scholar?q=N-CMAPSS%20dataset%20anomaly"
+    search: true
 D249:
   - citation: Search for the paper that introduced SGCC electricity theft dataset
     url: "https://scholar.google.com/scholar?q=SGCC%20electricity%20theft%20dataset%20dataset%20anomaly"
+    search: true
 D250:
   - citation: Search for the paper that introduced Irish CER smart meter trial
     url: "https://scholar.google.com/scholar?q=Irish%20CER%20smart%20meter%20trial%20dataset%20anomaly"
+    search: true
 D251:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/vsb-power-line-fault-detection"
   - citation: Search for the paper that introduced VSB Power Line Fault Detection
     url: "https://scholar.google.com/scholar?q=VSB%20Power%20Line%20Fault%20Detection%20dataset%20anomaly"
+    search: true
 D252:
   - citation: "Paper (Data, MDPI): www.mdpi.com"
     url: "https://www.mdpi.com/2306-5729/9/12/138"
@@ -1145,6 +1396,7 @@ D252:
     url: "https://arxiv.org/abs/2404.10320"
   - citation: Search for the paper that introduced CARE to Compare
     url: "https://scholar.google.com/scholar?q=CARE%20to%20Compare%20dataset%20anomaly"
+    search: true
 D253:
   - citation: "Dataset page: zenodo.org"
     url: "https://zenodo.org/records/5841834"
@@ -1152,12 +1404,15 @@ D253:
     url: "https://zenodo.org/records/5946808"
   - citation: Search for the paper that introduced Kelmarsh and Penmanshiel wind farm data
     url: "https://scholar.google.com/scholar?q=Kelmarsh%20and%20Penmanshiel%20wind%20farm%20data%20dataset%20anomaly"
+    search: true
 D254:
   - citation: Search for the paper that introduced EDP wind turbine open data
     url: "https://scholar.google.com/scholar?q=EDP%20wind%20turbine%20open%20data%20dataset%20anomaly"
+    search: true
 D255:
   - citation: Search for the paper that introduced NASA battery aging data
     url: "https://scholar.google.com/scholar?q=NASA%20battery%20aging%20data%20dataset%20anomaly"
+    search: true
 D256:
   - citation: "Dataset page: github.com"
     url: "https://github.com/rdbraatz/data-driven-prediction-of-battery-cycle-life-before-capacity-degradation"
@@ -1165,44 +1420,57 @@ D256:
     url: "https://www.tri.global/research/data-driven-prediction-battery-cycle-life-capacity-degradation"
   - citation: Search for the paper that introduced Severson battery cycle life
     url: "https://scholar.google.com/scholar?q=Severson%20battery%20cycle%20life%20dataset%20anomaly"
+    search: true
 D257:
   - citation: Search for the paper that introduced CALCE battery data
     url: "https://scholar.google.com/scholar?q=CALCE%20battery%20data%20dataset%20anomaly"
+    search: true
 D258:
   - citation: "Paper (Scientific Data, PMC): www.ncbi.nlm.nih.gov"
     url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9747709/"
   - citation: Search for the paper that introduced NPPAD
     url: "https://scholar.google.com/scholar?q=NPPAD%20dataset%20anomaly"
+    search: true
 D259:
   - citation: Search for the paper that introduced LeakDB
     url: "https://scholar.google.com/scholar?q=LeakDB%20dataset%20anomaly"
+    search: true
 D260:
   - citation: Search for the paper that introduced BattLeDIM
     url: "https://scholar.google.com/scholar?q=BattLeDIM%20dataset%20anomaly"
+    search: true
 D261:
   - citation: Search for the paper that introduced GECCO 2018 drinking water quality challenge
     url: "https://scholar.google.com/scholar?q=GECCO%202018%20drinking%20water%20quality%20challenge%20dataset%20anomaly"
+    search: true
 D262:
   - citation: Search for the paper that introduced LEAD1.0
     url: "https://scholar.google.com/scholar?q=LEAD1.0%20dataset%20anomaly"
+    search: true
 D263:
   - citation: Search for the paper that introduced Building Data Genome 2
     url: "https://scholar.google.com/scholar?q=Building%20Data%20Genome%202%20dataset%20anomaly"
+    search: true
 D264:
   - citation: Search for the paper that introduced LBNL HVAC fault detection datasets
     url: "https://scholar.google.com/scholar?q=LBNL%20HVAC%20fault%20detection%20datasets%20dataset%20anomaly"
+    search: true
 D265:
   - citation: Search for the paper that introduced MIVIA fire and smoke videos
     url: "https://scholar.google.com/scholar?q=MIVIA%20fire%20and%20smoke%20videos%20dataset%20anomaly"
+    search: true
 D266:
   - citation: Search for the paper that introduced Z24 bridge
     url: "https://scholar.google.com/scholar?q=Z24%20bridge%20dataset%20anomaly"
+    search: true
 D267:
   - citation: Search for the paper that introduced KW51 railway bridge
     url: "https://scholar.google.com/scholar?q=KW51%20railway%20bridge%20dataset%20anomaly"
+    search: true
 D268:
   - citation: Search for the paper that introduced LANL SHM three-story structure
     url: "https://scholar.google.com/scholar?q=LANL%20SHM%20three-story%20structure%20dataset%20anomaly"
+    search: true
 D269:
   - citation: "Dataset page: zenodo.org"
     url: "https://zenodo.org/records/7622128"
@@ -1212,30 +1480,37 @@ D269:
     url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10492790/"
   - citation: Search for the paper that introduced TIHM dementia remote monitoring
     url: "https://scholar.google.com/scholar?q=TIHM%20dementia%20remote%20monitoring%20dataset%20anomaly"
+    search: true
 D270:
   - citation: Search for the paper that introduced Intel Berkeley Research Lab sensor data
     url: "https://scholar.google.com/scholar?q=Intel%20Berkeley%20Research%20Lab%20sensor%20data%20dataset%20anomaly"
+    search: true
 D271:
   - citation: "Dataset page: openaq.org"
     url: "https://openaq.org/"
   - citation: Search for the paper that introduced OpenAQ
     url: "https://scholar.google.com/scholar?q=OpenAQ%20dataset%20anomaly"
+    search: true
 D272:
   - citation: "Dataset page: segmentmeifyoucan.com"
     url: "https://segmentmeifyoucan.com/"
   - citation: Search for the paper that introduced SegmentMeIfYouCan (SMIYC)
     url: "https://scholar.google.com/scholar?q=SegmentMeIfYouCan%20%28SMIYC%29%20dataset%20anomaly"
+    search: true
 D273:
   - citation: "Dataset page: fishyscapes.com"
     url: "https://fishyscapes.com/"
   - citation: Search for the paper that introduced Fishyscapes
     url: "https://scholar.google.com/scholar?q=Fishyscapes%20dataset%20anomaly"
+    search: true
 D274:
   - citation: Search for the paper that introduced Lost and Found
     url: "https://scholar.google.com/scholar?q=Lost%20and%20Found%20dataset%20anomaly"
+    search: true
 D275:
   - citation: Search for the paper that introduced StreetHazards and BDD-Anomaly
     url: "https://scholar.google.com/scholar?q=StreetHazards%20and%20BDD-Anomaly%20dataset%20anomaly"
+    search: true
 D276:
   - citation: "Dataset page: arxiv.org"
     url: "https://arxiv.org/abs/2203.07724"
@@ -1243,6 +1518,7 @@ D276:
     url: "https://ecva.net/papers/eccv_2022/papers_ECCV/html/1247_ECCV_2022_paper.php"
   - citation: Search for the paper that introduced CODA
     url: "https://scholar.google.com/scholar?q=CODA%20dataset%20anomaly"
+    search: true
 D277:
   - citation: "Dataset page: zenodo.org"
     url: "https://zenodo.org/records/8171712"
@@ -1250,6 +1526,7 @@ D277:
     url: "https://arxiv.org/abs/2405.07865"
   - citation: Search for the paper that introduced AnoVox
     url: "https://scholar.google.com/scholar?q=AnoVox%20dataset%20anomaly"
+    search: true
 D278:
   - citation: "Paper (CVPR 2025): openaccess.thecvf.com"
     url: "https://openaccess.thecvf.com/content/CVPR2025/html/Nekrasov_Spotting_the_Unexpected_STU_A_3D_LiDAR_Dataset_for_Anomaly_CVPR_2025_paper.html"
@@ -1259,66 +1536,83 @@ D278:
     url: "https://www.vision.rwth-aachen.de/publication/00242/"
   - citation: Search for the paper that introduced STU (Spotting the Unexpected)
     url: "https://scholar.google.com/scholar?q=STU%20%28Spotting%20the%20Unexpected%29%20dataset%20anomaly"
+    search: true
 D279:
   - citation: Search for the paper that introduced DAD (Dashcam Accident Dataset)
     url: "https://scholar.google.com/scholar?q=DAD%20%28Dashcam%20Accident%20Dataset%29%20dataset%20anomaly"
+    search: true
 D280:
   - citation: Search for the paper that introduced DoTA (Detection of Traffic Anomaly)
     url: "https://scholar.google.com/scholar?q=DoTA%20%28Detection%20of%20Traffic%20Anomaly%29%20dataset%20anomaly"
+    search: true
 D281:
   - citation: Search for the paper that introduced CCD (Car Crash Dataset)
     url: "https://scholar.google.com/scholar?q=CCD%20%28Car%20Crash%20Dataset%29%20dataset%20anomaly"
+    search: true
 D282:
   - citation: Search for the paper that introduced UTA-RLDD
     url: "https://scholar.google.com/scholar?q=UTA-RLDD%20dataset%20anomaly"
+    search: true
 D283:
   - citation: "Dataset page: www.aicitychallenge.org"
     url: "https://www.aicitychallenge.org/"
   - citation: Search for the paper that introduced AI City Challenge traffic anomaly track
     url: "https://scholar.google.com/scholar?q=AI%20City%20Challenge%20traffic%20anomaly%20track%20dataset%20anomaly"
+    search: true
 D284:
   - citation: "Dataset page: pems.dot.ca.gov"
     url: "https://pems.dot.ca.gov/"
   - citation: Search for the paper that introduced PeMS traffic with incident records
     url: "https://scholar.google.com/scholar?q=PeMS%20traffic%20with%20incident%20records%20dataset%20anomaly"
+    search: true
 D285:
   - citation: Search for the paper that introduced Porto taxi trajectories
     url: "https://scholar.google.com/scholar?q=Porto%20taxi%20trajectories%20dataset%20anomaly"
+    search: true
 D286:
   - citation: Search for the paper that introduced Geolife GPS trajectories
     url: "https://scholar.google.com/scholar?q=Geolife%20GPS%20trajectories%20dataset%20anomaly"
+    search: true
 D287:
   - citation: Search for the paper that introduced DataCo smart supply chain
     url: "https://scholar.google.com/scholar?q=DataCo%20smart%20supply%20chain%20dataset%20anomaly"
+    search: true
 D288:
   - citation: Search for the paper that introduced Danish Maritime Authority AIS data
     url: "https://scholar.google.com/scholar?q=Danish%20Maritime%20Authority%20AIS%20data%20dataset%20anomaly"
+    search: true
 D289:
   - citation: "Dataset page: globalfishingwatch.org"
     url: "https://globalfishingwatch.org/datasets-and-code/"
   - citation: Search for the paper that introduced Global Fishing Watch AIS-derived events
     url: "https://scholar.google.com/scholar?q=Global%20Fishing%20Watch%20AIS-derived%20events%20dataset%20anomaly"
+    search: true
 D290:
   - citation: "Dataset page: opensky-network.org"
     url: "https://opensky-network.org/"
   - citation: Search for the paper that introduced OpenSky Network ADS-B data
     url: "https://scholar.google.com/scholar?q=OpenSky%20Network%20ADS-B%20data%20dataset%20anomaly"
+    search: true
 D291:
   - citation: Search for the paper that introduced NASA DASHlink sample flight data
     url: "https://scholar.google.com/scholar?q=NASA%20DASHlink%20sample%20flight%20data%20dataset%20anomaly"
+    search: true
 D292:
   - citation: "Dataset page: asrs.arc.nasa.gov"
     url: "https://asrs.arc.nasa.gov/"
   - citation: Search for the paper that introduced NASA Aviation Safety Reporting System (ASRS)
     url: "https://scholar.google.com/scholar?q=NASA%20Aviation%20Safety%20Reporting%20System%20%28ASRS%29%20dataset%20anomaly"
+    search: true
 D293:
   - citation: Search for the paper that introduced ALFA (AirLab Failure and Anomaly)
     url: "https://scholar.google.com/scholar?q=ALFA%20%28AirLab%20Failure%20and%20Anomaly%29%20dataset%20anomaly"
+    search: true
 D294:
   - citation: "Dataset page: github.com"
     url: "https://github.com/khundman/telemanom"
   - citation: Search for the paper that introduced NASA SMAP and MSL telemetry
     url: "https://scholar.google.com/scholar?q=NASA%20SMAP%20and%20MSL%20telemetry%20dataset%20anomaly"
+    search: true
 D295:
   - citation: "Dataset page: github.com"
     url: "https://github.com/kplabs-pl/ESA-ADB"
@@ -1330,6 +1624,7 @@ D295:
     url: "https://www.kplabs.space/projects-and-missions/esa-anomaly-detection-benchmark"
   - citation: Search for the paper that introduced ESA Anomalies Dataset and ESA-ADB
     url: "https://scholar.google.com/scholar?q=ESA%20Anomalies%20Dataset%20and%20ESA-ADB%20dataset%20anomaly"
+    search: true
 D296:
   - citation: "Dataset page: zenodo.org"
     url: "https://zenodo.org/records/12588359"
@@ -1339,44 +1634,53 @@ D296:
     url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12041257/"
   - citation: Search for the paper that introduced OPSSAT-AD
     url: "https://scholar.google.com/scholar?q=OPSSAT-AD%20dataset%20anomaly"
+    search: true
 D297:
   - citation: Search for the paper that introduced Statlog Shuttle
     url: "https://scholar.google.com/scholar?q=Statlog%20Shuttle%20dataset%20anomaly"
+    search: true
 D298:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/mimiciv/"
   - citation: Search for the paper that introduced MIMIC-IV
     url: "https://scholar.google.com/scholar?q=MIMIC-IV%20dataset%20anomaly"
+    search: true
 D299:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/eicu-crd/"
   - citation: Search for the paper that introduced eICU Collaborative Research Database
     url: "https://scholar.google.com/scholar?q=eICU%20Collaborative%20Research%20Database%20dataset%20anomaly"
+    search: true
 D300:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/challenge-2019/"
   - citation: Search for the paper that introduced PhysioNet/CinC 2019 sepsis challenge
     url: "https://scholar.google.com/scholar?q=PhysioNet/CinC%202019%20sepsis%20challenge%20dataset%20anomaly"
+    search: true
 D301:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/hirid/"
   - citation: Search for the paper that introduced HiRID
     url: "https://scholar.google.com/scholar?q=HiRID%20dataset%20anomaly"
+    search: true
 D302:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/challenge-2015/"
   - citation: Search for the paper that introduced PhysioNet/CinC 2015 false arrhythmia alarms
     url: "https://scholar.google.com/scholar?q=PhysioNet/CinC%202015%20false%20arrhythmia%20alarms%20dataset%20anomaly"
+    search: true
 D303:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/mitdb/"
   - citation: Search for the paper that introduced MIT-BIH Arrhythmia Database
     url: "https://scholar.google.com/scholar?q=MIT-BIH%20Arrhythmia%20Database%20dataset%20anomaly"
+    search: true
 D304:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/ptb-xl/"
   - citation: Search for the paper that introduced PTB-XL
     url: "https://scholar.google.com/scholar?q=PTB-XL%20dataset%20anomaly"
+    search: true
 D305:
   - citation: "Dataset page: isip.piconepress.com"
     url: "https://isip.piconepress.com/projects/nedc/html/tuh_eeg"
@@ -1384,30 +1688,37 @@ D305:
     url: "https://isip.piconepress.com/projects/tuh_eeg/html/downloads.shtml"
   - citation: Search for the paper that introduced TUH EEG Seizure Corpus (TUSZ)
     url: "https://scholar.google.com/scholar?q=TUH%20EEG%20Seizure%20Corpus%20%28TUSZ%29%20dataset%20anomaly"
+    search: true
 D306:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/chbmit/"
   - citation: Search for the paper that introduced CHB-MIT Scalp EEG
     url: "https://scholar.google.com/scholar?q=CHB-MIT%20Scalp%20EEG%20dataset%20anomaly"
+    search: true
 D307:
   - citation: Search for the paper that introduced SisFall
     url: "https://scholar.google.com/scholar?q=SisFall%20dataset%20anomaly"
+    search: true
 D308:
   - citation: Search for the paper that introduced UP-Fall
     url: "https://scholar.google.com/scholar?q=UP-Fall%20dataset%20anomaly"
+    search: true
 D309:
   - citation: Search for the paper that introduced OhioT1DM
     url: "https://scholar.google.com/scholar?q=OhioT1DM%20dataset%20anomaly"
+    search: true
 D310:
   - citation: "Dataset page: vitaldb.net"
     url: "https://vitaldb.net/"
   - citation: Search for the paper that introduced VitalDB
     url: "https://scholar.google.com/scholar?q=VitalDB%20dataset%20anomaly"
+    search: true
 D311:
   - citation: "Dataset page: github.com"
     url: "https://github.com/DorisBao/BMAD"
   - citation: Search for the paper that introduced BMAD
     url: "https://scholar.google.com/scholar?q=BMAD%20dataset%20anomaly"
+    search: true
 D312:
   - citation: "Dataset page: zenodo.org"
     url: "https://zenodo.org/records/12677223"
@@ -1415,192 +1726,239 @@ D312:
     url: "https://arxiv.org/abs/2404.04518"
   - citation: Search for the paper that introduced MedIAnomaly
     url: "https://scholar.google.com/scholar?q=MedIAnomaly%20dataset%20anomaly"
+    search: true
 D313:
   - citation: "Paper (arXiv): arxiv.org"
     url: "https://arxiv.org/abs/2503.16247"
   - citation: Search for the paper that introduced OpenMIBOOD
     url: "https://scholar.google.com/scholar?q=OpenMIBOOD%20dataset%20anomaly"
+    search: true
 D314:
   - citation: Search for the paper that introduced MOOD challenge (Medical Out-of-Distribution)
     url: "https://scholar.google.com/scholar?q=MOOD%20challenge%20%28Medical%20Out-of-Distribution%29%20dataset%20anomaly"
+    search: true
 D315:
   - citation: Search for the paper that introduced BraTS
     url: "https://scholar.google.com/scholar?q=BraTS%20dataset%20anomaly"
+    search: true
 D316:
   - citation: "Dataset page: brain-development.org"
     url: "https://brain-development.org/ixi-dataset/"
   - citation: Search for the paper that introduced IXI healthy brain MRI
     url: "https://scholar.google.com/scholar?q=IXI%20healthy%20brain%20MRI%20dataset%20anomaly"
+    search: true
 D317:
   - citation: Search for the paper that introduced ATLAS stroke lesions
     url: "https://scholar.google.com/scholar?q=ATLAS%20stroke%20lesions%20dataset%20anomaly"
+    search: true
 D318:
   - citation: Search for the paper that introduced CheXpert
     url: "https://scholar.google.com/scholar?q=CheXpert%20dataset%20anomaly"
+    search: true
 D319:
   - citation: Search for the paper that introduced NIH ChestX-ray14
     url: "https://scholar.google.com/scholar?q=NIH%20ChestX-ray14%20dataset%20anomaly"
+    search: true
 D320:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/vindr-cxr/"
   - citation: Search for the paper that introduced VinDr-CXR
     url: "https://scholar.google.com/scholar?q=VinDr-CXR%20dataset%20anomaly"
+    search: true
 D321:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/rsna-pneumonia-detection-challenge"
   - citation: Search for the paper that introduced RSNA Pneumonia Detection
     url: "https://scholar.google.com/scholar?q=RSNA%20Pneumonia%20Detection%20dataset%20anomaly"
+    search: true
 D322:
   - citation: Search for the paper that introduced OCT2017 (Kermany)
     url: "https://scholar.google.com/scholar?q=OCT2017%20%28Kermany%29%20dataset%20anomaly"
+    search: true
 D323:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/aptos2019-blindness-detection"
   - citation: Search for the paper that introduced APTOS 2019 Blindness Detection
     url: "https://scholar.google.com/scholar?q=APTOS%202019%20Blindness%20Detection%20dataset%20anomaly"
+    search: true
 D324:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/diabetic-retinopathy-detection"
   - citation: Search for the paper that introduced EyePACS diabetic retinopathy
     url: "https://scholar.google.com/scholar?q=EyePACS%20diabetic%20retinopathy%20dataset%20anomaly"
+    search: true
 D325:
   - citation: Search for the paper that introduced Camelyon16
     url: "https://scholar.google.com/scholar?q=Camelyon16%20dataset%20anomaly"
+    search: true
 D326:
   - citation: Search for the paper that introduced Camelyon17-WILDS
     url: "https://scholar.google.com/scholar?q=Camelyon17-WILDS%20dataset%20anomaly"
+    search: true
 D327:
   - citation: Search for the paper that introduced CBIS-DDSM
     url: "https://scholar.google.com/scholar?q=CBIS-DDSM%20dataset%20anomaly"
+    search: true
 D328:
   - citation: "Dataset page: physionet.org"
     url: "https://physionet.org/content/vindr-mammo/"
   - citation: Search for the paper that introduced VinDr-Mammo
     url: "https://scholar.google.com/scholar?q=VinDr-Mammo%20dataset%20anomaly"
+    search: true
 D329:
   - citation: "Dataset page: www.isic-archive.com"
     url: "https://www.isic-archive.com/"
   - citation: Search for the paper that introduced ISIC Archive challenges
     url: "https://scholar.google.com/scholar?q=ISIC%20Archive%20challenges%20dataset%20anomaly"
+    search: true
 D330:
   - citation: "Dataset page: datasets.simula.no"
     url: "https://datasets.simula.no/hyper-kvasir/"
   - citation: Search for the paper that introduced HyperKvasir and Kvasir-SEG
     url: "https://scholar.google.com/scholar?q=HyperKvasir%20and%20Kvasir-SEG%20dataset%20anomaly"
+    search: true
 D331:
   - citation: Search for the paper that introduced LiTS
     url: "https://scholar.google.com/scholar?q=LiTS%20dataset%20anomaly"
+    search: true
 D332:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/rsna-intracranial-hemorrhage-detection"
   - citation: Search for the paper that introduced RSNA Intracranial Hemorrhage Detection
     url: "https://scholar.google.com/scholar?q=RSNA%20Intracranial%20Hemorrhage%20Detection%20dataset%20anomaly"
+    search: true
 D333:
   - citation: Search for the paper that introduced CQ500
     url: "https://scholar.google.com/scholar?q=CQ500%20dataset%20anomaly"
+    search: true
 D334:
   - citation: "Dataset page: fis.fda.gov"
     url: "https://fis.fda.gov/extensions/FPD-QDE-FAERS/FPD-QDE-FAERS.html"
   - citation: Search for the paper that introduced FAERS
     url: "https://scholar.google.com/scholar?q=FAERS%20dataset%20anomaly"
+    search: true
 D335:
   - citation: Search for the paper that introduced OMOP pharmacovigilance reference set
     url: "https://scholar.google.com/scholar?q=OMOP%20pharmacovigilance%20reference%20set%20dataset%20anomaly"
+    search: true
 D336:
   - citation: "Dataset page: vaers.hhs.gov"
     url: "https://vaers.hhs.gov/data.html"
   - citation: Search for the paper that introduced VAERS
     url: "https://scholar.google.com/scholar?q=VAERS%20dataset%20anomaly"
+    search: true
 D337:
   - citation: Search for the paper that introduced CDC ILINet
     url: "https://scholar.google.com/scholar?q=CDC%20ILINet%20dataset%20anomaly"
+    search: true
 D338:
   - citation: "Dataset page: www.euromomo.eu"
     url: "https://www.euromomo.eu/"
   - citation: Search for the paper that introduced EuroMOMO
     url: "https://scholar.google.com/scholar?q=EuroMOMO%20dataset%20anomaly"
+    search: true
 D339:
   - citation: Search for the paper that introduced Doublet detection benchmark (Xi and Li)
     url: "https://scholar.google.com/scholar?q=Doublet%20detection%20benchmark%20%28Xi%20and%20Li%29%20dataset%20anomaly"
+    search: true
 D340:
   - citation: "Dataset page: tabula-muris.ds.czbiohub.org"
     url: "https://tabula-muris.ds.czbiohub.org/"
   - citation: Search for the paper that introduced Tabula Muris
     url: "https://scholar.google.com/scholar?q=Tabula%20Muris%20dataset%20anomaly"
+    search: true
 D341:
   - citation: Search for the paper that introduced FlowCAP challenges
     url: "https://scholar.google.com/scholar?q=FlowCAP%20challenges%20dataset%20anomaly"
+    search: true
 D342:
   - citation: Search for the paper that introduced Levine and Samusik mass cytometry benchmarks
     url: "https://scholar.google.com/scholar?q=Levine%20and%20Samusik%20mass%20cytometry%20benchmarks%20dataset%20anomaly"
+    search: true
 D343:
   - citation: "Dataset page: www.nist.gov"
     url: "https://www.nist.gov/programs-projects/genome-bottle"
   - citation: Search for the paper that introduced Genome in a Bottle truth sets
     url: "https://scholar.google.com/scholar?q=Genome%20in%20a%20Bottle%20truth%20sets%20dataset%20anomaly"
+    search: true
 D344:
   - citation: "Dataset page: gtexportal.org"
     url: "https://gtexportal.org/"
   - citation: Search for the paper that introduced GTEx
     url: "https://scholar.google.com/scholar?q=GTEx%20dataset%20anomaly"
+    search: true
 D345:
   - citation: "Dataset page: portal.gdc.cancer.gov"
     url: "https://portal.gdc.cancer.gov/"
   - citation: Search for the paper that introduced TCGA
     url: "https://scholar.google.com/scholar?q=TCGA%20dataset%20anomaly"
+    search: true
 D346:
   - citation: "Dataset page: jump-cellpainting.broadinstitute.org"
     url: "https://jump-cellpainting.broadinstitute.org/"
   - citation: Search for the paper that introduced JUMP Cell Painting
     url: "https://scholar.google.com/scholar?q=JUMP%20Cell%20Painting%20dataset%20anomaly"
+    search: true
 D347:
   - citation: "Dataset page: pubchem.ncbi.nlm.nih.gov"
     url: "https://pubchem.ncbi.nlm.nih.gov/"
   - citation: Search for the paper that introduced PubChem BioAssay
     url: "https://scholar.google.com/scholar?q=PubChem%20BioAssay%20dataset%20anomaly"
+    search: true
 D348:
   - citation: Search for the paper that introduced BioFors
     url: "https://scholar.google.com/scholar?q=BioFors%20dataset%20anomaly"
+    search: true
 D349:
   - citation: Search for the paper that introduced PLAsTiCC
     url: "https://scholar.google.com/scholar?q=PLAsTiCC%20dataset%20anomaly"
+    search: true
 D350:
   - citation: Search for the paper that introduced ELAsTiCC
     url: "https://scholar.google.com/scholar?q=ELAsTiCC%20dataset%20anomaly"
+    search: true
 D351:
   - citation: "Dataset page: www.ztf.caltech.edu"
     url: "https://www.ztf.caltech.edu/"
   - citation: Search for the paper that introduced ZTF alert stream
     url: "https://scholar.google.com/scholar?q=ZTF%20alert%20stream%20dataset%20anomaly"
+    search: true
 D352:
   - citation: "Dataset page: data.galaxyzoo.org"
     url: "https://data.galaxyzoo.org/"
   - citation: Search for the paper that introduced Galaxy Zoo
     url: "https://scholar.google.com/scholar?q=Galaxy%20Zoo%20dataset%20anomaly"
+    search: true
 D353:
   - citation: "Dataset page: www.sdss.org"
     url: "https://www.sdss.org/"
   - citation: Search for the paper that introduced SDSS spectroscopic catalog
     url: "https://scholar.google.com/scholar?q=SDSS%20spectroscopic%20catalog%20dataset%20anomaly"
+    search: true
 D354:
   - citation: "Dataset page: archive.stsci.edu"
     url: "https://archive.stsci.edu/"
   - citation: Search for the paper that introduced Kepler and TESS light curves
     url: "https://scholar.google.com/scholar?q=Kepler%20and%20TESS%20light%20curves%20dataset%20anomaly"
+    search: true
 D355:
   - citation: "Dataset page: breakthroughinitiatives.org"
     url: "https://breakthroughinitiatives.org/opendatasearch"
   - citation: Search for the paper that introduced Breakthrough Listen open data
     url: "https://scholar.google.com/scholar?q=Breakthrough%20Listen%20open%20data%20dataset%20anomaly"
+    search: true
 D356:
   - citation: Search for the paper that introduced Gravity Spy
     url: "https://scholar.google.com/scholar?q=Gravity%20Spy%20dataset%20anomaly"
+    search: true
 D357:
   - citation: Search for the paper that introduced LHC Olympics 2020
     url: "https://scholar.google.com/scholar?q=LHC%20Olympics%202020%20dataset%20anomaly"
+    search: true
 D358:
   - citation: Search for the paper that introduced Dark Machines anomaly score challenge
     url: "https://scholar.google.com/scholar?q=Dark%20Machines%20anomaly%20score%20challenge%20dataset%20anomaly"
+    search: true
 D359:
   - citation: "Paper (Scientific Data, PMC): www.ncbi.nlm.nih.gov"
     url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9070018/"
@@ -1608,125 +1966,161 @@ D359:
     url: "https://arxiv.org/abs/2107.02157"
   - citation: Search for the paper that introduced ADC2021 LHC dataset at 40 MHz
     url: "https://scholar.google.com/scholar?q=ADC2021%20LHC%20dataset%20at%2040%20MHz%20dataset%20anomaly"
+    search: true
 D360:
   - citation: "Dataset page: opendata.cern.ch"
     url: "https://opendata.cern.ch/"
   - citation: Search for the paper that introduced CMS Open Data
     url: "https://scholar.google.com/scholar?q=CMS%20Open%20Data%20dataset%20anomaly"
+    search: true
 D361:
   - citation: Search for the paper that introduced SWAN-SF
     url: "https://scholar.google.com/scholar?q=SWAN-SF%20dataset%20anomaly"
+    search: true
 D362:
   - citation: Search for the paper that introduced STEAD
     url: "https://scholar.google.com/scholar?q=STEAD%20dataset%20anomaly"
+    search: true
 D363:
   - citation: Search for the paper that introduced INSTANCE
     url: "https://scholar.google.com/scholar?q=INSTANCE%20dataset%20anomaly"
+    search: true
 D364:
   - citation: Search for the paper that introduced ClimateNet
     url: "https://scholar.google.com/scholar?q=ClimateNet%20dataset%20anomaly"
+    search: true
 D365:
   - citation: Search for the paper that introduced ExtremeWeather
     url: "https://scholar.google.com/scholar?q=ExtremeWeather%20dataset%20anomaly"
+    search: true
 D366:
   - citation: "Dataset page: www.ncei.noaa.gov"
     url: "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily"
   - citation: Search for the paper that introduced NOAA GHCN-Daily with QC flags
     url: "https://scholar.google.com/scholar?q=NOAA%20GHCN-Daily%20with%20QC%20flags%20dataset%20anomaly"
+    search: true
 D367:
   - citation: "Dataset page: argo.ucsd.edu"
     url: "https://argo.ucsd.edu/data/"
   - citation: Search for the paper that introduced Argo float profiles with QC flags
     url: "https://scholar.google.com/scholar?q=Argo%20float%20profiles%20with%20QC%20flags%20dataset%20anomaly"
+    search: true
 D368:
   - citation: Search for the paper that introduced LEVIR-CD
     url: "https://scholar.google.com/scholar?q=LEVIR-CD%20dataset%20anomaly"
+    search: true
 D369:
   - citation: Search for the paper that introduced OSCD
     url: "https://scholar.google.com/scholar?q=OSCD%20dataset%20anomaly"
+    search: true
 D370:
   - citation: Search for the paper that introduced ABU (Airport-Beach-Urban)
     url: "https://scholar.google.com/scholar?q=ABU%20%28Airport-Beach-Urban%29%20dataset%20anomaly"
+    search: true
 D371:
   - citation: Search for the paper that introduced AVIRIS San Diego airport scene
     url: "https://scholar.google.com/scholar?q=AVIRIS%20San%20Diego%20airport%20scene%20dataset%20anomaly"
+    search: true
 D372:
   - citation: Search for the paper that introduced Sen1Floods11
     url: "https://scholar.google.com/scholar?q=Sen1Floods11%20dataset%20anomaly"
+    search: true
 D373:
   - citation: "Dataset page: arxiv.org"
     url: "https://arxiv.org/abs/1911.09296"
   - citation: Search for the paper that introduced xBD
     url: "https://scholar.google.com/scholar?q=xBD%20dataset%20anomaly"
+    search: true
 D374:
   - citation: Search for the paper that introduced SAR oil spill dataset (Krestenitis et al.)
     url: "https://scholar.google.com/scholar?q=SAR%20oil%20spill%20dataset%20%28Krestenitis%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D375:
   - citation: "Dataset page: www.globalforestwatch.org"
     url: "https://www.globalforestwatch.org/"
   - citation: Search for the paper that introduced GLAD forest loss alerts
     url: "https://scholar.google.com/scholar?q=GLAD%20forest%20loss%20alerts%20dataset%20anomaly"
+    search: true
 D376:
   - citation: Search for the paper that introduced FLAME
     url: "https://scholar.google.com/scholar?q=FLAME%20dataset%20anomaly"
+    search: true
 D377:
   - citation: "Dataset page: lila.science"
     url: "https://lila.science/datasets/snapshot-serengeti"
   - citation: Search for the paper that introduced Snapshot Serengeti
     url: "https://scholar.google.com/scholar?q=Snapshot%20Serengeti%20dataset%20anomaly"
+    search: true
 D378:
   - citation: Search for the paper that introduced iWildCam
     url: "https://scholar.google.com/scholar?q=iWildCam%20dataset%20anomaly"
+    search: true
 D379:
   - citation: Search for the paper that introduced BirdCLEF
     url: "https://scholar.google.com/scholar?q=BirdCLEF%20dataset%20anomaly"
+    search: true
 D380:
   - citation: "Dataset page: www.movebank.org"
     url: "https://www.movebank.org/"
   - citation: Search for the paper that introduced Movebank
     url: "https://scholar.google.com/scholar?q=Movebank%20dataset%20anomaly"
+    search: true
 D381:
   - citation: Search for the paper that introduced Agriculture-Vision
     url: "https://scholar.google.com/scholar?q=Agriculture-Vision%20dataset%20anomaly"
+    search: true
 D382:
   - citation: Search for the paper that introduced PlantVillage
     url: "https://scholar.google.com/scholar?q=PlantVillage%20dataset%20anomaly"
+    search: true
 D383:
   - citation: Search for the paper that introduced PlantDoc
     url: "https://scholar.google.com/scholar?q=PlantDoc%20dataset%20anomaly"
+    search: true
 D384:
   - citation: Search for the paper that introduced To bee or not to bee beehive sounds
     url: "https://scholar.google.com/scholar?q=To%20bee%20or%20not%20to%20bee%20beehive%20sounds%20dataset%20anomaly"
+    search: true
 D385:
   - citation: Search for the paper that introduced UCSD Pedestrian (Ped1, Ped2)
     url: "https://scholar.google.com/scholar?q=UCSD%20Pedestrian%20%28Ped1%2C%20Ped2%29%20dataset%20anomaly"
+    search: true
 D386:
   - citation: Search for the paper that introduced CUHK Avenue
     url: "https://scholar.google.com/scholar?q=CUHK%20Avenue%20dataset%20anomaly"
+    search: true
 D387:
   - citation: Search for the paper that introduced ShanghaiTech Campus
     url: "https://scholar.google.com/scholar?q=ShanghaiTech%20Campus%20dataset%20anomaly"
+    search: true
 D388:
   - citation: Search for the paper that introduced UCF-Crime
     url: "https://scholar.google.com/scholar?q=UCF-Crime%20dataset%20anomaly"
+    search: true
 D389:
   - citation: Search for the paper that introduced XD-Violence
     url: "https://scholar.google.com/scholar?q=XD-Violence%20dataset%20anomaly"
+    search: true
 D390:
   - citation: Search for the paper that introduced UBnormal
     url: "https://scholar.google.com/scholar?q=UBnormal%20dataset%20anomaly"
+    search: true
 D391:
   - citation: Search for the paper that introduced NWPU Campus
     url: "https://scholar.google.com/scholar?q=NWPU%20Campus%20dataset%20anomaly"
+    search: true
 D392:
   - citation: Search for the paper that introduced Street Scene
     url: "https://scholar.google.com/scholar?q=Street%20Scene%20dataset%20anomaly"
+    search: true
 D393:
   - citation: Search for the paper that introduced UMN crowd dataset
     url: "https://scholar.google.com/scholar?q=UMN%20crowd%20dataset%20dataset%20anomaly"
+    search: true
 D394:
   - citation: Search for the paper that introduced IITB-Corridor
     url: "https://scholar.google.com/scholar?q=IITB-Corridor%20dataset%20anomaly"
+    search: true
 D395:
   - citation: "Dataset page: time.griffith.edu.au"
     url: "https://time.griffith.edu.au/paper-sites/msad"
@@ -1734,6 +2128,7 @@ D395:
     url: "https://arxiv.org/abs/2402.04857"
   - citation: Search for the paper that introduced MSAD (Multi-Scenario Anomaly Detection)
     url: "https://scholar.google.com/scholar?q=MSAD%20%28Multi-Scenario%20Anomaly%20Detection%29%20dataset%20anomaly"
+    search: true
 D396:
   - citation: "Dataset page: github.com"
     url: "https://github.com/fesvhtr/CUVA"
@@ -1743,12 +2138,15 @@ D396:
     url: "https://arxiv.org/abs/2405.00181"
   - citation: Search for the paper that introduced CUVA (Causation Understanding of Video Anomaly)
     url: "https://scholar.google.com/scholar?q=CUVA%20%28Causation%20Understanding%20of%20Video%20Anomaly%29%20dataset%20anomaly"
+    search: true
 D397:
   - citation: Search for the paper that introduced UBI-Fights
     url: "https://scholar.google.com/scholar?q=UBI-Fights%20dataset%20anomaly"
+    search: true
 D398:
   - citation: Search for the paper that introduced DCASE 2017 rare sound event detection
     url: "https://scholar.google.com/scholar?q=DCASE%202017%20rare%20sound%20event%20detection%20dataset%20anomaly"
+    search: true
 D399:
   - citation: "Dataset page: seadronessee.cs.uni-tuebingen.de"
     url: "https://seadronessee.cs.uni-tuebingen.de"
@@ -1756,18 +2154,23 @@ D399:
     url: "https://arxiv.org/abs/2105.01922"
   - citation: Search for the paper that introduced SeaDronesSee
     url: "https://scholar.google.com/scholar?q=SeaDronesSee%20dataset%20anomaly"
+    search: true
 D400:
   - citation: Search for the paper that introduced HERIDAL
     url: "https://scholar.google.com/scholar?q=HERIDAL%20dataset%20anomaly"
+    search: true
 D401:
   - citation: Search for the paper that introduced DLC-2021 document liveness
     url: "https://scholar.google.com/scholar?q=DLC-2021%20document%20liveness%20dataset%20anomaly"
+    search: true
 D402:
   - citation: Search for the paper that introduced Urban radiation search challenge (LBNL)
     url: "https://scholar.google.com/scholar?q=Urban%20radiation%20search%20challenge%20%28LBNL%29%20dataset%20anomaly"
+    search: true
 D403:
   - citation: Search for the paper that introduced Safety helmet wearing dataset (SHWD)
     url: "https://scholar.google.com/scholar?q=Safety%20helmet%20wearing%20dataset%20%28SHWD%29%20dataset%20anomaly"
+    search: true
 D404:
   - citation: "Dataset page: arxiv.org"
     url: "https://arxiv.org/abs/2206.04564"
@@ -1775,85 +2178,109 @@ D404:
     url: "https://proceedings.neurips.cc/paper_files/paper/2022/hash/e4fd610b1d77699a02df07ae97de992a-Abstract-Datasets_and_Benchmarks.html"
   - citation: Search for the paper that introduced TwiBot-22
     url: "https://scholar.google.com/scholar?q=TwiBot-22%20dataset%20anomaly"
+    search: true
 D405:
   - citation: Search for the paper that introduced Cresci-2017 social spambots
     url: "https://scholar.google.com/scholar?q=Cresci-2017%20social%20spambots%20dataset%20anomaly"
+    search: true
 D406:
   - citation: Search for the paper that introduced Twitter information operations archive
     url: "https://scholar.google.com/scholar?q=Twitter%20information%20operations%20archive%20dataset%20anomaly"
+    search: true
 D407:
   - citation: "Dataset page: github.com"
     url: "https://github.com/KaiDMML/FakeNewsNet"
   - citation: Search for the paper that introduced FakeNewsNet
     url: "https://scholar.google.com/scholar?q=FakeNewsNet%20dataset%20anomaly"
+    search: true
 D408:
   - citation: Search for the paper that introduced LIAR
     url: "https://scholar.google.com/scholar?q=LIAR%20dataset%20anomaly"
+    search: true
 D409:
   - citation: Search for the paper that introduced PHEME rumour dataset
     url: "https://scholar.google.com/scholar?q=PHEME%20rumour%20dataset%20dataset%20anomaly"
+    search: true
 D410:
   - citation: Search for the paper that introduced Fakeddit
     url: "https://scholar.google.com/scholar?q=Fakeddit%20dataset%20anomaly"
+    search: true
 D411:
   - citation: Search for the paper that introduced Hateful Memes
     url: "https://scholar.google.com/scholar?q=Hateful%20Memes%20dataset%20anomaly"
+    search: true
 D412:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/jigsaw-toxic-comment-classification-challenge"
   - citation: Search for the paper that introduced Jigsaw Toxic Comment Classification
     url: "https://scholar.google.com/scholar?q=Jigsaw%20Toxic%20Comment%20Classification%20dataset%20anomaly"
+    search: true
 D413:
   - citation: Search for the paper that introduced PAN-WVC-10
     url: "https://scholar.google.com/scholar?q=PAN-WVC-10%20dataset%20anomaly"
+    search: true
 D414:
   - citation: "Dataset page: snap.stanford.edu"
     url: "https://snap.stanford.edu/jodie/"
   - citation: Search for the paper that introduced JODIE interaction datasets (Reddit, Wikipedia, MOOC)
     url: "https://scholar.google.com/scholar?q=JODIE%20interaction%20datasets%20%28Reddit%2C%20Wikipedia%2C%20MOOC%29%20dataset%20anomaly"
+    search: true
 D415:
   - citation: Search for the paper that introduced Reddit banned users graph
     url: "https://scholar.google.com/scholar?q=Reddit%20banned%20users%20graph%20dataset%20anomaly"
+    search: true
 D416:
   - citation: Search for the paper that introduced Weibo user graph
     url: "https://scholar.google.com/scholar?q=Weibo%20user%20graph%20dataset%20anomaly"
+    search: true
 D417:
   - citation: Search for the paper that introduced T-Social
     url: "https://scholar.google.com/scholar?q=T-Social%20dataset%20anomaly"
+    search: true
 D418:
   - citation: Search for the paper that introduced Questions (Yandex Q) graph
     url: "https://scholar.google.com/scholar?q=Questions%20%28Yandex%20Q%29%20graph%20dataset%20anomaly"
+    search: true
 D419:
   - citation: Search for the paper that introduced Tolokers
     url: "https://scholar.google.com/scholar?q=Tolokers%20dataset%20anomaly"
+    search: true
 D420:
   - citation: Search for the paper that introduced Disney, Books and Enron attributed graphs
     url: "https://scholar.google.com/scholar?q=Disney%2C%20Books%20and%20Enron%20attributed%20graphs%20dataset%20anomaly"
+    search: true
 D421:
   - citation: Search for the paper that introduced WEBSPAM-UK2007
     url: "https://scholar.google.com/scholar?q=WEBSPAM-UK2007%20dataset%20anomaly"
+    search: true
 D422:
   - citation: Search for the paper that introduced MovieLens with injected shilling profiles
     url: "https://scholar.google.com/scholar?q=MovieLens%20with%20injected%20shilling%20profiles%20dataset%20anomaly"
+    search: true
 D423:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/talkingdata-adtracking-fraud-detection"
   - citation: Search for the paper that introduced TalkingData AdTracking Fraud
     url: "https://scholar.google.com/scholar?q=TalkingData%20AdTracking%20Fraud%20dataset%20anomaly"
+    search: true
 D424:
   - citation: "Publication record (Strathclyde): pureportal.strath.ac.uk"
     url: "https://pureportal.strath.ac.uk/en/publications/building-a-large-scale-corpus-for-evaluating-event-detection-on-t/"
   - citation: Search for the paper that introduced Events2012 Twitter corpus
     url: "https://scholar.google.com/scholar?q=Events2012%20Twitter%20corpus%20dataset%20anomaly"
+    search: true
 D425:
   - citation: Search for the paper that introduced Event2018 French tweets
     url: "https://scholar.google.com/scholar?q=Event2018%20French%20tweets%20dataset%20anomaly"
+    search: true
 D426:
   - citation: Search for the paper that introduced CrisisLexT26
     url: "https://scholar.google.com/scholar?q=CrisisLexT26%20dataset%20anomaly"
+    search: true
 D427:
   - citation: Search for the paper that introduced TREC Incident Streams
     url: "https://scholar.google.com/scholar?q=TREC%20Incident%20Streams%20dataset%20anomaly"
+    search: true
 D428:
   - citation: "Paper (ACL Anthology): aclanthology.org"
     url: "https://aclanthology.org/D18-1483/"
@@ -1861,36 +2288,45 @@ D428:
     url: "https://arxiv.org/abs/1809.00540"
   - citation: Search for the paper that introduced Multilingual news stream clustering (Miranda et al.)
     url: "https://scholar.google.com/scholar?q=Multilingual%20news%20stream%20clustering%20%28Miranda%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D429:
   - citation: Search for the paper that introduced TDT corpora
     url: "https://scholar.google.com/scholar?q=TDT%20corpora%20dataset%20anomaly"
+    search: true
 D430:
   - citation: "Dataset page: www.kaggle.com"
     url: "https://www.kaggle.com/c/m5-forecasting-accuracy"
   - citation: Search for the paper that introduced M5 Forecasting (Walmart)
     url: "https://scholar.google.com/scholar?q=M5%20Forecasting%20%28Walmart%29%20dataset%20anomaly"
+    search: true
 D431:
   - citation: Search for the paper that introduced Telecom Italia Big Data Challenge
     url: "https://scholar.google.com/scholar?q=Telecom%20Italia%20Big%20Data%20Challenge%20dataset%20anomaly"
+    search: true
 D432:
   - citation: Search for the paper that introduced ProZorro procurement data
     url: "https://scholar.google.com/scholar?q=ProZorro%20procurement%20data%20dataset%20anomaly"
+    search: true
 D433:
   - citation: "Dataset page: www.tf-pm.org"
     url: "https://www.tf-pm.org/competitions-awards/bpi-challenge"
   - citation: Search for the paper that introduced BPI Challenge event logs
     url: "https://scholar.google.com/scholar?q=BPI%20Challenge%20event%20logs%20dataset%20anomaly"
+    search: true
 D434:
   - citation: Search for the paper that introduced Process anomaly logs (Nolle et al.)
     url: "https://scholar.google.com/scholar?q=Process%20anomaly%20logs%20%28Nolle%20et%20al.%29%20dataset%20anomaly"
+    search: true
 D435:
   - citation: Search for the paper that introduced IBM HR Analytics Employee Attrition
     url: "https://scholar.google.com/scholar?q=IBM%20HR%20Analytics%20Employee%20Attrition%20dataset%20anomaly"
+    search: true
 D436:
   - citation: "Dataset page: www.atticusprojectai.org"
     url: "https://www.atticusprojectai.org/cuad"
   - citation: Search for the paper that introduced CUAD
     url: "https://scholar.google.com/scholar?q=CUAD%20dataset%20anomaly"
+    search: true
 D437:
   - citation: "Dataset page: analyse.kmi.open.ac.uk"
     url: "https://analyse.kmi.open.ac.uk/open-dataset"
@@ -1898,24 +2334,30 @@ D437:
     url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5704676/"
   - citation: Search for the paper that introduced OULAD
     url: "https://scholar.google.com/scholar?q=OULAD%20dataset%20anomaly"
+    search: true
 D438:
   - citation: Search for the paper that introduced KDD Cup 2015 MOOC dropout
     url: "https://scholar.google.com/scholar?q=KDD%20Cup%202015%20MOOC%20dropout%20dataset%20anomaly"
+    search: true
 D439:
   - citation: "Dataset page: www.ris.ripe.net"
     url: "https://www.ris.ripe.net/"
   - citation: Search for the paper that introduced RIPE RIS and RouteViews BGP archives
     url: "https://scholar.google.com/scholar?q=RIPE%20RIS%20and%20RouteViews%20BGP%20archives%20dataset%20anomaly"
+    search: true
 D440:
   - citation: Search for the paper that introduced Enron spreadsheet corpus
     url: "https://scholar.google.com/scholar?q=Enron%20spreadsheet%20corpus%20dataset%20anomaly"
+    search: true
 D441:
   - citation: "Dataset page: materialsproject.org"
     url: "https://materialsproject.org/"
   - citation: Search for the paper that introduced Materials Project
     url: "https://scholar.google.com/scholar?q=Materials%20Project%20dataset%20anomaly"
+    search: true
 D442:
   - citation: "Dataset page: archive.ics.uci.edu"
     url: "https://archive.ics.uci.edu/dataset/320/student+performance"
   - citation: Search for the paper that introduced Student Performance (UCI)
     url: "https://scholar.google.com/scholar?q=Student%20Performance%20%28UCI%29%20dataset%20anomaly"
+    search: true

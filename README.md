@@ -23,7 +23,8 @@ site/                        the web page (HTML, CSS, JavaScript; no framework)
 .github/workflows/           check pull requests, comment their impact, deploy the site, turn proposals into PRs
 ```
 
-Scenario membership, dataset qualification and every count are computed by `scripts/atlaslib.py` from the files:
+The website shows only entries whose `review.status` is `reviewed`; drafts appear only in the Review tab.
+Scenario membership, dataset qualification and every count are computed by `scripts/atlaslib.py` from the reviewed files:
 
 - an application belongs to a scenario if it matches any clause of the scenario's `rule`;
 - a dataset qualifies for a scenario if one of its `applications` is a member (or, for generic collections, the
