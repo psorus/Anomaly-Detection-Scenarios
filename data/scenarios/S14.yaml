@@ -32,6 +32,6 @@ algorithms: Diverse ensembles of detectors with different inductive biases, maxi
 avoid: Single-detector rankings evaluated only by ROC-AUC, which rewards retrieving many similar anomalies.
 gaps: "No standard diversity metric for anomaly detection; few datasets annotate root causes (the paper's call for diversity metrics)."
 review:
-  status: draft
-  reviewers: []
-  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.
+  status: reviewed
+  reviewers: [psorus]
+  note: "Reviewed by @psorus in #7."

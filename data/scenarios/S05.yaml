@@ -29,6 +29,6 @@ algorithms: Pretrained-feature memory banks (PatchCore, PaDiM), normalizing flow
 avoid: "Image-level-only evaluation; methods that need defect samples for every class; global-context-free patch methods for logical anomalies."
 gaps: "MVTec AD is near saturation; severity grading, multi-view inspection and logical constraints are open; line-rate latency is rarely reported alongside accuracy."
 review:
-  status: draft
-  reviewers: []
-  note: Rule and guidance drafted with Claude (Anthropic) in October 2026 from arXiv 2507.15584 and general knowledge. Open for discussion.
+  status: reviewed
+  reviewers: [psorus]
+  note: "Reviewed by @psorus in #7."
