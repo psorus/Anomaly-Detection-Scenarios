@@ -17,7 +17,11 @@ links:
     found_in_search: false
   other: []
 references: []
+evidence:
+  general:
+    - source: Search for the paper that introduced 3W dataset (Petrobras)
+      url: "https://scholar.google.com/scholar?q=3W%20dataset%20%28Petrobras%29%20dataset%20anomaly"
 review:
-  status: draft
-  reviewers: []
-  note: Initial entry drafted with Claude (Anthropic) in October 2026. Facts such as size and label type are not yet checked against the dataset paper.
+  status: reviewed
+  reviewers: [psorus]
+  note: "Reviewed by @psorus in #4."
